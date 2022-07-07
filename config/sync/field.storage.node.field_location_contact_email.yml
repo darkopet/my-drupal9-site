@@ -1,0 +1,18 @@
+uuid: 65762ac1-9b31-4d16-95d6-79b432303a33
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_location_contact_email
+field_name: field_location_contact_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

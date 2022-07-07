@@ -1,0 +1,27 @@
+uuid: b01ba5a7-3c55-4e38-b7ef-a22b9d0f58cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.company
+  module:
+    - text
+id: node.company.field_description
+field_name: field_description
+entity_type: node
+bundle: company
+label: Description
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>This is a Company Description field.</p>\r\n"
+    summary: ''
+    format: basic_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

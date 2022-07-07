@@ -1,0 +1,17 @@
+uuid: 82ad2a94-8365-4c9e-94f4-9d5ae4405bb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'This is a Location Content Type.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

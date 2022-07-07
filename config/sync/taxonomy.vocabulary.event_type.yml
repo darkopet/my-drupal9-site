@@ -1,0 +1,8 @@
+uuid: 001d88ed-7973-4528-b250-d06db8f6ec4c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Type'
+vid: event_type
+description: 'This is an Event Type list.'
+weight: 0

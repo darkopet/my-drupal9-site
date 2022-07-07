@@ -1,0 +1,18 @@
+uuid: 52e4fff0-02bb-441d-a051-7647e91d9704
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vani
+id: pagetitle
+theme: vani
+region: footer_top
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

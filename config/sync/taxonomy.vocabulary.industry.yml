@@ -1,0 +1,8 @@
+uuid: 4e956bfb-7016-4d40-9a23-9e40b5af9874
+langcode: en
+status: true
+dependencies: {  }
+name: Industry
+vid: industry
+description: 'List of industries related to companies.'
+weight: 0

@@ -1,0 +1,49 @@
+uuid: 5b9d5048-e79b-4273-8f76-66296e418e1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company.field_address
+    - field.field.node.company.field_contact_email
+    - field.field.node.company.field_description
+    - field.field.node.company.field_industry
+    - field.field.node.company.field_logo
+    - field.field.node.company.field_phone_number
+    - field.field.node.company.field_website
+    - image.style.thumbnail
+    - node.type.company
+  module:
+    - image
+    - text
+    - user
+id: node.company.teaser
+targetEntityType: node
+bundle: company
+mode: teaser
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_address: true
+  field_contact_email: true
+  field_industry: true
+  field_phone_number: true
+  field_website: true
+  links: true

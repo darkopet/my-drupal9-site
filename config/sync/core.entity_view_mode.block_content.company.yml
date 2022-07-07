@@ -1,0 +1,10 @@
+uuid: 7e7f656b-8e29-4828-8804-791964290ef1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.company
+label: Company
+targetEntityType: block_content
+cache: true

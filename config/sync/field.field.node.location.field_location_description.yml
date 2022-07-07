@@ -1,0 +1,23 @@
+uuid: fdd5808f-8fcc-409b-a470-6bf9fe8e1527
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_description
+    - node.type.location
+  module:
+    - text
+id: node.location.field_location_description
+field_name: field_location_description
+entity_type: node
+bundle: location
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

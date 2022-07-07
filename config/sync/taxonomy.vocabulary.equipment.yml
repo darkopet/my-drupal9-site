@@ -1,0 +1,8 @@
+uuid: 50a1f2d9-87f5-4949-a526-f67ff4d5c9ae
+langcode: en
+status: true
+dependencies: {  }
+name: Equipment
+vid: equipment
+description: 'List of equipment being used.'
+weight: 0
