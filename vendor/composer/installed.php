@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '46d10e0c0e59ab65dee0bdec9fb0c2254cfd73ec',
+        'reference' => 'eacc9f71a0539a7a7252431e60bf250414cfec07',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -760,6 +760,15 @@
                 0 => '9.4.1',
             ),
         ),
+        'drupal/photoswipe' => array(
+            'pretty_version' => '3.1.4',
+            'version' => '3.1.4.0',
+            'reference' => '3.1.4',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/photoswipe',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/quickedit' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -775,7 +784,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '46d10e0c0e59ab65dee0bdec9fb0c2254cfd73ec',
+            'reference' => 'eacc9f71a0539a7a7252431e60bf250414cfec07',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
