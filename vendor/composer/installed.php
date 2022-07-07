@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'eacc9f71a0539a7a7252431e60bf250414cfec07',
+        'reference' => '6c0bff2bfb3d6353102440813fd03972d3795857',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -231,6 +231,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/blazy' => array(
+            'pretty_version' => '2.13.0',
+            'version' => '2.13.0.0',
+            'reference' => '8.x-2.13',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/blazy',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/block' => array(
             'dev_requirement' => false,
@@ -784,7 +793,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'eacc9f71a0539a7a7252431e60bf250414cfec07',
+            'reference' => '6c0bff2bfb3d6353102440813fd03972d3795857',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -831,6 +840,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/slick' => array(
+            'pretty_version' => '2.6.0',
+            'version' => '2.6.0.0',
+            'reference' => '8.x-2.6',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/slick',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/sqlite' => array(
             'dev_requirement' => false,
