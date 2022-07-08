@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'fdd12152d3117f54be48016ec1db387475a7ee08',
+        'reference' => '6980c6c003cbdf2f4ae63bea75421c0b34bd3a4f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -664,6 +664,15 @@
                 0 => '9.4.1',
             ),
         ),
+        'drupal/libraries' => array(
+            'pretty_version' => '3.0.0-beta2',
+            'version' => '3.0.0.0-beta2',
+            'reference' => '8.x-3.0-beta2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/libraries',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/link' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -802,7 +811,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'fdd12152d3117f54be48016ec1db387475a7ee08',
+            'reference' => '6980c6c003cbdf2f4ae63bea75421c0b34bd3a4f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
