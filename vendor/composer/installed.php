@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '4b286c80a09e427400527d6204b4fcd870842a84',
+        'reference' => '31f20352f902f3b64d5694f57b95a32dd541f921',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -553,6 +553,15 @@
                 0 => '9.4.1',
             ),
         ),
+        'drupal/entity_browser' => array(
+            'pretty_version' => '2.7.0',
+            'version' => '2.7.0.0',
+            'reference' => '8.x-2.7',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/entity_browser',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/entity_reference' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -901,7 +910,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '4b286c80a09e427400527d6204b4fcd870842a84',
+            'reference' => '31f20352f902f3b64d5694f57b95a32dd541f921',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
