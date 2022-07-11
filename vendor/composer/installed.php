@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '246139e25ebbdf04671eca999ef3ae9053666f02',
+        'reference' => '4b286c80a09e427400527d6204b4fcd870842a84',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -568,6 +568,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/entity_usage' => array(
+            'pretty_version' => '2.0.0-beta6',
+            'version' => '2.0.0.0-beta6',
+            'reference' => '8.x-2.0-beta6',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/entity_usage',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/faq' => array(
             'pretty_version' => '1.1.0',
             'version' => '1.1.0.0',
@@ -892,7 +901,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '246139e25ebbdf04671eca999ef3ae9053666f02',
+            'reference' => '4b286c80a09e427400527d6204b4fcd870842a84',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
