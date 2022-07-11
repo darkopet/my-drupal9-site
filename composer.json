@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/entity_reference_revisions": "^1.9",
+        "drupal/faq": "^1.1",
         "drupal/field_group": "^3.2",
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/jquery_ui_accordion": "^1.1",
