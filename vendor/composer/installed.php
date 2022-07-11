@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '8fbaadae7ecf7802e519e8738fcc3ac25c4bdeaf',
+        'reference' => '1fc143c2c7d3be94f78ad2cc337fb7ed4d278735',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -823,6 +823,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/paragraphs_features' => array(
+            'pretty_version' => '1.16.0',
+            'version' => '1.16.0.0',
+            'reference' => '8.x-1.16',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/paragraphs_features',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/path' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -865,7 +874,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '8fbaadae7ecf7802e519e8738fcc3ac25c4bdeaf',
+            'reference' => '1fc143c2c7d3be94f78ad2cc337fb7ed4d278735',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
