@@ -32,6 +32,7 @@
         "drupal/paragraphs_ee": "^2.0",
         "drupal/paragraphs_features": "^1.16",
         "drupal/paragraphs_sets": "^2.8",
+        "drupal/pathauto": "^1.10",
         "drupal/photoswipe": "^3.1",
         "drupal/slick": "^2.6",
         "drupal/slick_views": "^2.6",

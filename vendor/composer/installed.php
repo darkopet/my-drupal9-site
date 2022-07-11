@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '31f20352f902f3b64d5694f57b95a32dd541f921',
+        'reference' => '1c0513f89479d247c2b2c8f9493a1a23f80edcf1',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -523,6 +523,15 @@
                 0 => '9.4.1',
             ),
         ),
+        'drupal/ctools' => array(
+            'pretty_version' => '4.0.0',
+            'version' => '4.0.0.0',
+            'reference' => '4.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/ctools',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/datetime' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -880,6 +889,15 @@
                 0 => '9.4.1',
             ),
         ),
+        'drupal/pathauto' => array(
+            'pretty_version' => '1.10.0',
+            'version' => '1.10.0.0',
+            'reference' => '8.x-1.10',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/pathauto',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/pgsql' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -910,7 +928,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '31f20352f902f3b64d5694f57b95a32dd541f921',
+            'reference' => '1c0513f89479d247c2b2c8f9493a1a23f80edcf1',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1029,6 +1047,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/token' => array(
+            'pretty_version' => '1.10.0',
+            'version' => '1.10.0.0',
+            'reference' => '8.x-1.10',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/token',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/toolbar' => array(
             'dev_requirement' => false,
