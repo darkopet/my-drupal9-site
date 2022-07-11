@@ -13,10 +13,109 @@ dependencies:
     - node.type.company
   module:
     - address
+    - field_group
     - image
     - link
+    - telephone
     - text
     - user
+third_party_settings:
+  field_group:
+    group_companies_fieldset:
+      children:
+        - field_website
+        - field_contact_email
+      label: 'Companies Fieldset'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        description: ''
+    group_tab_1:
+      children:
+        - group_company_div_header
+      label: 'Tab 1'
+      parent_name: group_companies_tabs
+      region: content
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: company-header
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+    group_tab_2:
+      children:
+        - field_phone_number
+        - field_address
+      label: 'Tab 2'
+      parent_name: group_companies_tabs
+      region: content
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_companies_tabs:
+      children:
+        - group_tab_1
+        - group_tab_2
+        - group_tab_3
+      label: 'Companies Tabs'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_tab_3:
+      children:
+        - field_industry
+      label: 'Tab 3'
+      parent_name: group_companies_tabs
+      region: content
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+    group_company_div_header:
+      children:
+        - field_description
+        - field_logo
+      label: 'Company Div Header'
+      parent_name: group_tab_1
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: company-header
+        show_empty_fields: true
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: company-header
+        attributes: ''
+        effect: collapsible
+        speed: slow
 id: node.company.default
 targetEntityType: node
 bundle: company
@@ -27,21 +126,21 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 31
     region: content
   field_contact_email:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 107
+    weight: 31
     region: content
   field_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 21
     region: content
   field_industry:
     type: entity_reference_label
@@ -49,7 +148,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 108
+    weight: 2
     region: content
   field_logo:
     type: image
@@ -60,14 +159,15 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 103
+    weight: 22
     region: content
   field_phone_number:
-    type: basic_string
+    type: telephone_link
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 29
     region: content
   field_website:
     type: link
@@ -79,11 +179,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 104
+    weight: 30
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  links: true

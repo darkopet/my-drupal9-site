@@ -13,10 +13,75 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - field_group
     - image
     - link
     - text
     - user
+third_party_settings:
+  field_group:
+    group_events_tabs:
+      children:
+        - group_events_tab1
+        - group_events_tab_2
+        - group_events_tab_3
+      label: 'Events Tabs'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_events_tab1:
+      children:
+        - field_event_description
+      label: 'Events Tab 1'
+      parent_name: group_events_tabs
+      region: content
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+    group_events_tab_2:
+      children:
+        - field_event_start_end_date
+        - field_event_location
+        - field_event_organizer
+        - field_event_website
+      label: 'Events Tab 2'
+      parent_name: group_events_tabs
+      region: content
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+    group_events_tab_3:
+      children:
+        - field_event_type
+        - field_event_image
+      label: 'Events Tab 3'
+      parent_name: group_events_tabs
+      region: content
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -27,7 +92,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_event_image:
     type: image
@@ -38,7 +103,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 108
+    weight: 10
     region: content
   field_event_location:
     type: entity_reference_label
@@ -46,7 +111,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 106
+    weight: 4
     region: content
   field_event_organizer:
     type: entity_reference_label
@@ -54,7 +119,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_event_start_end_date:
     type: datetime_default
@@ -63,7 +128,7 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_event_type:
     type: entity_reference_label
@@ -71,7 +136,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 107
+    weight: 8
     region: content
   field_event_website:
     type: link
@@ -83,11 +148,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 104
+    weight: 6
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  links: true

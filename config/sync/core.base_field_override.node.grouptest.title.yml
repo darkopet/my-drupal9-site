@@ -1,14 +1,14 @@
-uuid: 11fd2eda-b767-4b56-8bdf-1d6a0062dce6
+uuid: 1b19a0ed-22d9-4b9b-bb09-04527ca48b62
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.image_slide
-id: node.image_slide.title
+    - node.type.grouptest
+id: node.grouptest.title
 field_name: title
 entity_type: node
-bundle: image_slide
-label: 'Image Slide'
+bundle: grouptest
+label: FieldGroup
 description: ''
 required: true
 translatable: true

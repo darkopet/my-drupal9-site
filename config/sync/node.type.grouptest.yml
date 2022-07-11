@@ -1,4 +1,4 @@
-uuid: d5671349-37ec-4b06-8b6b-01b115d3f848
+uuid: 3ff97816-eec3-43f9-b019-125c8da3b57b
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Image Slide'
-type: image_slide
-description: 'This is Image Slide content type.'
+name: GroupTest
+type: grouptest
+description: 'Field Group Test.'
 help: ''
 new_revision: true
 preview_mode: 1

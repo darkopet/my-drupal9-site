@@ -1,41 +1,52 @@
-uuid: 0ad94985-7811-4ab9-873c-ba6de28b8c4e
+uuid: c055630f-8b14-46a4-b859-70660b7af22b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.image_slide.field_imageslide_image
-    - field.field.node.image_slide.field_imageslide_subtitle
-    - image.style.thumbnail
-    - node.type.image_slide
+    - field.field.node.grouptest.body
+    - field.field.node.grouptest.field_mail
+    - field.field.node.grouptest.field_test_website
+    - node.type.grouptest
   module:
-    - image
+    - link
     - path
-id: node.image_slide.default
+    - text
+id: node.grouptest.default
 targetEntityType: node
-bundle: image_slide
+bundle: grouptest
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_imageslide_image:
-    type: image_image
+  field_mail:
+    type: email_default
     weight: 122
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      placeholder: ''
+      size: 60
     third_party_settings: {  }
-  field_imageslide_subtitle:
-    type: string_textfield
-    weight: 121
+  field_test_website:
+    type: link_default
+    weight: 123
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   path:
     type: path

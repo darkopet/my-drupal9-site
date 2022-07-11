@@ -1,0 +1,18 @@
+uuid: d2103955-e081-4245-8cc2-3fc68026614e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.smartphone
+id: node.smartphone.title
+field_name: title
+entity_type: node
+bundle: smartphone
+label: Smartphone
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

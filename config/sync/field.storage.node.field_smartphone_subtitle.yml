@@ -1,0 +1,21 @@
+uuid: 5335066d-0d13-4087-9a64-8a2aa2353434
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_smartphone_subtitle
+field_name: field_smartphone_subtitle
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

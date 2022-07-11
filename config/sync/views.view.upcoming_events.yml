@@ -1,15 +1,14 @@
-uuid: 83f979ed-9845-4cb5-98fe-ba7f6c96942a
+uuid: 3e828d8c-ada4-44c7-9bbb-4876320a937c
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.image_slide
-    - system.menu.account
+    - node.type.event
   module:
     - node
     - user
-id: image_slide_view
-label: 'Image Slide View'
+id: upcoming_events
+label: 'Upcoming Events'
 module: views
 description: ''
 tag: ''
@@ -22,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Image Slide View'
+      title: 'Upcoming Events'
       fields:
         title:
           id: title
@@ -31,10 +30,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
-          label: Title
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -67,7 +64,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -90,23 +87,10 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: some
         options:
           offset: 0
-          items_per_page: 10
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
@@ -164,40 +148,14 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            image_slide: image_slide
+            event: event
           expose:
             operator_limit_selection: false
             operator_list: {  }
       style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: false
-          columns:
-            title: title
-          default: '-1'
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          override: true
-          sticky: false
-          summary: ''
-          empty_table: false
-          caption: ''
-          description: ''
+        type: default
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       query:
         type: views_query
         options:
@@ -215,31 +173,21 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    id: page_1
-    display_title: 'Image Slide View'
-    display_plugin: page
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
     position: 1
     display_options:
-      display_description: ''
       display_extenders: {  }
-      path: image-slide-view
-      menu:
-        type: normal
-        title: 'Image Slide View'
-        enabled: false
-        menu_name: account
-        parent: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

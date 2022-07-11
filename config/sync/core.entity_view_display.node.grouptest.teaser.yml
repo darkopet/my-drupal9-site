@@ -1,0 +1,34 @@
+uuid: 3a2c2185-d187-44b4-9197-f51f2505da5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.grouptest.body
+    - field.field.node.grouptest.field_mail
+    - field.field.node.grouptest.field_test_website
+    - node.type.grouptest
+  module:
+    - text
+    - user
+id: node.grouptest.teaser
+targetEntityType: node
+bundle: grouptest
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_mail: true
+  field_test_website: true

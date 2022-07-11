@@ -1,17 +1,14 @@
-uuid: 2bec529e-4982-438a-b574-f56ddd072aa6
+uuid: dc4428e0-0e47-4af2-bd2d-2661e36d2d8d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_imageslide_subtitle
-field_name: field_imageslide_subtitle
+id: node.field_mail
+field_name: field_mail
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+type: email
+settings: {  }
 module: core
 locked: false
 cardinality: 1

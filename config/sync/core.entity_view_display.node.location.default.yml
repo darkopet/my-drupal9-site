@@ -13,10 +13,73 @@ dependencies:
     - node.type.location
   module:
     - address
+    - field_group
     - image
     - link
+    - telephone
     - text
     - user
+third_party_settings:
+  field_group:
+    group_locations_accordion:
+      children:
+        - group_locations_accordion_item_1
+        - group_locations_accordion_item_2
+      label: 'Locations Accordion'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: accordion
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        effect: bounceslide
+    group_locations_accordion_item_1:
+      children:
+        - field_location_description
+      label: 'Locations Accordion Item 1'
+      parent_name: group_locations_accordion
+      region: content
+      weight: 9
+      format_type: accordion_item
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+    group_locations_accordion_item_2:
+      children:
+        - field_location_website
+        - field_location_address
+        - field_location_phone_number
+        - field_location_contact_email
+      label: 'Locations Accordion Item 2'
+      parent_name: group_locations_accordion
+      region: content
+      weight: 10
+      format_type: accordion_item
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+    group_locations_fieldset:
+      children:
+        - field_location_equipment
+        - field_location_image
+      label: 'Locations Fieldset'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        description: ''
 id: node.location.default
 targetEntityType: node
 bundle: location
@@ -27,21 +90,21 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_location_contact_email:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 107
+    weight: 7
     region: content
   field_location_description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_location_equipment:
     type: entity_reference_label
@@ -49,7 +112,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 108
+    weight: 3
     region: content
   field_location_image:
     type: image
@@ -60,14 +123,15 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 103
+    weight: 4
     region: content
   field_location_phone_number:
-    type: basic_string
+    type: telephone_link
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 6
     region: content
   field_location_website:
     type: link
@@ -79,11 +143,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  links: true

@@ -1,0 +1,50 @@
+uuid: 02bc1673-aabb-48f7-9a4c-3c9bc1c3247f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.grouptest.body
+    - field.field.node.grouptest.field_mail
+    - field.field.node.grouptest.field_test_website
+    - node.type.grouptest
+  module:
+    - link
+    - text
+    - user
+id: node.grouptest.default
+targetEntityType: node
+bundle: grouptest
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_test_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

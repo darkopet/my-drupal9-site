@@ -1,20 +1,20 @@
-uuid: a50d79da-38a7-4e58-8887-e459fcae2456
+uuid: 2fe8e464-fb37-40fe-ad4f-dc274e36b13b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.image_slide.field_imageslide_image
-    - field.field.node.image_slide.field_imageslide_subtitle
-    - node.type.image_slide
+    - field.field.node.smartphone.field_smartphone_image
+    - field.field.node.smartphone.field_smartphone_subtitle
+    - node.type.smartphone
   module:
     - image
     - user
-id: node.image_slide.default
+id: node.smartphone.default
 targetEntityType: node
-bundle: image_slide
+bundle: smartphone
 mode: default
 content:
-  field_imageslide_image:
+  field_smartphone_image:
     type: image
     label: above
     settings:
@@ -25,7 +25,7 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  field_imageslide_subtitle:
+  field_smartphone_subtitle:
     type: string
     label: above
     settings:

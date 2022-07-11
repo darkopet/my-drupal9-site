@@ -1,0 +1,24 @@
+uuid: a5afb6aa-51ab-4eed-87ad-9adcf0bee62a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.smartphone.field_smartphone_image
+    - field.field.node.smartphone.field_smartphone_subtitle
+    - node.type.smartphone
+  module:
+    - user
+id: node.smartphone.teaser
+targetEntityType: node
+bundle: smartphone
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_smartphone_image: true
+  field_smartphone_subtitle: true

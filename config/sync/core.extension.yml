@@ -4,6 +4,8 @@ module:
   address: 0
   automated_cron: 0
   big_pipe: 0
+  blazy: 0
+  blazy_ui: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -20,13 +22,20 @@ module:
   dynamic_page_cache: 0
   editor: 0
   field: 0
+  field_group: 0
+  field_group_migrate: 0
+  field_slideshow: 0
   field_ui: 0
   file: 0
   filter: 0
   help: 0
   history: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_accordion: 0
+  libraries: 0
   link: 0
+  media: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
@@ -39,6 +48,9 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
+  slick: 0
+  slick_ui: 0
+  slick_views: 0
   smart_date: 0
   system: 0
   taxonomy: 0
@@ -48,6 +60,8 @@ module:
   tour: 0
   update: 0
   user: 0
+  views_slideshow: 0
+  views_slideshow_cycle: 0
   views_ui: 0
   webprofiler: 0
   views: 10
