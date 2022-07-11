@@ -28,6 +28,7 @@
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/libraries": "^3.0@beta",
+        "drupal/metatag": "^1.19",
         "drupal/paragraphs": "^1.14",
         "drupal/paragraphs_ee": "^2.0",
         "drupal/paragraphs_features": "^1.16",
