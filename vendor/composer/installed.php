@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '43d57bf7d06b6bce3c21911f0c15f27e2fe87dee',
+        'reference' => '8e680610ae99ed852d4a0a9b6694927ae8bc10ee',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -264,6 +264,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/checklistapi' => array(
+            'pretty_version' => '2.1.0',
+            'version' => '2.1.0.0',
+            'reference' => '2.1.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/checklistapi',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/ckeditor' => array(
             'dev_requirement' => false,
@@ -937,7 +946,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '43d57bf7d06b6bce3c21911f0c15f27e2fe87dee',
+            'reference' => '8e680610ae99ed852d4a0a9b6694927ae8bc10ee',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -960,6 +969,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/seo_checklist' => array(
+            'pretty_version' => '5.1.0',
+            'version' => '5.1.0.0',
+            'reference' => '5.1.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/seo_checklist',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/serialization' => array(
             'dev_requirement' => false,
