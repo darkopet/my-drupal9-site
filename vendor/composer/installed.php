@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '7437a68faf9b5f130e3dd93017e163378a7b990c',
+        'reference' => '43d57bf7d06b6bce3c21911f0c15f27e2fe87dee',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -937,7 +937,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '7437a68faf9b5f130e3dd93017e163378a7b990c',
+            'reference' => '43d57bf7d06b6bce3c21911f0c15f27e2fe87dee',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -984,6 +984,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/simple_sitemap' => array(
+            'pretty_version' => '4.1.2',
+            'version' => '4.1.2.0',
+            'reference' => '4.1.2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/simple_sitemap',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drupal/slick' => array(
             'pretty_version' => '2.6.0',
@@ -1128,6 +1137,15 @@
             'replaced' => array(
                 0 => '9.4.1',
             ),
+        ),
+        'drupal/xmlsitemap' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '8.x-1.2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/xmlsitemap',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'drush/drush' => array(
             'pretty_version' => '11.0.9',
