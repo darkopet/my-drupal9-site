@@ -1,0 +1,10 @@
+uuid: 06b63269-cd05-4236-9625-1e809ab2848d
+langcode: en
+status: true
+dependencies: {  }
+id: quote
+label: Quote
+icon_uuid: null
+icon_default: null
+description: 'This is a Quote paragraph type. Consists of image, quote, author.'
+behavior_plugins: {  }

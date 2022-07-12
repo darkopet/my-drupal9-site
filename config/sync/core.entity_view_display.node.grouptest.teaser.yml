@@ -32,3 +32,4 @@ content:
 hidden:
   field_mail: true
   field_test_website: true
+  langcode: true

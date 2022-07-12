@@ -1,0 +1,10 @@
+uuid: 3a09784c-a2cc-49c3-ae53-9c56fdb02537
+langcode: en
+status: true
+dependencies: {  }
+id: gallery
+label: Gallery
+icon_uuid: null
+icon_default: null
+description: 'This is a Gallery paragraph type.'
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: beead557-a984-4163-922e-1d24c877c1e3
+langcode: en
+status: true
+dependencies: {  }
+id: content
+label: Content
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

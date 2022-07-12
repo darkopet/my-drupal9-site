@@ -1,0 +1,10 @@
+uuid: 23993fda-8c18-4910-9e30-a9c08cde469d
+langcode: en
+status: true
+dependencies: {  }
+id: faq
+label: FAQ
+icon_uuid: null
+icon_default: null
+description: 'This is a Frequently Asked Questions (FAQs) paragraph type. Consists of title, multiple pairs of questions&answers.'
+behavior_plugins: {  }

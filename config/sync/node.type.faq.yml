@@ -1,0 +1,13 @@
+uuid: 0f5db434-8147-4f10-908e-f765e1c12011
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: L5fQmHilstpn-pY2na8uhk7qeWxa3Ac3x3LsBrZORQg
+name: FAQ
+type: faq
+description: 'A frequently asked question and its answer.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

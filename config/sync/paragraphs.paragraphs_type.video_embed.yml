@@ -1,0 +1,10 @@
+uuid: 9b14a0b7-f0c9-4f98-9300-4e487106e3f5
+langcode: en
+status: true
+dependencies: {  }
+id: video_embed
+label: 'Video embed'
+icon_uuid: null
+icon_default: null
+description: 'This is a Video Embedded paragraph type.'
+behavior_plugins: {  }

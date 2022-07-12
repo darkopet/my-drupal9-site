@@ -1,0 +1,12 @@
+uuid: e1083036-c1a0-4cf2-b73f-f6393405ec60
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  og_title: '[node:title]'
+  og_image: '[node:field_media:entity:thumbnail]'
+  og_type: article
+  og_url: '[node:url]'
+  og_description: '[node:summary]'

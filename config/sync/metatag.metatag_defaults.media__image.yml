@@ -1,0 +1,7 @@
+uuid: e7082c41-1053-4b27-8eb4-8de0af99ad0b
+langcode: en
+status: true
+dependencies: {  }
+id: media__image
+label: 'Media: Image'
+tags: {  }

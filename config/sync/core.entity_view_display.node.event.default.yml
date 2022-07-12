@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_event_start_end_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_twitter_text
     - node.type.event
   module:
     - datetime
@@ -150,5 +151,18 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_twitter_text:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
 hidden:
+  langcode: true
   links: true

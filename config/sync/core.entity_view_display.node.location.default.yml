@@ -146,4 +146,5 @@ content:
     weight: 4
     region: content
 hidden:
+  langcode: true
   links: true

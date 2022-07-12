@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: e320cd67-2b96-444d-a8c6-da57088f09c0
-name: 'Drush Site-Install'
+name: 'Drupal | We have all the events, locations and companies in the city'
 mail: admin@example.com
-slogan: ''
+slogan: 'Darko Drupal BackEnd Onboarding '
 page:
   403: ''
   404: ''

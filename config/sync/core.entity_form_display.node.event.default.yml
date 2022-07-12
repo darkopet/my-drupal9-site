@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_event_start_end_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_twitter_text
     - image.style.thumbnail
     - node.type.event
   module:
@@ -90,6 +91,21 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_twitter_text:
+    type: link_default
+    weight: 129
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path

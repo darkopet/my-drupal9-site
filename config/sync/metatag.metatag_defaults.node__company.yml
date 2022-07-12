@@ -1,0 +1,8 @@
+uuid: 7e88b50f-72c4-4402-96f0-b7d046abf949
+langcode: en
+status: true
+dependencies: {  }
+id: node__company
+label: 'Content: Company'
+tags:
+  og_image: '[node:field_logo]'

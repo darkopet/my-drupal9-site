@@ -32,3 +32,4 @@ hidden:
   field_location_image: true
   field_location_phone_number: true
   field_location_website: true
+  langcode: true
