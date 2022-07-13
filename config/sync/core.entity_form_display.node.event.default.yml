@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.comment
+    - field.field.node.event.field_add_to_favourites
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
@@ -14,6 +16,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.event
   module:
+    - comment
     - datetime
     - image
     - link
@@ -24,11 +27,25 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  comment:
+    type: comment_default
+    weight: 131
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_add_to_favourites:
+    type: link_default
+    weight: 130
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_event_description:
     type: text_textarea_with_summary
@@ -119,6 +136,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

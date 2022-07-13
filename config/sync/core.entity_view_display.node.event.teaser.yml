@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.event.comment
+    - field.field.node.event.field_add_to_favourites
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
@@ -26,6 +28,8 @@ content:
     weight: 100
     region: content
 hidden:
+  comment: true
+  field_add_to_favourites: true
   field_event_description: true
   field_event_image: true
   field_event_location: true

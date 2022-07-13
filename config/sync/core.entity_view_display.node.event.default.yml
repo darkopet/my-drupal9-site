@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.event.comment
+    - field.field.node.event.field_add_to_favourites
     - field.field.node.event.field_event_description
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
@@ -13,6 +16,7 @@ dependencies:
     - field.field.node.event.field_twitter_text
     - node.type.event
   module:
+    - comment
     - datetime
     - field_group
     - image
@@ -88,6 +92,27 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_add_to_favourites:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_event_description:
     type: text_default
     label: above

@@ -1,0 +1,35 @@
+uuid: 0cea6f17-2196-4d56-8485-c93be57c91e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - flag_bookmark
+_core:
+  default_config_hash: vuzrLaRZ3xV-FmT127t2gLy_p8JDLMWtsKsnCwdWR2Y
+id: bookmark
+label: 'My Favorite Events'
+bundles:
+  - event
+entity_type: node
+global: false
+flag_short: 'Add to favorites'
+flag_long: 'Add this event to your favorites'
+flag_message: 'This event has been added to your favorites'
+unflag_short: 'Remove bookmark'
+unflag_long: 'Remove this event from your favorites'
+unflag_message: 'This event has been removed from your favorites'
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }
