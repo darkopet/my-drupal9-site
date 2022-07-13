@@ -9,6 +9,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  checklistapi: 0
   ckeditor: 0
   comment: 0
   config: 0
@@ -64,7 +65,9 @@ module:
   phone_international: 0
   rdf: 0
   search: 0
+  seo_checklist: 0
   shortcut: 0
+  simple_sitemap: 0
   slick: 0
   slick_ui: 0
   slick_views: 0
