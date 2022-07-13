@@ -128,7 +128,7 @@ $settings['rebuild_access'] = TRUE;
  * user pulling in the changes won't have permissions to modify files in the
  * directory.
  */
-$settings['skip_permissions_hardening'] = FALSE;
+$settings['skip_permissions_hardening'] = TRUE;
 
 /**
  * Exclude modules from configuration synchronization.
