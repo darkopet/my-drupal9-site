@@ -41,11 +41,10 @@
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/seo_checklist": "^5.1",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/slick_views": "^2.6",
         "drupal/smart_date": "^3.5",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_infinite_scroll": "^2.0",
-        "drupal/webform": "^6.2@beta",
+        "drupal/webform": "^6.1",
         "drupal/webform_submissions_delete": "^1.0",
         "drupal/xmlsitemap": "^1.2",
         "drush/drush": "^11.0"

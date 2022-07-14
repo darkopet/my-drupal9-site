@@ -1,0 +1,32 @@
+uuid: 3c06c4a8-6293-4b9d-b23c-23686af39622
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_companies
+  module:
+    - node
+    - views
+  theme:
+    - bartik
+id: views_block__featured_companies_block_1_2
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:featured_companies-block_1'
+settings:
+  id: 'views_block:featured_companies-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      landing_page: landing_page

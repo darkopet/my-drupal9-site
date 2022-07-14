@@ -1,0 +1,61 @@
+uuid: 3292b5ed-4516-4aca-8a8d-5744e816538e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.content
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image_with_text
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.video_embed
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_landing_page_content
+field_name: field_landing_page_content
+entity_type: node
+bundle: landing_page
+label: 'Landing page content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content: content
+      faq: faq
+      from_library: from_library
+      gallery: gallery
+      image_with_text: image_with_text
+      quote: quote
+      video_embed: video_embed
+    negate: 0
+    target_bundles_drag_drop:
+      content:
+        weight: 8
+        enabled: true
+      faq:
+        weight: 9
+        enabled: true
+      from_library:
+        weight: 10
+        enabled: true
+      gallery:
+        weight: 11
+        enabled: true
+      image_with_text:
+        weight: 12
+        enabled: true
+      quote:
+        weight: 13
+        enabled: true
+      video_embed:
+        weight: 14
+        enabled: true
+field_type: entity_reference_revisions

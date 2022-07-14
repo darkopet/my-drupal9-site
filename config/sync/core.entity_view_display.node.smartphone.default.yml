@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.smartphone.field_smartphone_subtitle
     - node.type.smartphone
   module:
-    - image
+    - field_slideshow
     - user
 id: node.smartphone.default
 targetEntityType: node
@@ -15,11 +15,35 @@ bundle: smartphone
 mode: default
 content:
   field_smartphone_image:
-    type: image
+    type: slideshow
     label: above
     settings:
-      image_link: ''
+      colorbox_image_style: null
+      slideshow:
+        fx: fade
+        allowWrap: '1'
+        autoHeight: '0'
+        delay: '0'
+        hideNonActive: '1'
+        loader: 'false'
+        loop: '0'
+        speed: '500'
+        startingSlide: '0'
+        sync: '1'
+        timeout: '4000'
+        pauseOnHover: 0
+        paused: 0
+        random: 0
+        reverse: 0
+        swipe: 0
+      slideshow_pager:
+        pager:
+          after: after
+          before: 0
+        pager_type: thumbnails
+        controls: '1'
       image_style: ''
+      image_link: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
