@@ -66,7 +66,12 @@ module:
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  rabbit_hole: 0
   rdf: 0
+  rh_media: 0
+  rh_node: 0
+  rh_taxonomy: 0
+  rh_user: 0
   search: 0
   seo_checklist: 0
   shortcut: 0
@@ -85,6 +90,9 @@ module:
   views_infinite_scroll: 0
   views_ui: 0
   webform: 0
+  webform_example_element: 0
+  webform_shortcuts: 0
+  webform_ui: 0
   pathauto: 1
   content_translation: 10
   views: 10

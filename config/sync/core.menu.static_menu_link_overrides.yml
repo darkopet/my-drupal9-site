@@ -13,3 +13,9 @@ definitions:
     parent: ''
     expanded: false
     enabled: true
+  user__page:
+    weight: 10
+    menu_name: account
+    parent: ''
+    enabled: true
+    expanded: false

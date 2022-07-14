@@ -1,0 +1,14 @@
+uuid: 696cc05b-bf4a-47cd-b4d7-c43f4329b024
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+id: node_type_event
+entity_type_id: node_type
+entity_id: event
+action: display_page
+allow_override: 1
+redirect: 'https://my-drupal9-site.ddev.site/events'
+redirect_code: 301
+redirect_fallback_action: access_denied
