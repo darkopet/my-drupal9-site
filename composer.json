@@ -13,18 +13,18 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        {   "type": "package", 
-            "package": 
-                { "name": "woocommerce/flexslider", 
-                  "version": "2.7.2", 
-                  "type": "drupal-library", 
-                  "source": 
-                    { 
-                        "url": "https://github.com/woocommerce/FlexSlider.git", 
-                        "type": "git", 
-                        "reference": "2.7.2" 
-                    } 
-                } 
+        {
+          "type": "package",
+          "package": {
+            "name": "woocommerce/flexslider",
+            "version": "2.7.2",
+            "type": "drupal-library",
+            "source": {
+              "url": "https://github.com/woocommerce/FlexSlider.git",
+              "type": "git",
+              "reference": "2.7.2"
+            }
+          }
         }
     ],
     "require": {
