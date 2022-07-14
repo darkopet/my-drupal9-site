@@ -9,7 +9,7 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Smartphone
+name: Slider
 type: smartphone
 description: 'This is a simple Smartphone Content Type.'
 help: ''

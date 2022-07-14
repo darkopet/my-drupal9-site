@@ -1,0 +1,11 @@
+uuid: cbfe2975-2ca7-42a9-9941-e35a80ef7de0
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+id: webform_submission_make_sticky_action
+label: 'Star/flag submission'
+type: webform_submission
+plugin: webform_submission_make_sticky_action
+configuration: {  }

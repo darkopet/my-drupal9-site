@@ -12,7 +12,7 @@ id: contact_us
 title: 'Contact Us'
 description: 'Basic Contact Us Form'
 category: ''
-elements: null
+elements: ''
 css: ''
 javascript: ''
 settings:
@@ -28,7 +28,7 @@ settings:
   form_title: both
   form_submit_once: false
   form_open_message: ''
-  form_close_message: ''
+  form_close_message: null
   form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false

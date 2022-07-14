@@ -1,0 +1,11 @@
+uuid: bdb8a1a0-0932-4249-894f-2ccff796a288
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.smartphone
+id: node.smartphone
+target_entity_type_id: node
+target_bundle: smartphone
+default_langcode: site_default
+language_alterable: false

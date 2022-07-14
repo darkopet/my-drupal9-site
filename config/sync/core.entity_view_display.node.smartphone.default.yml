@@ -23,7 +23,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 102
+    weight: 103
     region: content
   field_smartphone_subtitle:
     type: string

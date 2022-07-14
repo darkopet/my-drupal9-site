@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_start_end_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_events_by_location
     - field.field.node.event.field_twitter_text
     - image.style.thumbnail
     - node.type.event
@@ -109,6 +110,12 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_events_by_location:
+    type: options_select
+    weight: 132
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_twitter_text:
     type: link_default
     weight: 129
@@ -116,6 +123,11 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  flag:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select

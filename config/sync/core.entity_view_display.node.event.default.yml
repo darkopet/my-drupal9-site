@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.event.field_event_start_end_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_events_by_location
     - field.field.node.event.field_twitter_text
     - node.type.event
   module:
@@ -21,6 +22,7 @@ dependencies:
     - field_group
     - image
     - link
+    - options
     - text
     - user
 third_party_settings:
@@ -176,6 +178,13 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_events_by_location:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
   field_twitter_text:
     type: link
     label: above
@@ -187,6 +196,11 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 11
+    region: content
+  flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
 hidden:
   langcode: true

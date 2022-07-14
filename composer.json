@@ -42,7 +42,6 @@
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/seo_checklist": "^5.1",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/slick": "^2.6",
         "drupal/slick_views": "^2.6",
         "drupal/smart_date": "^3.5",
         "drupal/views_infinite_scroll": "^2.0",
