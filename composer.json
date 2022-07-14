@@ -47,6 +47,7 @@
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/views_slideshow": "^4.8",
         "drupal/webform": "^6.2@beta",
+        "drupal/webform_submissions_delete": "^1.0",
         "drupal/xmlsitemap": "^1.2",
         "drush/drush": "^11.0"
     },
