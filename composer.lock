@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7aa553d090bf24005e7979cec45cf57",
+    "content-hash": "408899c1c6a0d8373e97c68b466968a9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9503,7 +9503,7 @@
         },
         {
             "name": "woocommerce/flexslider",
-            "version": "2.7.2",
+            "version": "2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/woocommerce/FlexSlider.git",
