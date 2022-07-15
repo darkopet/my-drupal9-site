@@ -38,6 +38,7 @@
         "drupal/drupal_slider": "^2.0",
         "drupal/entity_browser": "^2.7",
         "drupal/entity_reference_revisions": "^1.9",
+        "drupal/entity_reference_views": "^1.0",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/faq": "^1.1",
         "drupal/field_group": "^3.2",
