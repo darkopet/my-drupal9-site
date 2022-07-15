@@ -1,0 +1,23 @@
+uuid: bc1123c1-dad7-4134-942c-6e0b0e0db18f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_is_operating
+    - node.type.location
+id: node.location.field_location_is_operating
+field_name: field_location_is_operating
+entity_type: node
+bundle: location
+label: 'Is Operating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

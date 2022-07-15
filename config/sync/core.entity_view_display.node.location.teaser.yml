@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.location.field_location_description
     - field.field.node.location.field_location_equipment
     - field.field.node.location.field_location_image
+    - field.field.node.location.field_location_is_operating
     - field.field.node.location.field_location_phone_number
     - field.field.node.location.field_location_website
     - node.type.location
@@ -30,6 +31,7 @@ hidden:
   field_location_description: true
   field_location_equipment: true
   field_location_image: true
+  field_location_is_operating: true
   field_location_phone_number: true
   field_location_website: true
   langcode: true

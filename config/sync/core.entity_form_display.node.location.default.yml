@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.location.field_location_description
     - field.field.node.location.field_location_equipment
     - field.field.node.location.field_location_image
+    - field.field.node.location.field_location_is_operating
     - field.field.node.location.field_location_phone_number
     - field.field.node.location.field_location_website
     - image.style.thumbnail
@@ -72,6 +73,13 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_location_is_operating:
+    type: boolean_checkbox
+    weight: 129
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_location_phone_number:
     type: telephone_default
     weight: 126
@@ -106,6 +114,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

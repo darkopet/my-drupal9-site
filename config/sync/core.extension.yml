@@ -28,6 +28,7 @@ module:
   entity_browser: 0
   entity_browser_example: 0
   entity_reference_revisions: 0
+  entity_reference_views: 0
   entity_usage: 0
   faq: 0
   field: 0
@@ -77,6 +78,7 @@ module:
   rh_taxonomy: 0
   rh_user: 0
   search: 0
+  select2: 0
   seo_checklist: 0
   shortcut: 0
   simple_sitemap: 0

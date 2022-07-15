@@ -1,0 +1,7 @@
+uuid: b9a4a41c-d7b8-43b1-bc91-d1ccaf3d4ced
+langcode: en
+status: true
+dependencies: {  }
+name: drupalslider
+label: DrupalSlider
+effects: {  }

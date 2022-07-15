@@ -1,0 +1,16 @@
+uuid: 78e16388-dfce-4753-abd1-0bbef0717196
+langcode: en
+status: true
+dependencies: {  }
+id: drupalslider
+label: DrupalSlider
+layers:
+  1:
+    attributes:
+      horizontal: '10'
+      vertical: '10'
+      show_delay: '0'
+      hide_delay: '0'
+      show_transition: left
+      hide_transition: left
+    weight: '-10'

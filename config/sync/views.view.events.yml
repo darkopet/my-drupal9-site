@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_event_location
     - field.storage.node.field_event_organizer
     - node.type.event
@@ -1186,39 +1187,34 @@ display:
         groups:
           1: AND
       style:
-        type: default
+        type: html_list
         options:
           grouping:
             -
               field: field_event_location
               rendered: true
-              rendered_strip: true
-            -
-              field: field_event_location
-              rendered: true
-              rendered_strip: true
-            -
-              field: field_event_location
-              rendered: true
-              rendered_strip: true
-          row_class: 'Test Row'
+              rendered_strip: false
+          row_class: ''
           default_row_class: false
+          uses_fields: true
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline:
-            title: title
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: teaser
       defaults:
         title: false
         style: false
         row: false
+        relationships: false
         fields: false
         arguments: false
         filters: false
         filter_groups: false
+      relationships: {  }
       display_description: ''
       display_extenders: {  }
       path: events-by-location

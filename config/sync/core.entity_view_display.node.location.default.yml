@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.location.field_location_description
     - field.field.node.location.field_location_equipment
     - field.field.node.location.field_location_image
+    - field.field.node.location.field_location_is_operating
     - field.field.node.location.field_location_phone_number
     - field.field.node.location.field_location_website
     - node.type.location
@@ -124,6 +125,16 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_location_is_operating:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_location_phone_number:
     type: telephone_link
