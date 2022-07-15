@@ -1,4 +1,4 @@
-uuid: ba08cc2c-71b7-4b5b-ae5c-a9a8036a625f
+uuid: 4e5b8391-8a23-470e-b53d-fc72e75c925d
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - node
-id: node.field_smartphone_image
-field_name: field_smartphone_image
+id: node.field_slider_image
+field_name: field_slider_image
 entity_type: node
 type: image
 settings:

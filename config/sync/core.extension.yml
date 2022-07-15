@@ -41,6 +41,10 @@ module:
   flag_bookmark: 0
   flag_count: 0
   flag_follower: 0
+  flexslider: 0
+  flexslider_example: 0
+  flexslider_fields: 0
+  flexslider_views: 0
   help: 0
   history: 0
   image: 0

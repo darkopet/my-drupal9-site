@@ -1,14 +1,14 @@
-uuid: d2103955-e081-4245-8cc2-3fc68026614e
+uuid: 7e862635-cbd0-4f83-a652-2f416fe5f69b
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.smartphone
-id: node.smartphone.title
+    - node.type.image_slider
+id: node.image_slider.title
 field_name: title
 entity_type: node
-bundle: smartphone
-label: Smartphone
+bundle: image_slider
+label: 'Image Slider'
 description: ''
 required: true
 translatable: true

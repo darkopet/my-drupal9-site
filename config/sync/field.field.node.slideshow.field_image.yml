@@ -1,20 +1,27 @@
-uuid: cb500d08-7867-44d0-9093-4b26e3171e22
+uuid: 403d7d00-69b5-4abf-9585-c50f3625593f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_smartphone_image
-    - node.type.smartphone
+    - field.storage.node.field_image
+    - node.type.slideshow
   module:
+    - content_translation
     - image
-id: node.smartphone.field_smartphone_image
-field_name: field_smartphone_image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
+id: node.slideshow.field_image
+field_name: field_image
 entity_type: node
-bundle: smartphone
+bundle: slideshow
 label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,18 @@
+uuid: abe01033-372b-4d27-ac1d-a7138e250467
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.slideshow
+id: node.slideshow.title
+field_name: title
+entity_type: node
+bundle: slideshow
+label: Slideshow
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

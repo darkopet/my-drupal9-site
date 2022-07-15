@@ -1,42 +1,44 @@
-uuid: a04e9acb-3905-4ad4-a5d8-c166518587fd
+uuid: 5a59618b-68a0-4f61-b1da-722009b36595
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.smartphone.field_smartphone_image
-    - field.field.node.smartphone.field_smartphone_subtitle
+    - field.field.node.flexslider_example.field_flexslider_example_image
+    - field.field.node.flexslider_example.field_flexslider_example_slidesh
     - image.style.thumbnail
-    - node.type.smartphone
+    - node.type.flexslider_example
   module:
     - image
     - path
-id: node.smartphone.default
+_core:
+  default_config_hash: qkvgWxOo_NeZ6TuG1mTE2xWeuutlN8SxeNYg30jsPH4
+id: node.flexslider_example.default
 targetEntityType: node
-bundle: smartphone
+bundle: flexslider_example
 mode: default
 content:
   created:
     type: datetime_timestamp
     weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
-  field_smartphone_image:
-    type: image_image
-    weight: 122
     region: content
+  field_flexslider_example_image:
+    weight: 31
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_smartphone_subtitle:
-    type: string_textfield
-    weight: 121
+    type: image_image
     region: content
+  field_flexslider_example_slidesh:
+    weight: 32
     settings:
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
+    type: image_image
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -47,46 +49,50 @@ content:
   path:
     type: path
     weight: 30
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
-    weight: 15
-    region: content
     settings:
       display_label: true
+    weight: 15
     third_party_settings: {  }
+    region: content
+  simple_sitemap:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   status:
     type: boolean_checkbox
-    weight: 120
-    region: content
     settings:
       display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
-    region: content
     settings:
       display_label: true
+    weight: 16
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: -5
-    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
-    region: content
     settings:
       match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

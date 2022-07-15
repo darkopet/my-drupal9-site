@@ -1,11 +1,11 @@
-uuid: bdb8a1a0-0932-4249-894f-2ccff796a288
+uuid: 62863006-ce86-4152-8baf-7702b8ac67ff
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.smartphone
-id: node.smartphone
+    - node.type.slideshow
+id: node.slideshow
 target_entity_type_id: node
-target_bundle: smartphone
+target_bundle: slideshow
 default_langcode: site_default
 language_alterable: false
