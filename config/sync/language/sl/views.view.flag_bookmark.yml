@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      pager:
+        options:
+          tags:
+            previous: '‹ prejšnja'
+            next: 'naslednja ›'
+            first: '« prva'
+            last: 'zadnja »'
+      fields:
+        flagging_bulk_form:
+          action_title: Akcija
+        type:
+          label: Tip
+        title:
+          label: Naslov
+        name:
+          label: Avtor
+  page_1:
+    display_title: Stran

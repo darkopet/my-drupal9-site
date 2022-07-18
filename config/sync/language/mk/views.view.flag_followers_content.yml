@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Сите -'
+  page_1:
+    display_options:
+      menu:
+        title: Содржина

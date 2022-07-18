@@ -1,0 +1,9 @@
+uuid: 0d3433ab-53f7-48b2-92c8-60475bb61287
+langcode: en
+status: true
+dependencies: {  }
+id: sl
+label: Slovenian
+direction: ltr
+weight: 1
+locked: false

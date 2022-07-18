@@ -1,0 +1,37 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Εφαρμογή
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+          tags:
+            previous: '‹ προηγούμενη'
+            next: 'επόμενη ›'
+            first: '« πρώτη'
+            last: 'τελευταία »'
+      fields:
+        title:
+          separator: ', '
+        status:
+          label: Κατάσταση
+          separator: ', '
+        type:
+          label: Τύπος
+      filters:
+        title:
+          expose:
+            label: Τίτλος
+      sorts:
+        created:
+          expose:
+            label: 'Συντάχθηκε στις'

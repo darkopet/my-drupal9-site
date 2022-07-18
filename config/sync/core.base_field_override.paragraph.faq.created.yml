@@ -1,0 +1,18 @@
+uuid: 9832eec6-3048-499e-971f-354f8f54a237
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.faq
+id: paragraph.faq.created
+field_name: created
+entity_type: paragraph
+bundle: faq
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

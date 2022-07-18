@@ -1,0 +1,19 @@
+uuid: 8161ed35-909b-4864-a5d9-425265083244
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+    - path
+id: paragraphs_library_item.paragraphs_library_item.path
+field_name: path
+entity_type: paragraphs_library_item
+bundle: paragraphs_library_item
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

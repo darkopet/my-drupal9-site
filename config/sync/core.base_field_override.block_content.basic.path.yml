@@ -1,0 +1,20 @@
+uuid: 80f36e8a-01d4-4270-8838-8ef285783e91
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+  module:
+    - path
+id: block_content.basic.path
+field_name: path
+entity_type: block_content
+bundle: basic
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

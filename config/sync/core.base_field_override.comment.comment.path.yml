@@ -1,0 +1,20 @@
+uuid: 1e9690ee-f9cc-42bc-a344-f7791e41fe0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+  module:
+    - path
+id: comment.comment.path
+field_name: path
+entity_type: comment
+bundle: comment
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

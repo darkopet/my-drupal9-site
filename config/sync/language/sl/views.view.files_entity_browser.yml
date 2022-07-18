@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      pager:
+        options:
+          tags:
+            previous: '‹ prejšnja'
+            next: 'naslednja ›'
+            first: '« prva'
+            last: 'zadnja »'
+      fields:
+        created:
+          label: Ustvarjeno
+        filesize:
+          label: 'Velikost datoteke'
+        status:
+          label: Stanje
+      filters:
+        filename:
+          expose:
+            label: 'Ime datoteke'

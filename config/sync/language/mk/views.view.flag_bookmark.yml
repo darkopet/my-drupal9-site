@@ -1,0 +1,18 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          tags:
+            previous: '‹ претходно'
+            first: '« прв'
+            last: 'последно »'
+          expose:
+            items_per_page_options_all_label: '- Сите -'
+      fields:
+        type:
+          label: Тип
+        title:
+          label: Наслов
+        name:
+          label: Автор

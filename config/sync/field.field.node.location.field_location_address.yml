@@ -14,7 +14,7 @@ bundle: location
 label: Address
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     langcode: null

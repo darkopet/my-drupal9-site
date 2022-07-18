@@ -1,0 +1,42 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Φίλτρο
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        entity_browser_select:
+          label: Επιλογή
+        label:
+          label: Ετικέτα
+          separator: ', '
+        type:
+          label: Τύπος
+          separator: ', '
+        paragraphs__target_id:
+          separator: ', '
+        changed:
+          label: Τροποποιημένο
+          separator: ', '
+      filters:
+        label:
+          expose:
+            label: Ετικέτα
+          group_info:
+            label: Ετικέτα
+        type:
+          expose:
+            label: Τύπος

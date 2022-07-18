@@ -1,0 +1,19 @@
+uuid: 0685a675-faeb-4931-a662-2bacb8b7a9f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_link_content
+    - path
+id: menu_link_content.menu_link_content.path
+field_name: path
+entity_type: menu_link_content
+bundle: menu_link_content
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
