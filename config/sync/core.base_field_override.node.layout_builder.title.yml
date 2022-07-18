@@ -1,0 +1,18 @@
+uuid: 45b856ce-9a34-4888-b309-e5f348495839
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.layout_builder
+id: node.layout_builder.title
+field_name: title
+entity_type: node
+bundle: layout_builder
+label: 'Layout Builder'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
