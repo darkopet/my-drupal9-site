@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.event.field_event_start_end_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
-    - field.field.node.event.field_events_by_location
     - field.field.node.event.field_twitter_text
     - node.type.event
   module:
@@ -43,6 +42,5 @@ hidden:
   field_event_start_end_date: true
   field_event_type: true
   field_event_website: true
-  field_events_by_location: true
   field_twitter_text: true
   langcode: true
