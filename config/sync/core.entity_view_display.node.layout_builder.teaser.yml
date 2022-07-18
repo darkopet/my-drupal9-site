@@ -4,28 +4,26 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.layout_builder.body
+    - field.field.node.layout_builder.field_layout_image
+    - field.field.node.layout_builder.field_text
+    - field.field.node.layout_builder.field_title
+    - field.field.node.layout_builder.field_youtube_link
     - node.type.layout_builder
   module:
-    - text
     - user
 id: node.layout_builder.teaser
 targetEntityType: node
 bundle: layout_builder
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_layout_image: true
+  field_text: true
+  field_title: true
+  field_youtube_link: true
   langcode: true

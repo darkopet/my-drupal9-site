@@ -1,0 +1,23 @@
+uuid: 97e1b7e2-7804-4472-862e-38fe6e90e46a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube_link
+    - node.type.layout_builder
+  module:
+    - link
+id: node.layout_builder.field_youtube_link
+field_name: field_youtube_link
+entity_type: node
+bundle: layout_builder
+label: 'Youtube Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

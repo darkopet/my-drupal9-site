@@ -1,0 +1,21 @@
+uuid: f7a2132e-7747-476f-8a5b-adb7d503a545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text
+    - node.type.layout_builder
+  module:
+    - text
+id: node.layout_builder.field_text
+field_name: field_text
+entity_type: node
+bundle: layout_builder
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
