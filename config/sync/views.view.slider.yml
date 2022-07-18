@@ -1,18 +1,19 @@
-uuid: 87d4fa4e-90ea-41be-8e94-27cc328946c0
+uuid: 803b06be-51cf-4262-8de3-7ba387550f46
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_slider_image
+    - field.storage.node.field_image
     - image.style.flexslider_full
-    - node.type.image_slider
+    - node.type.slideshow
   module:
+    - flexslider_fields
     - flexslider_views
     - image
     - node
     - user
-id: slideshow
-label: Slideshow
+id: slider
+label: Slider
 module: views
 description: ''
 tag: ''
@@ -25,12 +26,12 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Slideshow
+      title: FlexSlider
       fields:
-        field_slider_image:
-          id: field_slider_image
-          table: node__field_slider_image
-          field: field_slider_image
+        field_image:
+          id: field_image
+          table: node__field_image
+          field: field_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -77,10 +78,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: flexslider
           settings:
-            image_link: ''
             image_style: flexslider_full
+            image_link: ''
             image_loading:
               attribute: lazy
           group_column: ''
@@ -94,10 +95,23 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: some
+        type: mini
         options:
           offset: 0
           items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       exposed_form:
         type: basic
         options:
@@ -156,7 +170,7 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            image_slider: image_slider
+            slideshow: slideshow
           expose:
             operator_limit_selection: false
             operator_list: {  }
@@ -181,24 +195,45 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_slider_image'
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
+        - 'config:field.storage.node.field_image'
+  block_1:
+    id: block_1
+    display_title: 'FlexSlider Block'
+    display_plugin: block
+    position: 2
     display_options:
+      display_description: ''
       display_extenders: {  }
-      path: slideshow
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_slider_image'
+        - 'config:field.storage.node.field_image'
+  page_1:
+    id: page_1
+    display_title: FlexSlider
+    display_plugin: page
+    position: 1
+    display_options:
+      display_description: ''
+      display_extenders: {  }
+      path: slider
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_image'

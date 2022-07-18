@@ -1,0 +1,25 @@
+uuid: 1d6db1f4-8670-4a4b-8644-11c60ff07ce2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0ef4ec98-977a-492a-956b-115b3300a32b'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: slidertext
+theme: bartik
+region: featured_top
+weight: 1
+provider: null
+plugin: 'block_content:0ef4ec98-977a-492a-956b-115b3300a32b'
+settings:
+  id: 'block_content:0ef4ec98-977a-492a-956b-115b3300a32b'
+  label: 'Slider Text'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
