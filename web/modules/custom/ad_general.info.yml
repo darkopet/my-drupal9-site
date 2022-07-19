@@ -1,0 +1,6 @@
+name: Ad General
+type: module
+description: 'ad_general - first custom module for Drupal onboarding.'
+package: Custom
+core_version_requirement: ^8 || ^9
+configure: ad_general.form
