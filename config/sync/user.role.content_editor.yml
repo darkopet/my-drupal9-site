@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.node.layout_builder.default
+    - core.entity_view_display.node.team_member.default
     - node.type.article
     - node.type.landing_page
     - node.type.page
@@ -11,6 +13,7 @@ dependencies:
     - comment
     - contextual
     - file
+    - layout_builder
     - node
     - path
     - system
@@ -31,6 +34,10 @@ permissions:
   - 'access toolbar'
   - 'access tour'
   - 'administer url aliases'
+  - 'configure all layout_builder node layout overrides'
+  - 'configure all team_member node layout overrides'
+  - 'configure editable layout_builder node layout overrides'
+  - 'configure editable team_member node layout overrides'
   - 'create article content'
   - 'create landing_page content'
   - 'create page content'

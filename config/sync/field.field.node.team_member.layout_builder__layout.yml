@@ -1,0 +1,21 @@
+uuid: b7411f5e-ac5c-4e9a-a5e5-56d8905c32b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.team_member
+  module:
+    - layout_builder
+id: node.team_member.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: team_member
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

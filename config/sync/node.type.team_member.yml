@@ -1,0 +1,17 @@
+uuid: 677f8082-71ce-4f58-971a-6e2bbcbf5b8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Team Member'
+type: team_member
+description: 'This is a Team Member content type.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

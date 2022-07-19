@@ -1,25 +1,19 @@
-uuid: 92101cab-abf1-42ae-9803-698a3a38e6b2
+uuid: 2218e75c-fb48-4b4a-87db-0bbf3c49ead2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.layout_builder.field_layout_image
-    - field.field.node.layout_builder.field_member_name
-    - field.field.node.layout_builder.field_member_photo
-    - field.field.node.layout_builder.field_text
-    - field.field.node.layout_builder.field_title
-    - field.field.node.layout_builder.field_youtube_link
-    - field.field.node.layout_builder.layout_builder__layout
+    - field.field.node.team_member.field_member_name
+    - field.field.node.team_member.field_member_photo
+    - field.field.node.team_member.layout_builder__layout
     - image.style.thumbnail
-    - node.type.layout_builder
+    - node.type.team_member
   module:
     - image
-    - link
     - path
-    - text
-id: node.layout_builder.default
+id: node.team_member.default
 targetEntityType: node
-bundle: layout_builder
+bundle: team_member
 mode: default
 content:
   created:
@@ -28,39 +22,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_layout_image:
-    type: image_image
-    weight: 124
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   field_member_name:
-    type: string_textfield
-    weight: 125
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_member_photo:
-    type: image_image
-    weight: 126
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_text:
-    type: text_textarea
-    weight: 123
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_title:
     type: string_textfield
     weight: 121
     region: content
@@ -68,13 +30,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_youtube_link:
-    type: link_default
+  field_member_photo:
+    type: image_image
     weight: 122
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select

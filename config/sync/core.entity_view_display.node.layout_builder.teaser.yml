@@ -5,9 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.layout_builder.field_layout_image
+    - field.field.node.layout_builder.field_member_name
+    - field.field.node.layout_builder.field_member_photo
     - field.field.node.layout_builder.field_text
     - field.field.node.layout_builder.field_title
     - field.field.node.layout_builder.field_youtube_link
+    - field.field.node.layout_builder.layout_builder__layout
     - node.type.layout_builder
   module:
     - user
@@ -23,7 +26,10 @@ content:
     region: content
 hidden:
   field_layout_image: true
+  field_member_name: true
+  field_member_photo: true
   field_text: true
   field_title: true
   field_youtube_link: true
   langcode: true
+  layout_builder__layout: true

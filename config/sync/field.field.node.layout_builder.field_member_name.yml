@@ -1,0 +1,19 @@
+uuid: e2ee52cc-e33d-42b2-8cef-c94d827d1da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_member_name
+    - node.type.layout_builder
+id: node.layout_builder.field_member_name
+field_name: field_member_name
+entity_type: node
+bundle: layout_builder
+label: 'Member Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

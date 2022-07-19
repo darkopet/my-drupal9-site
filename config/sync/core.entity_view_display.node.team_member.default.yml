@@ -1,0 +1,100 @@
+uuid: 6adc7ef5-bfc9-40a5-82ba-609f4fe38ce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team_member.field_member_name
+    - field.field.node.team_member.field_member_photo
+    - node.type.team_member
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3d106616-7e4e-4289-8529-3af9906a1361:
+            uuid: 3d106616-7e4e-4289-8529-3af9906a1361
+            region: content
+            configuration:
+              id: 'extra_field_block:node:team_member:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          cdaf91e3-b28d-4ea5-aee7-032513611d51:
+            uuid: cdaf91e3-b28d-4ea5-aee7-032513611d51
+            region: content
+            configuration:
+              id: 'field_block:node:team_member:field_member_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          74aa7fc5-c999-4c6b-a7da-05f4bfd2480d:
+            uuid: 74aa7fc5-c999-4c6b-a7da-05f4bfd2480d
+            region: content
+            configuration:
+              id: 'field_block:node:team_member:field_member_photo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+id: node.team_member.default
+targetEntityType: node
+bundle: team_member
+mode: default
+content:
+  field_member_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_member_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
