@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains ad_general.module.
+ *
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+  /**
+   * Display status message on Company node save, when field_website is empty.
+   */
+function ad_general_node_insert(EntityInterface $node): void {
+  if ($node->bundle() === 'company'){
+    if (empty($node->get('field_website')->getValue())){
+      Drupal::messenger()->addWarning('Please consider adding a website for your company. It’s not mandatory, but it’s a good way of showing people what you do.');
+      return;
+    }
+    if ($node->get('field_website')->getValue()[0]['uri'] === '' || $node->get('field_website')->getValue()[0]['title'] === '') {
+       \Drupal::messenger()->addWarning('Please consider completing the fields for the website of your company.');
+       return;
+    }
+  }
+}
