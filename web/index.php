@@ -8,8 +8,6 @@
  * See COPYRIGHT.txt and LICENSE.txt files in the "core" directory.
  */
 
-//echo phpinfo();
-//die;
 use Drupal\Core\DrupalKernel;
 use Symfony\Component\HttpFoundation\Request;
 
