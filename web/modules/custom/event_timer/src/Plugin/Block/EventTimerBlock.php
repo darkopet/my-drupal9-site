@@ -61,7 +61,11 @@ class EventTimerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $endTimeInt = strtotime($node->get('field_start_end_date')->getValue()[0]['end_value']);
     $currentTimeInt = strtotime(date('Y-m-d h:i:s', time()));
     $diffStartTime = $startTimeInt-$currentTimeInt;
-
+    $time_info = 'test';
+    return [
+      '#theme' => 'event_block',
+      '#time_info' => $time_info,
+    ];
     if ($currentTimeInt < $startTimeInt)
     {
       if ($diffStartTime < 86400)
