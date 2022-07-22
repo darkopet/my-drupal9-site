@@ -4,8 +4,10 @@ namespace Drupal\event_timer\Plugin\Block;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\Core\Session\AccountInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a block with a simple text.
@@ -15,62 +17,73 @@ use Drupal\Core\Session\AccountInterface;
  *   admin_label = @Translation("Event timer"),
  * )
  */
-class EventTimerBlock extends BlockBase {
+class EventTimerBlock extends BlockBase implements ContainerFactoryPluginInterface {
+  /**
+   * @var CurrentRouteMatch $currentRouteService
+   */
+  protected CurrentRouteMatch $currentRouteService;
+
+  /**
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   * @param CurrentRouteMatch $currentRouteMatch
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrentRouteMatch $currentRouteMatch) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->currentRouteService = $currentRouteMatch;
+  }
+
+  /**
+   * @param ContainerInterface $container
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   *
+   * @return static
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('current_route_match')
+    );
+  }
+
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
-    $node = \Drupal::routeMatch()->getParameter('node');
+  public function build(): array {
+    $node = $this->currentRouteService->getParameter('node');
 
-    $start = $node->get('field_start_end_date')->getValue()[0]['value'];
-    var_dump($start);
-    $startint = strtotime($start);
-    var_dump($startint);
+    $startTimeInt = strtotime($node->get('field_start_end_date')->getValue()[0]['value']);
+    $endTimeInt = strtotime($node->get('field_start_end_date')->getValue()[0]['end_value']);
+    $currentTimeInt = strtotime(date('Y-m-d h:i:s', time()));
+    $diffStartTime = $startTimeInt-$currentTimeInt;
 
-    echo "<br><br>";
-
-    $end = $node->get('field_start_end_date')->getValue()[0]['end_value'];
-    var_dump($end);
-    $endint = strtotime($end);
-    var_dump($endint);
-
-    echo "<br><br>";
-
-    $current = date('Y-m-d h:i:s', time());
-    var_dump($current);
-    echo "<br>";
-    $currint = strtotime($current);
-    var_dump($currint);
-    echo "<br><br>";
-
-    (int) $resultstart = $startint-$currint;
-    (int) $resultend = $endint-$currint;
-//    var_dump($resultstart);
-//    var_dump($resultend);
-
-    if ($currint < $startint)
+    if ($currentTimeInt < $startTimeInt)
     {
-      if ($resultstart < 86400)
+      if ($diffStartTime < 86400)
       {
         return [
           '#markup' => $this->t('The event is starting today.')
         ];
       }
       return [
-        '#markup' => $this->t('Days left to the event start: ' . intdiv($resultstart, 86400)),
+        '#markup' => $this->t('Days left to the event start: ' . intdiv($diffStartTime, 86400)),
       ];
     }
-    elseif ($startint <= $currint && $currint <= $endint) {
+    elseif ($startTimeInt <= $currentTimeInt && $currentTimeInt <= $endTimeInt) {
       return [
       '#markup' => $this->t('This event is ongoing.'),
       ];
     }
-    elseif ($currint > $endint) {
+    else {
       return [
         '#markup' => $this->t('The event has passed.'),
       ];
-    };
+    }
   }
 
   /**
