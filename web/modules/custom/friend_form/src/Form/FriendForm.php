@@ -7,18 +7,15 @@ namespace Drupal\friend_form\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Form\FormInterface;
 
 class friendForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return 'friend_form_form';
   }
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $form['message_title'] = array(
       '#type' => 'textfield',
       '#title' => t('Message Title:'),
@@ -29,7 +26,7 @@ class friendForm extends FormBase {
       '#required' => TRUE,
     );
     $form['friend_email'] = array(
-      '#type' => 'email',
+      '#type' => 'textfield',
       '#title' => t('Email:'),
       '#required' => TRUE,
     );
@@ -41,18 +38,16 @@ class friendForm extends FormBase {
     );
     return $form;
   }
-  public function validateForm(array &$form, FormStateInterface $form_state)
-  {
-    $value = $form_state->getValue('friend_email');
-
-    if (!\Drupal::service('email.validator')->isValid($value)) {
-      $form_state->setErrorByName('friend_email', t('Enter a valid email address.'));
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    $friendEmail = $form_state->getValue('friend_email');
+    if (!\Drupal::service('email.validator')->isValid($friendEmail)) {
+        $form_state->setErrorByName('friend_email', t('Enter a valid email address.'));
     }
+//    return (boolean) filter_var($friendEmail, FILTER_VALIDATE_EMAIL);
   }
-  public function submitForm(array &$form, FormStateInterface $form_state)
-  {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     foreach ($form_state->getValues() as $key => $value) {
-      \Drupal::messenger()->addMessage($key . ': ' . $value);
+      $this->messenger()->addMessage($key . ': ' . $value);
     }
     return $form;
   }

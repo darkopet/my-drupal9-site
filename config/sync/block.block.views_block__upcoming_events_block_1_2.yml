@@ -2,10 +2,6 @@ uuid: 17f45a6a-2201-4638-8e50-d1fb741505fa
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.upcoming_events
-  module:
-    - views
   theme:
     - bartik
 id: views_block__upcoming_events_block_1_2

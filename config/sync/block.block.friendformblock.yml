@@ -1,24 +1,23 @@
-uuid: 7cf9aa5d-ef57-4fe8-a631-ec0c8cbdc125
+uuid: 5497cb63-796c-4790-a9f9-97e519f5a9d7
 langcode: en
 status: true
 dependencies:
   module:
+    - friend_form
     - node
   theme:
     - bartik
-id: views_block__upcoming_events_block_1
+id: friendformblock
 theme: bartik
-region: content
+region: sidebar_second
 weight: 0
 provider: null
-plugin: 'views_block:upcoming_events-block_1'
+plugin: friend_form
 settings:
-  id: 'views_block:upcoming_events-block_1'
-  label: ''
+  id: friend_form
+  label: 'Friend Form Block'
   label_display: visible
-  provider: views
-  views_label: ''
-  items_per_page: none
+  provider: friend_form
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
@@ -26,4 +25,4 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
-      landing_page: landing_page
+      event: event
