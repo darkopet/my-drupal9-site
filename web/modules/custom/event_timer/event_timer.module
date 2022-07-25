@@ -5,8 +5,7 @@
 function event_timer_theme($existing, $type, $theme, $path){
   return [
     'event_block' => [
-      'variables' => ['time_info' => NULL],
+      'variables' => ['message' => ''],
     ],
   ];
 }
-

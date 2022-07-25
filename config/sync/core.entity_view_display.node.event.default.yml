@@ -10,14 +10,14 @@ dependencies:
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_organizer
-    - field.field.node.event.field_event_start_end_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
     - node.type.event
   module:
     - comment
-    - datetime
+    - datetime_range
     - field_group
     - image
     - link
@@ -147,15 +147,6 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  field_event_start_end_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_event_type:
     type: entity_reference_label
     label: above
@@ -175,6 +166,16 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_start_end_date:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_twitter_text:
     type: link

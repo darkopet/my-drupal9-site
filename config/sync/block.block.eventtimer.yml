@@ -1,0 +1,28 @@
+uuid: 59857560-1736-40a2-923d-8507c528264d
+langcode: en
+status: true
+dependencies:
+  module:
+    - event_timer
+    - node
+  theme:
+    - bartik
+id: eventtimer
+theme: bartik
+region: sidebar_second
+weight: -11
+provider: null
+plugin: event_timer_block
+settings:
+  id: event_timer_block
+  label: 'Event timer'
+  label_display: visible
+  provider: event_timer
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

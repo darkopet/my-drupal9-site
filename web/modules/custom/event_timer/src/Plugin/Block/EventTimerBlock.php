@@ -61,33 +61,25 @@ class EventTimerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $endTimeInt = strtotime($node->get('field_start_end_date')->getValue()[0]['end_value']);
     $currentTimeInt = strtotime(date('Y-m-d h:i:s', time()));
     $diffStartTime = $startTimeInt-$currentTimeInt;
-    $time_info = 'test';
-    return [
-      '#theme' => 'event_block',
-      '#time_info' => $time_info,
-    ];
+
+    $time_info = $node->get('field_start_end_date')->getValue()[0]['value'];
+    $message = '';
+
     if ($currentTimeInt < $startTimeInt)
     {
       if ($diffStartTime < 86400)
       {
-        return [
-          '#markup' => $this->t('The event is starting today.')
-        ];
+         $message = $this->t('The event is starting today.');
       }
-      return [
-        '#markup' => $this->t('Days left to the event start: ' . intdiv($diffStartTime, 86400)),
-      ];
+      $message = 'Days left to the event start: ' . intdiv($diffStartTime, 86400);
     }
     elseif ($startTimeInt <= $currentTimeInt && $currentTimeInt <= $endTimeInt) {
-      return [
-      '#markup' => $this->t('This event is ongoing.'),
-      ];
+      $message = $this->t('The event is currently in progress.');
     }
-    else {
-      return [
-        '#markup' => $this->t('The event has passed.'),
-      ];
-    }
+    return [
+      '#theme' => 'event_block',
+      '#message' => $message,
+    ];
   }
 
   /**
