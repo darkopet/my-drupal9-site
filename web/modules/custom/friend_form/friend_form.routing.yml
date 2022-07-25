@@ -1,0 +1,7 @@
+friend_form.form:
+  path: '/friend/friend-form'
+  defaults:
+    _title: 'Send to a Friend Form'
+    _form: '\Drupal\friend_form\Form\FriendForm'
+  requirements:
+    _permission: 'access content'
