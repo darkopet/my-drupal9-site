@@ -1,38 +1,72 @@
 <?php
-
-use Drupal\Component\Utility\SafeMarkup;
-
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 /**
- * Implements hook_module().
+ * Implements hook_mail().
  */
 function friend_form_mail($key, &$message, $params) {
   $options = array(
     'langcode' => $message['langcode'],
   );
   switch ($key) {
-    case 'node_insert':
+    case 'general':
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
       $message['from'] = \Drupal::config('system.site')->get('mail');
-      $message['subject'] = t('Your mail subject Here: @title', array('@title' => $params['title']), $options);
-      $message['body'][] = Html::escape($params['message']);
+      $message['subject'] = t('@name invited you to @title',
+        array('@title' => $params['node_title'],'@name' => $params['name']),
+        $options);
+      $message['body'][] = t("Hi! Check out this event: @event_title. It's going to take place at
+      @location_title on @event_date. ",
+          [
+            '@event_title'=>$params['node_title'],
+            '@event_date'=>$params['event_date'],
+            '@location_title' => $params['location']
+          ],
+          $options).$params['link'];
       break;
   }
 }
-function custom_function_name(&$message, $params, $label) {
-  $mailManager = \Drupal::service('plugin.manager.mail');
-  $module = 'module-name';
-  $key = 'node_insert'; // Replace with Your key
-  $to = \Drupal::currentUser()->getEmail();
-  $params['message'] = $message;
-  $params['title'] = $label;
-  $langcode = \Drupal::currentUser()->getPreferredLangcode();
-  $send = true;
-
-  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-  if ($result['result'] != true) {
-    $message = t('There was a problem sending your email notification to @email.', array('@email' => $to));
-    drupal_set_message($message, 'error');
-    \Drupal::logger('mail-log')->error($message);
-    return;
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * @throws Exception
+ */
+function friend_form_form_friend_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $node = \Drupal::routeMatch()->getParameter('id');
+  $eventTitle = "";
+  $start_date = "";
+  $location_title = "";
+  if ($node instanceof NodeInterface) {
+    $location = Node::load($node->get('field_event_location')->target_id);
+    $location_title = $location->getTitle();
+    $eventTitle = $node->getTitle();
+    try {
+      $start_date = new DateTime($node->get('field_event_start_end_date')->getValue()[0]['value']);
+    } catch (Exception $e) {
+      $messenger = \Drupal::messenger();
+      $messenger->addMessage(t("Event doesn't have valid email"),$messenger::TYPE_ERROR);
+    }
+    $start_date = $start_date->format("Y-m-d h:i:sa");
+    $link = $node->toLink('Read more','canonical',['absolute'])->toString();
   }
+  $form['event_title'] = [
+    '#type' => 'markup',
+    '#markup' => $eventTitle,
+  ];
+  $form['title'] = [
+    '#type' => 'hidden',
+    '#value' => $eventTitle,
+  ];
+  $form['location'] = [
+    '#type' => 'hidden',
+    '#value' => $location_title,
+  ];
+  $form['event_date'] = [
+    '#type' => 'hidden',
+    '#value' => $start_date,
+  ];
+  $form['link'] = [
+    '#type' => 'hidden',
+    '#value' => $link,
+  ];
 }
-?>
