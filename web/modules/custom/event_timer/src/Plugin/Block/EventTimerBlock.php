@@ -62,7 +62,6 @@ class EventTimerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $currentTimeInt = strtotime(date('Y-m-d h:i:s', time()));
     $diffStartTime = $startTimeInt-$currentTimeInt;
 
-    $time_info = $node->get('field_start_end_date')->getValue()[0]['value'];
     $message = '';
 
     if ($currentTimeInt < $startTimeInt)
@@ -75,6 +74,9 @@ class EventTimerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     }
     elseif ($startTimeInt <= $currentTimeInt && $currentTimeInt <= $endTimeInt) {
       $message = $this->t('The event is currently in progress.');
+    }
+    else {
+      $message = $this->t('The event has passed.');
     }
     return [
       '#theme' => 'event_block',

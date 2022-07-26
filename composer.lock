@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd4256b35840148f17a972be6761285f",
+    "content-hash": "071d59e8043a5ed9899d880d5ae9bc8a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2733,6 +2733,63 @@
             }
         },
         {
+            "name": "drupal/email_validator",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/email_validator.git",
+                "reference": "8.x-2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/email_validator-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "ada5ae5eaa3e0876ec1cbade9ff0ed40f22c6c88"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "guzzlehttp/guzzle": "^6.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.2",
+                    "datestamp": "1646444542",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "miguel.leal",
+                    "homepage": "https://www.drupal.org/user/2867019"
+                },
+                {
+                    "name": "saidatom",
+                    "homepage": "https://www.drupal.org/user/1846674"
+                },
+                {
+                    "name": "tiagof",
+                    "homepage": "https://www.drupal.org/user/3615094"
+                }
+            ],
+            "description": "EVA integrates seamlessly with your web platform to validate your customers and users email addresses",
+            "homepage": "https://www.drupal.org/project/email_validator",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/email_validator",
+                "issues": "https://www.drupal.org/project/issues/email_validator"
+            }
+        },
+        {
             "name": "drupal/entity_browser",
             "version": "2.7.0",
             "source": {
@@ -2998,6 +3055,60 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_usage",
                 "issues": "http://drupal.org/project/issues/entity_usage"
+            }
+        },
+        {
+            "name": "drupal/evac",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/evac.git",
+                "reference": "1.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/evac-1.0.3.zip",
+                "reference": "1.0.3",
+                "shasum": "06ea7c0e47e11ee2494f4678bec1cc2efb7bb39e"
+            },
+            "require": {
+                "drupal/core": "^9.0 || ^10.0",
+                "egulias/email-validator": "^3"
+            },
+            "suggest": {
+                "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.3",
+                    "datestamp": "1657905931",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas De Rijcke (andreasderijcke)",
+                    "homepage": "https://www.drupal.org/project/evac",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Adds additional email validator services and allows to replace the one from Core.",
+            "homepage": "http://drupal.org/project/evac",
+            "keywords": [
+                "Drupal",
+                "Mail"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/evac",
+                "issues": "https://www.drupal.org/project/issues/evac"
             }
         },
         {
