@@ -1,6 +1,38 @@
 <?php
+
+use Drupal\Component\Utility\SafeMarkup;
+
 /**
- * @file
- * code for friend form module
+ * Implements hook_module().
  */
+function friend_form_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'node_insert':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Your mail subject Here: @title', array('@title' => $params['title']), $options);
+      $message['body'][] = Html::escape($params['message']);
+      break;
+  }
+}
+function custom_function_name(&$message, $params, $label) {
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $module = 'module-name';
+  $key = 'node_insert'; // Replace with Your key
+  $to = \Drupal::currentUser()->getEmail();
+  $params['message'] = $message;
+  $params['title'] = $label;
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+  $send = true;
+
+  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+  if ($result['result'] != true) {
+    $message = t('There was a problem sending your email notification to @email.', array('@email' => $to));
+    drupal_set_message($message, 'error');
+    \Drupal::logger('mail-log')->error($message);
+    return;
+  }
+}
 ?>
