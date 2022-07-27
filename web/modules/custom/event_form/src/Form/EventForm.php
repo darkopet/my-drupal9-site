@@ -48,6 +48,13 @@ class eventForm extends FormBase {
     foreach ($form_state->getValues() as $key => $value) {
       $this->messenger()->addMessage($key . ': ' . $value);
     }
+    $params = [
+      'values' => $form_state->getValues(),
+    ];
+    // The 'plugin.manager.mail' service is the one to use for $mailManager.
+    $mailManager = \Drupal::service('plugin.manager.mail');
+    $mailManager->mail('event_form', 'event_form_submit', 'darkop@xgate.io', 'en', $params);
+//  $this->mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
     return $form;
   }
 }

@@ -1,55 +1,55 @@
 <?php
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\node\Entity\Node;
-use Drupal\node\NodeInterface;
-/**
- * Implements hook_form_FORM_ID_alter().
- * @throws Exception
- */
-function event_form_form_event_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $node = \Drupal::routeMatch()->getParameter('id');
-  $eventTitle = "";
-  $start_date = "";
-  $location_title = "";
-  $link = "";
-  if ($node instanceof NodeInterface) {
-    $location = Node::load($node->get('field_event_location')->target_id);
-    $location_title = $location->getTitle();
-    $eventTitle = $node->getTitle();
-    try {
-      $start_date = new DateTime($node->get('field_event_start_end_date')->getValue()[0]['value']);
-    } catch (Exception $e) {
-      $messenger = \Drupal::messenger();
-      $messenger->addMessage(t("Event doesn't have valid email"),$messenger::TYPE_ERROR);
-    }
-    $start_date = $start_date->format("Y-m-d h:i:sa");
-    $link = $node->toLink('Read more','canonical',['absolute'])->toString();
-  }
-  $form['event_title'] = [
-    '#type' => 'markup',
-    '#markup' => $eventTitle,
-  ];
-  $form['title'] = [
-    '#type' => 'hidden',
-    '#value' => $eventTitle,
-  ];
-  $form['location'] = [
-    '#type' => 'hidden',
-    '#value' => $location_title,
-  ];
-  $form['event_date'] = [
-    '#type' => 'hidden',
-    '#value' => $start_date,
-  ];
-  $form['link'] = [
-    '#type' => 'hidden',
-    '#value' => $link,
-  ];
-  $form['node'] = [
-    '#type' => 'hidden',
-    '#value' => $node,
-  ];
-}
+//use Drupal\Core\Form\FormStateInterface;
+//use Drupal\node\Entity\Node;
+//use Drupal\node\NodeInterface;
+///**
+// * Implements hook_form_FORM_ID_alter().
+// * @throws Exception
+// */
+//function event_form_form_event_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//  $node = \Drupal::routeMatch()->getParameter('id');
+//  $eventTitle = "";
+//  $start_date = "";
+//  $location_title = "";
+//  $link = "";
+//  if ($node instanceof NodeInterface) {
+//    $location = Node::load($node->get('field_event_location')->target_id);
+//    $location_title = $location->getTitle();
+//    $eventTitle = $node->getTitle();
+//    try {
+//      $start_date = new DateTime($node->get('field_event_start_end_date')->getValue()[0]['value']);
+//    } catch (Exception $e) {
+//      $messenger = \Drupal::messenger();
+//      $messenger->addMessage(t("Event doesn't have valid email"),$messenger::TYPE_ERROR);
+//    }
+//    $start_date = $start_date->format("Y-m-d h:i:sa");
+//    $link = $node->toLink('Read more','canonical',['absolute'])->toString();
+//  }
+//  $form['event_title'] = [
+//    '#type' => 'markup',
+//    '#markup' => $eventTitle,
+//  ];
+//  $form['title'] = [
+//    '#type' => 'hidden',
+//    '#value' => $eventTitle,
+//  ];
+//  $form['location'] = [
+//    '#type' => 'hidden',
+//    '#value' => $location_title,
+//  ];
+//  $form['event_date'] = [
+//    '#type' => 'hidden',
+//    '#value' => $start_date,
+//  ];
+//  $form['link'] = [
+//    '#type' => 'hidden',
+//    '#value' => $link,
+//  ];
+//  $form['node'] = [
+//    '#type' => 'hidden',
+//    '#value' => $node,
+//  ];
+//}
 /**
  * Implements hook_mail().
  */
@@ -58,12 +58,11 @@ function event_form_mail($key, &$message, $params) {
     'langcode' => $message['langcode'],
   );
   switch ($key) {
-    case 'general':
+    case 'event_form_submit':
       $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
       $message['from'] = \Drupal::config('system.site')->get('mail');
       $message['subject'] = t('@name invited you to @title',
-        array('@title' => $params['node_title'],'@name' => $params['name']),
-        $options);
+        array('@title' => $params['node_title'],'@name' => $params['name']));
       $message['body'][] = t("Hi! Check out this event: @event_title. It's going to take place at
       @location_title on @event_date. ",
           [
@@ -71,8 +70,7 @@ function event_form_mail($key, &$message, $params) {
             '@event_date'=>$params['event_date'],
             '@location_title' => $params['location']
           ],
-          $options).$params['link'];
+        );
       break;
   }
 }
-
