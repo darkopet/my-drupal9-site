@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\friend_form\Plugin\Block;
+namespace Drupal\event_form\Plugin\Block;
 
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\Core\Block\BlockBase;
@@ -9,12 +9,12 @@ use Drupal\Core\Form\FormBuilder;
 /**
  *
  * @Block(
- *   id = "friend_form",
+ *   id = "event_form",
  *   admin_label = @Translation("Friend Form Block"),
  *   category = @Translation("Custom"),
  * )
  */
-class FriendFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class EventFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * @var $formBuilder FormBuilder
    */
@@ -50,6 +50,6 @@ class FriendFormBlock extends BlockBase implements ContainerFactoryPluginInterfa
    * {@inheritdoc}
    */
   public function build() {
-    return  $this->formBuilder->getForm('Drupal\friend_form\Form\FriendForm');
+    return  $this->formBuilder->getForm('Drupal\event_form\Form\EventForm');
   }
 }

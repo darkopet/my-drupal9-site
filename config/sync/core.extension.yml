@@ -36,6 +36,7 @@ module:
   entity_reference_views: 0
   entity_usage: 0
   evac: 0
+  event_form: 0
   event_timer: 0
   examples: 0
   faq: 0
@@ -54,7 +55,6 @@ module:
   flexslider_example: 0
   flexslider_fields: 0
   flexslider_views: 0
-  friend_form: 0
   hal: 0
   help: 0
   history: 0
@@ -68,6 +68,7 @@ module:
   libraries: 0
   link: 0
   locale: 0
+  mail_safety: 0
   maillog: 0
   mailsystem: 0
   media: 0

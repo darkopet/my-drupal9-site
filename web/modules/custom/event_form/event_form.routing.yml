@@ -1,7 +1,7 @@
-friend_form.form:
-  path: '/friend/friend-form'
+event_form.form:
+  path: '/events/event-form'
   defaults:
     _title: 'Send to a Friend Form'
-    _form: '\Drupal\friend_form\Form\FriendForm'
+    _form: '\Drupal\event_form\Form\EventForm'
   requirements:
     _permission: 'access content'

@@ -1,24 +1,24 @@
 <?php
 /**
  * @file
- * Contains \Drupal\friend_form\Form\FriendForm.
+ * Contains \Drupal\event_form\Form\EventForm.
  */
-namespace Drupal\friend_form\Form;
+namespace Drupal\event_form\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class friendForm extends FormBase {
+class eventForm extends FormBase {
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'friend_form_form';
+    return 'event_form_form';
   }
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['message_title'] = array(
       '#type' => 'textfield',
-      '#title' => t('Message Title:'),
+      '#title' => t('Title:'),
     );
     $form['friend_name'] = array(
       '#type' => 'textfield',
@@ -26,7 +26,7 @@ class friendForm extends FormBase {
       '#required' => TRUE,
     );
     $form['friend_email'] = array(
-      '#type' => 'textfield',
+      '#type' => 'email',
       '#title' => t('Email:'),
       '#required' => TRUE,
     );
@@ -43,7 +43,6 @@ class friendForm extends FormBase {
     if (!\Drupal::service('email.validator')->isValid($friendEmail)) {
         $form_state->setErrorByName('friend_email', t('Enter a valid email address.'));
     }
-//    return (boolean) filter_var($friendEmail, FILTER_VALIDATE_EMAIL);
   }
   public function submitForm(array &$form, FormStateInterface $form_state) {
     foreach ($form_state->getValues() as $key => $value) {

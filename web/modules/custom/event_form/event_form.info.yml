@@ -1,6 +1,6 @@
-name: Friend Form
+name: Event Form
 type: module
-description: A form to send a message to a friend.
+description: An event form to send a message to a friend.
 package: Custom
 version: 1.0
 core_version_requirement: ^8 || ^9

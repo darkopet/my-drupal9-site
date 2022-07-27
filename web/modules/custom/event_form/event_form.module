@@ -3,39 +3,15 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
 /**
- * Implements hook_mail().
- */
-function friend_form_mail($key, &$message, $params) {
-  $options = array(
-    'langcode' => $message['langcode'],
-  );
-  switch ($key) {
-    case 'general':
-      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
-      $message['from'] = \Drupal::config('system.site')->get('mail');
-      $message['subject'] = t('@name invited you to @title',
-        array('@title' => $params['node_title'],'@name' => $params['name']),
-        $options);
-      $message['body'][] = t("Hi! Check out this event: @event_title. It's going to take place at
-      @location_title on @event_date. ",
-          [
-            '@event_title'=>$params['node_title'],
-            '@event_date'=>$params['event_date'],
-            '@location_title' => $params['location']
-          ],
-          $options).$params['link'];
-      break;
-  }
-}
-/**
  * Implements hook_form_FORM_ID_alter().
  * @throws Exception
  */
-function friend_form_form_friend_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function event_form_form_event_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $node = \Drupal::routeMatch()->getParameter('id');
   $eventTitle = "";
   $start_date = "";
   $location_title = "";
+  $link = "";
   if ($node instanceof NodeInterface) {
     $location = Node::load($node->get('field_event_location')->target_id);
     $location_title = $location->getTitle();
@@ -69,4 +45,34 @@ function friend_form_form_friend_form_alter(&$form, FormStateInterface $form_sta
     '#type' => 'hidden',
     '#value' => $link,
   ];
+  $form['node'] = [
+    '#type' => 'hidden',
+    '#value' => $node,
+  ];
 }
+/**
+ * Implements hook_mail().
+ */
+function event_form_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'general':
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8';
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('@name invited you to @title',
+        array('@title' => $params['node_title'],'@name' => $params['name']),
+        $options);
+      $message['body'][] = t("Hi! Check out this event: @event_title. It's going to take place at
+      @location_title on @event_date. ",
+          [
+            '@event_title'=>$params['node_title'],
+            '@event_date'=>$params['event_date'],
+            '@location_title' => $params['location']
+          ],
+          $options).$params['link'];
+      break;
+  }
+}
+

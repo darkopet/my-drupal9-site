@@ -1,9 +1,9 @@
-uuid: 5497cb63-796c-4790-a9f9-97e519f5a9d7
+uuid: d043e7a2-d8fe-4029-9af4-ab1b0ececc33
 langcode: en
 status: true
 dependencies:
   module:
-    - friend_form
+    - event_form
     - node
   theme:
     - bartik
@@ -12,12 +12,12 @@ theme: bartik
 region: sidebar_second
 weight: 0
 provider: null
-plugin: friend_form
+plugin: event_form
 settings:
-  id: friend_form
+  id: event_form
   label: 'Friend Form Block'
   label_display: visible
-  provider: friend_form
+  provider: event_form
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
