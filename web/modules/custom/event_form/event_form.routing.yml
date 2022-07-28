@@ -1,9 +1,12 @@
-event_form.form:
-  path: '/events/event-form'
+event_form.modal_form:
+  path: '/admin/config/modal_form'
   defaults:
-    _title: 'Send to a Friend Form'
-    _form: '\Drupal\event_form\Form\EventForm'
+    _title: 'Modal Form'
+    _controller: '\Drupal\event_form\Controller\EmailController::openModalForm'
   requirements:
     _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
+  parametrs:
+    id:
+      type: entity:node

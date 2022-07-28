@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\event_form\Plugin\Block;
 
 use Drupal\Core\Routing\CurrentRouteMatch;
@@ -6,19 +7,22 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormBuilder;
+
 /**
  *
  * @Block(
  *   id = "event_form",
- *   admin_label = @Translation("Friend Form Block"),
+ *   admin_label = @Translation("FormBlock"),
  *   category = @Translation("Custom"),
  * )
  */
-class EventFormBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class FormBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
   /**
-   * @var $formBuilder FormBuilder
+  * @var $formBuilder FormBuilder
    */
-  protected FormBuilder $formBuilder;
+  protected $formBuilder;
+
   /**
    * @param ContainerInterface $container
    * @param array $configuration
@@ -35,6 +39,7 @@ class EventFormBlock extends BlockBase implements ContainerFactoryPluginInterfac
       $container->get('form_builder'),
     );
   }
+
   /**
    * @param array $configuration
    * @param string $plugin_id
@@ -46,10 +51,11 @@ class EventFormBlock extends BlockBase implements ContainerFactoryPluginInterfac
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->formBuilder = $formBuilder;
   }
+
   /**
    * {@inheritdoc}
    */
   public function build() {
-    return  $this->formBuilder->getForm('Drupal\event_form\Form\EventForm');
+    return  $this->formBuilder->getForm('Drupal\event_form\Form\EmailForm');
   }
 }
