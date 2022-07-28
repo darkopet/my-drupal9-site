@@ -4,4 +4,6 @@ event_form.form:
     _title: 'Send to a Friend Form'
     _form: '\Drupal\event_form\Form\EventForm'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

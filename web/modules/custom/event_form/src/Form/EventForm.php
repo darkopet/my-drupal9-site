@@ -8,7 +8,7 @@ namespace Drupal\event_form\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class eventForm extends FormBase {
+class EventForm extends FormBase {
   /**
    * {@inheritdoc}
    */
