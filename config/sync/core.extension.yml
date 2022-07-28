@@ -35,7 +35,6 @@ module:
   entity_reference_revisions: 0
   entity_reference_views: 0
   entity_usage: 0
-  evac: 0
   event_form: 0
   event_timer: 0
   examples: 0
