@@ -119,7 +119,7 @@ class ModalForm extends FormBase {
     );
 
     $form['email'] = array(
-      '#type' => 'textfield',
+      '#type' => 'email',
       '#title' => t('Email:'),
       '#required' => TRUE,
     );
@@ -148,10 +148,12 @@ class ModalForm extends FormBase {
         'valid' => false
       );
     } elseif (!$this->emailValidator->isValid($form_state->getValue('email'))) {
-      return array(
-        'message' => $this->t('Please enter valid email.'),
-        'valid' => false
-      );
+      if(!str_contains('email','.')) {
+        return array(
+          'message' => $this->t('Please enter valid email.'),
+          'valid' => false
+        );
+      }
     }
     else {
       return array(

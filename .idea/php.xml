@@ -96,6 +96,7 @@
       <path value="$PROJECT_DIR$/vendor/giggsey/libphonenumber-for-php" />
       <path value="$PROJECT_DIR$/vendor/giggsey/locale" />
       <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/alchemy/zippy" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
