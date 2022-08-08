@@ -1,0 +1,20 @@
+uuid: 07c64f5e-5b72-44d8-8f84-0ff9cf9d9945
+langcode: en
+status: true
+dependencies:
+  module:
+    - personalized_user
+  theme:
+    - bartik
+id: pers
+theme: bartik
+region: featured_top
+weight: 3
+provider: null
+plugin: journey_talk_personalized_user_block
+settings:
+  id: journey_talk_personalized_user_block
+  label: 'Personalized Per User'
+  label_display: visible
+  provider: personalized_user
+visibility: {  }
