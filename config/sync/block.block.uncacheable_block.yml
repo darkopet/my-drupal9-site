@@ -1,0 +1,20 @@
+uuid: 1d0d7817-31b5-4383-b5f2-382d2e9391b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - uncacheable
+  theme:
+    - bartik
+id: uncacheable_block
+theme: bartik
+region: featured_top
+weight: 2
+provider: null
+plugin: journey_talk_uncacheable_block
+settings:
+  id: journey_talk_uncacheable_block
+  label: 'Uncacheable Block'
+  label_display: visible
+  provider: uncacheable
+visibility: {  }

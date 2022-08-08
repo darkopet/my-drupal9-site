@@ -1,0 +1,20 @@
+uuid: 25026782-cab0-407c-98d7-2c6579e193d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - cacheable
+  theme:
+    - bartik
+id: cacheable_block
+theme: bartik
+region: featured_top
+weight: 4
+provider: null
+plugin: journey_talk_cacheable_block
+settings:
+  id: journey_talk_cacheable_block
+  label: 'Cacheable Block'
+  label_display: visible
+  provider: cacheable
+visibility: {  }

@@ -1,0 +1,11 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function uncacheable_theme($existing, $type, $theme, $path){
+  return [
+    'uncacheable_block' => [
+      'variables' => ['#markup' => ''],
+    ],
+  ];
+}

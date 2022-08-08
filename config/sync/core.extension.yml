@@ -11,6 +11,7 @@ module:
   block_content: 0
   breakpoint: 0
   cache_example: 0
+  cacheable: 0
   checklistapi: 0
   ckeditor: 0
   comment: 0
@@ -88,6 +89,9 @@ module:
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  personalized: 0
+  personalized_session: 0
+  personalized_user: 0
   queue_example: 0
   rabbit_hole: 0
   rdf: 0
@@ -115,6 +119,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  uncacheable: 0
   update: 0
   user: 0
   video_embed_field: 0
