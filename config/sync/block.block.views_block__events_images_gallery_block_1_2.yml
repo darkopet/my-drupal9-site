@@ -1,0 +1,32 @@
+uuid: 57e68bd1-9338-4d45-aba7-6fec7e777931
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_images_gallery
+  module:
+    - node
+    - views
+  theme:
+    - bartik
+id: views_block__events_images_gallery_block_1_2
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:events_images_gallery-block_1'
+settings:
+  id: 'views_block:events_images_gallery-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

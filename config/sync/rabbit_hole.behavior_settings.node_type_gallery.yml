@@ -1,0 +1,14 @@
+uuid: 6ade6d77-4b04-4eb6-aa8a-a6ef5350c0f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.gallery
+id: node_type_gallery
+entity_type_id: node_type
+entity_id: gallery
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.comment
     - field.field.node.event.field_add_to_favourites
     - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_gallery
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_organizer
@@ -56,6 +57,14 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_event_gallery:
+    type: image_image
+    weight: 133
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_event_image:
     type: image_image

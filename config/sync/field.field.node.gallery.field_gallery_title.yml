@@ -1,0 +1,21 @@
+uuid: a0b5896a-dbf9-4635-b239-d94596aeb17f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gallery_title
+    - node.type.gallery
+  module:
+    - text
+id: node.gallery.field_gallery_title
+field_name: field_gallery_title
+entity_type: node
+bundle: gallery
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

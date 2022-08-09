@@ -1,0 +1,29 @@
+uuid: d5862ee1-0abc-46ec-a1ca-bf428fa4ed97
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events_images_gallery
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__events_images_gallery_block_1
+theme: bartik
+region: featured_top
+weight: 0
+provider: null
+plugin: 'views_block:events_images_gallery-block_1'
+settings:
+  id: 'views_block:events_images_gallery-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

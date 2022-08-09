@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.comment
     - field.field.node.event.field_add_to_favourites
     - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_gallery
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_organizer
@@ -36,6 +37,7 @@ hidden:
   comment: true
   field_add_to_favourites: true
   field_event_description: true
+  field_event_gallery: true
   field_event_image: true
   field_event_location: true
   field_event_organizer: true
