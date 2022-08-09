@@ -7,6 +7,8 @@ module:
   backup_migrate: 0
   basic_auth: 0
   big_pipe: 0
+  blazy: 0
+  blazy_ui: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -59,6 +61,7 @@ module:
   history: 0
   hooks_example: 0
   image: 0
+  intense: 0
   jquery_ui: 0
   jquery_ui_accordion: 0
   language: 0
@@ -89,7 +92,6 @@ module:
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
-  personalized_session: 0
   queue_example: 0
   rabbit_hole: 0
   rdf: 0
@@ -127,6 +129,7 @@ module:
   webform_example_element: 0
   webform_shortcuts: 0
   webform_ui: 0
+  zooming: 0
   pathauto: 1
   content_translation: 10
   views: 10

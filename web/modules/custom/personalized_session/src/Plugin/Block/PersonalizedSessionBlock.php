@@ -1,12 +1,12 @@
 <?php
-namespace Drupal\personalized\Plugin\Block;
+namespace Drupal\personalized_session\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 /**
  * @Block(
- *   id = "journey_talk_personalized_block"
+ *   id = "journey_talk_personalized_session_block"
  * )
  */
-class PersonalizedBlock extends BlockBase {
+class PersonalizedSessionBlock extends BlockBase {
 
   public function build() {
     $funny_emojis = [':)', ':(', ':D', ':)'];

@@ -59,6 +59,7 @@
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
+        "drupal/intense": "^2.3",
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/libraries": "^3.0@beta",
         "drupal/mail_safety": "^1.2",
@@ -82,6 +83,7 @@
         "drupal/webform": "^6.1",
         "drupal/webform_submissions_delete": "^1.0",
         "drupal/xmlsitemap": "^1.2",
+        "drupal/zooming": "^1.1",
         "drush/drush": "^11.0",
         "woocommerce/flexslider": "~2.0"
     },

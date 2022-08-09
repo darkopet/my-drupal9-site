@@ -7,7 +7,7 @@ dependencies:
     - image.style.image_styles_events_images
     - node.type.event
   module:
-    - image
+    - blazy
     - node
     - user
 id: events_images_gallery
@@ -123,12 +123,21 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: image
+          type: blazy
           settings:
-            image_link: content
+            caption:
+              title: '0'
+              alt: '0'
+            background: false
+            box_caption: ''
+            box_caption_custom: ''
+            loading: eager
+            preload: false
+            box_style: ''
             image_style: image_styles_events_images
-            image_loading:
-              attribute: lazy
+            media_switch: content
+            ratio: ''
+            thumbnail_style: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -189,7 +198,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
-          order: DESC
+          order: ASC
           expose:
             label: ''
             field_identifier: ''
@@ -271,6 +280,12 @@ display:
           col_class_default: true
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline:
+            field_event_image: field_event_image
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options:

@@ -14,12 +14,13 @@ dependencies:
     - field.field.node.event.field_event_website
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
+    - image.style.image_styles_events_images
     - node.type.event
   module:
+    - blazy
     - comment
     - datetime_range
     - field_group
-    - image
     - link
     - text
     - user
@@ -120,13 +121,33 @@ content:
     weight: 2
     region: content
   field_event_image:
-    type: image
+    type: blazy
     label: above
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      caption:
+        title: '0'
+        alt: '0'
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      box_style: ''
+      image_style: image_styles_events_images
+      media_switch: zooming
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
     third_party_settings: {  }
     weight: 10
     region: content
