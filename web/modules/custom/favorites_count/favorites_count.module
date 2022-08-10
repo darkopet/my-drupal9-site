@@ -9,6 +9,18 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
+ * Implements hook_theme().
+ */
+function favorites_count_theme() {
+  return [
+    'favorites_count' => [
+      'variables' => [
+        'data' => NULL],
+      ],
+    ];
+}
+
+/**
  * Implements hook_help().
  */
 function favorites_count_help($route_name, RouteMatchInterface $route_match)

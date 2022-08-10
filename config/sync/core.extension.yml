@@ -41,6 +41,7 @@ module:
   event_timer: 0
   examples: 0
   faq: 0
+  favorites_count: 0
   field: 0
   field_group: 0
   field_group_migrate: 0

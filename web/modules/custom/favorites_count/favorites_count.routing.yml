@@ -1,0 +1,6 @@
+favorite_count.count:
+  path: '/count'
+  defaults:
+    _controller: '\Drupal\favorites_count\Controller\FavoritesCountController::count'
+  requirements:
+    _permission: 'access content'

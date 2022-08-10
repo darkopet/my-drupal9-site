@@ -1,5 +1,7 @@
-favorites_count-library:
+ajax:
+  version: VERSION
   js:
-    js/favorites_count.js: {}
+    js/favorites_count-command.js: {}
   dependencies:
+    - core/jquery
     - core/drupal.ajax
