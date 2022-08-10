@@ -1,0 +1,5 @@
+favorites_count-library:
+  js:
+    js/favorites_count.js: {}
+  dependencies:
+    - core/drupal.ajax
