@@ -1,15 +1,15 @@
-uuid: 33a6661f-c7f9-4f86-8a3a-b45e484d5e5e
+uuid: bfc122a5-d1c0-4c4d-8927-70f9e4385bdc
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - favorites_count
     - node
   theme:
     - bartik
-id: favoriteseventcounterblock_2
+id: favoriteseventcounterblock_3
 theme: bartik
-region: header
+region: sidebar_second
 weight: 0
 provider: null
 plugin: favorites_count
