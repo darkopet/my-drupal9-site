@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Custom field formatter module integrating with format.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function custom_field_formatter_theme() {
+  return ;
+}

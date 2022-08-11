@@ -1,0 +1,12 @@
+name: Custom Field Formatter
+type: module
+version: 1.0
+description: Field Formatter for entity reference Title and icon.
+package: Fields
+core: 8.x
+dependencies:
+  - field
+  - libraries
+
+
+
