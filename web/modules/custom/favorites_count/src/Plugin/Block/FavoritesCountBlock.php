@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\favourites_counter\Plugin\Block;
+namespace Drupal\favorites_count\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
@@ -13,11 +13,11 @@ use Drupal\flag\FlagService;
  * Provides a 'FavoritesEventCounterBlock' block.
  *
  * @Block(
- *  id = "favorites_counter",
+ *  id = "favorites_count",
  *  admin_label = @Translation("Favorites Event Counter Block"),
  * )
  */
-class CounterBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class FavoritesCountBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * Drupal\flag\FlagService definition.
    *

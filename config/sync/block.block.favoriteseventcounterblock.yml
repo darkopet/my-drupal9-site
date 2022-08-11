@@ -1,0 +1,28 @@
+uuid: a14b0f95-aea4-432b-b68a-1e4722ac64d3
+langcode: en
+status: false
+dependencies:
+  module:
+    - favorites_count
+    - node
+  theme:
+    - bartik
+id: favoriteseventcounterblock
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: favorites_count
+settings:
+  id: favorites_count
+  label: 'Favorites Event Counter Block'
+  label_display: visible
+  provider: favorites_count
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

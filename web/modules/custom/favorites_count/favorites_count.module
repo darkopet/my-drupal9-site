@@ -20,26 +20,26 @@ function favorites_count_theme() {
     ];
 }
 
-/**
- * Implements hook_help().
- */
-function favorites_count_help($route_name, RouteMatchInterface $route_match)
-{
-  switch ($route_name) {
-    // Main module help for the example module.
-    case 'help.page.favorites_count':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
-      return $output;
-
-    default:
-  }
-}
-
-function favorites_count_form_alter(&$form, FormStateInterface $form_state, $form_id)
-{
-  if ($form_id == 'codimth_form_api_ajax_demo') {
-    $form['#attached']['library'][] = "favorites_count/favorites_count-library";
-  }
-}
+///**
+// * Implements hook_help().
+// */
+//function favorites_count_help($route_name, RouteMatchInterface $route_match)
+//{
+//  switch ($route_name) {
+//    // Main module help for the example module.
+//    case 'help.page.favorites_count':
+//      $output = '';
+//      $output .= '<h3>' . t('About') . '</h3>';
+//      $output .= '<p>' . t('My Awesome Module') . '</p>';
+//      return $output;
+//
+//    default:
+//  }
+//}
+//
+//function favorites_count_form_alter(&$form, FormStateInterface $form_state, $form_id)
+//{
+//  if ($form_id == 'codimth_form_api_ajax_demo') {
+//    $form['#attached']['library'][] = "favorites_count/favorites_count-library";
+//  }
+//}
