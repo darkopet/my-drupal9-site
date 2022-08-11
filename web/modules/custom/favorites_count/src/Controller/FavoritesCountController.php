@@ -73,7 +73,7 @@ class FavoritesCountController extends ControllerBase implements ContainerInject
   public function count(): Response
   {
     $currentUser = $this->accountProxy->getAccount();
-    $favoriteFlag =  $this->flag->getFlagById('my_favourite_events');
+    $favoriteFlag =  $this->flag->getFlagById('bookmark');
     $countFlag = $this->flagCount->getUserFlagFlaggingCount($favoriteFlag,$currentUser);
 
     return new Response($countFlag);

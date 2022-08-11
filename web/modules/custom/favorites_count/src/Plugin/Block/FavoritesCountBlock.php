@@ -8,7 +8,7 @@ use Drupal\Core\Session\AccountProxy;
 use Drupal\flag\FlagCountManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\flag\FlagService;
-use Drupal\flag\FlagInterface;
+
 
 /**
  * Provides a 'FavoritesEventCounterBlock' block.
@@ -82,14 +82,14 @@ class FavoritesCountBlock extends BlockBase implements ContainerFactoryPluginInt
   public function build()
   {
     $currentUser = $this->accountProxy->getAccount();
-    $favoriteFlag =  $this->flag->getFlagById('my_favorite_events');
+    $favoriteFlag =  $this->flag->getFlagById('bookmark');
     $countFlag = $this->flagCount->getUserFlagFlaggingCount($favoriteFlag, $currentUser);
     return [
-      '#theme' => 'custom_counter',
+      '#theme' => 'favorites_count',
       '#data' => $countFlag,
       '#attached' => [
         'library' => [
-          'favourites_counter/ajax',
+          'favorites_count/ajax',
         ],
       ],
     ];
