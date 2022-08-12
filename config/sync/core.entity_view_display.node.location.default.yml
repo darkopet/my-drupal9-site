@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.location.field_location_is_operating
     - field.field.node.location.field_location_phone_number
     - field.field.node.location.field_location_website
-    - image.style.drupalslider
     - node.type.location
   module:
     - address
@@ -120,7 +119,7 @@ content:
     type: image_title_caption
     label: above
     settings:
-      image_style: drupalslider
+      image_style: ''
       image_link: ''
       image_loading:
         attribute: lazy

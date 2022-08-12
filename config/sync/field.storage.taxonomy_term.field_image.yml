@@ -1,0 +1,30 @@
+uuid: 613a104e-55c3-4bda-960a-636c890224cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - taxonomy
+id: taxonomy_term.field_image
+field_name: field_image
+entity_type: taxonomy_term
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 564089e7-3a8c-4d2f-8951-5714d3f0ec81
+    alt: ''
+    title: ''
+    width: 1920
+    height: 1080
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
