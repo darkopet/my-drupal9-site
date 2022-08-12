@@ -1,13 +1,30 @@
 <?php
 
+use Drupal\Core\Routing\RouteMatchInterface;
+
 /**
  * @file
  * Custom field formatter module integrating with format.
  */
 
+///**
+// * Implements hook_theme().
+// */
+//function custom_field_formatter_theme() {
+//  return ;
+//}
+
 /**
- * Implements hook_theme().
+ * Implements hook_help().
  */
-function custom_field_formatter_theme() {
-  return ;
+function custom_field_formatter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the avatar_field_formatter module.
+    case 'help.page.custom_field_formatter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('An image field formatter, if the image does not exist, display an icon letter instead.') . '</p>';
+      return $output;
+    default:
+  }
 }

@@ -4,6 +4,7 @@ version: 1.0
 description: Field Formatter for entity reference Title and icon.
 package: Fields
 core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
 dependencies:
   - field
   - libraries

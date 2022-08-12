@@ -11,11 +11,12 @@ dependencies:
     - field.field.node.location.field_location_is_operating
     - field.field.node.location.field_location_phone_number
     - field.field.node.location.field_location_website
+    - image.style.drupalslider
     - node.type.location
   module:
     - address
     - field_group
-    - image
+    - image_title_caption
     - link
     - telephone
     - text
@@ -116,15 +117,15 @@ content:
     weight: 3
     region: content
   field_location_image:
-    type: image
+    type: image_title_caption
     label: above
     settings:
+      image_style: drupalslider
       image_link: ''
-      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 4
+    weight: 12
     region: content
   field_location_is_operating:
     type: boolean
