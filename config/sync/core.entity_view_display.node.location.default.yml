@@ -118,13 +118,9 @@ content:
   field_location_image:
     type: image_title_caption
     label: above
-    settings:
-      image_style: ''
-      image_link: ''
-      image_loading:
-        attribute: lazy
+    settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_location_is_operating:
     type: boolean

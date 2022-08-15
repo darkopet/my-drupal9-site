@@ -1,3 +1,4 @@
-<h2>{{ title }}</h2>
-<img class="thumbnail" src="{{ url }}" />
-
+  {% for img in images %}
+    <h1>{{ img.title }}</h1>
+    <img class="thumbnail" src="{{ img.url }}" />
+  {% endfor %}
