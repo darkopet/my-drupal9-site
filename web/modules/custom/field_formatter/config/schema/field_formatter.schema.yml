@@ -1,0 +1,7 @@
+field.formatter.settings.title_icon:
+  type: mapping
+  label: 'Title and icon'
+  mapping:
+    image_style:
+      type: string
+      label: 'Image style'

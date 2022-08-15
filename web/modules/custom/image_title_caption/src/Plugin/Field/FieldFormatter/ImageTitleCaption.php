@@ -101,32 +101,32 @@ class ImageTitleCaption extends EntityReferenceFormatterBase {
     $node = $this->currentRouteService->getCurrentRouteMatch()->getParameter('node');
     if($node->get('type')->getValue()[0]['target_id'] === 'location') {
       $field_location_equipment = $node->get('field_location_equipment')->getValue();
-      // Loop troug all equipment terms assigned to the field.
-      foreach ($field_location_equipment as $taxonomyTermm){
+      // Loop through all equipment terms assigned to the field.
+      foreach ($field_location_equipment as $taxonomyTerm){
         // Get the term by term id.
-        $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($taxonomyTermm['target_id']);
-          // Get the image file id from the term if there is one.
-          $imgTargetId = $term->get('field_image')->getValue()[0]['target_id'];
-          // Load the fiel by the id.
-          $file = File::load($imgTargetId);
-          if (!is_null($file)){
-            // Create the array with values for that equipment.
-            $equipment[] = [
-              'title' => $term->get('name')->getValue()[0]['value'],
-              'url' => $file->createFileUrl('TRUE')
-            ];
-          }
-          else {
-            // Find the default image from taxonomy term. NEED TO DO !
-            $equipment[] = [
-              'title' => $term->get('name')->getValue()[0]['value'],
-              'url' => 'test'
-            ];
-         }
+        $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($taxonomyTerm['target_id']);
+        // Get the image file id from the term if there is one.
+        $imgTargetId = $term->get('field_image')->getValue()[0]['target_id'];
+        // Load the file by the id.
+        $file = File::load($imgTargetId);
+        if (!is_null($file)){
+          // Create the array with values for that equipment.
+          $equipment[] = [
+            'title' => $term->get('name')->getValue()[0]['value'],
+            'url' => $file->createFileUrl('TRUE')
+          ];
+        }
+        else {
+          // Find the default image from taxonomy term. NEED TO DO !
+          $equipment[] = [
+            'title' => $term->get('name')->getValue()[0]['value'],
+            'url' => 'test'
+          ];
+        }
       }
     }
-      $element['#theme'] = 'image_title_caption';
-      $element['#images'] = $equipment;
+    $element['#theme'] = 'image_title_caption';
+    $element['#images'] = $equipment;
 
     return $element;
   }

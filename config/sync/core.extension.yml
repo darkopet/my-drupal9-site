@@ -46,6 +46,7 @@ module:
   favorites_count: 0
   field: 0
   field_example: 0
+  field_formatter: 0
   field_group: 0
   field_group_migrate: 0
   field_slideshow: 0
