@@ -2,6 +2,7 @@
 
 namespace Drupal\image_title_caption\Plugin\Field\FieldFormatter;
 
+use Drupal;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
@@ -16,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @FieldFormatter(
  *   id = "image_title_caption",
- *   label = @Translation("Image with caption from title"),
+ *   label = @Translation("Title and Icon"),
  *   field_types = {
  *    "image"
  *   }
@@ -102,25 +103,33 @@ class ImageTitleCaption extends EntityReferenceFormatterBase {
     if($node->get('type')->getValue()[0]['target_id'] === 'location') {
       $field_location_equipment = $node->get('field_location_equipment')->getValue();
       // Loop through all equipment terms assigned to the field.
-      foreach ($field_location_equipment as $taxonomyTerm){
+      foreach ($field_location_equipment as $taxonomyTerm) {
         // Get the term by term id.
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($taxonomyTerm['target_id']);
         // Get the image file id from the term if there is one.
         $imgTargetId = $term->get('field_image')->getValue()[0]['target_id'];
         // Load the file by the id.
-        $file = File::load($imgTargetId);
-        if (!is_null($file)){
+        if (!is_null($imgTargetId)) {
+          $file = File::load($imgTargetId);
           // Create the array with values for that equipment.
           $equipment[] = [
             'title' => $term->get('name')->getValue()[0]['value'],
             'url' => $file->createFileUrl('TRUE')
           ];
-        }
-        else {
+        } else {
           // Find the default image from taxonomy term. NEED TO DO !
+          $default_image = $term->field_image->getSetting('default_image');
+          if ($default_image && $default_image['uuid']) {
+            $entityrepository = Drupal::service('entity.repository');
+            $defaultImageFile = $entityrepository->loadEntityByUuid('file', $default_image['uuid']);
+            if ($defaultImageFile) {
+              $file = File::load($defaultImageFile->get('fid')->getValue()[0]['value']);
+              $image_uri = $file->createFileUrl('TRUE');
+            }
+          }
           $equipment[] = [
             'title' => $term->get('name')->getValue()[0]['value'],
-            'url' => 'test'
+            'url' => $image_uri
           ];
         }
       }

@@ -80,32 +80,32 @@ class FieldFormatter extends EntityReferenceFormatterBase
    * @param \Drupal\Core\Entity\EntityStorageInterface $image_style_storage
    *   The image style storage.
    */
-  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings,EntityRepositoryInterface $entity_repository,  EntityFieldManagerInterface $entity_field_manager, AccountInterface $current_user, EntityStorageInterface $image_style_storage) {
-    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
-    $this->currentUser = $current_user;
-    $this->imageStyleStorage = $image_style_storage;
-    $this->entityFieldManager = $entity_field_manager;
-    $this->entityRepository = $entity_repository;
-  }
+    public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings,EntityRepositoryInterface $entity_repository,  EntityFieldManagerInterface $entity_field_manager, AccountInterface $current_user, EntityStorageInterface $image_style_storage) {
+      parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
+      $this->currentUser = $current_user;
+      $this->imageStyleStorage = $image_style_storage;
+      $this->entityFieldManager = $entity_field_manager;
+      $this->entityRepository = $entity_repository;
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static(
-      $plugin_id,
-      $plugin_definition,
-      $configuration['field_definition'],
-      $configuration['settings'],
-      $configuration['label'],
-      $configuration['view_mode'],
-      $configuration['third_party_settings'],
-      $container->get('current_user'),
-      $container->get('entity.repository'),
-      $container->get('entity_type.manager')->getStorage('image_style'),
-      $container->get('entity_field.manager'),
-    );
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+      return new static(
+        $plugin_id,
+        $plugin_definition,
+        $configuration['field_definition'],
+        $configuration['settings'],
+        $configuration['label'],
+        $configuration['view_mode'],
+        $configuration['third_party_settings'],
+        $container->get('current_user'),
+        $container->get('entity.repository'),
+        $container->get('entity_type.manager')->getStorage('image_style'),
+        $container->get('entity_field.manager'),
+      );
+    }
 
   public function viewElements(FieldItemListInterface $items, $langcode)
   {
@@ -133,7 +133,6 @@ class FieldFormatter extends EntityReferenceFormatterBase
         $element[$delta]['#url'] =  $image_uri ;
 
       } else {
-
         $image = $entity->get('field_event_taxonomy_image')->getValue()[0];
         $element[$delta]['#item'] = $name;
         $element[$delta]['#image_style'] =  $image_style_setting;
@@ -143,8 +142,6 @@ class FieldFormatter extends EntityReferenceFormatterBase
         $uri = str_replace('public://', '', $uri);
         $element[$delta]['#url'] = $uri;
         $element[$delta]['#alt'] = $image_alt;
-
-
       }
       return $element;
     }
