@@ -3,6 +3,7 @@
 namespace Drupal\image_title_caption\Plugin\Field\FieldFormatter;
 
 use Drupal;
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
@@ -105,9 +106,12 @@ class ImageTitleCaption extends EntityReferenceFormatterBase {
       // Loop through all equipment terms assigned to the field.
       foreach ($field_location_equipment as $taxonomyTerm) {
         // Get the term by term id.
+//            dd($taxonomyTerm);
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($taxonomyTerm['target_id']);
         // Get the image file id from the term if there is one.
-        $imgTargetId = $term->get('field_image')->getValue()[0]['target_id'];
+//          dd($term);
+        $imgTargetId = $term->get('field_image')->getValue()[0]['value'];
+//          dd($imgTargetId);
         // Load the file by the id.
         if (!is_null($imgTargetId)) {
           $file = File::load($imgTargetId);
