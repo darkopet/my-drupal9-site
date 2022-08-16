@@ -109,9 +109,12 @@ class ImageTitleCaption extends EntityReferenceFormatterBase {
 //            dd($taxonomyTerm);
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($taxonomyTerm['target_id']);
         // Get the image file id from the term if there is one.
-//          dd($term);
+          dd($term);
         $imgTargetId = $term->get('field_image')->getValue()[0]['value'];
+//        $imgTrId = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type_id, $bundle);
+//          dd($imgTrId);
 //          dd($imgTargetId);
+//          dd($node);
         // Load the file by the id.
         if (!is_null($imgTargetId)) {
           $file = File::load($imgTargetId);
