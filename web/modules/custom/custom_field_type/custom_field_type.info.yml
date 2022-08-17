@@ -1,0 +1,8 @@
+name: Custom Field Type
+type: module
+description: Youtube link with options to open the link or embed the video.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Custom
+
+
