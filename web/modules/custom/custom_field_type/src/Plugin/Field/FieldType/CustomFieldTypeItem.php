@@ -17,7 +17,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   module = "custom_field_type",
  *   description = @Translation("Output video from Youtube"),
  *   default_widget = "custom_field_type_widget"
- *   default_formatter = "custom_field_type_formatter"
+ *   default_formatter = "custom_field_type_thumbnail_formatter"
  */
 
 
