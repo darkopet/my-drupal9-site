@@ -5,6 +5,7 @@ namespace Drupal\custom_field_type\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 
+// Specify the field type in the class annotation.
 /**
  * Plugin implementation of the 'custom_field_type_thumbnail' formatter.
  *
