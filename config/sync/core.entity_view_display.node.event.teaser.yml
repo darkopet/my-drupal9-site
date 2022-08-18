@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.event.field_event_website
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
+    - field.field.node.event.field_youtube_video
     - node.type.event
   module:
     - user
@@ -43,4 +44,5 @@ hidden:
   field_event_website: true
   field_start_end_date: true
   field_twitter_text: true
+  field_youtube_video: true
   langcode: true

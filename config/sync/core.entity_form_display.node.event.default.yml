@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.event.field_event_website
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
+    - field.field.node.event.field_youtube_video
     - image.style.thumbnail
     - node.type.event
   module:
@@ -108,6 +109,12 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_youtube_video:
+    type: null
+    weight: 133
+    region: content
+    settings: {  }
     third_party_settings: {  }
   flag:
     weight: 10

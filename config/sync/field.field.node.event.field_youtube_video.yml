@@ -1,0 +1,21 @@
+uuid: b0609fe0-87c5-4a81-8fba-3109704b5a6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube_video
+    - node.type.event
+  module:
+    - custom_field_type
+id: node.event.field_youtube_video
+field_name: field_youtube_video
+entity_type: node
+bundle: event
+label: 'YouTube Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: custom_field_type
