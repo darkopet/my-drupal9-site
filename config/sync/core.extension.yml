@@ -117,7 +117,9 @@ module:
   shortcut: 0
   simple_sitemap: 0
   simpletest: 0
+  site_status_message: 0
   smart_date: 0
+  status_messages: 0
   system: 0
   taxonomy: 0
   telephone: 0
