@@ -13,11 +13,10 @@ use Drupal\Core\TypedData\DataDefinition;
  *
  * @FieldType(
  *   id = "custom_field_type",
- *   label = @Translation("Youtubexx` Video Link & Embed."),
+ *   label = @Translation("Youtube Video Link & Embed."),
  *   module = "custom_field_type",
  *   description = @Translation("Output video from Youtube"),
- *   default_widget = "custom_field_type_widget"
- *   default_formatter = "custom_field_type_thumbnail_formatter"
+ * )
  */
 
 

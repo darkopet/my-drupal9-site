@@ -1,11 +1,12 @@
+<?php
+
 /**
   * Implements hook_theme().
   */
-function custom_field_type() {
+function custom_field_type_theme() {
   return array(
     'custom_field_type_video_formatter' => array(
       'variables' => array('width' => 600, 'height' => 450, 'video_id' => NULL),
     ),
   );
 }
-
