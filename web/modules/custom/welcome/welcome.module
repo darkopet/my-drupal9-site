@@ -1,0 +1,9 @@
+<?php
+   /**
+    * @file
+    * Contains welcome.module.
+    */
+   function welcome_user_login($account) {
+   	$config = \Drupal::config('welcome.adminsettings');
+     \Drupal::messenger()->addStatus($config->get('welcome_message'));
+   }
