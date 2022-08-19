@@ -4,11 +4,11 @@
  * Implementation of hook_init().
  */
 function site_status_message_init() {
-  $enabled = variable_get('site_status_message_enabled', FALSE);
-  $type = variable_get('site_status_message_type', 'status');
-  $text = variable_get('site_status_message_text', '');
+  $enabled = \Drupal::state()->get('site_status_message_enabled', FALSE);
+  $type = \Drupal::state()->get('site_status_message_type', 'status');
+  $text = \Drupal::state()->get('site_status_message_text', '');
   if ($enabled && $text) {
-    drupal_set_message($text, $type);
+    \Drupal::messenger()->addStatus($text, $type);
   }
 }
 
@@ -34,7 +34,7 @@ function site_status_message_settings() {
     '#type' => 'checkbox',
     '#title' => t('Show message.'),
     '#description' => t('Enable the message.'),
-    '#default_value' => varible_get('site_status_message_enabled', FALSE),
+    '#default_value' => \Drupal::state()->get('site_status_message_enabled', FALSE),
   );
   $form['site_status_message_type'] = array(
     '#type' => 'select',
@@ -44,14 +44,14 @@ function site_status_message_settings() {
       'error' => t('Error'),
       'warning' => t('Warning'),
     ),
-    '#default_value' => variable_get('site_status_message_type', 'status'),
+    '#default_value' => \Drupal::state()->get('site_status_message_type', 'status'),
   );
   $form['site_status_message_text'] = array(
     '#type' => 'textfield',
     '#title' => t('Message to show.'),
-    '#default_value' => variable_get('site_status_message_text',''),
+    '#default_value' => \Drupal::state()->get('site_status_message_text',''),
     '#size' => 100,
   );
-  return site_system_settings_form($form);
+  return  \Drupal\Core\Form\ConfigFormBase($form);
 }
 
