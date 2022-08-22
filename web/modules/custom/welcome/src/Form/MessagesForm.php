@@ -45,6 +45,18 @@ class MessagesForm extends ConfigFormBase {
       '#description' => $this->t('Welcome message display to users when they login'),
       '#default_value' => $config->get('welcome_message'),						// getting the configuration settings
     ];
+    $form['welcome_settings'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Settings:'),
+      '#options' => [
+        'status' => $this->t('Status'),
+        'warning' => $this->t('Warning'),
+        'error' => $this->t('Error'),
+        'info' => $this->t('Information'),
+        'tba' => $this->t('To Be Announced'),
+      ],
+      '#default_value' => $config->get('welcome_settings'),
+    ];
     return parent::buildForm($form, $form_state);
   }
 
@@ -62,6 +74,7 @@ class MessagesForm extends ConfigFormBase {
 
     $this->config('welcome.adminsettings')						// retrieve the configuration
     ->set('welcome_message', $form_state->getValue('welcome_message'))		// set the configuration setting
+    ->set('welcome_settings', $form_state->getValue('welcome_settings'))
     ->save();								// saving the form data
   }
 }
