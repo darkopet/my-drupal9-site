@@ -42,6 +42,7 @@ module:
   entity_usage: 0
   event_form: 0
   event_timer: 0
+  example: 0
   examples: 0
   faq: 0
   favorites_count: 0
