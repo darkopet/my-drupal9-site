@@ -1,0 +1,23 @@
+uuid: f7fa91a0-2c5c-4b08-a480-74898dc01bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.company
+    - node.type.event
+    - node.type.location
+  module:
+    - node
+    - welcome
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'create company content'
+  - 'create event content'
+  - 'create location content'
+  - 'edit any company content'
+  - 'edit any event content'
+  - 'edit any location content'
+  - 'welcome administer_site_status_messge'

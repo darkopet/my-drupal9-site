@@ -4,6 +4,4 @@ welcome.admin_settings_form:
     _form: 'Drupal\welcome\Form\MessagesForm'
     _title: 'MessagesForm'
   requirements:
-    _permission: 'access administration pages'
-  options:
-    _admin_route: TRUE
+    _permission: 'welcome administer_site_status_message'

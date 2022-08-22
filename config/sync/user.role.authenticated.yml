@@ -24,6 +24,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'administer site status message'
   - 'edit own comments'
   - 'flag bookmark'
   - 'flag like'

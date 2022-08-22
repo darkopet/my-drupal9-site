@@ -1,0 +1,5 @@
+name: Content Lister
+type: module
+description: Listing the content type nodes using filters.
+core: 8.x
+core_version_requirement: ^8 || ^9
