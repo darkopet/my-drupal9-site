@@ -115,6 +115,7 @@ module:
   serialization: 0
   session_example: 0
   shortcut: 0
+  simple: 0
   simple_sitemap: 0
   simpletest: 0
   site_status_message: 0
