@@ -1,0 +1,32 @@
+uuid: 7cccfcb6-bb00-42f7-9fb4-b216a21ff190
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.companies_search_api
+id: locations_search_api
+label: 'Locations Search API'
+path: locations-searchapi
+clean_url: true
+show_all_when_no_keys: false
+index: companies_search_api
+limit: 10
+searched_fields: {  }
+style: view_modes
+view_mode_configuration:
+  'entity:node':
+    default: default
+    overrides:
+      article: ''
+      faq: ''
+      gallery: ''
+      grouptest: ''
+      landing_page: ''
+      layout_builder: ''
+      page: ''
+      rest_example_test: ''
+      slideshow: ''
+      team_member: ''
+      testing_example: ''
+show_search_form: true
+parse_mode: direct

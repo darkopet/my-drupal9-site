@@ -1,0 +1,37 @@
+uuid: 41e280e8-461c-4748-ade5-bf87b017ca7a
+langcode: en
+status: false
+dependencies:
+  module:
+    - search_api
+    - node
+id: companies_search_api
+name: 'Content Type Search API'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - company
+        - event
+        - location
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: ''

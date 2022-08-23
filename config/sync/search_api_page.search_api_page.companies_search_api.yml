@@ -1,0 +1,34 @@
+uuid: 26da845b-1b63-49e4-b20c-733d74889efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.companies_search_api
+id: companies_search_api
+label: 'Companies Search API'
+path: companies-searchapi
+clean_url: true
+show_all_when_no_keys: false
+index: companies_search_api
+limit: 10
+searched_fields: {  }
+style: view_modes
+view_mode_configuration:
+  'entity:node':
+    default: default
+    overrides:
+      article: ''
+      event: ''
+      faq: ''
+      gallery: ''
+      grouptest: ''
+      landing_page: ''
+      layout_builder: ''
+      location: ''
+      page: ''
+      rest_example_test: ''
+      slideshow: ''
+      team_member: ''
+      testing_example: ''
+show_search_form: true
+parse_mode: direct

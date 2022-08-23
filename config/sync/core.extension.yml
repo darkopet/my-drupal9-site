@@ -45,6 +45,7 @@ module:
   event_timer: 0
   example: 0
   examples: 0
+  facets: 0
   faq: 0
   favorites_count: 0
   field: 0
@@ -111,7 +112,8 @@ module:
   rh_node: 0
   rh_taxonomy: 0
   rh_user: 0
-  search: 0
+  search_api: 0
+  search_api_page: 0
   select2: 0
   seo_checklist: 0
   serialization: 0

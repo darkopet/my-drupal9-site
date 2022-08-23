@@ -10,7 +10,6 @@ dependencies:
     - filter
     - flag
     - media
-    - search
     - shortcut
     - system
 _core:
@@ -29,7 +28,6 @@ permissions:
   - 'flag bookmark'
   - 'flag like'
   - 'post comments'
-  - 'search content'
   - 'skip comment approval'
   - 'unflag bookmark'
   - 'unflag like'
