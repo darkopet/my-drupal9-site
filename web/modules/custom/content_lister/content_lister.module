@@ -1,0 +1,51 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * @file
+ * Contains content_lister.module.
+ */
+
+function get_companies($opt, $fname, $marks) {
+  $res = array();
+  $db = \Drupal::database();
+  if($opt == "All"){
+    $results = $db->select('companies', 'co')
+      ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
+      ->limit(15);
+    $results->fields('co');
+    $results->orderBy('co.id','DESC');
+    $res = $results->execute()->fetchAll();
+    $ret = [];
+  }else{
+    $results = $db->select('companies', 'co')
+      ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
+      ->limit(15);
+    $results->fields('co');
+    $results->orderBy('co.id','DESC');
+    $results->condition('fname', $fname);
+    $results->condition('marks', $marks);
+    $res = $results->execute()->fetchAll();
+    $ret = [];
+  }
+  foreach ($res as $row) {
+
+    $delete = Url::fromUserInput('/admin/structure/content_lister/companies/delete/' . $row->id, array('attributes' => array('onclick' => "return confirm('Are you Sure')")));
+    $edit = Url::fromUserInput('/admin/structure/content_lister/companies/edit/' . $row->id);
+    $edit_link = \Drupal::l('edit', $edit);
+    $delete_link = \Drupal::l('delete', $delete);
+
+    $mainLink = t('@linkApprove  @linkReject', array('@linkApprove' => $edit_link, '@linkReject' => $delete_link));
+
+    $ret[] = [
+      'id' => $row->id,
+      'fname' => $row->fname,
+      'sname' => $row->sname,
+      'age' => $row->age,
+      'marks' => $row->marks,
+      'opt' => $mainLink,
+    ];
+  }
+  return $ret;
+}

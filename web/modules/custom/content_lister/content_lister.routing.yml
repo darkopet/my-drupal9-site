@@ -1,0 +1,23 @@
+content_lister.companies:
+  path: '/admin/structure/content_lister/companies'
+  defaults:
+    _title: 'Companies'
+    _controller: '\Drupal\content_lister\Controller\CompanyController::listCompanies'
+  requirements:
+    _permission: 'administer Companies'
+
+content_lister.events:
+  path: '/admin/structure/content_lister/events'
+  defaults:
+    _title: 'Events'
+    _controller: '\Drupal\content_lister\Controller\EventController::listEvents'
+  requirements:
+    _permission: 'administer Events'
+
+content_lister.locations:
+  path: '/admin/structure/content_lister/locations'
+  defaults:
+    _title: 'Locations'
+    _controller: '\Drupal\content_lister\Controller\LocationController::listLocations'
+  requirements:
+    _permission: 'administer Locations'
