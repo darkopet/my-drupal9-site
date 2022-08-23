@@ -1,3 +1,11 @@
+content_lister.nodes:
+  path: '/admin/structure/content_lister/nodes'
+  defaults:
+    _title: 'Nodes'
+    _controller: '\Drupal\content_lister\Controller\ContentListerController::listNodes'
+  requirements:
+    _permission: 'administer Nodes'
+
 content_lister.companies:
   path: '/admin/structure/content_lister/companies'
   defaults:
