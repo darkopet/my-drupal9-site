@@ -3,30 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.companies_search_api
+    - search_api.index.locations_search_api_index
 id: locations_search_api
 label: 'Locations Search API'
 path: locations-searchapi
 clean_url: true
 show_all_when_no_keys: false
-index: companies_search_api
-limit: 10
+index: locations_search_api_index
+limit: 100
 searched_fields: {  }
 style: view_modes
 view_mode_configuration:
   'entity:node':
-    default: default
+    default: teaser
     overrides:
-      article: ''
-      faq: ''
-      gallery: ''
-      grouptest: ''
-      landing_page: ''
-      layout_builder: ''
-      page: ''
-      rest_example_test: ''
-      slideshow: ''
-      team_member: ''
-      testing_example: ''
+      location: teaser
 show_search_form: true
 parse_mode: direct

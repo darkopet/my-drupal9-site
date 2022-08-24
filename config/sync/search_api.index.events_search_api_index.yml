@@ -1,12 +1,12 @@
-uuid: 41e280e8-461c-4748-ade5-bf87b017ca7a
+uuid: 0941d70d-ce5e-4b96-8b0e-e41c377fef03
 langcode: en
 status: false
 dependencies:
   module:
     - search_api
     - node
-id: companies_search_api
-name: 'Companies Search API Index'
+id: events_search_api_index
+name: 'Events Search API Index'
 description: ''
 read_only: false
 field_settings: {  }
@@ -15,7 +15,7 @@ datasource_settings:
     bundles:
       default: false
       selected:
-        - company
+        - event
     languages:
       default: true
       selected: {  }

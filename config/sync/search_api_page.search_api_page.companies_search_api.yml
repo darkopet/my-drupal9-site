@@ -10,25 +10,13 @@ path: companies-searchapi
 clean_url: true
 show_all_when_no_keys: false
 index: companies_search_api
-limit: 10
+limit: 100
 searched_fields: {  }
 style: view_modes
 view_mode_configuration:
   'entity:node':
-    default: default
+    default: teaser
     overrides:
-      article: ''
-      event: ''
-      faq: ''
-      gallery: ''
-      grouptest: ''
-      landing_page: ''
-      layout_builder: ''
-      location: ''
-      page: ''
-      rest_example_test: ''
-      slideshow: ''
-      team_member: ''
-      testing_example: ''
+      company: teaser
 show_search_form: true
 parse_mode: direct

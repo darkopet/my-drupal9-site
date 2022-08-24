@@ -1,12 +1,12 @@
-uuid: 41e280e8-461c-4748-ade5-bf87b017ca7a
+uuid: 95a19f31-9720-4f62-9ebb-8616166a71ce
 langcode: en
 status: false
 dependencies:
   module:
     - search_api
     - node
-id: companies_search_api
-name: 'Companies Search API Index'
+id: locations_search_api_index
+name: 'Locations Search API Index'
 description: ''
 read_only: false
 field_settings: {  }
@@ -15,7 +15,7 @@ datasource_settings:
     bundles:
       default: false
       selected:
-        - company
+        - location
     languages:
       default: true
       selected: {  }
