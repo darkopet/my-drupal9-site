@@ -114,8 +114,12 @@ module:
   rh_user: 0
   search_api: 0
   search_api_autocomplete: 0
+  search_api_db: 0
+  search_api_db_defaults: 0
   search_api_page: 0
   search_api_solr: 0
+  search_api_solr_admin: 0
+  search_api_solr_autocomplete: 0
   select2: 0
   seo_checklist: 0
   serialization: 0

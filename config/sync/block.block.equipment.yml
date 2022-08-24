@@ -1,0 +1,32 @@
+uuid: c0f15e5a-1c66-4a0c-88b6-7d188f4633c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.equipment
+  module:
+    - facets
+    - node
+  theme:
+    - bartik
+id: equipment
+theme: bartik
+region: featured_top
+weight: 0
+provider: null
+plugin: 'facet_block:equipment'
+settings:
+  id: 'facet_block:equipment'
+  label: Equipment
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: equipment
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      location: location

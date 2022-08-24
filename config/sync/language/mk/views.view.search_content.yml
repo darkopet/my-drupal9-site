@@ -1,0 +1,17 @@
+label: 'Пребарување за содржина'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Барање
+      pager:
+        options:
+          tags:
+            previous: '‹ претходно'
+          expose:
+            items_per_page_options_all_label: '- Сите -'
+      filters:
+        search_api_fulltext:
+          expose:
+            label: Барање
