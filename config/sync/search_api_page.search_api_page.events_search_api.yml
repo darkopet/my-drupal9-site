@@ -8,10 +8,11 @@ id: events_search_api
 label: 'Events Search API'
 path: events-searchapi
 clean_url: true
-show_all_when_no_keys: false
+show_all_when_no_keys: true
 index: events_search_api_index
 limit: 100
-searched_fields: {  }
+searched_fields:
+  field_event_description: field_event_description
 style: view_modes
 view_mode_configuration:
   'entity:node':

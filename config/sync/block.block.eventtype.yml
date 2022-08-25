@@ -1,0 +1,29 @@
+uuid: e4ed0813-09a4-4c68-957e-5d01a646be37
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.event_type
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: eventtype
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:event_type'
+settings:
+  id: 'facet_block:event_type'
+  label: 'Event type'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: eventtype
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events-searchapi

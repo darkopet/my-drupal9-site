@@ -7,16 +7,17 @@ dependencies:
 id: companies_search_api
 label: 'Companies Search API'
 path: companies-searchapi
-clean_url: true
-show_all_when_no_keys: false
+clean_url: false
+show_all_when_no_keys: true
 index: companies_search_api
 limit: 100
-searched_fields: {  }
+searched_fields:
+  field_description: field_description
 style: view_modes
 view_mode_configuration:
   'entity:node':
-    default: teaser
+    default: search_index
     overrides:
-      company: teaser
+      company: search_index
 show_search_form: true
 parse_mode: direct

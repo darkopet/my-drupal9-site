@@ -1,0 +1,29 @@
+uuid: 9845b384-8c95-4ad1-b7de-47806d3a59c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.industry
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: industry
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:industry'
+settings:
+  id: 'facet_block:industry'
+  label: Industry
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: industry
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /companies-searchapi

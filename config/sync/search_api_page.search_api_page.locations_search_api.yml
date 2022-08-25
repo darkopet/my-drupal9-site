@@ -8,15 +8,16 @@ id: locations_search_api
 label: 'Locations Search API'
 path: locations-searchapi
 clean_url: true
-show_all_when_no_keys: false
+show_all_when_no_keys: true
 index: locations_search_api_index
 limit: 100
-searched_fields: {  }
+searched_fields:
+  field_location_description: field_location_description
 style: view_modes
 view_mode_configuration:
   'entity:node':
-    default: teaser
+    default: token
     overrides:
-      location: teaser
+      location: token
 show_search_form: true
 parse_mode: direct

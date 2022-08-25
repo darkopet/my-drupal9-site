@@ -10,7 +10,7 @@ dependencies:
 id: formblock
 theme: bartik
 region: sidebar_second
-weight: 0
+weight: -10
 provider: null
 plugin: event_form
 settings:

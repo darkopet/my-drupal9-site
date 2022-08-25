@@ -70,7 +70,6 @@ module:
   history: 0
   hooks_example: 0
   image: 0
-  image_title_caption: 0
   intense: 0
   jquery_ui: 0
   jquery_ui_accordion: 0

@@ -1,0 +1,6 @@
+name: Has events
+type: module
+description: Custom field in search index which will be displayed as a facet for companies that have at least one event assigned.
+core: 8.x
+core_version_requirement: ^8 || ^9
+

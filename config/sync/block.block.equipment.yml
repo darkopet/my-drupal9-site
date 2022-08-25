@@ -1,0 +1,29 @@
+uuid: 3e14602d-a81b-403c-8565-2aaa0133dd63
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.equipment
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: equipment
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:equipment'
+settings:
+  id: 'facet_block:equipment'
+  label: Equipment
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: equipment
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /locations-searchapi

@@ -1,4 +1,4 @@
-uuid: 9dc7b6d0-d72f-458c-b4a2-e121e98fd900
+uuid: bc0258dd-bd36-4883-bc07-400d64452bd5
 langcode: en
 status: true
 dependencies:
@@ -26,9 +26,16 @@ hierarchy:
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 widget:
-  type: array
+  type: links
   config:
-    show_numbers: true
+    show_numbers: false
+    soft_limit: 0
+    show_reset_link: false
+    reset_text: 'Show all'
+    hide_reset_when_no_selection: false
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
 empty_behavior:
   behavior: none
 only_visible_when_facet_source_is_visible: true
@@ -40,13 +47,13 @@ processor_configs:
     weights:
       sort: 20
     settings:
-      sort: ASC
+      sort: DESC
   count_widget_order:
     processor_id: count_widget_order
     weights:
       sort: 30
     settings:
-      sort: ASC
+      sort: DESC
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
@@ -57,6 +64,16 @@ processor_configs:
     processor_id: hierarchy_processor
     weights:
       build: 100
+    settings: {  }
+  list_item:
+    processor_id: list_item
+    weights:
+      build: 5
+    settings: {  }
+  translate_entity:
+    processor_id: translate_entity
+    weights:
+      build: 5
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler

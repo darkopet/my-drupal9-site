@@ -1,0 +1,9 @@
+uuid: e9e6503a-8bd3-4d0c-aefe-fdc42f1a3a74
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__search_api_page__locations_search_api
+name: 'search_api:search_api_page__locations_search_api'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

@@ -95,14 +95,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location_equipment
-  field_location_equipment_1:
-    label: Equipment
-    datasource_id: 'entity:node'
-    property_path: field_location_equipment
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_location_equipment
   field_location_image:
     label: Image
     datasource_id: 'entity:node'

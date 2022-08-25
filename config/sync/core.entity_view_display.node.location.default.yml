@@ -15,7 +15,7 @@ dependencies:
   module:
     - address
     - field_group
-    - image_title_caption
+    - image
     - link
     - telephone
     - text
@@ -116,11 +116,15 @@ content:
     weight: 3
     region: content
   field_location_image:
-    type: image_title_caption
+    type: image
     label: above
-    settings: {  }
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    weight: 18
+    weight: 19
     region: content
   field_location_is_operating:
     type: boolean
@@ -155,3 +159,4 @@ content:
 hidden:
   langcode: true
   links: true
+  search_api_excerpt: true

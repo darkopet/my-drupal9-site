@@ -101,6 +101,7 @@ class ImageTitleCaption extends EntityReferenceFormatterBase {
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $equipment = [];
     $node = $this->currentRouteService->getCurrentRouteMatch()->getParameter('node');
+//    dd($node);
     if($node->get('type')->getValue()[0]['target_id'] === 'location') {
       $field_location_equipment = $node->get('field_location_equipment')->getValue();
       // Loop through all equipment terms assigned to the field.
