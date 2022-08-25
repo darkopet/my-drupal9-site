@@ -1,6 +1,6 @@
 uuid: 541ef8e5-ffc1-4069-a00e-cf186e243511
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - favorites_count

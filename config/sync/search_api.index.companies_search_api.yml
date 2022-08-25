@@ -3,12 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_address
+    - field.storage.node.field_contact_email
+    - field.storage.node.field_description
     - field.storage.node.field_industry
+    - field.storage.node.field_logo
+    - field.storage.node.field_phone_number
+    - field.storage.node.field_website
     - search_api.server.default_server
   module:
     - search_api_solr
-    - search_api
     - node
+    - search_api
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -56,6 +62,30 @@ name: 'Companies Search API Index'
 description: ''
 read_only: false
 field_settings:
+  field_address:
+    label: Address
+    datasource_id: 'entity:node'
+    property_path: field_address
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_address
+  field_contact_email:
+    label: 'Contact email'
+    datasource_id: 'entity:node'
+    property_path: field_contact_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contact_email
+  field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_description
   field_industry:
     label: Industry
     datasource_id: 'entity:node'
@@ -64,6 +94,57 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_industry
+  field_logo:
+    label: Logo
+    datasource_id: 'entity:node'
+    property_path: field_logo
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_logo
+  field_phone_number:
+    label: 'Phone number'
+    datasource_id: 'entity:node'
+    property_path: field_phone_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_phone_number
+  field_website:
+    label: Website
+    datasource_id: 'entity:node'
+    property_path: field_website
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_website
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  uid:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -77,10 +158,15 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   auto_aggregated_fulltext_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
   entity_type: {  }
   language_with_fallback: {  }
   rendered_item: {  }
-  solr_date_range: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
 tracker_settings:
   default:
     indexing_order: fifo

@@ -3,7 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_location_address
+    - field.storage.node.field_location_contact_email
+    - field.storage.node.field_location_description
     - field.storage.node.field_location_equipment
+    - field.storage.node.field_location_image
+    - field.storage.node.field_location_is_operating
+    - field.storage.node.field_location_phone_number
+    - field.storage.node.field_location_website
     - search_api.server.default_server
   module:
     - search_api_solr
@@ -56,6 +63,30 @@ name: 'Locations Search API Index'
 description: ''
 read_only: false
 field_settings:
+  field_location_address:
+    label: Address
+    datasource_id: 'entity:node'
+    property_path: field_location_address
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location_address
+  field_location_contact_email:
+    label: 'Contact email'
+    datasource_id: 'entity:node'
+    property_path: field_location_contact_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location_contact_email
+  field_location_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_location_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_location_description
   field_location_equipment:
     label: Equipment
     datasource_id: 'entity:node'
@@ -64,6 +95,46 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location_equipment
+  field_location_equipment_1:
+    label: Equipment
+    datasource_id: 'entity:node'
+    property_path: field_location_equipment
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location_equipment
+  field_location_image:
+    label: Image
+    datasource_id: 'entity:node'
+    property_path: field_location_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_location_image
+  field_location_is_operating:
+    label: 'Is Operating'
+    datasource_id: 'entity:node'
+    property_path: field_location_is_operating
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_location_is_operating
+  field_location_phone_number:
+    label: 'Phone number'
+    datasource_id: 'entity:node'
+    property_path: field_location_phone_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location_phone_number
+  field_location_website:
+    label: Website
+    datasource_id: 'entity:node'
+    property_path: field_location_website
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location_website
 datasource_settings:
   'entity:node':
     bundles:

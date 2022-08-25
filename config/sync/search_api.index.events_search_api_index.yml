@@ -3,7 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_add_to_favourites
+    - field.storage.node.comment
+    - field.storage.node.field_event_description
     - field.storage.node.field_event_type
+    - field.storage.node.field_event_image
+    - field.storage.node.field_event_location
+    - field.storage.node.field_event_organizer
+    - field.storage.node.field_start_end_date
+    - field.storage.node.field_twitter_text
+    - field.storage.node.field_event_website
+    - field.storage.node.field_youtube_video
     - search_api.server.default_server
   module:
     - search_api_solr
@@ -56,6 +66,54 @@ name: 'Events Search API Index'
 description: ''
 read_only: false
 field_settings:
+  comment:
+    label: Comments
+    datasource_id: 'entity:node'
+    property_path: comment
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.comment
+  field_add_to_favourites:
+    label: 'Add To Favourites'
+    datasource_id: 'entity:node'
+    property_path: field_add_to_favourites
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_add_to_favourites
+  field_event_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_event_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_event_description
+  field_event_image:
+    label: Image
+    datasource_id: 'entity:node'
+    property_path: field_event_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_image
+  field_event_location:
+    label: Location
+    datasource_id: 'entity:node'
+    property_path: field_event_location
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_location
+  field_event_organizer:
+    label: Organizer
+    datasource_id: 'entity:node'
+    property_path: field_event_organizer
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_organizer
   field_event_type:
     label: 'Event type'
     datasource_id: 'entity:node'
@@ -64,6 +122,38 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_event_type
+  field_event_website:
+    label: Website
+    datasource_id: 'entity:node'
+    property_path: field_event_website
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_website
+  field_start_end_date:
+    label: 'Start/End Date'
+    datasource_id: 'entity:node'
+    property_path: field_start_end_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_start_end_date
+  field_twitter_text:
+    label: 'Twitter Text'
+    datasource_id: 'entity:node'
+    property_path: field_twitter_text
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_twitter_text
+  field_youtube_video:
+    label: 'YouTube Video'
+    datasource_id: 'entity:node'
+    property_path: field_youtube_video
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_youtube_video
 datasource_settings:
   'entity:node':
     bundles:
