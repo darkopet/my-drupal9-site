@@ -154,6 +154,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_youtube_video
+  has_events:
+    label: hasEvents
+    property_path: search_api_has_events
+    type: string
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants

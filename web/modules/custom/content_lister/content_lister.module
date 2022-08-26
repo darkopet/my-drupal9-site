@@ -53,7 +53,6 @@ function get_nodes($opt, $type) {
   return $ret;
 }
 
-
 function get_nodes_field_data($opt, $type, $title) {
   $res = array();
   $db = \Drupal::database();
