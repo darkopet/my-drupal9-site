@@ -1,4 +1,4 @@
-uuid: 8b3575bb-4615-4176-b6a3-a52fe54993a4
+uuid: b2e04cae-1cc8-4c44-ab66-8dec3a3addd1
 langcode: en
 status: true
 dependencies:
@@ -35,9 +35,9 @@ dependencies:
     - search_api_solr.solr_request_handler.request_handler_tvrh_default_7_0_0
   module:
     - search_api_solr
-id: content_type_search_api
-name: 'Content Type Search API'
-description: 'Search API Solr Server.'
+id: tutorial_solr_server
+name: 'Tutorial Solr Server'
+description: ''
 backend: search_api_solr
 backend_config:
   retrieve_data: false
@@ -46,10 +46,10 @@ backend_config:
   server_prefix: ''
   domain: generic
   environment: default
-  connector: standard
+  connector: basic_auth
   connector_config:
     scheme: http
-    host: my-drupal9-site.ddev.site
+    host: localhost
     port: 8984
     path: /
     core: new_core
@@ -64,6 +64,8 @@ backend_config:
     jmx: false
     jts: false
     solr_install_dir: ''
+    username: admin
+    password: adminpass
   optimize: false
   fallback_multiple: false
   disabled_field_types: {  }
