@@ -2,33 +2,30 @@
 
 namespace Drupal\content_lister\Form;
 
-use Drupal\Core\Routing\CurrentRouteMatch;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Url;
-use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides the form for filter Students.
  */
-class CompanyfilterForm extends FormBase {
-  /**
-   * @var $currentRouteService CurrentRouteMatch
-   */
-  protected $currentRouteService;
+class CompanyfilterForm extends ConfigFormBase implements ContainerInjectionInterface {
 
-  /**
-   * @param CurrentRouteMatch $currentRouteMatch
-   */
-  public function __construct(CurrentRouteMatch $currentRouteMatch) {
-    $this->currentRouteService = $currentRouteMatch;
+  public function __construct(ConfigFactoryInterface $config_factory, Url $from_route) {
+    parent::__construct($config_factory);
+    $this->fromRoute = $from_route;
   }
-
   public static function create(ContainerInterface $container) {
-    $form = new static(
-      $container->get('current_route_match')
+    return new static(
+      $container->get('config.factory'),
+      $container->get('from_route'),
     );
-    return $form;
+  }
+  public function getEditableConfigNames(){
+    // TODO: Implement getEditableConfigNames() method.
   }
 
   /**
