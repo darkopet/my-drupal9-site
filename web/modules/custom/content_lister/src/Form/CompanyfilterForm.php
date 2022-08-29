@@ -2,13 +2,34 @@
 
 namespace Drupal\content_lister\Form;
 
+use Drupal\Core\Routing\CurrentRouteMatch;
+use Drupal\Core\Url;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides the form for filter Students.
  */
 class CompanyfilterForm extends FormBase {
+  /**
+   * @var $currentRouteService CurrentRouteMatch
+   */
+  protected $currentRouteService;
+
+  /**
+   * @param CurrentRouteMatch $currentRouteMatch
+   */
+  public function __construct(CurrentRouteMatch $currentRouteMatch) {
+    $this->currentRouteService = $currentRouteMatch;
+  }
+
+  public static function create(ContainerInterface $container) {
+    $form = new static(
+      $container->get('current_route_match')
+    );
+    return $form;
+  }
 
   /**
    * {@inheritdoc}
@@ -21,6 +42,7 @@ class CompanyfilterForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+
     $form['filters'] = [
       '#type'  => 'fieldset',
       '#title' => $this->t('Filter'),
@@ -55,13 +77,11 @@ class CompanyfilterForm extends FormBase {
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
-//    dd($field);
     $title = $field["title"];
-//    dd($type);
-    $url = \Drupal\Core\Url::fromRoute('content_lister.companies')
+
+    $url = Url::fromRoute('content_lister.companies')
       ->setRouteParameters(array('title'=>$title));
-//    dd($url);
+
     $form_state->setRedirectUrl($url);
-//    dd($form_state);
   }
 }

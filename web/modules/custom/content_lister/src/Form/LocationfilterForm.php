@@ -4,6 +4,7 @@ namespace Drupal\content_lister\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides the form for filter Students.
@@ -55,13 +56,12 @@ class LocationfilterForm extends FormBase {
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
-//    dd($field);
+
     $title = $field["title"];
-//    dd($type);
-    $url = \Drupal\Core\Url::fromRoute('content_lister.locations')
+
+    $url = Url::fromRoute('content_lister.locations')
       ->setRouteParameters(array('title'=>$title));
-//    dd($url);
+
     $form_state->setRedirectUrl($url);
-//    dd($form_state);
   }
 }

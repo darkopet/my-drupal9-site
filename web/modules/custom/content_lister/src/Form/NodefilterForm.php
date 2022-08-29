@@ -1,8 +1,10 @@
 <?php
+
 namespace Drupal\content_lister\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides the form for filter Students.
@@ -54,13 +56,12 @@ class NodefilterForm extends FormBase {
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
-//    dd($field);
+
     $type = $field["type"];
-//    dd($type);
-    $url = \Drupal\Core\Url::fromRoute('content_lister.nodes')
+
+    $url = Url::fromRoute('content_lister.nodes')
       ->setRouteParameters(array('type'=>$type));
-//    dd($url);
+
     $form_state->setRedirectUrl($url);
-//    dd($form_state);
   }
 }

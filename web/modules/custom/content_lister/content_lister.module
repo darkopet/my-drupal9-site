@@ -82,18 +82,17 @@ function get_nodes_field_data($opt, $type, $title) {
 
     $delete = Url::fromUserInput('/admin/structure/content_lister/nodes/delete/' . $row->nid, array('attributes' => array('onclick' => "return confirm('Are you Sure')")));
     $edit = Url::fromUserInput('/admin/structure/content_lister/nodes/edit/' . $row->nid);
-//    dd($edit);
+
     $edit_link = Link::fromTextAndUrl('edit', $edit)->toString();
-//    dd($edit_link);
+
     $delete_link = Link::fromTextAndUrl('delete', $delete)->toString();
     $mainLink = t('@linkApprove  @linkReject', array('@linkApprove' => $edit_link, '@linkReject' => $delete_link));
 
     $title_url_text = Url::fromUserInput('/node/' . $row->nid);
-//    dd($title_url_text);
+
     $title_link = Link::fromTextAndUrl($row->title, $title_url_text)->toString();
-//    dd($title_link);
+
     $title_uri = t('@linkApprove', array('@linkApprove' => $title_link));
-//    dd($title);
 
     $ret[] = [
       'nid' => $row->nid,

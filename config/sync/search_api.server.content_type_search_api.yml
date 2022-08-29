@@ -46,11 +46,11 @@ backend_config:
   server_prefix: ''
   domain: generic
   environment: default
-  connector: standard
+  connector: solr_cloud
   connector_config:
     scheme: http
     host: my-drupal9-site.ddev.site
-    port: 8984
+    port: 8983
     path: /
     core: new_core
     timeout: 5
@@ -64,6 +64,10 @@ backend_config:
     jmx: false
     jts: false
     solr_install_dir: ''
+    checkpoints_collection: ''
+    stats_cache: org.apache.solr.search.stats.LRUStatsCache
+    distrib: true
+    context: solr
   optimize: false
   fallback_multiple: false
   disabled_field_types: {  }
