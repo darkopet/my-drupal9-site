@@ -1,0 +1,6 @@
+site_status_message.admin_settings_form:
+  title: 'Site Status Message configuration.'
+  route_name: site_status_message.admin_settings_form
+  description: 'Site status message admin'
+  parent: system.admin_config_system
+  weight: 99

@@ -1,4 +1,23 @@
 <?php
+/**
+ * @file
+ * Site Status message provides a configurable page top message.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function site_status_message_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#site_status_message':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Site Status Message is a simple module to display a site wide message to your users at the top of each page. Use cases could be to inform of known downtime in the future, to advertise a special offer on the site or some important news that needs highlighting.') . '</p>';
+      $output .= '<p>' . t('An optional link to a page with more information can be displayed after the message.') . '</p>';
+      $output .= '<p>' . t('The settings for this module can be configured on the <a href="@url">Site Status Message Administration</a> page.', array('@url' => '/admin/config/system/site-status-message')) . '</p>';
+      return $output;
+  }
+  return NULL;
+}
 
 /**
  * Implementation of hook_init().

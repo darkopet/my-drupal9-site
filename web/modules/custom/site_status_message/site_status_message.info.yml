@@ -1,8 +1,7 @@
 name: Site Status Message
 type: module
-description: Provides a simple status message for the site.
+description: Provides a configurable status message to display on the top of the site.
 package: Custom
-version: 1.x
 core: 8.x
 core_version_requirement: ^8 || ^9
-configure: site_status_messages
+configure: administer_site_status_messages
