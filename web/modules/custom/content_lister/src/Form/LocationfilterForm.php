@@ -10,7 +10,6 @@ use Drupal\Core\Url;
  * Provides the form for filter Students.
  */
 class LocationfilterForm extends FormBase {
-
   /**
    * {@inheritdoc}
    */

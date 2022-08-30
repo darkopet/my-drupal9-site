@@ -2,30 +2,32 @@
 
 namespace Drupal\content_lister\Form;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Drupal\Core\Url;
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Provides the form for filter Students.
  */
-class CompanyfilterForm extends ConfigFormBase implements ContainerInjectionInterface {
-
-  public function __construct(ConfigFactoryInterface $config_factory, Url $from_route) {
-    parent::__construct($config_factory);
-    $this->fromRoute = $from_route;
+class CompanyfilterForm extends FormBase {
+  /**
+   * @var Request
+   */
+  protected $requestUri;
+  /**
+   * Constructs a LocationController object
+   */
+  public function __construct(Request $requestUri) {
+    $this->requestUri = $requestUri;
   }
+  /**
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.factory'),
-      $container->get('from_route'),
+      $container->get('request_')
     );
-  }
-  public function getEditableConfigNames(){
-    // TODO: Implement getEditableConfigNames() method.
   }
 
   /**
@@ -39,7 +41,6 @@ class CompanyfilterForm extends ConfigFormBase implements ContainerInjectionInte
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-
     $form['filters'] = [
       '#type'  => 'fieldset',
       '#title' => $this->t('Filter'),
@@ -64,7 +65,7 @@ class CompanyfilterForm extends ConfigFormBase implements ContainerInjectionInte
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
 
-    if ( $form_state->getValue('title') == "") {
+    if ($form_state->getValue('title') == "") {
       $form_state->setErrorByName('from', $this->t('You must enter a valid title.'));
     }
   }
@@ -74,9 +75,10 @@ class CompanyfilterForm extends ConfigFormBase implements ContainerInjectionInte
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
+
     $title = $field["title"];
 
-    $url = Url::fromRoute('content_lister.companies')
+    $url = $this->requestUri->getUriForPath('content_lister.companies')
       ->setRouteParameters(array('title'=>$title));
 
     $form_state->setRedirectUrl($url);

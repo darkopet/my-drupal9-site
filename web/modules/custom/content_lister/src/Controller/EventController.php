@@ -3,6 +3,8 @@
 namespace Drupal\content_lister\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class EventController.
@@ -11,21 +13,35 @@ use Drupal\Core\Controller\ControllerBase;
  */
 
 class EventController extends ControllerBase {
+  /**
+   * @var RequestStack
+   */
+  protected $requestStack;
+  /**
+   * Constructs a EventController object
+   */
+  public function __construct(RequestStack $requestStack) {
+    $this->requestStack = $requestStack;
+  }
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('request_stack')
+    );
+  }
   public function listEvents() {
-      // Getting value while submitting filter form.
       $type = "event";
-      $title = \Drupal::request()->query->get('title');
-//    dd($title);
+      $title = $this->requestStack->getCurrentRequest()->query->get('title');
       $form['form'] = $this->formBuilder()->getForm('Drupal\content_lister\Form\EventfilterForm');
 
-      // Creating table header
       $header = [
         'nid' => $this->t('Nid'),
         'vid' => $this->t('Vid'),
         'type' => $this->t('Type'),
         'title' => $this->t('Title'),
       ];
-
       if ($type == "event" && !$title) {
         $form['table'] = [
           '#type' => 'table',

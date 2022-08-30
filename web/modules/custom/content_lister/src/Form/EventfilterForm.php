@@ -5,32 +5,11 @@ namespace Drupal\content_lister\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Routing\CurrentRouteMatch;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides the form for filter Students.
  */
 class EventfilterForm extends FormBase {
-  /**
-   * @var $currentRouteService CurrentRouteMatch
-   */
-  protected $currentRouteService;
-
-  /**
-   * @param CurrentRouteMatch $currentRouteMatch
-   */
-  public function __construct(CurrentRouteMatch $currentRouteMatch) {
-    $this->currentRouteService = $currentRouteMatch;
-  }
-
-  public static function create(ContainerInterface $container) {
-    $form = new static(
-      $container->get('current_route_match')
-    );
-    return $form;
-  }
-
   /**
    * {@inheritdoc}
    */

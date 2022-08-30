@@ -3,6 +3,8 @@
 namespace Drupal\content_lister\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class ContentListerController.
@@ -11,15 +13,28 @@ use Drupal\Core\Controller\ControllerBase;
  */
 
 class ContentListerController extends ControllerBase {
-
+  /**
+   * @var RequestStack
+   */
+  protected $requestStack;
+  /**
+   * Constructs a LocationController object
+   */
+  public function __construct(RequestStack $requestStack) {
+    $this->requestStack = $requestStack;
+  }
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('request_stack')
+    );
+  }
   public function listNodes() {
-    // Getting value while submitting filter form.
-    $type = \Drupal::request()->query->get('type');
-
-    //====load filter controller
+    $type = $this->requestStack->getCurrentRequest()->query->get('title');
     $form['form'] = $this->formBuilder()->getForm('Drupal\content_lister\Form\NodefilterForm');
 
-    // Creating table header
     $header = [
       'nid' => $this->t('Nid'),
       'vid' => $this->t('Vid'),
@@ -27,7 +42,6 @@ class ContentListerController extends ControllerBase {
       'uuid' => $this->t('Uuid'),
       'langcode' => $this->t('Langcode'),
     ];
-
     if ($type == "") {
       $form['table'] = [
         '#type' => 'table',

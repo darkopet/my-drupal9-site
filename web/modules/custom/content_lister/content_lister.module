@@ -11,7 +11,6 @@ use Drupal\Core\Link;
 function get_nodes($opt, $type) {
   $res = array();
   $db = \Drupal::database();
-
   if($opt == "All") {
     $results = $db->select('node')
       ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
@@ -30,9 +29,7 @@ function get_nodes($opt, $type) {
     $res = $results->execute()->fetchAll();
     $ret = [];
   }
-
   foreach ($res as $row) {
-
     $delete = Url::fromUserInput('/admin/structure/content_lister/nodes/delete/' . $row->nid, array('attributes' => array('onclick' => "return confirm('Are you Sure')")));
     $edit = Url::fromUserInput('/admin/structure/content_lister/nodes/edit/' . $row->nid);
 
@@ -56,7 +53,6 @@ function get_nodes($opt, $type) {
 function get_nodes_field_data($opt, $type, $title) {
   $res = array();
   $db = \Drupal::database();
-
   if($opt == "All") {
     $results = $db->select('node_field_data')
       ->extend('\Drupal\Core\Database\Query\PagerSelectExtender')
@@ -77,23 +73,15 @@ function get_nodes_field_data($opt, $type, $title) {
     $res = $results->execute()->fetchAll();
     $ret = [];
   }
-
   foreach ($res as $row) {
-
     $delete = Url::fromUserInput('/admin/structure/content_lister/nodes/delete/' . $row->nid, array('attributes' => array('onclick' => "return confirm('Are you Sure')")));
     $edit = Url::fromUserInput('/admin/structure/content_lister/nodes/edit/' . $row->nid);
-
     $edit_link = Link::fromTextAndUrl('edit', $edit)->toString();
-
     $delete_link = Link::fromTextAndUrl('delete', $delete)->toString();
     $mainLink = t('@linkApprove  @linkReject', array('@linkApprove' => $edit_link, '@linkReject' => $delete_link));
-
     $title_url_text = Url::fromUserInput('/node/' . $row->nid);
-
     $title_link = Link::fromTextAndUrl($row->title, $title_url_text)->toString();
-
     $title_uri = t('@linkApprove', array('@linkApprove' => $title_link));
-
     $ret[] = [
       'nid' => $row->nid,
       'vid' => $row->vid,
