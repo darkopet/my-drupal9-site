@@ -45,7 +45,7 @@ class SiteStatusMessageConfigForm extends ConfigFormBase {
       '#type' => 'select',
       '#title' => $this->t('Settings:'),
       '#options' => [
-        'status' => $this->t('Status'),
+        'status' => $this->t('- Select status -'),
         'warning' => $this->t('Warning'),
         'error' => $this->t('Error'),
         'info' => $this->t('Information'),

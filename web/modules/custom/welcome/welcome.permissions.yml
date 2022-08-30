@@ -1,4 +1,0 @@
-welcome administer_site_status_messge:
-  title: 'administer site status message'
-  description: 'Administer Site Status Message for config form module.'
-  restrict access: true

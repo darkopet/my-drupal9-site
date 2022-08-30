@@ -1,7 +1,0 @@
-welcome.admin_settings_form:
-  path: '/admin/config/welcome/adminsettings'
-  defaults:
-    _form: 'Drupal\welcome\Form\MessagesForm'
-    _title: 'MessagesForm'
-  requirements:
-    _permission: 'welcome administer_site_status_message'
