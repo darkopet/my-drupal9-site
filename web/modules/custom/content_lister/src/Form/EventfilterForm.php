@@ -44,23 +44,18 @@ class EventfilterForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-
     if ( $form_state->getValue('title') == "") {
       $form_state->setErrorByName('from', $this->t('You must enter a valid title.'));
     }
   }
-
   /**
    * {@inheritdoc}
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
-
     $title = $field["title"];
-
     $url = Url::fromRoute('content_lister.events')
       ->setRouteParameters(array('title'=>$title));
-
     $form_state->setRedirectUrl($url);
   }
 }

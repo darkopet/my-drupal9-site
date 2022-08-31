@@ -32,12 +32,9 @@ function get_nodes($opt, $type) {
   foreach ($res as $row) {
     $delete = Url::fromUserInput('/admin/structure/content_lister/nodes/delete/' . $row->nid, array('attributes' => array('onclick' => "return confirm('Are you Sure')")));
     $edit = Url::fromUserInput('/admin/structure/content_lister/nodes/edit/' . $row->nid);
-
     $edit_link = Link::fromTextAndUrl('edit', $edit)->toString();
     $delete_link = Link::fromTextAndUrl('delete', $delete)->toString();
-
     $mainLink = t('@linkApprove  @linkReject', array('@linkApprove' => $edit_link, '@linkReject' => $delete_link));
-
     $ret[] = [
       'nid' => $row->nid,
       'vid' => $row->vid,

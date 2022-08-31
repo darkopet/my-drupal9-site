@@ -44,7 +44,6 @@ class NodefilterForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-
     if ( $form_state->getValue('type') == "") {
       $form_state->setErrorByName('from', $this->t('You must enter a valid content type.'));
     }
@@ -55,12 +54,9 @@ class NodefilterForm extends FormBase {
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
-
     $type = $field["type"];
-
     $url = Url::fromRoute('content_lister.nodes')
       ->setRouteParameters(array('type'=>$type));
-
     $form_state->setRedirectUrl($url);
   }
 }
