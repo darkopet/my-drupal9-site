@@ -10,7 +10,7 @@ dependencies:
 id: favoriteseventcounterblock
 theme: bartik
 region: sidebar_second
-weight: -11
+weight: -14
 provider: null
 plugin: favorites_count
 settings:

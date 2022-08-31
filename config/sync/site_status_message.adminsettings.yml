@@ -1,2 +1,3 @@
-site_status_message: test
+site_status_message: 'Site Status Message Information testing.'
 site_status_settings: null
+site_status_message_type: Information

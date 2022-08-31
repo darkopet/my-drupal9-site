@@ -16,6 +16,7 @@ dependencies:
     - layout_builder
     - node
     - path
+    - site_status_message
     - system
     - taxonomy
     - toolbar
@@ -27,6 +28,7 @@ label: 'Content editor'
 weight: 2
 is_admin: false
 permissions:
+  - 'Site Status Message administer_site_status_message'
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'

@@ -1,7 +1,0 @@
-name: Simple
-type: module
-description:  Configuration form
-package: Custom
-version: 1.x
-core: 8.x
-core_version_requirement: ^8 || ^9

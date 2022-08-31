@@ -1,0 +1,20 @@
+uuid: d5c508fc-1dde-4811-b391-da05428da405
+langcode: en
+status: true
+dependencies:
+  module:
+    - site_status_message
+  theme:
+    - bartik
+id: sitestatusmessage
+theme: bartik
+region: sidebar_second
+weight: -8
+provider: null
+plugin: site_status_message
+settings:
+  id: site_status_message
+  label: 'Site Status Message'
+  label_display: visible
+  provider: site_status_message
+visibility: {  }

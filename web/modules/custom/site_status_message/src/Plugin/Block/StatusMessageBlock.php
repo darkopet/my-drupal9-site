@@ -1,12 +1,11 @@
 <?php
 
-namespace Drupal\event_timer\Plugin\Block;
+namespace Drupal\site_status_message\Plugin\Block;
 
-use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
-use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\State\State;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -22,6 +21,10 @@ class StatusMessageBlock extends BlockBase implements ContainerFactoryPluginInte
    * @var CurrentRouteMatch $currentRouteService
    */
   protected CurrentRouteMatch $currentRouteService;
+  /**
+   * @var State
+   */
+  protected $state;
 
   /**
    * @param array $configuration
@@ -29,11 +32,11 @@ class StatusMessageBlock extends BlockBase implements ContainerFactoryPluginInte
    * @param mixed $plugin_definition
    * @param CurrentRouteMatch $currentRouteMatch
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrentRouteMatch $currentRouteMatch) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrentRouteMatch $currentRouteMatch, State $state) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->currentRouteService = $currentRouteMatch;
+    $this->state = $state;
   }
-
   /**
    * @param ContainerInterface $container
    * @param array $configuration
@@ -47,27 +50,17 @@ class StatusMessageBlock extends BlockBase implements ContainerFactoryPluginInte
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('current_route_match')
+      $container->get('current_route_match'),
+      $container->get('state')
     );
   }
-
   /**
    * {@inheritdoc}
    */
   public function build(): array {
-
     return [
-      '#theme' => 'event_block',
-      '#type' => '',
-      '#message' => '',
+      '#title' => $this->state->get('site_status')['message'],
+      '#markup' => $this->state->get('site_status')['type']
     ];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function blockAccess(AccountInterface $account)
-  {
-    return AccessResult::allowedIfHasPermission($account, 'access content');
   }
 }

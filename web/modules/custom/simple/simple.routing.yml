@@ -1,7 +1,0 @@
-simple.admin_settings_form:
-  path: '/admin/config/simple/adminsettings'
-  defaults:
-    _form: 'Drupal\simple\Form\SimpleConfigForm'
-    _title: 'Simple Configuration'
-  requirements:
-    _permission: 'simple administer_site_status_message'
