@@ -1,7 +1,19 @@
-.message-color-back {
+.status {
+  background-color: sandybrown;
+}
+
+.warning {
+ background-color: yellow;
+}
+
+.error {
+  background-color: red;
+}
+
+.info {
   background-color: green;
 }
 
-.type-color-back {
-  background-color: red;
+.tba {
+  background-color: orange;
 }

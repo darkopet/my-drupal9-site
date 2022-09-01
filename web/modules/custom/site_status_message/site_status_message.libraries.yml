@@ -1,0 +1,4 @@
+site_status_message:
+  css:
+    layout:
+      css/site_status_message.css: {}

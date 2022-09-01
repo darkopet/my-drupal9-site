@@ -1,73 +1,14 @@
 <?php
-
-
-///**
-// * Implements hook_help().
-// */
-//function site_status_message_help($path, $arg) {
-//  switch ($path) {
-//    case 'admin/help#site_status_message':
-//      $output = '<h3>' . t('About') . '</h3>';
-//      $output .= '<p>' . t('The Site Status Message is a simple module to display a site wide message to your users at the top of each page. Use cases could be to inform of known downtime in the future, to advertise a special offer on the site or some important news that needs highlighting.') . '</p>';
-//      $output .= '<p>' . t('An optional link to a page with more information can be displayed after the message.') . '</p>';
-//      $output .= '<p>' . t('The settings for this module can be configured on the <a href="@url">Site Status Message Administration</a> page.', array('@url' => '/admin/config/system/site-status-message')) . '</p>';
-//      return $output;
-//  }
-//  return NULL;
-//}
-//
-///**
-// * Implementation of hook_init().
-// */
-//function site_status_message_init() {
-//  $enabled = \Drupal::state()->get('site_status_message_enabled', FALSE);
-//  $type = \Drupal::state()->get('site_status_message_type', 'status');
-//  $text = \Drupal::state()->get('site_status_message_text', '');
-//  if ($enabled && $text) {
-//    \Drupal::messenger()->addStatus($text, $type);
-//  }
-//}
-//
-///**
-// * Implementation of hook_menu().
-// */
-//function site_status_message_menu() {
-//  $items['admin/config/system/status/site_status_message'] = array(
-//    'title' => t('Status message'),
-//    'description' => t('Set a Drupal message.'),
-//    'page callback' => 'drupal_get_form',
-//    'page arguments' => array('site_status_message_settings'),
-//    'access arguments' => array('administer site configuration'),
-//  );
-//  return $items;
-//}
-//
-///**
-// * Admin settings form
-// */
-//function site_status_message_settings() {
-//  $form['site_status_message_enabled'] = array(
-//    '#type' => 'checkbox',
-//    '#title' => t('Show message.'),
-//    '#description' => t('Enable the message.'),
-//    '#default_value' => \Drupal::state()->get('site_status_message_enabled', FALSE),
-//  );
-//  $form['site_status_message_type'] = array(
-//    '#type' => 'select',
-//    '#title' => t('Message type'),
-//    '#options' => array(
-//      'status' => t('Status'),
-//      'error' => t('Error'),
-//      'warning' => t('Warning'),
-//    ),
-//    '#default_value' => \Drupal::state()->get('site_status_message_type', 'status'),
-//  );
-//  $form['site_status_message_text'] = array(
-//    '#type' => 'textfield',
-//    '#title' => t('Message to show.'),
-//    '#default_value' => \Drupal::state()->get('site_status_message_text',''),
-//    '#size' => 100,
-//  );
-//  return  \Drupal\Core\Form\ConfigFormBase($form);
-
-
+/**
+ * Implements hook_theme().
+ */
+function site_status_message_theme($existing, $type, $theme, $path){
+  return [
+    'site_status_message' => [
+      'variables' => [
+        'message' => '',
+        'type' => ''
+      ],
+    ],
+  ];
+}

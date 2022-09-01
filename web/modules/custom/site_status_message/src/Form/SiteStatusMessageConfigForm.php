@@ -64,11 +64,11 @@ class SiteStatusMessageConfigForm extends ConfigFormBase {
       '#type' => 'select',
       '#title' => $this->t('Type:'),
       '#options' => [
-        'Status' => $this->t('- Select status -'),
-        'Warning' => $this->t('Warning'),
-        'Error' => $this->t('Error'),
-        'Information' => $this->t('Information'),
-        'To Be Announced' => $this->t('To Be Announced'),
+        'status' => $this->t('- Select status -'),
+        'warning' => $this->t('Warning'),
+        'error' => $this->t('Error'),
+        'info' => $this->t('Information'),
+        'tba' => $this->t('To Be Announced'),
       ],
       '#default_value' => $config->get('site_status_message_type'),
     ];

@@ -15,6 +15,6 @@ plugin: site_status_message
 settings:
   id: site_status_message
   label: 'Site Status Message'
-  label_display: visible
+  label_display: '0'
   provider: site_status_message
 visibility: {  }

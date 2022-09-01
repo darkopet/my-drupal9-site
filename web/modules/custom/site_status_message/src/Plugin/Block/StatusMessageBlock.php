@@ -59,8 +59,14 @@ class StatusMessageBlock extends BlockBase implements ContainerFactoryPluginInte
    */
   public function build(): array {
     return [
-      '#title' => $this->state->get('site_status')['message'],
-      '#markup' => $this->state->get('site_status')['type']
+      '#theme' => 'site_status_message',
+      '#attached' => [
+        'library' => [
+          'site_status_message/site_status_message',
+        ],
+      ],
+      '#message' => $this->state->get('site_status')['message'],
+      '#type' => $this->state->get('site_status')['type']
     ];
   }
 }

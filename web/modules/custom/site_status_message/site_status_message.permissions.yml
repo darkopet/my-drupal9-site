@@ -1,4 +1,3 @@
 Site Status Message administer_site_status_message:
-  title: 'Administer site status message'
+  title: 'Administer site status message permissions.'
   description: 'Administer Site Status Message for configuration form module.'
-  restrict access: true
