@@ -82,7 +82,7 @@ class SiteStatusMessageConfigForm extends ConfigFormBase {
     $this->config('site_status_message.adminsettings')
     ->set('site_status_message', $form_state->getValue('site_status_message'))
     ->set('site_status_message_type', $form_state->getValue('site_status_message_type'))
-      ->save();
+    ->save();
     $this->state->set('site_status', [
       'message' => $form_state->getValue('site_status_message'),
       'type' =>  $form_state->getValue('site_status_message_type')
