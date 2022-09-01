@@ -3,6 +3,5 @@ type: module
 description: Provides a configurable status message to display on the top of the site.
 package: Custom
 core_version_requirement: ^8 || ^9
-configure: administer_site_status_messages
 libraries:
   - 'site_status_message/custom'

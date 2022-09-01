@@ -4,4 +4,4 @@ site_status_message.admin_settings_form:
     _form: 'Drupal\site_status_message\Form\SiteStatusMessageConfigForm'
     _title: 'Site Status Message Configuration'
   requirements:
-    _permission: 'content_editor'
+    _permission: 'site_status_message permission'
