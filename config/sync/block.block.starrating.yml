@@ -1,0 +1,28 @@
+uuid: 04c28615-c901-4b3d-a208-d1e9a5aecb67
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - star_rating
+  theme:
+    - bartik
+id: starrating
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'Star rating'
+settings:
+  id: 'Star rating'
+  label: 'Star Rating'
+  label_display: visible
+  provider: star_rating
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      location: location

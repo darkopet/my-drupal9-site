@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.location.field_equipment_score
     - field.field.node.location.field_location_address
     - field.field.node.location.field_location_contact_email
     - field.field.node.location.field_location_description
@@ -26,6 +27,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_equipment_score: true
   field_location_address: true
   field_location_contact_email: true
   field_location_description: true
@@ -35,3 +37,4 @@ hidden:
   field_location_phone_number: true
   field_location_website: true
   langcode: true
+  search_api_excerpt: true

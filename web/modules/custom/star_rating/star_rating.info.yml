@@ -1,0 +1,7 @@
+name: 'Star rating'
+description: 'Scoring the location using its equipment values.'
+type: module
+package: Custom
+core_version_requirement: ^8 || ^9
+libraries:
+  - 'star_rating/custom'

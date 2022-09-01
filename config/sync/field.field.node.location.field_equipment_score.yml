@@ -1,0 +1,24 @@
+uuid: b9c90ed7-9946-49c5-a049-ae75a887e9ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equipment_score
+    - node.type.location
+  module:
+    - starrating
+id: node.location.field_equipment_score
+field_name: field_equipment_score
+entity_type: node
+bundle: location
+label: 'Equipment Score'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '5'
+default_value_callback: ''
+settings:
+  max_value: '10'
+field_type: starrating

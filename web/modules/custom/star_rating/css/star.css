@@ -1,0 +1,7 @@
+.star-on {
+   float: left;
+   width: 20px;
+   height: 20px;
+   margin-top: 5px;
+   background: url("star.png");
+ }

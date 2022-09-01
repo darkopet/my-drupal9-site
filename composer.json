@@ -90,6 +90,7 @@
         "drupal/simple_sitemap": "^4.1",
         "drupal/smart_date": "^3.5",
         "drupal/smtp": "^1.0",
+        "drupal/starrating": "^4.1@alpha",
         "drupal/status_messages": "^4.3",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_infinite_scroll": "^2.0",

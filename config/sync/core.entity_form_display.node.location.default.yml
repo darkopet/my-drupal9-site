@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.location.field_equipment_score
     - field.field.node.location.field_location_address
     - field.field.node.location.field_location_contact_email
     - field.field.node.location.field_location_description
@@ -18,6 +19,7 @@ dependencies:
     - image
     - link
     - path
+    - starrating
     - telephone
     - text
 id: node.location.default
@@ -28,6 +30,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_equipment_score:
+    type: starrating
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -141,6 +149,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

@@ -130,6 +130,8 @@ module:
   simpletest: 0
   site_status_message: 0
   smart_date: 0
+  star_rating: 0
+  starrating: 0
   system: 0
   taxonomy: 0
   telephone: 0

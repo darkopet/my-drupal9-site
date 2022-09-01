@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function star_rating_theme() {
+  return [
+    'star_rating' => [
+      'variables' => [
+        'rate' => '',
+      ],
+    ],
+  ];
+}
