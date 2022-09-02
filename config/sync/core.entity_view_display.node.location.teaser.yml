@@ -26,6 +26,11 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  star_rating_pseudo_field:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_equipment_score: true
   field_location_address: true

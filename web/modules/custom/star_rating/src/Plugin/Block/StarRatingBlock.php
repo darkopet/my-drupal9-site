@@ -61,25 +61,22 @@ class StarRatingBlock extends BlockBase implements ContainerFactoryPluginInterfa
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
+  public function build() {
     $node = $this->currentRouteService->getParameter('node');
     $contentType = $node->get('type')->getValue()[0]['target_id'];
     $taxonomyTermItemsNumber = count($node->get('field_location_equipment')->getValue());
-
     if ($contentType === 'location') {
-
-      return [
-        '#theme' => 'star_rating',
-        '#attached' => [
-          'library' => [
-            'star_rating/star',
+        return [
+          '#theme' => 'star_rating',
+          '#attached' => [
+            'library' => [
+              'star_rating/star',
+            ],
           ],
-        ],
-        '#rate' => $taxonomyTermItemsNumber,
-      ];
-    } else {
-      return ['test'];
+          '#rate' => $taxonomyTermItemsNumber,
+        ];
+      } else {
+      return ['It is not a Location.'];
     }
   }
 }

@@ -1,4 +1,4 @@
-uuid: b9c90ed7-9946-49c5-a049-ae75a887e9ee
+uuid: d9f9ed3c-1c43-4859-a568-e9759dbe6e29
 langcode: en
 status: true
 dependencies:
@@ -17,7 +17,7 @@ required: false
 translatable: false
 default_value:
   -
-    value: '5'
+    value: '4'
 default_value_callback: ''
 settings:
   max_value: '10'

@@ -71,6 +71,7 @@ third_party_settings:
         description: ''
     group_locations_fieldset:
       children:
+        - star_rating_pseudo_field
         - field_location_equipment
         - field_location_image
       label: 'Locations Fieldset'
@@ -96,7 +97,7 @@ content:
       icon_type: star
       icon_color: 1
     third_party_settings: {  }
-    weight: 20
+    weight: 103
     region: content
   field_location_address:
     type: address_default
@@ -117,7 +118,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 101
     region: content
   field_location_equipment:
     type: entity_reference_label
@@ -125,7 +126,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 101
     region: content
   field_location_image:
     type: image
@@ -136,7 +137,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 19
+    weight: 102
     region: content
   field_location_is_operating:
     type: boolean
@@ -167,6 +168,11 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 4
+    region: content
+  star_rating_pseudo_field:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   langcode: true

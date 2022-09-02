@@ -1,4 +1,13 @@
-<div class='star_rating'>
+{% if rate < 1 %}
+  <div class="star-off">
+    {{ "" }}
+  </div>
+{% endif %}
 
-  {{ rate }}
-</div>
+{% for i in 1..rate if rate > 0 %}
+  {% if i < 6 %}
+      <div class="star3-on">
+        {{ "" }}
+      </div>
+  {% endif %}
+{% endfor %}

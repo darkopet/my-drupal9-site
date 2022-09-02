@@ -11,3 +11,44 @@ function star_rating_theme() {
     ],
   ];
 }
+
+use Drupal\node\Entity\NodeType;
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function star_rating_entity_extra_field_info() {
+  $extra = [];
+	foreach (NodeType::loadMultiple() as $bundle) {
+    if($bundle->get('type') === 'location') {
+      $extra['node'][$bundle->Id()]['display']['star_rating_pseudo_field'] = [
+        'label' => t('Location Star Rating pseudo field'),
+        'description' => t('This is locations equipment star rating pseudo-field.'),
+        'weight' => 100,
+        'visible' => TRUE,
+      ];
+    }
+  }
+	return $extra;
+}
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+/**
+ * Implements hook_entity_type_view() for nodes.
+ *
+ *  - render star rating pseudo fields
+ */
+function star_rating_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $rate = count($entity->get('field_location_equipment')->getValue());
+  if ($display->getComponent('star_rating_pseudo_field')) {
+    $build['star_rating_pseudo_field'] = [
+      '#theme' => 'star_rating',
+      '#attached' => [
+        'library' => [
+          'star_rating/star',
+        ],
+      ],
+      '#rate' => $rate,
+    ];
+  }
+}
