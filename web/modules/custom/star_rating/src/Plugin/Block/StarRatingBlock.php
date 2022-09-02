@@ -16,8 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   admin_label = @Translation("Star Rating"),
  * )
  */
-class StarRatingBlock extends BlockBase implements ContainerFactoryPluginInterface
-{
+class StarRatingBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * @var CurrentRouteMatch $currentRouteService
    */
@@ -46,6 +45,7 @@ class StarRatingBlock extends BlockBase implements ContainerFactoryPluginInterfa
    * @param array $configuration
    * @param string $plugin_id
    * @param mixed $plugin_definition
+
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
   {

@@ -3,61 +3,61 @@
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px 0px;
+  background: url('star.png');
 }
 .star1-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -14px;
+  background: url('star.png');
 }
 .star2-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -28px;
+  background: url('star.png');
 }
 .star3-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -42px;
+  background: url('star.png');
 }
 .star4-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -56px;
+  background: url('star.png');
 }
 .star5-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -70px;
+  background: url('star.png');
 }
 .star6-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -84px;
+  background: url('star.png');
 }
 .star7-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -98px;
+  background: url('star.png');
 }
 .star8-on {
   float: left;
   width: 14px;
   height: 14px;
   margin-top: 3px;
-  background: url('star.png') no-repeat 0px -112px;
+  background: url('star.png');
 }
