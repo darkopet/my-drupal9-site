@@ -1,27 +1,27 @@
-uuid: 7c1ffca9-08ab-4921-87d4-2a1ac3193b1d
+uuid: 119eb8dd-c0b6-46f3-b1cf-8bcc7c4ca251
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.hasevents
+    - facets.facet.has_events
   module:
     - facets
     - system
   theme:
     - bartik
-id: hasevents
+id: has_events
 theme: bartik
-region: sidebar_second
-weight: -9
+region: sidebar_first
+weight: 0
 provider: null
-plugin: 'facet_block:hasevents'
+plugin: 'facet_block:has_events'
 settings:
-  id: 'facet_block:hasevents'
-  label: hasEvents
+  id: 'facet_block:has_events'
+  label: has_Events
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: hasevents
+  block_id: has_events
 visibility:
   request_path:
     id: request_path

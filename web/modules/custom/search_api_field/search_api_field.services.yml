@@ -1,0 +1,3 @@
+services:
+  search_api_fields.companies:
+    class: Drupal\search_api_field\GetCompaniesServices

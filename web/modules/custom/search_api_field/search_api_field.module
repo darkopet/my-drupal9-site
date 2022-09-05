@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function search_api_field_theme() {
+  return [
+    'search_api_field' => [
+      'variables' => [
+        'companies' => '',
+      ],
+    ],
+  ];
+}
