@@ -98,7 +98,8 @@
         "drupal/webform_submissions_delete": "^1.0",
         "drupal/xmlsitemap": "^1.2",
         "drupal/zooming": "^1.1",
-        "drush/drush": "^11.0",
+        "drush/drush": "*",
+        "platformsh/config-reader": "^2.4",
         "woocommerce/flexslider": "~2.0"
     },
     "conflict": {

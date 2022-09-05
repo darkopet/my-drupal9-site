@@ -774,8 +774,15 @@ if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
+#docker-compose.solr.yaml
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
  }
 $config['system.logging']['error_level'] = 'verbose';
+
+
+// Apache Solr settings for the DDev environment.
+$config['search_api.server.solr']['backend_config']['connector_config']['scheme'] = 'http';
+$config['search_api.server.solr']['backend_config']['connector_config']['host'] = 'my-drupal9-site.ddev.site';
+$config['search_api.server.solr']['backend_config']['connector_config']['port'] = '8983';
+$config['search_api.server.solr']['backend_config']['connector_config']['core'] = 'dev';
