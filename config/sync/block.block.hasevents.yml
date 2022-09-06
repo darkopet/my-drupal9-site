@@ -1,0 +1,29 @@
+uuid: 49ad648a-9dc4-4851-8bb4-73093194504c
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.hasevents
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: hasevents
+theme: bartik
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'facet_block:hasevents'
+settings:
+  id: 'facet_block:hasevents'
+  label: hasEvents
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: hasevents
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /companies-searchapi

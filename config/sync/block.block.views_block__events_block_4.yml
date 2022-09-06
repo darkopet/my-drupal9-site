@@ -12,7 +12,7 @@ dependencies:
 id: views_block__events_block_4
 theme: bartik
 region: sidebar_first
-weight: -7
+weight: -16
 provider: null
 plugin: 'views_block:events-block_4'
 settings:

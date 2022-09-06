@@ -1,12 +1,31 @@
 <?php
 /**
+ * @file
+ * Implements hooks required by Search API Field.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function search_api_field_help($route_name) {
+  switch ($route_name) {
+    case 'help.page.search_api_field':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides a field to filter companies.') . '</p>';
+      $output .= '</ul>';
+      return $output;
+    default:
+  }
+}
+/**
  * Implements hook_theme().
  */
 function search_api_field_theme() {
   return [
     'search_api_field' => [
       'variables' => [
-        'companies' => '',
+        'field' => '',
       ],
     ],
   ];

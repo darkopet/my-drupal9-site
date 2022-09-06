@@ -15,6 +15,7 @@ dependencies:
     - search_api_solr
     - node
     - search_api
+    - search_api_field
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -62,6 +63,10 @@ name: 'Companies Search API Index'
 description: ''
 read_only: false
 field_settings:
+  field:
+    label: 'Upcoming Events Filter'
+    property_path: search_api_field
+    type: string
   field_address:
     label: Address
     datasource_id: 'entity:node'
@@ -164,16 +169,19 @@ processor_settings:
   auto_aggregated_fulltext_field: {  }
   content_access:
     weights:
-      preprocess_query: -30
+      preprocess_query: -48
   entity_type: {  }
   has_events:
     weights:
-      preprocess_query: -30
+      preprocess_query: -50
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:
     weights:
       preprocess_index: 0
+  upcoming_events_filter:
+    weights:
+      preprocess_query: -49
 tracker_settings:
   default:
     indexing_order: fifo
