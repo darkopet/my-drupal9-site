@@ -64,7 +64,7 @@ description: ''
 read_only: false
 field_settings:
   field:
-    label: 'Upcoming Events Filter'
+    label: 'Has Upcoming Events'
     property_path: search_api_field
     type: string
   field_address:
@@ -173,15 +173,16 @@ processor_settings:
   entity_type: {  }
   has_events:
     weights:
-      preprocess_query: -50
+      preprocess_query: -30
   language_with_fallback: {  }
   rendered_item: {  }
+  serch_api_field:
+    weights:
+      preprocess_index: -30
+      preprocess_query: -30
   solr_date_range:
     weights:
       preprocess_index: 0
-  upcoming_events_filter:
-    weights:
-      preprocess_query: -49
 tracker_settings:
   default:
     indexing_order: fifo

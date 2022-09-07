@@ -1,3 +1,4 @@
 services:
-  search_api_fields.companies:
-    class: Drupal\search_api_field\GetCompaniesService
+  companies.ids:
+    class: 'Drupal\search_api_field\Service\GetCompaniesService'
+    arguments: ['@entity_type.manager']

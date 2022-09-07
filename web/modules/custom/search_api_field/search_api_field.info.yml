@@ -1,6 +1,5 @@
-name: Search api field
-description: 'Search api field for listing companies that have an event.'
+name: Search Api Field
+description: Custom Field For Search Index.
 type: module
-package: Custom
+package: 'Custom'
 core_version_requirement: ^8 || ^9
-

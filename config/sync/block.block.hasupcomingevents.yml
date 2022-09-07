@@ -1,27 +1,27 @@
-uuid: 9b455769-b0ee-4ee0-afa9-f151b91d601f
+uuid: a751c0fa-bc7e-406b-baba-fa0d75597230
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.upcoming_events_filter
+    - facets.facet.has_upcoming_events
   module:
     - facets
     - system
   theme:
     - bartik
-id: upcomingeventsfilter
+id: hasupcomingevents
 theme: bartik
-region: sidebar_first
-weight: 0
+region: sidebar_second
+weight: -17
 provider: null
-plugin: 'facet_block:upcoming_events_filter'
+plugin: 'facet_block:has_upcoming_events'
 settings:
-  id: 'facet_block:upcoming_events_filter'
-  label: 'Upcoming Events Filter'
+  id: 'facet_block:has_upcoming_events'
+  label: 'Has Upcoming Events'
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: upcomingeventsfilter
+  block_id: hasupcomingevents
 visibility:
   request_path:
     id: request_path

@@ -1,4 +1,4 @@
-uuid: 49ad648a-9dc4-4851-8bb4-73093194504c
+uuid: f7003bed-e978-4435-8895-558268109e6c
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
 id: hasevents
 theme: bartik
 region: sidebar_first
-weight: -11
+weight: 0
 provider: null
 plugin: 'facet_block:hasevents'
 settings:
