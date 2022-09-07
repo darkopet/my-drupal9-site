@@ -10,7 +10,7 @@ dependencies:
 id: eventtimer
 theme: bartik
 region: sidebar_second
-weight: -16
+weight: -17
 provider: null
 plugin: event_timer_block
 settings:

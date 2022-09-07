@@ -9,7 +9,7 @@ dependencies:
 id: sitestatusmessage
 theme: bartik
 region: sidebar_second
-weight: -9
+weight: -10
 provider: null
 plugin: site_status_message
 settings:

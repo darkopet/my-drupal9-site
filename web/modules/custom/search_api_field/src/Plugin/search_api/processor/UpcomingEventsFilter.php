@@ -18,8 +18,6 @@ use Psr\Container\ContainerInterface;
  *  description = @Translation("Display companies with at least one event when option checked in facet."),
  *  stages = {
  *   "add_properties" = 0,
- *   "pre_index_save" = -10,
- *   "preprocess_index" = -30,
  *   },
  * )
  */
@@ -66,10 +64,10 @@ class UpcomingEventsFilter extends ProcessorPluginBase {
    * {@inheritdoc}
    */
   public function addFieldValues(ItemInterface $item) {
+    dd('test');
     $id = $item->getDatasource()->getItemId($item->getOriginalObject());
     $id = preg_replace('/[^0-9]/','',$id);
     $nids = $this->service->getNids();
-
     $fields = $this->getFieldsHelper()
       ->filterForPropertyPath($item->getFields(), NULL, 'search_api_field');
     foreach ($fields as $field) {

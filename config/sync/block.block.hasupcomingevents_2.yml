@@ -1,4 +1,4 @@
-uuid: a751c0fa-bc7e-406b-baba-fa0d75597230
+uuid: e6f4cc0a-b859-4166-8d7a-1554ab08e752
 langcode: en
 status: true
 dependencies:
@@ -6,13 +6,12 @@ dependencies:
     - facets.facet.has_upcoming_events
   module:
     - facets
-    - system
   theme:
     - bartik
-id: hasupcomingevents
+id: hasupcomingevents_2
 theme: bartik
-region: sidebar_second
-weight: -8
+region: featured_top
+weight: -18
 provider: null
 plugin: 'facet_block:has_upcoming_events'
 settings:
@@ -21,9 +20,5 @@ settings:
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: hasupcomingevents
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: /companies-searchapi
+  block_id: hasupcomingevents_2
+visibility: {  }

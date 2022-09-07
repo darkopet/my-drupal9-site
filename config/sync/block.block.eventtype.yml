@@ -12,7 +12,7 @@ dependencies:
 id: eventtype
 theme: bartik
 region: sidebar_second
-weight: -11
+weight: -12
 provider: null
 plugin: 'facet_block:event_type'
 settings:

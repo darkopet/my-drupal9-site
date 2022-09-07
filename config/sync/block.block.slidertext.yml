@@ -11,7 +11,7 @@ dependencies:
 id: slidertext
 theme: bartik
 region: featured_top
-weight: 1
+weight: -15
 provider: null
 plugin: 'block_content:0ef4ec98-977a-492a-956b-115b3300a32b'
 settings:

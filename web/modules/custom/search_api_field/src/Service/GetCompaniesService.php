@@ -19,7 +19,7 @@ class GetCompaniesService {
       $current = date('Y-m-d H:i:s', time());
       $diffStart = ((strtotime($current) - strtotime($eventStart)) / 60 / 60 / 24);
       if ($diffStart < 0) {
-        $nid = $event->get('field_events_organizer')->getValue()[0]['target_id'];
+        $nid = $event->get('field_event_organizer')->getValue()[0]['target_id'];
         array_push($nids, $nid);
       }
     }
