@@ -178,8 +178,7 @@ processor_settings:
   rendered_item: {  }
   serch_api_field:
     weights:
-      preprocess_index: -30
-      preprocess_query: -30
+      preprocess_query: -20
   solr_date_range:
     weights:
       preprocess_index: 0

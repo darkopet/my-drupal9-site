@@ -1,4 +1,4 @@
 services:
   companies.ids:
-    class: 'Drupal\search_api_field\Service\GetCompaniesService'
+    class: '\Drupal\search_api_field\Service\GetCompaniesService'
     arguments: ['@entity_type.manager']

@@ -1,4 +1,4 @@
-uuid: a751c0fa-bc7e-406b-baba-fa0d75597230
+uuid: 87e39d5d-7e09-46f9-b3e4-96dd772edb69
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ dependencies:
 id: hasupcomingevents
 theme: bartik
 region: sidebar_second
-weight: -8
+weight: 0
 provider: null
 plugin: 'facet_block:has_upcoming_events'
 settings:
