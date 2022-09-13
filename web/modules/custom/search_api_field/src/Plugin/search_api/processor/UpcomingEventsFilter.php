@@ -13,12 +13,11 @@ use Psr\Container\ContainerInterface;
  * Custom field in Search Index which will be displayed as a facet.
  *
  * @SearchApiProcessor (
- *  id = "serch_api_field",
- *  label = @Translation("Custom Search Api Field"),
- *  description = @Translation("Display companies with at least one event when option checked in facet."),
+ *  id = "field",
+ *  label = @Translation("Has Upcoming Events"),
+ *  description = @Translation("Cusrom Search Api Field"),
  *  stages = {
  *   "add_properties" = 0,
- *   "preprocess_query" = -20,
  *   },
  * )
  */
@@ -28,14 +27,7 @@ class UpcomingEventsFilter extends ProcessorPluginBase {
    * @var $service GetCompaniesService
    */
   protected $service;
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static(
-      $configuration,
-      $plugin_id,
-      $plugin_definition,
-      $container->get('companies.ids'),
-    );
-  }
+
   /**
    * @param GetCompaniesService $service
    */
@@ -44,12 +36,21 @@ class UpcomingEventsFilter extends ProcessorPluginBase {
     $this->service=$service;
   }
 
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('companies.ids'),
+    );
+  }
+
   /**
    * {@inheritdoc}
    */
   public function getPropertyDefinitions(DatasourceInterface $datasource = NULL) {
     $properties = [];
-    if (!$datasource) {
+    if ($datasource) {
       $definition = [
         'label' => $this->t('Has Upcoming Events'),
         'description' => $this->t('Companies with upcoming Events.'),

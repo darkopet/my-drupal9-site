@@ -15,7 +15,6 @@ dependencies:
     - search_api_solr
     - node
     - search_api
-    - search_api_field
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -63,10 +62,6 @@ name: 'Companies Search API Index'
 description: ''
 read_only: false
 field_settings:
-  field:
-    label: 'Has Upcoming Events'
-    property_path: search_api_field
-    type: string
   field_address:
     label: Address
     datasource_id: 'entity:node'
@@ -176,9 +171,6 @@ processor_settings:
       preprocess_query: -30
   language_with_fallback: {  }
   rendered_item: {  }
-  serch_api_field:
-    weights:
-      preprocess_query: -20
   solr_date_range:
     weights:
       preprocess_index: 0

@@ -1,4 +1,4 @@
-uuid: 87e39d5d-7e09-46f9-b3e4-96dd772edb69
+uuid: 25c57e1b-2d56-41ae-adc0-e508a9951c41
 langcode: en
 status: true
 dependencies:
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /companies-searchapi
+    pages: /events-searchapi

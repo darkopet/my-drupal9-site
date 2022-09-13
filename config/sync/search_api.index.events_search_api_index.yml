@@ -19,6 +19,7 @@ dependencies:
     - search_api_solr
     - node
     - search_api
+    - search_api_field
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -74,6 +75,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.comment
+  field:
+    label: 'Has Upcoming Events'
+    property_path: search_api_field
+    type: string
   field_add_to_favourites:
     label: 'Add To Favourites'
     datasource_id: 'entity:node'
@@ -154,10 +159,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_youtube_video
-  has_events:
-    label: hasEvents
-    property_path: search_api_has_events
-    type: string
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -202,11 +203,9 @@ processor_settings:
     weights:
       preprocess_query: -30
   entity_type: {  }
-  has_events:
-    weights:
-      preprocess_query: -30
   language_with_fallback: {  }
   rendered_item: {  }
+  serch_api_field: {  }
   solr_date_range:
     weights:
       preprocess_index: 0

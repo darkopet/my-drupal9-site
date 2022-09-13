@@ -1,9 +1,9 @@
-uuid: e5a95502-789f-4a83-9552-e0adc949a3fe
+uuid: 62faf766-4ed7-40c4-a6b0-986d19a2faa5
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.companies_search_api
+    - search_api.index.events_search_api_index
   module:
     - search_api_page
 id: has_upcoming_events
@@ -13,7 +13,7 @@ min_count: 1
 missing: false
 missing_label: others
 url_alias: has_upcoming_events
-facet_source_id: 'search_api:search_api_page__companies_search_api'
+facet_source_id: 'search_api:search_api_page__events_search_api'
 field_identifier: field
 query_operator: or
 hard_limit: 0
@@ -37,10 +37,12 @@ widget:
       show_less_label: 'Show less'
       show_more_label: 'Show more'
 empty_behavior:
-  behavior: none
+  behavior: text
+  text_format: plain_text
+  text: empty
 only_visible_when_facet_source_is_visible: true
 show_only_one_result: false
-show_title: false
+show_title: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
