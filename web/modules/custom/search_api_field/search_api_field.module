@@ -8,7 +8,7 @@ use Drupal\node\Entity\Node;
  * Implements hook_cron().
  */
 function search_api_field_cron() {
-  $query = \Drupal::entityQuery('node')->condition('nid','1');
+  $query = \Drupal::entityQuery('node');
   $nids = $query->execute();
   $nodes = Node::loadMultiple($nids);
   foreach ($nodes as $node) {
