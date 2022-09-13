@@ -2,15 +2,18 @@
 
 use Drupal\taxonomy\TermInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\Node;
 
+/**
+ * Implements hook_cron().
+ */
 function search_api_field_cron() {
-  search_api_cron();
-}
-
-function search_api_field_entity_presave(EntityInterface $entity) {
-  if ($entity instanceof TermInterface) {
-    if ($entity->bundle() == 'companies') {
-      search_api_entity_update($entity);
-    }
+  $query = \Drupal::entityQuery('node')->condition('nid','1');
+  $nids = $query->execute();
+  $nodes = Node::loadMultiple($nids);
+  foreach ($nodes as $node) {
+    $node->set("title", strtolower($node->title->value));
+    $node->save();
   }
-}
+  \Drupal::messenger()->addMessage('Nodes updated');
+} 

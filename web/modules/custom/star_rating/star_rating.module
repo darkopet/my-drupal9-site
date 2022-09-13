@@ -42,7 +42,8 @@ function star_rating_entity_extra_field_info() {
  */
 function star_rating_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   $node = \Drupal::routeMatch()->getParameter('node');
-  if($node) {
+  $contentType = $node->get('type')->getValue()[0]['target_id'];
+  if($contentType == 'location') {
     $rate = count($node->get('field_location_equipment')->getValue());
     if ($display->getComponent('star_rating_pseudo_field')) {
       $build['star_rating_pseudo_field'] = [
