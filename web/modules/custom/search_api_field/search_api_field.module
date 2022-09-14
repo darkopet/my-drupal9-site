@@ -3,6 +3,7 @@
 use Drupal\taxonomy\TermInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\Entity\Node;
+use Drupal\path_alias\AliasRepository;
 
 /**
  * Implements hook_cron().
@@ -13,13 +14,15 @@ function search_api_field_cron() {
   $nids = $query->execute();
   $nodes = Node::loadMultiple($nids);
   foreach ($nodes as $node) {
-    $node->set("title", strtoupper($node->title->value));
+    $node->set("title", strtolower($node->title->value));
     $node->save();
   }
   $node_company = Node::create([
     'type' => 'company',
-    'langcode' => 'en',  
+    'title' => 'Test Company',
   ]);  
+  $nid = $node_company->id();
+  $node_company->save();
 } 
 
 function search_api_field_entity_presave(EntityInterface $entity) {
