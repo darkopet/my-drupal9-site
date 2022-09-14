@@ -17,14 +17,14 @@ use Drush\Commands\DrushCommands;
  *   - http://cgit.drupalcode.org/devel/tree/drush.services.yml
  */
 class CustomDrushCommandCommands extends DrushCommands {
-   /**
+/**
    * Echos back hello with the argument provided.
    *
    * @param string $name
    *   Argument provided to the drush command.
    *
-   * @command drush9_example:hello
-   * @aliases d9-hello
+   * @command hello
+   * @aliases hi
    * @options arr An option that takes multiple values.
    * @options msg Whether or not an extra message should be displayed to the user.
    * @usage drush9_example:hello akanksha --msg
@@ -39,4 +39,53 @@ class CustomDrushCommandCommands extends DrushCommands {
     }
   }
 
+  // /**
+  //  * Command description here.
+  //  *
+  //  * @param $arg1
+  //  *   Argument description.
+  //  * @param array $options
+  //  *   An associative array of options whose values come from cli, aliases, config, etc.
+  //  * @option option-name
+  //  *   Description
+  //  * @usage custom_drush_command-commandName foo
+  //  *   Usage description
+  //  *
+  //  * @command custom_drush_command:commandName
+  //  * @aliases foo
+  //  */ 
+  // public function commandName($arg1, $options = ['option-name' => 'default']) {
+  //   $this->logger()->success(dt('Achievement unlocked.'));
+  // }
+
+  // /**
+  //  * An example of the table output format.
+  //  *
+  //  * @param array $options An associative array of options whose values come from cli, aliases, config, etc.
+  //  *
+  //  * @field-labels
+  //  *   group: Group
+  //  *   token: Token
+  //  *   name: Name
+  //  * @default-fields group,token,name
+  //  *
+  //  * @command custom_drush_command:token
+  //  * @aliases token
+  //  *
+  //  * @filter-default-field name
+  //  * @return \Consolidation\OutputFormatters\StructuredData\RowsOfFields
+  //  */
+  // public function token($options = ['format' => 'table']) {
+  //   $all = \Drupal::token()->getInfo();
+  //   foreach ($all['tokens'] as $group => $tokens) {
+  //     foreach ($tokens as $key => $token) {
+  //       $rows[] = [
+  //         'group' => $group,
+  //         'token' => $key,
+  //         'name' => $token['name'],
+  //       ];
+  //     }
+  //   }
+  //   return new RowsOfFields($rows);
+  // }
 }
