@@ -1,0 +1,62 @@
+uuid: 1bcec3e7-0a49-4473-87a2-6dca09b91aba
+langcode: en
+status: true
+dependencies: {  }
+id: company_csv_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: default
+label: 'Import articles'
+source:
+  plugin: csv
+  path: /home/workstation/Projects/my-drupal9-site/companies.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    -
+      name: id
+      label: 'Unique Id'
+    -
+      name: address
+      label: Address
+    -
+      name: 'contact email'
+      label: 'Contact email'
+    -
+      name: description
+      label: Description
+    -
+      name: industry
+      label: Industry
+    -
+      name: 'contact email'
+      label: 'Contact email'
+    -
+      name: logo
+      label: Logo
+    -
+      name: website
+      label: Website
+    -
+      name: test
+      label: test
+process:
+  address: address
+  'contact email': 'contact email'
+  description: description
+  industry: industry
+  logo: logo
+  'phone number': 'phone number'
+  website: website
+  test: test
+  type:
+    plugin: default_value
+    default_value: article
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null
