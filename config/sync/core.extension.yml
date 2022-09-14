@@ -26,6 +26,7 @@ module:
   ctools: 0
   ctools_block: 0
   ctools_views: 0
+  custom_drush_command: 0
   custom_field_type: 0
   datetime: 0
   datetime_range: 0

@@ -1,0 +1,17 @@
+{
+    "name": "org/custom_drush_command",
+    "description": "An example custom Drush command.",
+    "type": "drupal-drush",
+     "autoload": {
+    "psr-4": {
+      "Drupal\\custom_drush_command\\": "src/"
+        }
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^11"
+            }
+        }
+    }
+}
