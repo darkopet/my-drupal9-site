@@ -1,3 +1,4 @@
+label: Nachricht
 display:
   default:
     display_title: Master
@@ -21,22 +22,33 @@ display:
             first: '« erste Seite'
             last: 'letzte Seite »'
       fields:
-        title:
+        message_bulk_form_1:
+          label: 'Massenbearbeitungsformular für Nachrichtenaktionen'
+          action_title: Auswahl
+        mid:
+          label: Nachrichten-ID
+          separator: ', '
+        template:
+          label: Nachrichtenvorlage
+          separator: ', '
+        get_text:
+          label: 'Text der Nachricht'
+        uid:
+          label: Autor
           separator: ', '
         created:
-          label: 'Erstellt am'
-        status:
-          label: Status
-          separator: ', '
-        type:
-          label: Typ
+          label: 'Erschienen am'
       filters:
-        title:
+        template:
           expose:
-            label: Titel
-      sorts:
-        created:
-          expose:
-            label: 'Geschrieben am'
-  entity_browser_1:
-    display_title: Entitäten-Browser
+            label: Template
+      title: Nachricht
+      empty:
+        area:
+          content:
+            value: 'Noch keine Nachrichten erstellt'
+  page_1:
+    display_title: Seite
+    display_options:
+      menu:
+        title: Nachricht

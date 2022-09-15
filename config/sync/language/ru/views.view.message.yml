@@ -1,3 +1,4 @@
+label: Сообщение
 display:
   default:
     display_title: Основной
@@ -21,22 +22,27 @@ display:
             first: '« первая'
             last: 'последняя »'
       fields:
-        title:
+        message_bulk_form_1:
+          action_title: 'С выделенным'
+        mid:
+          label: '№ сообщения'
+          separator: ', '
+        template:
+          separator: ', '
+        get_text:
+          label: 'Текст сообщения'
+        uid:
+          label: Автор
           separator: ', '
         created:
-          label: Создано
-        status:
-          label: Статус
-          separator: ', '
-        type:
-          label: Тип
+          label: 'Дата публикации'
       filters:
-        title:
+        template:
           expose:
-            label: Заголовок
-      sorts:
-        created:
-          expose:
-            label: 'Создан в'
-  entity_browser_1:
-    display_title: 'Обозреватель сущностей'
+            label: Шаблон
+      title: Сообщение
+  page_1:
+    display_title: Страница
+    display_options:
+      menu:
+        title: Сообщение

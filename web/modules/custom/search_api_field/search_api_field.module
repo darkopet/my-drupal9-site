@@ -17,11 +17,12 @@ function search_api_field_cron() {
     $node->set("title", strtolower($node->title->value));
     $node->save();
   }
+  $node_id = mt_rand(1111,9999);
   $node_company = Node::create([
+    'nid' => $node_id,
     'type' => 'company',
-    'title' => 'Test Company',
+    'title' => 'Test Company' . $node_id,
   ]);  
-  $nid = $node_company->id();
   $node_company->save();
 } 
 

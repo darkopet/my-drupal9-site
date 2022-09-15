@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Сите -'
+          tags:
+            previous: '‹ претходно'
+            first: '« прв'
+            last: 'последно »'
+      fields:
+        uid:
+          label: Автор

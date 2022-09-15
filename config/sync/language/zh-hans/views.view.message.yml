@@ -1,3 +1,4 @@
+label: 消息
 display:
   default:
     display_title: 主
@@ -21,22 +22,26 @@ display:
             first: '« 第一页'
             last: '末页 »'
       fields:
-        title:
+        message_bulk_form_1:
+          action_title: 对所选项目
+        mid:
+          separator: ', '
+        template:
+          separator: ', '
+        get_text:
+          label: 消息文本
+        uid:
+          label: 作者
           separator: ', '
         created:
-          label: 建立在
-        status:
-          label: 状态
-          separator: ', '
-        type:
-          label: 类型
+          label: 发布日期
       filters:
-        title:
+        template:
           expose:
-            label: 标题
-      sorts:
-        created:
-          expose:
-            label: 发布于
-  entity_browser_1:
-    display_title: 实体浏览器
+            label: 模板
+      title: 消息
+  page_1:
+    display_title: 页面
+    display_options:
+      menu:
+        title: 消息

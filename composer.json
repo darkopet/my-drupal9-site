@@ -67,6 +67,7 @@
         "drupal/mail_safety": "^1.2",
         "drupal/maillog": "^1.0@beta",
         "drupal/mailsystem": "^4.4",
+        "drupal/message": "^1.2",
         "drupal/metatag": "^1.19",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_source_csv": "^3.5",

@@ -1,0 +1,30 @@
+uuid: 7704ff9a-1f00-43de-baeb-6537d20f0efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_notify_me_about_new_events
+  module:
+    - user
+id: user.user.field_notify_me_about_new_events
+field_name: field_notify_me_about_new_events
+entity_type: user
+bundle: user
+label: 'Notify me about new events'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: _none
+    include_anonymous: true
+field_type: entity_reference

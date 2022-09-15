@@ -1,3 +1,4 @@
+label: Μήνυμα
 display:
   default:
     display_options:
@@ -20,20 +21,20 @@ display:
             first: '« πρώτη'
             last: 'τελευταία »'
       fields:
-        title:
+        message_bulk_form_1:
+          action_title: 'Επιλογές ενημέρωσης'
+        mid:
           separator: ', '
-        created:
-          label: 'Δημιουργήθηκε την'
-        status:
-          label: Κατάσταση
+        template:
           separator: ', '
-        type:
-          label: Τύπος
-      filters:
-        title:
-          expose:
-            label: Τίτλος
-      sorts:
-        created:
-          expose:
-            label: 'Συντάχθηκε στις'
+        get_text:
+          label: 'Κείμενο μηνύματος'
+        uid:
+          label: Συντάκτης
+          separator: ', '
+      title: Μήνυμα
+  page_1:
+    display_title: Σελίδα
+    display_options:
+      menu:
+        title: Μήνυμα
