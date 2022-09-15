@@ -1,16 +1,14 @@
-uuid: a4bf0939-f146-4b08-b2eb-bd0fcd6e2a37
+uuid: 5fe57fe7-3ffc-4824-a22d-1172e8324a62
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - user
-id: user.field_notify_me_about_new_events
-field_name: field_notify_me_about_new_events
+id: user.field_notify
+field_name: field_notify
 entity_type: user
-type: entity_reference
-settings:
-  target_type: node_type
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_notify
     - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -34,6 +35,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_notify: true
   field_notify_me_about_new_events: true
   langcode: true
   member_for: true

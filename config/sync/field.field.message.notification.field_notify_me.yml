@@ -1,0 +1,21 @@
+uuid: 03b7a14c-b027-40d9-b87a-2c61c92fe74f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_notify_me
+    - message.template.notification
+id: message.notification.field_notify_me
+field_name: field_notify_me
+entity_type: message
+bundle: notification
+label: 'Notify me'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -11,20 +11,14 @@ field_name: field_notify_me_about_new_events
 entity_type: user
 bundle: user
 label: 'Notify me about new events'
-description: ''
+description: "Every user that checks this option will receive a notification when a new Event is being created.\r\nNotification text should be as following: New event [event_title] has been added and will take place at [event_start_date] in [event_location]."
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:user'
+  handler: 'default:node_type'
   handler_settings:
     target_bundles: null
-    sort:
-      field: _none
-      direction: ASC
     auto_create: false
-    filter:
-      type: _none
-    include_anonymous: true
 field_type: entity_reference

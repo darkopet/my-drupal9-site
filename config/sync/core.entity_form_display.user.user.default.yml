@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_notify
     - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -23,6 +24,13 @@ content:
   contact:
     weight: 5
     region: content
+  field_notify:
+    type: boolean_checkbox
+    weight: 32
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_notify_me_about_new_events:
     type: entity_reference_autocomplete
     weight: 31
