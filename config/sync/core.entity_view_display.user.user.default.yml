@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_notify
-    - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -17,25 +15,12 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_notify:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 12
-    region: content
-  field_notify_me_about_new_events:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 11
-    region: content
   flag_following:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  flag_subscribe_user:
     settings: {  }
     third_party_settings: {  }
     weight: 10
