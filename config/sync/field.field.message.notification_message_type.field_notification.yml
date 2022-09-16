@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.message.field_notification
     - message.template.notification_message_type
-    - node.type.event
 id: message.notification_message_type.field_notification
 field_name: field_notification
 entity_type: message
@@ -17,13 +16,6 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
-  handler_settings:
-    target_bundles:
-      event: event
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
+  handler: 'default:message'
+  handler_settings: {  }
 field_type: entity_reference

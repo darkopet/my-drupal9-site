@@ -14,10 +14,19 @@ function notification_node_insert($node) {
         if($contentType == 'event') {
             $message = Message::create([
                 'template' => 'notification_message_type',
-                'uid' => $node->get('uid')->getValue()
+                'uid' => $node->get('uid')->getValue(),
             ]);
-            dd($message);
-            $message->set('event', $node, $notify = TRUE);
+            $message->set('field_notification', $node);
+            $eventType = $node->get('field_event_type')->getValue()[0]['target_id'];
+            $message->set('field_event_type_message', $eventType);
+            $text = $message->getText()[0];
+            $html = \Drupal::token()->replace($text, [
+                'node' => $node,
+            ], []);
+             $html = strip_tags(html_entity_decode($html));
+            $message->set('field_message_show', str_replace('&nbsp;', ' ', $html));
+            // dd($message);
+            // $message->set('field_notification', $node, $notify = TRUE);
             // dd($message);
             $message->save();
         }

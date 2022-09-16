@@ -1,0 +1,18 @@
+uuid: e9af89b0-2198-4122-bad7-6ca280fdeda5
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_notify_me_about_new_events
+field_name: field_notify_me_about_new_events
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

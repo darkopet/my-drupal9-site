@@ -4,13 +4,12 @@ status: true
 dependencies:
   module:
     - message
-    - node
 id: message.field_notification
 field_name: field_notification
 entity_type: message
 type: entity_reference
 settings:
-  target_type: node
+  target_type: message
 module: core
 locked: false
 cardinality: 1
