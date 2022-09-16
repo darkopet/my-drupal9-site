@@ -1,0 +1,27 @@
+uuid: e6b82d7e-2ab6-4c06-8576-463e772c120b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.message.notification_message_type.field_notification
+    - message.template.notification_message_type
+id: message.notification_message_type.default
+targetEntityType: message
+bundle: notification_message_type
+mode: default
+content:
+  field_notification:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  partial_0:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

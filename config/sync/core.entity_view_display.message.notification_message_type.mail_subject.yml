@@ -1,0 +1,26 @@
+uuid: 2082b5c4-5b01-4565-9551-d27a19d88978
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - field.field.message.notification_message_type.field_notification
+    - message.template.notification_message_type
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: message.notification_message_type.mail_subject
+targetEntityType: message
+bundle: notification_message_type
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  field_notification: true
+  partial_1: true
+  search_api_excerpt: true

@@ -1,0 +1,4 @@
+text:
+  -
+    value: "<p>Example 2 message text.</p>\r\n"
+    format: basic_html

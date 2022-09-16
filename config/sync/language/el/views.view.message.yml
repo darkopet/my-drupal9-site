@@ -21,8 +21,6 @@ display:
             first: '« πρώτη'
             last: 'τελευταία »'
       fields:
-        message_bulk_form_1:
-          action_title: 'Επιλογές ενημέρωσης'
         mid:
           separator: ', '
         template:

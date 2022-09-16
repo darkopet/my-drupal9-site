@@ -1,0 +1,19 @@
+uuid: b8d9a05e-9134-47be-bf28-18eec10f2d2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+template: example_2_message_type
+label: 'Example 2 Message Type'
+description: 'Example 2'
+text:
+  -
+    value: "<p>Example 2 message text.</p>\r\n"
+    format: basic_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

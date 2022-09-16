@@ -1,0 +1,4 @@
+text:
+  -
+    value: "<p>New event [field_event_name] has been added and will take place at [event_start_date] in [field_event_location].</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: basic_html

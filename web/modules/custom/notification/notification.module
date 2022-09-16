@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\message\Entity\Message;
+
+/**
+* Implements hook_node_insert().
+*/
+
+function notification_node_insert($node) {
+  if($node) {
+    // dd($node);
+    $contentType = $node->get('type')->getValue()[0]['target_id'];
+    // dd($contentType);
+        if($contentType == 'event') {
+            $message = Message::create([
+                'template' => 'notification_message_type',
+                'uid' => $node->get('uid')->getValue()
+            ]);
+            dd($message);
+            $message->set('event', $node, $notify = TRUE);
+            // dd($message);
+            $message->save();
+        }
+    }
+}

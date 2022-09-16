@@ -1,0 +1,23 @@
+uuid: f1918aa1-cb05-4408-88d8-ede91a80c954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.message.notification_message_type.field_notification
+    - message.template.notification_message_type
+id: message.notification_message_type.default
+targetEntityType: message
+bundle: notification_message_type
+mode: default
+content:
+  field_notification:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
