@@ -10,7 +10,7 @@ field_name: field_message_show
 entity_type: message
 bundle: notification_message_type
 label: 'Message Show'
-description: ''
+description: "\r\n"
 required: false
 translatable: false
 default_value: {  }

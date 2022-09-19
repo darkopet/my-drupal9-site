@@ -18,8 +18,7 @@ function notification_node_insert($node) {
                 'uid' => $node->get('uid')->getValue(),
             ]);
             $message->set('field_notification', $node);
-
-
+            // dd($message);
             $eventType = $node->get('field_event_type')->getValue()[0]['target_id'];
             // dd($eventType);
             $message->set('field_event_type_message', $eventType);
@@ -32,12 +31,7 @@ function notification_node_insert($node) {
             // dd($html);
             $html = strip_tags(html_entity_decode($html));
             // dd($html);
-            $message->set('field_message_show', str_replace('&nbsp;', ' ', $html));
-            // dd($message);
-
-
-            $message->set('field_notification', $node, $notify = TRUE);
-            // dd($message);
+            $message->set('field_message_show', str_replace('&nbsp;',' ', $html));
             $message->save();
         }
     }
