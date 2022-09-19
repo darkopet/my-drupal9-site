@@ -1,9 +1,10 @@
-uuid: c994706f-5231-4a58-8124-cf1c5e741a5f
+uuid: 6fdfa95b-bd12-43a4-8f94-2f19b4ac24eb
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.token
     - field.field.node.event.comment
     - field.field.node.event.field_add_to_favourites
     - field.field.node.event.field_event_description
@@ -23,6 +24,7 @@ dependencies:
     - custom_field_type
     - datetime_range
     - field_group
+    - layout_builder
     - link
     - text
     - user
@@ -89,10 +91,13 @@ third_party_settings:
         id: ''
         formatter: open
         description: ''
-id: node.event.default
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.token
 targetEntityType: node
 bundle: event
-mode: default
+mode: token
 content:
   comment:
     type: comment_default
