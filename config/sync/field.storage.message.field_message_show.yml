@@ -1,0 +1,19 @@
+uuid: ebfa163a-a55c-435b-be4e-a9d26ab70509
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message.field_message_show
+field_name: field_message_show
+entity_type: message
+type: entity_reference
+settings:
+  target_type: message
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

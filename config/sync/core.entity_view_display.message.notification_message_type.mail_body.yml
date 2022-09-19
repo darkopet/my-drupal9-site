@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.message.mail_body
+    - field.field.message.notification_message_type.field_event_type_message
+    - field.field.message.notification_message_type.field_message_show
     - field.field.message.notification_message_type.field_notification
     - message.template.notification_message_type
   module:
@@ -21,6 +23,8 @@ content:
     weight: 0
     region: content
 hidden:
+  field_event_type_message: true
+  field_message_show: true
   field_notification: true
   partial_0: true
   search_api_excerpt: true

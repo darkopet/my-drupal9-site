@@ -1,16 +1,16 @@
-uuid: 0dec933d-146a-4765-bf2d-5576661ecd08
+uuid: 170bfe55-1f5a-4555-b578-be7f069e7a73
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.message.field_notification
+    - field.storage.message.field_event_type_message
     - message.template.notification_message_type
-id: message.notification_message_type.field_notification
-field_name: field_notification
+id: message.notification_message_type.field_event_type_message
+field_name: field_event_type_message
 entity_type: message
 bundle: notification_message_type
-label: Notification
-description: 'Notify the user when a new Event content type node is being created.'
+label: 'Event Type Message'
+description: ''
 required: false
 translatable: false
 default_value: {  }

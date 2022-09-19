@@ -1,0 +1,19 @@
+uuid: 8088d02b-e8aa-40fc-bfc2-336c63eec9b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message.field_event_type_message
+field_name: field_event_type_message
+entity_type: message
+type: entity_reference
+settings:
+  target_type: message
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

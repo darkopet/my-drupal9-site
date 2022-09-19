@@ -9,7 +9,7 @@ label: 'Notification Message Type'
 description: 'Notifications when new content type node created.'
 text:
   -
-    value: "<p>New event [field_event_name] has been added and will take place at [event_start_date] in [field_event_location].</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    value: "<p>New event&nbsp;[node:title] has been added and will take place at [node:field_start_end_date:value]&nbsp;in [node:field_event_location].</p>\r\n\r\n<p>[node:nid]</p>\r\n\r\n<p>[node:content-type]</p>\r\n\r\n<p>[node:field_event_description]</p>\r\n\r\n<p>[node:field_location_description]</p>\r\n\r\n<p>[node:field_event_type]</p>\r\n\r\n<p>[node:field_event_location]</p>\r\n\r\n<p>[node:field_event_organizer]</p>\r\n\r\n<p>[node:url]</p>\r\n\r\n<p>[node:field_title]</p>\r\n\r\n<p>[node:title]</p>\r\n"
     format: basic_html
 settings:
   'token options':
