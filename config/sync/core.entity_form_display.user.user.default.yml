@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_maximum_notifications
     - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -26,6 +27,13 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_maximum_notifications:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_notify_me_about_new_events:
     type: boolean_checkbox

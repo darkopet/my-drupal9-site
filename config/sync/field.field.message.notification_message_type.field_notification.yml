@@ -1,4 +1,4 @@
-uuid: 0dec933d-146a-4765-bf2d-5576661ecd08
+uuid: ed3158ed-8ba1-4590-87f2-92024d74be9b
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ field_name: field_notification
 entity_type: message
 bundle: notification_message_type
 label: Notification
-description: 'Notify the user when a new Event content type node is being created.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
@@ -21,7 +21,7 @@ settings:
     target_bundles:
       notification_message_type: notification_message_type
     sort:
-      field: _none
+      field: created
       direction: ASC
     auto_create: false
     auto_create_bundle: ''

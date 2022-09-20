@@ -1,0 +1,7 @@
+<ul>
+  {% for item in content %}
+    {% autoescape false %}
+      <li> {{ item|raw}} </li>
+    {% endautoescape %}
+  {% endfor %}
+</ul>

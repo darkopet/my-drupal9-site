@@ -1,11 +1,12 @@
-uuid: 2eb92b6e-45e8-42c2-8c22-9c6576e63cdb
+uuid: 7bca7e67-42fd-48ed-95c2-f4ccab3bdaa2
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.message.mail_body
+    - core.entity_view_mode.message.full
     - field.field.message.notification_message_type.field_event_type_message
     - field.field.message.notification_message_type.field_message_show
+    - field.field.message.notification_message_type.field_node_reference
     - field.field.message.notification_message_type.field_notification
     - message.template.notification_message_type
   module:
@@ -14,10 +15,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: message.notification_message_type.mail_body
+id: message.notification_message_type.full
 targetEntityType: message
 bundle: notification_message_type
-mode: mail_body
+mode: full
 content:
   field_event_type_message:
     type: entity_reference_label
@@ -25,7 +26,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
   field_message_show:
     type: entity_reference_label
@@ -33,7 +34,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_notification:
     type: entity_reference_label
@@ -41,11 +42,13 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
-  partial_1:
+  partial_0:
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
-  partial_0: true
+  field_node_reference: true
   search_api_excerpt: true

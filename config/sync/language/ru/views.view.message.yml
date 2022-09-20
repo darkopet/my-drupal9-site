@@ -22,6 +22,8 @@ display:
             first: '« первая'
             last: 'последняя »'
       fields:
+        message_bulk_form_1:
+          action_title: 'С выделенным'
         mid:
           label: '№ сообщения'
           separator: ', '

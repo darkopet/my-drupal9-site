@@ -22,6 +22,9 @@ display:
             first: '« erste Seite'
             last: 'letzte Seite »'
       fields:
+        message_bulk_form_1:
+          label: 'Massenbearbeitungsformular für Nachrichtenaktionen'
+          action_title: Auswahl
         mid:
           label: Nachrichten-ID
           separator: ', '

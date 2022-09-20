@@ -1,11 +1,11 @@
-uuid: 4330f5c9-92ce-4c57-926e-4e9e83a9eec7
+uuid: 2abe4a8f-1997-41ea-a751-7aeca3c057a4
 langcode: en
 status: true
 dependencies:
   module:
     - message
-id: message.field_notification
-field_name: field_notification
+id: message.field_node_reference
+field_name: field_node_reference
 entity_type: message
 type: entity_reference
 settings:

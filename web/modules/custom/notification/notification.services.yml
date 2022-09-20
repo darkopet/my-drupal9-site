@@ -1,0 +1,6 @@
+services:
+  # Name of this service.
+  notification.list:
+    # Get Notifications
+    class: '\Drupal\notification\GetNotificationList'
+    arguments: [ '@entity_type.manager', '@token', '@request_stack', '@current_user' ]

@@ -1,4 +1,4 @@
 text:
   -
-    value: "<p>New event&nbsp;[node:title] has been added and will take place at [node:field_start_end_date:value]&nbsp;in [node:field_event_location].</p>\r\n"
-    format: full_html
+    value: "<p>[node:name]</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: basic_html

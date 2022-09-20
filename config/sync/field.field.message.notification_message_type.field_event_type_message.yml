@@ -1,4 +1,4 @@
-uuid: 170bfe55-1f5a-4555-b578-be7f069e7a73
+uuid: bd9fb34d-3c37-4d3f-98d4-325ea4c834ac
 langcode: en
 status: true
 dependencies:
@@ -21,7 +21,7 @@ settings:
     target_bundles:
       notification_message_type: notification_message_type
     sort:
-      field: _none
+      field: created
       direction: ASC
     auto_create: false
     auto_create_bundle: ''

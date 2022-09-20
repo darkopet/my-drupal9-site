@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_maximum_notifications
     - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -16,6 +17,15 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_maximum_notifications:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_notify_me_about_new_events:
     type: boolean
     label: above

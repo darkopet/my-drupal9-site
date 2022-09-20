@@ -1,16 +1,16 @@
-uuid: 281aa79b-4af2-4d6b-82b5-56cda9d174a5
+uuid: 7fe299ab-f6ab-4a20-ad21-a2d38b7caea7
 langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.full_html
+    - filter.format.basic_html
 template: notification_message_type
 label: 'Notification Message Type'
 description: 'Notifications when new content type node created.'
 text:
   -
-    value: "<p>New event&nbsp;[node:title] has been added and will take place at [node:field_start_end_date:value]&nbsp;in [node:field_event_location].</p>\r\n"
-    format: full_html
+    value: "<p>[node:name]</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: basic_html
 settings:
   'token options':
     clear: false

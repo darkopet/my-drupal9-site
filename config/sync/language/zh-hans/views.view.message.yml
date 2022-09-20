@@ -22,6 +22,8 @@ display:
             first: '« 第一页'
             last: '末页 »'
       fields:
+        message_bulk_form_1:
+          action_title: 对所选项目
         mid:
           separator: ', '
         template:

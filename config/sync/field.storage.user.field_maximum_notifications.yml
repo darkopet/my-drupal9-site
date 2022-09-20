@@ -1,0 +1,20 @@
+uuid: 8b95ab4b-3ad5-4b6d-9171-bdc88b8fea24
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_maximum_notifications
+field_name: field_maximum_notifications
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

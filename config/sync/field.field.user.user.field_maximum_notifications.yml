@@ -1,0 +1,24 @@
+uuid: 1d16aaa1-ce45-464b-a975-bbe2e0ad8e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_maximum_notifications
+  module:
+    - user
+id: user.user.field_maximum_notifications
+field_name: field_maximum_notifications
+entity_type: user
+bundle: user
+label: 'Maximum Notifications'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
