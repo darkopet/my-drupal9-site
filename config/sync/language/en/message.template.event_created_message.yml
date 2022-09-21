@@ -1,0 +1,4 @@
+text:
+  -
+    value: "<p>[node:title]&nbsp;</p>\r\n\r\n<p>[node:field_event_location]</p>\r\n\r\n<p>[node:field_start_end_date:value]</p>\r\n"
+    format: basic_html

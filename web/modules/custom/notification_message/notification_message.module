@@ -13,8 +13,8 @@ use Drupal\message\Entity\Message;
  */
 function notification_message_node_insert(Node $node) {
   if ($node->getType() === 'event') {
-    $message = Message::create(['template' => 'event_created', 'uid' => $node->get('uid')]);
-    $message->set('field_node_reference', $node);
+    $message = Message::create(['template' => 'event_created_message', 'uid' => $node->get('uid')]);
+    $message->set('field_node_reference_message', $node);
     $eventType = $node->get('field_event_type')->getValue()[0]['target_id'];
     $message->set('field_event_type_msg', $eventType);
     $text = $message->getText()[0];
@@ -22,8 +22,9 @@ function notification_message_node_insert(Node $node) {
       'node' => $node,
     ], []);
     $html = strip_tags(html_entity_decode($html));
-    $message->set('field_message_show', str_replace('&nbsp;', ' ', $html));
+    $message->set('field_message_show_ui', str_replace('&nbsp;', ' ', $html));
     $message->save();
+//  dd($message);
   }
 }
 

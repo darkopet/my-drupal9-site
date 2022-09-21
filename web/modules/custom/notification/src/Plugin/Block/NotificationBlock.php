@@ -16,6 +16,7 @@ use Drupal\Core\Form\FormBuilder;
  *  admin_label = @Translation("Notification Block"),
  * )
  */
+
 class NotificationBlock extends BlockBase implements ContainerFactoryPluginInterface
 {
 

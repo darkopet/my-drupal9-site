@@ -1,0 +1,24 @@
+uuid: 1a07fa6b-45d9-49fc-a84c-44fd50031c71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_maximum_items
+  module:
+    - user
+id: user.user.field_maximum_items
+field_name: field_maximum_items
+entity_type: user
+bundle: user
+label: 'Maximum items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

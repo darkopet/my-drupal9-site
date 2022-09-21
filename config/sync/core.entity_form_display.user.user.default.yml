@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_maximum_items
     - field.field.user.user.field_maximum_notifications
     - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
@@ -27,6 +28,13 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_maximum_items:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   field_maximum_notifications:
     type: number

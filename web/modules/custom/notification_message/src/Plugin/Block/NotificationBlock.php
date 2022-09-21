@@ -16,9 +16,10 @@ use Symfony\Component\HttpFoundation\RequestStack;
  *
  * @Block(
  *  id = "notification_block",
- *  admin_label = @Translation("My Notification"),
+ *  admin_label = @Translation("Meri Notification"),
  * )
  */
+
 class NotificationBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
@@ -133,12 +134,12 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
     if ($eventTypeFilter) {
       $query->condition('field_event_type_msg',$eventTypeFilter);
     }
-    $mids = $query->pager($limit)->sort('created', $direction = 'DESC')->condition('template','event_created')->execute();
+    $mids = $query->pager($limit)->sort('created', $direction = 'DESC')->condition('template','event_created_message')->execute();
     foreach ($mids as $mid) {
       $message = $this->entityTypeManager->getStorage('message')->load($mid);
-      $referencedNode = $message->get('field_node_reference')->getValue()[0]['target_id'];
+      $referencedNode = $message->get('field_node_reference_message')->getValue()[0]['target_id'];
       $node = $this->entityTypeManager->getStorage('node')->load($referencedNode);
-        $startDate = strtotime($node->get('field_event_start_end_date')->getValue()[0]['value']);
+        $startDate = strtotime($node->get('field_start_end_date')->getValue()[0]['value']);
         $now = time();
         if ($now < $startDate) {
           $text = $message->getText()[0];

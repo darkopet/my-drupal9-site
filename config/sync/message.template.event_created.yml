@@ -6,7 +6,7 @@ dependencies:
     - filter.format.basic_html
 template: event_created
 label: 'Event created'
-description: 'New event created[node:title]'
+description: 'New event created'
 text:
   -
     value: "<p>[node:title]</p>\r\n\r\n<p>[node:field_event_location]</p>\r\n\r\n<p>[node:field_event_type]</p>\r\n"

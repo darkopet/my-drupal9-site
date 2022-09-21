@@ -27,8 +27,7 @@ class GetNotificationList {
     $this->accountProxy = $accountProxy;
   }
 
-  public function getList()
-  {
+  public function getList() {
     $eventTypeFilter = $this->requestStack->getCurrentRequest()->query->get('event_type');
     $notificationList = [];
     $userId = $this->accountProxy->id();

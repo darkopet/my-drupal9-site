@@ -7,7 +7,6 @@
 
 use Drupal\node\Entity\Node;
 use Drupal\message\Entity\Message;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_node_insert().
