@@ -1,0 +1,6 @@
+name: Notification1
+type: module
+description: 'Notification messages on new Event created.'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

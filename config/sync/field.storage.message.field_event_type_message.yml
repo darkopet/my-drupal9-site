@@ -1,4 +1,4 @@
-uuid: 3c50a59f-c675-48b3-8dbf-3044e3f0356f
+uuid: c127cc75-8f6a-49bb-a567-5c333ebaa52e
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,10 @@ dependencies:
 id: message.field_event_type_message
 field_name: field_event_type_message
 entity_type: message
-type: entity_reference
+type: integer
 settings:
-  target_type: message
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

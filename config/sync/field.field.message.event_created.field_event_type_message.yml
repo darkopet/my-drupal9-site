@@ -1,4 +1,4 @@
-uuid: 3197dbad-c417-4f82-b795-3d4480c432a0
+uuid: 72ee8ad4-73a4-4568-b0d1-8596d9ff13c3
 langcode: en
 status: true
 dependencies:
@@ -16,13 +16,8 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:message'
-  handler_settings:
-    target_bundles:
-      event_created: event_created
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
-field_type: entity_reference
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

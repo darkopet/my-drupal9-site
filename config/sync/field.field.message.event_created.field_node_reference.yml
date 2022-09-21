@@ -1,10 +1,11 @@
-uuid: 4a23cd23-80d0-4746-8fa2-dc487993a021
+uuid: eb9a5e8f-c8ec-4aa3-b8d8-efb25fed7218
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.message.field_node_reference
     - message.template.event_created
+    - node.type.event
 id: message.event_created.field_node_reference
 field_name: field_node_reference
 entity_type: message
@@ -16,10 +17,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:message'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      event_created: event_created
+      event: event
     sort:
       field: _none
       direction: ASC

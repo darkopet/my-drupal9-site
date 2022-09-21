@@ -1,4 +1,4 @@
-uuid: 283730d5-8b38-4333-90da-4ef434666478
+uuid: b6e4bfe9-8d70-47f4-b457-915dfcfa78d3
 langcode: en
 status: true
 dependencies:
@@ -21,8 +21,8 @@ settings:
     target_bundles:
       event_created: event_created
     sort:
-      field: _none
-      direction: ASC
+      field: created
+      direction: DESC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference

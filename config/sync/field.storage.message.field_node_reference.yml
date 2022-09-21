@@ -1,15 +1,16 @@
-uuid: bda0836f-6dcd-421b-a2bb-8421b3b12875
+uuid: b37324dd-d332-4fb9-a71e-738b7bb2fe7e
 langcode: en
 status: true
 dependencies:
   module:
     - message
+    - node
 id: message.field_node_reference
 field_name: field_node_reference
 entity_type: message
 type: entity_reference
 settings:
-  target_type: message
+  target_type: node
 module: core
 locked: false
 cardinality: 1

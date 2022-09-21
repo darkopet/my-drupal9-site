@@ -1,4 +1,4 @@
-uuid: fd209fb7-8522-4207-80cc-3546a83df15f
+uuid: b5171843-a559-4935-9f93-606659b780bc
 langcode: en
 status: true
 dependencies:
@@ -13,12 +13,13 @@ bundle: event_created
 mode: default
 content:
   field_event_type_message:
-    type: entity_reference_label
+    type: number_integer
     label: above
     settings:
-      link: true
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_message_show:
     type: entity_reference_label
@@ -26,18 +27,13 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_node_reference:
     type: entity_reference_label
     label: above
     settings:
       link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  partial_0:
-    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content

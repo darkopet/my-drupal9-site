@@ -1,4 +1,4 @@
-uuid: 5aba20ab-c93a-4daa-a987-69e8ba54ec0b
+uuid: 46b4810d-219b-4bdb-94e2-a45fc11a1aaa
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,10 @@ dependencies:
     - filter.format.basic_html
 template: event_created
 label: 'Event created'
-description: 'New event created'
+description: 'Notification messages on new Event creation.'
 text:
   -
-    value: "<p>[node:title]</p>\r\n\r\n<p>[node:field_event_location]</p>\r\n\r\n<p>[node:field_event_type]</p>\r\n"
+    value: "<p>New event&nbsp;[message:field_node_reference] has been added and will take place at&nbsp;[message:field_node_reference:entity:field_start_end_date:value] in&nbsp;[message:field_node_reference:entity:field_event_location]</p>\r\n"
     format: basic_html
 settings:
   'token options':

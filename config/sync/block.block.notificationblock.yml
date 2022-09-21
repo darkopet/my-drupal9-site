@@ -1,20 +1,25 @@
-uuid: 2413cb24-2435-4b36-9825-8dbe58bf6038
+uuid: 513e5da8-15d9-4712-8f4b-f590827c8fcd
 langcode: en
 status: true
 dependencies:
   module:
-    - notification_message
+    - notification1
+    - system
   theme:
     - bartik
 id: notificationblock
 theme: bartik
-region: sidebar_first
-weight: -12
+region: sidebar_second
+weight: 0
 provider: null
 plugin: notification_block
 settings:
   id: notification_block
   label: 'Notification Block'
   label_display: visible
-  provider: notification
-visibility: {  }
+  provider: notification1
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

@@ -1,4 +1,4 @@
-uuid: 1d16aaa1-ce45-464b-a975-bbe2e0ad8e4a
+uuid: 3ebe6346-f118-4a47-9fd3-cfdaf6aa8b3f
 langcode: en
 status: true
 dependencies:
@@ -10,7 +10,7 @@ id: user.user.field_maximum_notifications
 field_name: field_maximum_notifications
 entity_type: user
 bundle: user
-label: 'Maximum Notifications'
+label: 'Maximum notifications'
 description: ''
 required: false
 translatable: false

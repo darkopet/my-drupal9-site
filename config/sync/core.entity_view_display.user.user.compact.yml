@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_maximum_items
     - field.field.user.user.field_maximum_notifications
     - field.field.user.user.field_notify_me_about_new_events
     - field.field.user.user.user_picture
@@ -41,7 +40,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_maximum_items: true
   field_maximum_notifications: true
   field_notify_me_about_new_events: true
   langcode: true

@@ -1,4 +1,4 @@
-uuid: 634f5230-65c6-457b-8806-8c1ae9d89fb8
+uuid: ace26f25-029b-478a-989c-74c875434c07
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,9 @@ label: 'Notify me about new events'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 0
 default_value_callback: ''
 settings:
   on_label: 'On'

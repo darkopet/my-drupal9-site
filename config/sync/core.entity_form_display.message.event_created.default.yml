@@ -1,4 +1,4 @@
-uuid: 3c750522-4f9f-4ce8-9156-0c070732d294
+uuid: f780275f-64b8-4c9f-bf15-e6bf3ca7de3b
 langcode: en
 status: true
 dependencies:
@@ -13,13 +13,10 @@ bundle: event_created
 mode: default
 content:
   field_event_type_message:
-    type: entity_reference_autocomplete
+    type: number
     weight: 1
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_message_show:
