@@ -1,7 +1,0 @@
-name: Custom Notification Messages
-type: module
-description: 'Custom Notification Messages for content type Event.'
-package: Custom
-version: 1.0
-core_version_requirement: ^8.8 || ^9
-

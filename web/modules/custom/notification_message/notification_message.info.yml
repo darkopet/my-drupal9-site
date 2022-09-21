@@ -1,4 +1,0 @@
-name: Event Notifications
-description: Notifications about newly created events
-core_version_requirement: ^8 || ^9
-type: module
