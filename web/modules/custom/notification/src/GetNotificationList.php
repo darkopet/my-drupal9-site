@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Drupal\Core\Session\AccountProxy;
 
-class GetNotificationList{
+class GetNotificationList {
 
   private $entityTypeManager;
   private $requestStack;

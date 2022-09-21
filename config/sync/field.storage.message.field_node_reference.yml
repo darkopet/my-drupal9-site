@@ -1,0 +1,19 @@
+uuid: bda0836f-6dcd-421b-a2bb-8421b3b12875
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message.field_node_reference
+field_name: field_node_reference
+entity_type: message
+type: entity_reference
+settings:
+  target_type: message
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

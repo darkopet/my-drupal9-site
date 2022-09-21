@@ -1,0 +1,28 @@
+uuid: 283730d5-8b38-4333-90da-4ef434666478
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_message_show
+    - message.template.event_created
+id: message.event_created.field_message_show
+field_name: field_message_show
+entity_type: message
+bundle: event_created
+label: 'Message show'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:message'
+  handler_settings:
+    target_bundles:
+      event_created: event_created
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

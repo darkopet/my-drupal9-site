@@ -1,0 +1,45 @@
+uuid: 3c750522-4f9f-4ce8-9156-0c070732d294
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.message.event_created.field_event_type_message
+    - field.field.message.event_created.field_message_show
+    - field.field.message.event_created.field_node_reference
+    - message.template.event_created
+id: message.event_created.default
+targetEntityType: message
+bundle: event_created
+mode: default
+content:
+  field_event_type_message:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_message_show:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_node_reference:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
