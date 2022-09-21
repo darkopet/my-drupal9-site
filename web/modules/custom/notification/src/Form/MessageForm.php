@@ -50,11 +50,8 @@ class MessageForm extends FormBase {
       '' => 'Select Event Type'
     ];
     $query = $this->entityTypeManager->getStorage('taxonomy_term')->getQuery();
-    // dd($query);
-    $nids = $query->condition('vid', "event")->execute();
-    // dd($nids);
+    $nids = $query->condition('vid', "events")->execute();
     $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadMultiple($nids);
-    // dd($terms);
     foreach ($terms as $term) {
       $options[$term->tid->value] = $term->name->value;
     }
@@ -64,7 +61,7 @@ class MessageForm extends FormBase {
       '#open'  => true,
     ];
 
-    $form['filters']['field_event_type'] = [
+    $form['filters']['event_type'] = [
       '#title'         => 'Event Type',
       '#type'          => 'select',
       '#options'       => $options,
@@ -88,9 +85,9 @@ class MessageForm extends FormBase {
    */
   public function submitForm(array & $form, FormStateInterface $form_state) {
     $field = $form_state->getValues();
-    $event_type = $field["field_event_type"];
+    $event_type = $field["event_type"];
     $url = Url::fromRoute('<current>')
-      ->setRouteParameters(array('field_event_type'=>$event_type));
+      ->setRouteParameters(array('event_type'=>$event_type));
     $form_state->setRedirectUrl($url);
   }
 

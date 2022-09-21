@@ -7,8 +7,9 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Drupal\Core\Session\AccountProxy;
 
-class GetNotificationList {
-private $entityTypeManager;
+class GetNotificationList{
+
+  private $entityTypeManager;
   private $requestStack;
   private $token;
   private $accountProxy;
@@ -18,39 +19,29 @@ private $entityTypeManager;
     TokenInterface $token,
     RequestStack $requestStack,
     AccountProxy $accountProxy
-  ) {
+  )
+  {
     $this->entityTypeManager = $entityTypeManager;
     $this->token = $token;
     $this->requestStack = $requestStack;
     $this->accountProxy = $accountProxy;
   }
 
-  public function getList() {
-    // dd($this);
-    $eventTypeFilter = $this->requestStack->getCurrentRequest()->query->get('field_event_type');
-    // dd($eventTypeFilter);
+  public function getList()
+  {
+    $eventTypeFilter = $this->requestStack->getCurrentRequest()->query->get('event_type');
     $notificationList = [];
-    // dd($notificationList); 
-
     $userId = $this->accountProxy->id();
-    // dd($userId);
     $user = $this->entityTypeManager->getStorage('user')->load($userId);
-    // dd($user);
     $limit = $user->get('field_maximum_notifications')->getValue()[0]['value'];
-    // dd($limit);
-
-
     $query = $this->entityTypeManager->getStorage('message')->getQuery();
-    // dd($query);
     $query->condition('field_event_type_message', $eventTypeFilter);
-    $mids = $query->pager($limit)->sort('created', $direction = 'DESC')->condition('template', 'notification_message_type')->execute();
-    // dd($mids);
+    $mids = $query->pager($limit)->sort('created', $direction = 'DESC')->condition('template', 'event_created')->execute();
 
     if ($eventTypeFilter && $mids !== []) {
       foreach ($mids as $mid) {
         $message = $this->entityTypeManager->getStorage('message')->load($mid);
         $referencedNode = $message->get('field_node_reference')->getValue()[0]['target_id'];
-        // dd($referencedNode);
         $node = $this->entityTypeManager->getStorage('node')->load($referencedNode);
         $startDate = $node->get('field_start_end_date')->getValue()[0]['value'];
         $startDate = strtotime($startDate);
@@ -68,3 +59,4 @@ private $entityTypeManager;
     }
   }
 }
+

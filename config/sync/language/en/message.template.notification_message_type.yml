@@ -1,4 +1,0 @@
-text:
-  -
-    value: "<p>[node:name]</p>\r\n\r\n<p>&nbsp;</p>\r\n"
-    format: basic_html

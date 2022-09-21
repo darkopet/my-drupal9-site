@@ -85,7 +85,6 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
-  message: 0
   metatag: 0
   metatag_facebook: 0
   metatag_open_graph: 0
@@ -97,7 +96,6 @@ module:
   migrate_tools: 0
   mysql: 0
   node: 0
-  notification: 0
   options: 0
   page_cache: 0
   page_example: 0
