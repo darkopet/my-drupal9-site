@@ -53,8 +53,10 @@ class MessageForm extends FormBase {
     $query = $this->entityTypeManager->getStorage('taxonomy_term')->getQuery();
     $nids = $query->condition('vid', "event_type")->execute();
     $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadMultiple($nids);
+//  dd($terms);
     foreach ($terms as $term) {
       $options[$term->tid->value] = $term->name->value;
+//      dd($options);
     }
     $form['filters'] = [
       '#type'  => 'fieldset',
@@ -78,7 +80,6 @@ class MessageForm extends FormBase {
     ];
 
     return $form;
-
   }
 
   /**
@@ -91,5 +92,4 @@ class MessageForm extends FormBase {
       ->setRouteParameters(array('event_type'=>$event_type));
     $form_state->setRedirectUrl($url);
   }
-
 }

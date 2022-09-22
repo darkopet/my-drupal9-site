@@ -15,7 +15,6 @@ function notification1_node_insert(Node $node) {
   if ($node->getType() === 'event') {
     $message = Message::create(['template' => 'event_created', 'uid' => $node->get('uid')]);
     $message->set('field_node_reference', $node);
-//  dd($message);
     $eventType = $node->get('field_event_type')->getValue()[0]['target_id'];
     $message->set('field_event_type_message', $eventType);
     $text = $message->getText()[0];
@@ -25,16 +24,15 @@ function notification1_node_insert(Node $node) {
     $html = strip_tags(html_entity_decode($html));
     $message->set('field_message_show', str_replace('&nbsp;', ' ', $html));
     $message->save();
-//  dd($message);
   }
 }
 
 /**
  * Implements hook_theme().
  */
-function notification_theme() {
+function notification1_theme() {
   return [
-    'notification' => [
+    'notification1' => [
       'variables' => [
         'content' => NULL
       ],
@@ -42,7 +40,7 @@ function notification_theme() {
   ];
 }
 
-function notification_views_query_alter(
+function notification1_views_query_alter(
   \Drupal\views\ViewExecutable $view,
   \Drupal\views\Plugin\views\query\QueryPluginBase $query){
   if($view->id() == 'notifications2'){

@@ -17,8 +17,7 @@ use Drupal\Core\Form\FormBuilder;
  * )
  */
 
-class NotificationBlock extends BlockBase implements ContainerFactoryPluginInterface
-{
+class NotificationBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * @var $service GetNotificationList
@@ -39,14 +38,13 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
    *
    * @return static
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
-  {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration,
       $plugin_id,
       $plugin_definition,
       $container->get('form_builder'),
-      $container->get('notification.list')
+      $container->get('notification1.list')
     );
   }
 
@@ -56,8 +54,7 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
    * @param mixed $plugin_definition
    * @param FormBuilder $formBuilder
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, FormBuilder $formBuilder, GetNotificationList $service)
-  {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, FormBuilder $formBuilder, GetNotificationList $service) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->formBuilder = $formBuilder;
     $this->service = $service;
@@ -66,8 +63,7 @@ class NotificationBlock extends BlockBase implements ContainerFactoryPluginInter
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
+  public function build() {
     $query = \Drupal::entityTypeManager()->getStorage('message')->getQuery();
     $block[0]['form'] = $this->formBuilder->getForm('Drupal\notification1\Form\MessageForm');
     $block[1]['content'] = [
