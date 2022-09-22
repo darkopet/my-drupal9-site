@@ -1,0 +1,56 @@
+# Route name can be used in several places: links, redirects, local actions.
+
+entity.content_entity_reviews.canonical:
+  path: '/content_entity_reviews/{content_entity_reviews}'
+  defaults:
+    # Calls the VIEW CONTROLLER defined in the annotation of the reviews entity
+    _entity_view: 'content_entity_reviews'
+    _title: 'Reviews Content'
+  requirements:
+    # Calls the ACCESS CONTROLLER of the entity, $operation 'view'
+    _entity_access: 'content_entity_reviews.view'
+
+entity.content_entity_reviews.collection:
+  path: '/content_entity_reviews/list'
+  defaults:
+    # Calls the LIST CONTROLLER defined in the annotation of the reviews entity
+    _entity_list: 'content_entity_reviews'
+    _title: 'Reviews List'
+  requirements:
+    # Check the permission directly
+    _permission: 'administer reviews entity'
+
+
+entity.content_entity_reviews.add:
+  path: '/content_entity_reviews/add'
+  defaults:
+    # Calls the form.add controller defined in the reviews entity
+    _entity_form: content_entity_reviews.add
+    _title: 'Add Reviews'
+  requirements:
+    _entity_create_access: 'content_entity_reviews'
+
+entity.content_entity_reviews.edit:
+  path: '/content_entity_reviews/{content_entity_reviews}/edit'
+  defaults:
+    _entity_form: content_entity_reviews.edit
+    _title: 'Edit Reviews'
+  requirements:
+    _entity_access: 'content_entity_reviews.edit'
+
+entity.content_entity_reviews.delete:
+  path: 'reviews/{content_entity_reviews}/delete'
+  defaults:
+    # Calls the form.delete controller defined in the reviews entity
+    _entity_form:  content_entity_reviews.delete
+    _title: 'Delete Reviews'
+  requirements:
+    _entity_access: 'content_entity_reviews.delete'
+
+content_entity_reviews.reviews_settings:
+  path: 'admin/structure/content_entity_reviews_settings'
+  defaults:
+    _form: 'Drupal\content_entity_reviews\Form\ReviewsSettingsForm'
+    _title: 'Reviews Settings'
+  requirements:
+    _permission: 'administer review entity'
