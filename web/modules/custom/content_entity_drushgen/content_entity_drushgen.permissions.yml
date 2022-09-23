@@ -1,0 +1,3 @@
+administer content entity drushgen:
+  title: 'Administer content entity drushgen settings'
+  restrict access: true

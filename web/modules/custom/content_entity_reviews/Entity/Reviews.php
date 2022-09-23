@@ -272,4 +272,3 @@ class Reviews extends ContentEntityBase implements ReviewsInterface {
 // - from the definition of the base fields
 // - corresponding tables are set up in the database during installation of the module
 
-?>

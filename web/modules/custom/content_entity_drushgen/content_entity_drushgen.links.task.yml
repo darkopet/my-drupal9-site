@@ -1,0 +1,22 @@
+entity.content_entity_drushgen.settings:
+  title: 'Settings'
+  route_name: entity.content_entity_drushgen.settings
+  base_route: entity.content_entity_drushgen.settings
+entity.content_entity_drushgen.view:
+  title: 'View'
+  route_name: entity.content_entity_drushgen.canonical
+  base_route: entity.content_entity_drushgen.canonical
+entity.content_entity_drushgen.edit_form:
+  title: 'Edit'
+  route_name: entity.content_entity_drushgen.edit_form
+  base_route: entity.content_entity_drushgen.canonical
+entity.content_entity_drushgen.delete_form:
+  title: 'Delete'
+  route_name: entity.content_entity_drushgen.delete_form
+  base_route: entity.content_entity_drushgen.canonical
+  weight: 10
+entity.content_entity_drushgen.collection:
+  title: 'Content entity drushgens'
+  route_name: entity.content_entity_drushgen.collection
+  base_route: system.admin_content
+  weight: 10
