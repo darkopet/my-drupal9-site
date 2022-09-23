@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * @ingroup content_entity_reviews
  */
-class ContactForm extends ContentEntityForm {
+class ReviewsForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}
