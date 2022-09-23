@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Provides a reviews entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\reviews\Entity\Reviews;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function reviews_theme() {
+  return [
+    'reviews' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for reviews templates.
+ *
+ * Default template: reviews.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the reviews information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_reviews(array &$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function reviews_user_cancel($edit, UserInterface $account, $method) {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish reviewss.
+      $storage = \Drupal::entityTypeManager()->getStorage('reviews');
+      $reviews_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->execute();
+      foreach ($storage->loadMultiple($reviews_ids) as $reviews) {
+        $reviews->set('status', FALSE);
+        $reviews->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize reviewss.
+      $storage = \Drupal::entityTypeManager()->getStorage('reviews');
+      $reviews_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->execute();
+      foreach ($storage->loadMultiple($reviews_ids) as $reviews) {
+        $reviews->setOwnerId(0);
+        $reviews->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function reviews_user_predelete(UserInterface $account) {
+  // Delete reviewss.
+  $storage = \Drupal::entityTypeManager()->getStorage('reviews');
+  $reviews_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->execute();
+  $reviewss = $storage->loadMultiple($reviews_ids);
+  $storage->delete($reviewss);
+}

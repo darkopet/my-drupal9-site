@@ -1,0 +1,38 @@
+uuid: aa35f3f8-9bf2-47ea-a45d-14fec8a7236c
+langcode: en
+status: true
+dependencies:
+  module:
+    - review
+    - serialization
+    - user
+_core:
+  default_config_hash: hdnJUe1f0PTzToBI03RiPw8WldK0D26bxmbVS7cWOXU
+id: entity.review
+plugin_id: 'entity:review'
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  POST:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  PATCH:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie
+  DELETE:
+    supported_formats:
+      - json
+      - xml
+    supported_auth:
+      - cookie

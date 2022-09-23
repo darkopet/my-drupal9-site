@@ -1,0 +1,5 @@
+entity.review_type.collection:
+  title: 'Review types'
+  description: 'Manage and CRUD actions on Review type.'
+  parent: system.admin_structure
+  route_name: entity.review_type.collection

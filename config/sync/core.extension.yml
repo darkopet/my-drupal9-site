@@ -39,6 +39,7 @@ module:
   editor: 0
   entity_browser: 0
   entity_browser_example: 0
+  entity_reference: 0
   entity_reference_revisions: 0
   entity_reference_views: 0
   entity_usage: 0
@@ -113,6 +114,8 @@ module:
   render_example: 0
   rest: 0
   rest_example: 0
+  review: 0
+  reviews: 0
   rh_media: 0
   rh_node: 0
   rh_taxonomy: 0

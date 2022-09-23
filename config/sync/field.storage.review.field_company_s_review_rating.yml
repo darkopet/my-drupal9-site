@@ -1,0 +1,19 @@
+uuid: 1935fa4e-5683-46e7-b179-ac0d7708a43c
+langcode: en
+status: true
+dependencies:
+  module:
+    - review
+    - starrating
+id: review.field_company_s_review_rating
+field_name: field_company_s_review_rating
+entity_type: review
+type: starrating
+settings: {  }
+module: starrating
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

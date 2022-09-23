@@ -1,0 +1,26 @@
+entity.reviews.view:
+  title: 'View'
+  route_name: entity.reviews.canonical
+  base_route: entity.reviews.canonical
+entity.reviews.edit_form:
+  title: 'Edit'
+  route_name: entity.reviews.edit_form
+  base_route: entity.reviews.canonical
+entity.reviews.delete_form:
+  title: 'Delete'
+  route_name: entity.reviews.delete_form
+  base_route: entity.reviews.canonical
+  weight: 10
+entity.reviews.collection:
+  title: 'Reviewss'
+  route_name: entity.reviews.collection
+  base_route: system.admin_content
+  weight: 10
+entity.reviews_type.edit_form:
+  title: 'Edit'
+  route_name: entity.reviews_type.edit_form
+  base_route: entity.reviews_type.edit_form
+entity.reviews_type.collection:
+  title: 'List'
+  route_name: entity.reviews_type.collection
+  base_route: entity.reviews_type.collection

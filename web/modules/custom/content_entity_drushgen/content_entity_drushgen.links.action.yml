@@ -1,5 +1,0 @@
-content_entity_drushgen.add_form:
-  title: 'Add content entity drushgen'
-  route_name: entity.content_entity_drushgen.add_form
-  appears_on:
-    - entity.content_entity_drushgen.collection

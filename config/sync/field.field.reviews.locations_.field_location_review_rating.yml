@@ -1,0 +1,24 @@
+uuid: 7574ee30-18ff-4db0-8b61-f1e0e1f82ca3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.reviews.field_location_review_rating
+    - reviews.reviews_type.locations_
+  module:
+    - starrating
+id: reviews.locations_.field_location_review_rating
+field_name: field_location_review_rating
+entity_type: reviews
+bundle: locations_
+label: 'Location review rating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  max_value: '5'
+field_type: starrating

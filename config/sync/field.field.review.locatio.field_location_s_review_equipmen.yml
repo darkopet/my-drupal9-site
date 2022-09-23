@@ -1,0 +1,29 @@
+uuid: 21a0ddac-ed9a-47e5-a87c-2da542fe0cb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_location_s_review_equipmen
+    - review.review_type.locatio
+    - taxonomy.vocabulary.equipment
+id: review.locatio.field_location_s_review_equipmen
+field_name: field_location_s_review_equipmen
+entity_type: review
+bundle: locatio
+label: 'Location''s review equipment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      equipment: equipment
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

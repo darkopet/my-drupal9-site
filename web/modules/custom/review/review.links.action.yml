@@ -1,0 +1,11 @@
+review.type_add:
+  title: 'Add review type'
+  route_name: entity.review_type.add_form
+  appears_on:
+    - entity.review_type.collection
+
+review.add_page:
+  title: 'Add review'
+  route_name: entity.review.add_page
+  appears_on:
+    - entity.review.collection

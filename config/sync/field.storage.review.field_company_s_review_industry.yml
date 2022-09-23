@@ -1,0 +1,20 @@
+uuid: 8d91baa0-801f-426c-bd56-2e3fc6dc6356
+langcode: en
+status: true
+dependencies:
+  module:
+    - review
+    - taxonomy
+id: review.field_company_s_review_industry
+field_name: field_company_s_review_industry
+entity_type: review
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

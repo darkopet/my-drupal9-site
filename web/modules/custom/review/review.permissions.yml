@@ -1,0 +1,12 @@
+administer review types:
+  title: 'Administer review types'
+  description: 'Maintain the types of review entity.'
+  restrict access: true
+delete review:
+  title: Delete review
+create review:
+  title: Create review
+view review:
+  title: View review
+edit review:
+  title: Edit review

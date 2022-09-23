@@ -1,7 +1,0 @@
-entity.content_entity_drushgen.settings:
-  path: 'admin/structure/content-entity-drushgen'
-  defaults:
-    _form: '\Drupal\content_entity_drushgen\Form\ContentEntityDrushgenSettingsForm'
-    _title: 'Content entity drushgen'
-  requirements:
-    _permission: 'administer content entity drushgen'

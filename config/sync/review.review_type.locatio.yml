@@ -1,0 +1,6 @@
+uuid: 94e8370d-68a0-463a-97fc-01a16b97a800
+langcode: en
+status: true
+dependencies: {  }
+id: locatio
+label: 'Location review type'

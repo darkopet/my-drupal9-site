@@ -1,0 +1,32 @@
+uuid: 19b7910e-1897-46a0-8073-953e1254ea24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_location_s_review_author
+    - review.review_type.locatio
+id: review.locatio.field_location_s_review_author
+field_name: field_location_s_review_author
+entity_type: review
+bundle: locatio
+label: 'Location''s review author'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    filter:
+      type: role
+      role:
+        content_editor: content_editor
+        administrator: administrator
+    include_anonymous: true
+field_type: entity_reference
