@@ -225,34 +225,6 @@ class Reviews extends ContentEntityBase implements ReviewsInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-
-    // Gender field for the contact.
-    // ListTextType with a drop down menu widget.
-    // The values shown in the menu are 'male' and 'female'.
-    // In the view the field content is shown as string.
-    // In the form the choices are presented as options list.
-    $fields['gender'] = BaseFieldDefinition::create('list_string')
-      ->setLabel(t('Gender'))
-      ->setDescription(t('The gender of the Contact entity.'))
-      ->setSettings(array(
-        'allowed_values' => array(
-          'female' => 'female',
-          'male' => 'male',
-        ),
-      ))
-      ->setDisplayOptions('view', array(
-        'label' => 'above',
-        'type' => 'list_default',
-        'weight' => -4,
-      ))
-      ->setDisplayOptions('form', array(
-        'type' => 'options_select',
-        'weight' => -4,
-      ))
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-
     // Owner field of the review.
     // Entity reference field, holds the reference to the user object.
     // The view shows the user name field of the user.
