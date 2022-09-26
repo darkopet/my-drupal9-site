@@ -75,6 +75,7 @@ module:
   jquery_ui: 0
   jquery_ui_accordion: 0
   jsonapi: 0
+  jsonapi_extras: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
@@ -115,6 +116,7 @@ module:
   render_example: 0
   rest: 0
   rest_example: 0
+  restui: 0
   review: 0
   rh_media: 0
   rh_node: 0
