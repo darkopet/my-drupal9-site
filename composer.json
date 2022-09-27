@@ -86,6 +86,7 @@
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/reroute_email": "^2.1",
         "drupal/restui": "^1.21",
+        "drupal/schemata": "^1.0@beta",
         "drupal/search_api": "^1.25",
         "drupal/search_api_algolia": "^3.0@beta",
         "drupal/search_api_autocomplete": "^1.6",
