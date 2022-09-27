@@ -1,6 +1,0 @@
-uuid: b404df15-40e3-405c-b368-98b43158af69
-langcode: en
-status: true
-dependencies: {  }
-id: company_review_type
-label: 'Company review type'

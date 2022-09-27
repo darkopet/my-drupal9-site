@@ -19,6 +19,7 @@ dependencies:
     - layout_builder
     - node
     - path
+    - review
     - site_status_message
     - system
     - taxonomy
@@ -38,6 +39,7 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'access tour'
+  - 'administer review types'
   - 'administer url aliases'
   - 'configure all layout_builder node layout overrides'
   - 'configure all team_member node layout overrides'
@@ -46,6 +48,7 @@ permissions:
   - 'create article content'
   - 'create landing_page content'
   - 'create page content'
+  - 'create review'
   - 'create terms in tags'
   - 'create url aliases'
   - 'delete any landing_page content'
@@ -58,6 +61,7 @@ permissions:
   - 'delete own location content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete review'
   - 'edit any landing_page content'
   - 'edit own article content'
   - 'edit own comments'
@@ -66,6 +70,7 @@ permissions:
   - 'edit own landing_page content'
   - 'edit own location content'
   - 'edit own page content'
+  - 'edit review'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'revert landing_page revisions'
@@ -73,4 +78,5 @@ permissions:
   - 'view all revisions'
   - 'view landing_page revisions'
   - 'view own unpublished content'
+  - 'view review'
   - 'view the administration theme'

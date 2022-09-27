@@ -9,6 +9,7 @@ dependencies:
     - contact
     - filter
     - media
+    - review
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -20,5 +21,10 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'administer review types'
+  - 'create review'
+  - 'delete review'
+  - 'edit review'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view review'
