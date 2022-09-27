@@ -33,7 +33,11 @@ class GetNotificationList {
     $notificationList = [];
     $userId = $this->accountProxy->id();
     $user = $this->entityTypeManager->getStorage('user')->load($userId);
-    $limit = $user->get('field_maximum_notifications')->getValue()[0]['value'];
+    if($userId != 0) {
+      $limit = $user->get('field_maximum_notifications')->getValue()[0]['value'];
+    } else {
+      $limit = 0;
+    }
     $query = $this->entityTypeManager->getStorage('message')->getQuery();
     $query->condition('field_event_type_message', $eventTypeFilter);
     $mids = $query->pager($limit)->sort('created', $direction = 'DESC')->condition('template', 'event_created')->execute();

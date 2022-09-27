@@ -1,0 +1,24 @@
+uuid: d3069dcc-162e-48a5-8806-eac776cc383a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_location_review_rating
+    - review.review_type.location_review_type
+  module:
+    - starrating
+id: review.location_review_type.field_location_review_rating
+field_name: field_location_review_rating
+entity_type: review
+bundle: location_review_type
+label: 'Location review rating'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  max_value: '5'
+field_type: starrating

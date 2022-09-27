@@ -7,6 +7,6 @@ event_form.modal_form:
     _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
-  parametrs:
-    id:
-      type: entity:node
+    parameters:
+      id:
+        type: entity:node

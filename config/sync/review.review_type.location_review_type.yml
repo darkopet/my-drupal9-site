@@ -1,0 +1,6 @@
+uuid: 68b4e6b5-7790-4c9e-bf4d-b900ab5e2836
+langcode: en
+status: true
+dependencies: {  }
+id: location_review_type
+label: 'Location review type'

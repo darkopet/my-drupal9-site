@@ -142,7 +142,7 @@ class Review extends ContentEntityBase implements ReviewInterface {
         'settings' => [
           'match_operator' => 'CONTAINS',
           'size' => 60,
-          'placeholder' => \Drupal::currentUser(),
+          'placeholder' => '',
         ],
         'weight' => 15,
       ])
@@ -175,5 +175,4 @@ class Review extends ContentEntityBase implements ReviewInterface {
 
     return $fields;
   }
-
 }

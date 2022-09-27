@@ -1,0 +1,20 @@
+uuid: 235d5f15-d5a6-45a9-a6a3-c0ebb314ce66
+langcode: en
+status: true
+dependencies:
+  module:
+    - review
+    - taxonomy
+id: review.field_location_review_equipment
+field_name: field_location_review_equipment
+entity_type: review
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

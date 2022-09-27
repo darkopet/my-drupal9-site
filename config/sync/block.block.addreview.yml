@@ -1,0 +1,29 @@
+uuid: 5b1f32c8-3b57-4155-8331-27eb989c7a0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - review
+  theme:
+    - bartik
+id: addreview
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: add_review
+settings:
+  id: add_review
+  label: 'Add review'
+  label_display: visible
+  provider: review
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      company: company
+      location: location

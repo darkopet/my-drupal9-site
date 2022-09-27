@@ -1,0 +1,6 @@
+uuid: 092ade61-8a07-4712-a91c-5191984ae566
+langcode: en
+status: true
+dependencies: {  }
+id: company_review_type
+label: 'Company review type'

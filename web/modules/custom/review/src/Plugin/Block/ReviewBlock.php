@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\event_form\Plugin\Block;
+namespace Drupal\review\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
@@ -10,12 +10,12 @@ use Drupal\Core\Form\FormBuilder;
 /**
  *
  * @Block(
- *   id = "event_form",
- *   admin_label = @Translation("FormBlock"),
+ *   id = "add_review",
+ *   admin_label = @Translation("Add Review"),
  *   category = @Translation("Custom"),
  * )
  */
-class FormBlock extends BlockBase implements ContainerFactoryPluginInterface {
+class ReviewBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
   * @var $formBuilder FormBuilder
@@ -55,6 +55,6 @@ class FormBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    return  $this->formBuilder->getForm('Drupal\event_form\Form\EmailForm');
+    return  $this->formBuilder->getForm('Drupal\review\Form\CompanyReviewForm');
   }
 }

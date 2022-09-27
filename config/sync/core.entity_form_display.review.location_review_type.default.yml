@@ -1,0 +1,72 @@
+uuid: c27a169c-6bdd-431b-8f44-d57977ff4c25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.review.location_review_type.field_location_review_equipment
+    - field.field.review.location_review_type.field_location_review_rating
+    - review.review_type.location_review_type
+  module:
+    - starrating
+    - text
+id: review.location_review_type.default
+targetEntityType: review
+bundle: location_review_type
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_location_review_equipment:
+    type: entity_reference_autocomplete
+    weight: 22
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location_review_rating:
+    type: starrating
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
