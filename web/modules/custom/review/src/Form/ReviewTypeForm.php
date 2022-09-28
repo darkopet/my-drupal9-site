@@ -77,5 +77,4 @@ class ReviewTypeForm extends BundleEntityFormBase {
 
     $form_state->setRedirectUrl($entity_type->toUrl('collection'));
   }
-
 }
