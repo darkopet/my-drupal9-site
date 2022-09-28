@@ -110,6 +110,7 @@
         "drupal/zooming": "^1.1",
         "drush/drush": "*",
         "platformsh/config-reader": "^2.4",
+        "twig/twig": "2.15.2",
         "woocommerce/flexslider": "~2.0"
     },
     "conflict": {

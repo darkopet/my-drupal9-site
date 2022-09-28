@@ -1,11 +1,13 @@
-uuid: 8df32c2b-db1e-488d-a610-a210a93fd93b
+uuid: 4954c8aa-a731-4065-9b9d-0a25cec1067f
 langcode: en
 status: true
 dependencies:
+  config:
+    - review.review_type.company_review_type
   module:
     - review
-id: review_type
-label: 'Review type'
+id: reviews
+label: Reviews
 module: views
 description: ''
 tag: ''
@@ -18,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Review type'
+      title: Reviews
       fields:
         label:
           id: label
@@ -119,7 +121,23 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: review
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: review
+          entity_field: created
+          plugin_id: date
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         bundle:
@@ -167,7 +185,14 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: default
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ol
+          wrapper_class: item-list
+          class: ''
       row:
         type: 'entity:review'
       query:
@@ -190,23 +215,79 @@ display:
         - url
         - url.query_args
       tags: {  }
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 2
+    display_options:
+      filters:
+        bundle_1:
+          id: bundle_1
+          table: review
+          field: bundle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: review
+          entity_field: bundle
+          plugin_id: bundle
+          operator: in
+          value:
+            company_review_type: company_review_type
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+      tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Reviews
     display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
-      path: review-type
-      menu:
-        type: tab
-        title: /review-type
-        description: Reviews
-        weight: 10
-        expanded: false
-        menu_name: main
-        parent: ''
-        context: '0'
+      path: reviews
     cache_metadata:
       max-age: -1
       contexts:
