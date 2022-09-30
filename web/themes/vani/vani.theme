@@ -50,6 +50,7 @@ function vani_preprocess_page(array &$variables) {
 	$variables['copyright_text'] = theme_get_setting('copyright_text', 'vani');
 	$variables['font_icon_fontawesome'] = theme_get_setting('font_icon_fontawesome', 'vani');
 	$variables['font_icon_material'] = theme_get_setting('font_icon_material', 'vani');
+	$variables['bootstrapicons'] = theme_get_setting('bootstrapicons');
 	$slider_image_id = theme_get_setting('slider_image', 'vani');
 	if(!empty($slider_image_id)) {
 		$slider_image_file = File::load($slider_image_id[0]);
@@ -85,6 +86,7 @@ function vani_preprocess_comment(array &$variables) {
 function vani_preprocess_html(&$variables) {
 	$variables['base_path'] = base_path();
 	$variables['styling'] = theme_get_setting('styling', 'vani');
+	$variables['google_font'] = theme_get_setting('google_font', 'vani');
 	$variables['styling_code'] = theme_get_setting('styling_code', 'vani');
 }
 

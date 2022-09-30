@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 575px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -9,7 +9,6 @@
 --------------------------------*/
 .main-wrapper {
   width: 100%;
-  padding: 2em 0;
 }
 /* Layout -> containers */
 .main-container {
@@ -17,32 +16,30 @@
   display: grid;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
 }
 .no-sidebar .main-container,
 .sidebar-left .main-container,
 .sidebar-right .main-container,
 .two-sidebar .main-container {
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
 }
-/* Main
---------------------------------*/
 .sidebar-left #main,
 .sidebar-right #main,
 .two-sidebar #main {
-  margin: 0 0 2em 0;
+  margin: 0 0 2rem 0;
 }
 /* Column
 --------------------------------*/
 .section {
   width: 100%;
   clear: both;
-  padding: 1.6em 0;
+  padding: 1.6rem 0;
 }
 .row {
   width: 100%;
   clear: both;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 .full {
   position: relative;
@@ -57,7 +54,7 @@
   margin: 0;
 }
 .item {
-  margin: 0 0 2em 0;
+  margin: 0 0 2rem 0;
   padding: 0;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 100%;

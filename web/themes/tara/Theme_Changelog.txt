@@ -158,8 +158,36 @@ Version 8.3.2
 
 +===============================+
 Version 8.3.3
-04 July, 2021
+07 July, 2021
 +===============================+
 # Fixed reposnive layout for services, features and projects shortcodes.
 # Fixed full search box in mobile devices.
 # Fixed other minor bugs.
+
+
+
++===============================+
+Version 9.1.0
+01 Aug, 2022
++===============================+
+# Added template file menu.html.twig
+# Multiple menu can now be used in "Primary menu" block region.
+# Fixed issue #3212753 (search clear icon missing).
+# Fixed issue #3169863
+# Fixed issue #3253703 (Theme now uses css variables for color).
+# Fixed issue #3256583 (calendar display issue).
+
++===============================+
+Version 9.1.1
+07 Aug, 2022
++===============================+
+# Minor improvements.
+
+
++===============================+
+Version 9.1.2
+08 Aug, 2022
++===============================+
+# Added bootstrap font icons.
+# Changed h1 - h6 font size.
+# Increased font size to 18px for laptop and desktop.

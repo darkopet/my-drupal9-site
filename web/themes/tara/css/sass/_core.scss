@@ -27,3 +27,12 @@
 .field--label-inline .field__label::after{
   content:":";
 }
+
+/* Calendar
+-------------------------------------- */
+.calendar-calendar .full {
+  display: table;
+}
+.calendar-calendar .empty {
+  display: table-cell;
+}

@@ -1,16 +1,3 @@
-/* Misc
----------------------------------------- */
-::-moz-selection {
-  background: var(--theme-color);
-  color: #fff;
-  text-shadow: none;
-}
-::selection {
-  background: var(--theme-color);
-  color: #fff;
-  text-shadow: none;
-}
-
 /* Clearing
 --------------------------------------*/
 .clear {

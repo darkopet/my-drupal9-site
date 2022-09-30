@@ -5,7 +5,7 @@ description: '<p>Tara is a light weight modern Drupal 8, 9 theme by <a href="htt
 package: Drupar
 core_version_requirement: ^8 || ^9
 # Comment version before uploading to drupal.org
-# version: 8.3.3
+# version: 9.1.2
 # Libraries
 libraries:
   - tara/global-styling # Library for all global css. These css will be loaded on every pages.
@@ -32,7 +32,7 @@ regions:
   footer_bottom: 'Footer Bottom'
   hidden_blocks: 'Hidden Blocks'
 
-# Information added by Drupal.org packaging script on 2021-07-07
-version: '8.3.3'
+# Information added by Drupal.org packaging script on 2022-08-08
+version: '9.1.2'
 project: 'tara'
-datestamp: 1625672048
+datestamp: 1659955848

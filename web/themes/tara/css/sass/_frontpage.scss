@@ -27,26 +27,26 @@ ul.home-slider {
 .home-slider h2,
 .home-slider h3 {
   font-size: 3rem;
-  color: #000;
+  color: var(--bold-color);
 }
 .home-slider p {
   display: inline-block;
   padding: 0 10px;
   font-size: 1.6rem;
-  background: #fff;
-  color: #222;
+  background: #ffffff;
+  color: var(--bold-color);
 }
 .home-slider a.button {
   padding: 10px 20px;
-  background: #e3831c;
-  color: #fff;
+  background: var(--primary);
+  color: #ffffff;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 .home-slider .owl-item a.button:hover,
 .home-slider a.button:hover {
-  background: #222;
+  background: var(--bold-color);
 }
 .home-slider .owl-dots {
   position: relative;
@@ -60,7 +60,7 @@ ul.home-slider {
   border: 2px solid #ffffff;
   border-radius: 50%;
   margin: 0 4px;
-  background: #000;
+  background: var(--bold-color);
 }
 .owl-dots button.active {
   background: var(--primary);
@@ -76,7 +76,7 @@ ul.home-slider {
   z-index: 2;
 }
 .homepage-content .block {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .homepage-content h3.block-title {
   margin-bottom: 20px;
@@ -93,7 +93,7 @@ ul.home-slider {
   width: 50px;
   height: 2px;
   margin-left: -25px;
-  background: #e3831c;
+  background: var(--primary);
 }
 .region-content-home {
   display: flex;

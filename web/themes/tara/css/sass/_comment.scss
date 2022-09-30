@@ -3,10 +3,10 @@
 #node-comment {
   position: relative;
   margin-top: 30px;
-  border-top: 3px double #bbb;
+  border-top: 3px double var(--border);
 }
 #node-comment i {
-  color: #e3831c;
+  color: var(--primary);
 }
 .comment-form-wrap {
   position: relative;
@@ -17,11 +17,11 @@
   box-shadow: var(--shadow);
 }
 h2.add-comment-title {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #ffffff;
 }
 .filter-wrapper {
-  font-size: 0.9em;
-  border: 2px solid #fff;
+  font-size: 0.9rem;
+  border: 2px solid #ffffff;
 }
 .filter-wrapper ul {
   margin: 0;
@@ -31,7 +31,7 @@ h2.add-comment-title {
 }
 .filter-wrapper ul li {
   padding: 6px 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff;
 }
 .filter-wrapper ul li:last-child {
   border: 0;
@@ -42,9 +42,9 @@ h2.add-comment-title {
   position: relative;
   display: table;
   width: 100%;
-  margin-bottom: 14px;
-  padding: 10px 0;
-  border: 2px solid #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border: 2px solid #ffffff;
   border-radius: 6px;
   box-shadow: var(--shadow);
 }
@@ -53,29 +53,26 @@ h2.add-comment-title {
   display: table-cell;
   padding: 0 10px;
   vertical-align: top;
-}
-.comment-user-picture {
   width: 100px;
-  border-right: 2px solid #fff;
+  border-right: 2px solid #ffffff;
 }
 .comment-user-picture img {
   width: 100px;
-  height: auto;;
+  height: auto;
 }
 h3.single-comment-title {
-  margin: 0.1em 0;
-  font-size: 1.2em;
+  margin: 0.1rem 0;
+  font-size: 1.2rem;
 }
 .single-comment-meta {
   width: 100%;
   margin-bottom: 6px;
   padding-bottom: 6px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: #909090;
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid var(--border);
 }
-.single-comment-meta a,
-.single-comment-meta a:visited {
+.single-comment-meta a {
   color: #909090;
 }
 .single-comment-content-body {

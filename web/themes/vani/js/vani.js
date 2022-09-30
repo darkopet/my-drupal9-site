@@ -18,17 +18,21 @@ jQuery(document).ready(function ($) {
     $('.search-box').removeClass('open');
     return false;
   });
-
+  $(document).keyup(function(e) {
+    if (e.key === "Escape") {
+      $('.search-box').removeClass('open');
+   }
+  });
   // Scroll To Top.
   $(window).scroll(function () {
     if ($(this).scrollTop() > 80) {
-      $('.scrolltop').fadeIn('slow');
+      $('.scrolltop').css('display', 'grid');
     } else {
       $('.scrolltop').fadeOut('slow');
     }
   });
   $('.scrolltop').click(function () {
-    $('html, body').animate( { scrollTop: 0 }, 'slow');
+    $('html, body').scrollTop(0);
   });
 
   // Wrap homepage blocks

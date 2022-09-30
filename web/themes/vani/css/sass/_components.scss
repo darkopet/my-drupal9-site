@@ -1,13 +1,26 @@
+/* Navigation */
+.menu {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  position: relative;
+}
+.submenu {
+  margin: 0;
+  padding: 0;
+}
 /* Main -> Admin Tabs */
-ul.page-tabs {
-  margin: 0 0 0.6em 0;
-  padding: 0 0 1px 0;
+.page-tabs {
+  display: flex;
+  margin: 0 0 0.6rem 0;
+  padding: 0;
   border-bottom: 1px solid var(--border-color);
   list-style: none;
 }
 .page-tabs li {
-  display: inline-block;
   padding: 0;
+  border-right: 2px solid #ffffff;
 }
 .page-tabs li a {
   padding: 4px 10px;
@@ -17,13 +30,13 @@ ul.page-tabs {
 }
 .page-tabs li.active-page-tab a,
 .page-tabs li a:hover {
-  color: #fff;
   background: var(--theme-color);
+  color: #ffffff;
 }
 /* Drupal system message */
 .message {
   position: relative;
-  margin: 1em 0;
+  margin: 1rem 0;
   padding: 14px 14px 14px 64px;
   color: #ffffff;
   text-shadow: none;
@@ -72,7 +85,7 @@ ul.page-tabs {
   text-align: center;
 }
 
-/* Footer -> Scroll To Top. */
+/* Scroll To Top. */
 .scrolltop {
   position: fixed;
   display: none;
@@ -80,15 +93,12 @@ ul.page-tabs {
   bottom: 10px;
   width: 50px;
   height: 50px;
-  line-height: 42px;
+  place-content: center;
   border-radius: 50%;
   background: var(--theme-color);
-  color: #fff;
-  font-size: 20px;
+  color: #ffffff;
   z-index: 20;
   cursor: pointer;
-  text-align: center;
-  padding: 4px;
 }
 .scrolltop-icon {
   border-radius: 50%;

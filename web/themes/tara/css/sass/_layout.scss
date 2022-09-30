@@ -13,7 +13,7 @@
 .main-wrapper {
   position: relative;
   padding: 20px 0 50px 0;
-  background: #f4f4ef;
+  background: var(--body-bg);
   z-index: 2;
 }
 .main-container {
@@ -24,14 +24,6 @@
   padding: 0;
 }
 /* Main */
-#main {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #f4f4ef;
-  z-index: 2;
-}
 .no-sidebar .main-container {
   grid-template-columns: 100%;
 }
@@ -49,7 +41,11 @@
   order: 1;
 }
 #main {
+  position: relative;
   background: var(--body-bg);
+  width: 100%;
+  margin: 0;
+  padding: 0;
   order: 2;
   z-index: 2;
 }

@@ -9,18 +9,16 @@
  */
 #}
 {% include '@vani/template-parts/header.html.twig' %}
-{% include '@vani/template-parts/highlighted.html.twig' %}
 <div id="main-wrapper" class="main-wrapper">
   {% include '@vani/template-parts/content_home.html.twig' %}
-  <div class="container clear">
+  <div class="container">
     {% if front_sidebar %}
       <div class="main-container">
     {% endif %}
-    <main id="main" class="page-content home-content clear">
+    <main id="main" class="page-content home-content">
       <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
       {% include '@vani/template-parts/content_top.html.twig' %}
       {{ page.content }}
-      {# {% include '@vani/template-parts/content_home.html.twig' %} #}
       {% include '@vani/template-parts/content_bottom.html.twig' %}
     </main>
     {% if front_sidebar %}

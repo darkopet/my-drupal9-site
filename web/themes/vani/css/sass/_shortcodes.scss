@@ -10,25 +10,28 @@
 .text-center {
   text-align: center;
 }
+.text-justify {
+  text-align: justify;
+}
 .center {
   margin: 0 auto;
 }
 
 /* Shortcodes -> Text Size */
 .size-2x {
-  font-size: 2em;
+  font-size: 2rem;
 }
 .size-3x {
-  font-size: 3em;
+  font-size: 3rem;
 }
 .size-4x {
-  font-size: 4em;
+  font-size: 4rem;
 }
 .size-5x {
-  font-size: 5em;
+  font-size: 5rem;
 }
 .size-6x {
-  font-size: 6em;
+  font-size: 6rem;
 }
 
 /* Shortcodes -> container width */
@@ -48,18 +51,37 @@
 .empty {
   position: relative;
   width: 100%;
-  height: 2em;
+  height: 2rem;
   clear: both;
 }
 /* Shortcodes -> Color */
+.theme-bg {
+	background: var(--theme-color);
+}
+.content-bg {
+	background: var(--content-bg);
+}
+.dark-bg {
+  background: var(--footer-bg);
+}
 .theme-color {
   color: var(--theme-color);
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000000;
+}
+.dark {
+  color: var(--footer-bg);
 }
 
 /* Button
 -------------------------------------------*/
 .button-link,
-a.button-link {
+a.button-link,
+button.button-link {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -71,32 +93,33 @@ a.button-link {
   transition: 0.3s ease-in-out;
 }
 .button-link:hover,
-a.button-link:hover {
+a.button-link:hover,
+button.button-link:hover {
   color: var(--theme-color);
   background: transparent;
 }
 /* Services
 -------------------------------------------*/
 .service {
-  background: #ffffff;
-  padding: 1em;
+  background-color: #ffffff;
+  padding: 1rem;
   border-radius: 0;
   box-shadow: 0 0 20px #cacbda;
   transition: all 0.5s ease-in-out;
 }
 .service:hover {
   border-radius: 30px 0;
-  transform: translateY(-1em);
+  transform: translateY(-1rem);
 }
 .service-icon {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 .service-icon img {
   max-height: 50px;
   width: auto;
 }
 .service-icon i {
-  font-size: 3em;
+  font-size: 3rem;
   color: var(--theme-color);
 }
 
@@ -115,20 +138,20 @@ a.button-link:hover {
 -------------------------------------------*/
 .feature {
   background: #ffffff;
-  padding: 1em;
+  padding: 1rem;
   box-shadow: 0 0 10px #cacbda;
   transition: all 0.5s ease-in-out;
   text-align: center;
 }
 .feature-icon {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 .feature-icon img {
   max-height: 50px;
   width: auto;
 }
 .feature-icon i {
-  font-size: 3em;
+  font-size: 3rem;
   color: var(--bold-color);
 }
 .feature:hover {

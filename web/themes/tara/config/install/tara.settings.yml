@@ -34,3 +34,6 @@ scrolltotop_on: 1
 # Addtional css
 css_extra: 0
 css_code: ''
+
+# Font Icons
+bootstrapicons: 0

@@ -1,11 +1,5 @@
 /* Drupal Core
 ----------------------------------- */
-/* Admin Toolbar */
-button.toolbar-item,
-button.toolbar-icon {
-  background: none;
-}
-
 /* Drupal core Field */
 [dir] .field:not(:last-child){
   margin-bottom:36px;
@@ -33,4 +27,26 @@ button.toolbar-icon {
 
 .field--label-inline .field__label::after{
   content:":";
+}
+/* Calendar module
+-------------------------------------- */
+.calendar-calendar .full {
+  display: table;
+}
+.calendar-calendar .empty {
+  display: table-cell;
+}
+/* Admin Toolbar */
+button.toolbar-item,
+button.toolbar-icon {
+  background: none;
+}
+
+/* Filter Module */
+.filter-wrapper {
+  border: 1px solid var(--border-color);
+}
+/* Feed icon */
+.feed-icon {
+  display: block;
 }

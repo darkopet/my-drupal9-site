@@ -21,6 +21,8 @@ slider_image_path: ''
 front_sidebar: 0
 
 # Content
+google_font: 'local'
+bootstrapicons: 0
 comment_user_pic: 1
 node_author_pic: 0
 node_tags: 0

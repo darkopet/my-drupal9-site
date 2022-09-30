@@ -17,7 +17,7 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
   $form['general'] = [
     '#type'  => 'details',
     '#title' => t('General'),
-    '#description' => t('<h3>Thanks for using Tara Theme</h3>Tara is a free Drupal 8 theme designed and developed by <a href="https://drupar.com" target="_blank">Drupar.com</a>'),
+    '#description' => t('<h3>Thanks for using Tara Theme</h3>Tara is a free Drupal 8, 9 theme designed and developed by <a href="https://drupar.com" target="_blank">Drupar.com</a>'),
     '#group' => 'tara',
   ];
 
@@ -97,20 +97,20 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
   $form['general']['general_info'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Theme Info'),
-    '#description' => t('<a href="https://www.drupar.com/theme/tara" target="_blank">Theme Homepage</a> || <a href="//demo2.drupar.com/tara/" target="_blank">Theme Demo</a> || <a href="https://www.drupar.com/tara-theme-documentation" target="_blank">Theme Documentation</a> || <a href="https://www.drupar.com/support" target="_blank">Theme Support</a>'),
+    '#description' => t('<a href="https://drupar.com/theme/tara" target="_blank">Theme Homepage</a> || <a href="//demo2.drupar.com/tara/" target="_blank">Theme Demo</a> || <a href="https://drupar.com/tara-theme-documentation" target="_blank">Theme Documentation</a> || <a href="https://drupar.com/support" target="_blank">Theme Support</a>'),
   ];
 
   $form['general']['general_info_upgrade'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Upgrade To TaraPro for $19 only'),
-    '#description' => t('<a href="https://www.drupar.com/theme/tarapro" target="_blank">Purchase TaraPro</a> || <a href="//demo2.drupar.com/tarapro/" target="_blank">TaraPro Demo</a>'),
+    '#description' => t('<a href="https://drupar.com/theme/tarapro" target="_blank">Purchase TaraPro</a> || <a href="//demo2.drupar.com/tarapro/" target="_blank">TaraPro Demo</a>'),
   ];
 
   // Color tab -> Settings.
   $form['color']['theme_color'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Theme Color'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   // Settings under social tab.
@@ -130,13 +130,13 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
   $form['social']['only_header_icons'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Show Social Icons only in header'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   $form['social']['only_footer_icons'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Show Social Icons only in footer'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   // Facebook.
@@ -293,7 +293,7 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
     ),
     '#title'  => t('<p>Upload Slider Image</p>'),
     '#default_value'  => theme_get_setting('slider_image', 'tara'),
-    '#description'   => t('Tara theme has limitation of single image for slider. Separate image for each slide is available in TaraPro. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('Tara theme has limitation of single image for slider. Separate image for each slide is available in TaraPro. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
   $form['slider']['slider_time_field'] = [
     '#type'          => 'fieldset',
@@ -325,14 +325,14 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
     '#type'          => 'textarea',
     '#title'         => t('Slider Code'),
     '#default_value' => theme_get_setting('slider_code', 'tara'),
-    '#description'   => t('Please refer to this <a href="https://www.drupar.com/tara-theme-documentation/how-manage-homepage-slider" target="_blank">documentation page</a> for slider code tutorial.'),
+    '#description'   => t('Please refer to this <a href="https://drupar.com/tara-theme-documentation/how-manage-homepage-slider" target="_blank">documentation page</a> for slider code tutorial.'),
   ];
 
   // Settings under header tab.
   $form['header']['sticky_header'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Sticky Header'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   // Settings under sidebar.
@@ -350,37 +350,84 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
   $form['sidebar']['animated_sidebar'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Animated Sidebar'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
-  // Settings under content tab.
-  // Settings under content tab -> Homepage.
-  $form['content']['homepage'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Homepage Content'),
-    '#description'   => t('Please follow this tutorial to add content on homepage. <a href="https://www.drupar.com/tara-theme-documentation/how-add-content-homepage" target="_blank">How to add content on homepage</a>'),
+  /**
+   * Content
+   */
+  $form['content']['content_tab'] = [
+    '#type'  => 'vertical_tabs',
   ];
-
-  // Settings under content tab -> Page loader.
-  $form['content']['preloader'] = [
-    '#type'        => 'fieldset',
+  // content -> Homepage  content
+  $form['content_tab']['home_content'] = [
+    '#type'        => 'details',
+    '#title'       => t('Homepage content'),
+    '#description' => t('Please follow this tutorial to add content on homepage. <a href="https://drupar.com/tara-theme-documentation/how-add-content-homepage" target="_blank">How to add content on homepage</a>'),
+    '#group' => 'content_tab',
+  ];
+  // content -> Page loader
+  $form['content_tab']['preloader'] = [
+    '#type'        => 'details',
     '#title'       => t('Pre Page Loader'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description' => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#group' => 'content_tab',
   ];
-
-  // Settings under content tab -> Animated Content.
-  $form['content']['animated_content'] = [
+  // content -> Animated Content
+  $form['content_tab']['animated_content'] = [
+    '#type'        => 'details',
+    '#title'       => t('Animated Content'),
+    '#description' => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#group' => 'content_tab',
+  ];
+  // content -> Google fonts
+  $form['content_tab']['font_tab'] = [
+    '#type'        => 'details',
+    '#title'       => t('Google Fonts'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
+  ];
+  // content -> Font icons
+  $form['content_tab']['icon_tab'] = [
+    '#type'        => 'details',
+    '#title'       => t('Font Icon'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
+  ];
+  // content -> shortcodes
+  $form['content_tab']['shortcode'] = [
+    '#type'        => 'details',
+    '#title'       => t('Shortcodes'),
+    '#description' => t('Tara theme has some custom shortcodes. You can create some styling content using these shortcodes.<br />Please visit this tutorial page for details. <a href="https://drupar.com/tara-theme-documentation/tara-shortcodes" target="_blank">Shortcodes in Tara theme</a>.'),
+    '#group' => 'content_tab',
+  ];
+  // content -> comment
+  $form['content_tab']['comment'] = [
+    '#type'        => 'details',
+    '#title'       => t('Comment'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
+  ];
+  // content -> node
+  $form['content_tab']['node'] = [
+    '#type'        => 'details',
+    '#title'       => t('Node'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
+  ];
+  // content -> share page
+  $form['content_tab']['node_share'] = [
+    '#type'        => 'details',
+    '#title'       => t('Share Page'),
+    '#description' => t('<h3>Share Page On Social Media</h3><p>This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a></p>'),
+    '#group' => 'content_tab',
+  ];
+  // content -> Google fonts options
+  $form['content_tab']['font_tab']['font_section'] = [
     '#type'        => 'fieldset',
-    '#title'       => t('Animated Page Content'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#title'       => t('Google Fonts'),
   ];
-
-  // Content -> Google Fonts.
-  $form['content']['google_font_section'] = [
-    '#type'          => 'fieldset',
-    '#title'         => t('Google Fonts'),
-  ];
-  $form['content']['google_font_section']['google_font'] = [
+  $form['content_tab']['font_tab']['font_section']['google_font'] = [
     '#type'          => 'select',
     '#title'         => t('Select Google Fonts Location'),
     '#options' => array(
@@ -390,81 +437,75 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
     '#default_value' => theme_get_setting('google_font', 'tara'),
     '#description'   => t('Tara theme uses following Google fonts: Open Sans, Roboto and Poppins. You can serve these fonts locally or from Google server.'),
   ];
-
-  // Settings under content tab -> Font icons.
-  $form['content']['fonticons'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Font Icons'),
-  ];
-  // Settings under content tab -> FontAwesome icons.
-  $form['content']['fonticons']['font_icons'] = [
+  // content -> Font icons -> FontAwesome 4
+  $form['content_tab']['icon_tab']['font_icons'] = [
     '#type'        => 'fieldset',
     '#title'       => t('FontAwesome 4 Font Icons'),
-    '#description'   => t('Tara theme has included FontAwesome v4.7 font icons. You can use 600+ icons with Tara theme.<br />Please visit this tutorial page for details. <a href="https://www.drupar.com/custom-shortcodes-set-two/fontawesome-font-icons" target="_blank">How To Use FontAwesome Icons</a>.'),
+    '#description'   => t('Tara theme has included FontAwesome v4.7 font icons. You can use 600+ icons with Tara theme.<br />Please visit this tutorial page for details. <a href="https://drupar.com/custom-shortcodes-set-two/fontawesome-font-icons" target="_blank">How To Use FontAwesome Icons</a>.'),
   ];
-
-  // Font Icons -> Fontawesome 5
-  $form['content']['fonticons']['fontawesome5'] = [
+  // content -> Font icons -> FontAwesome 5
+  $form['content_tab']['icon_tab']['fontawesome5'] = [
     '#type'        => 'fieldset',
     '#title'       => t('FontAwesome 5'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
-  // Font Icons -> Fontawesome 5
-  $form['content']['fonticons']['material'] = [
+  // content -> Font icons -> FontAwesome 6
+  $form['content_tab']['icon_tab']['fontawesome6'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('FontAwesome 6'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+  ];
+  // content -> Font icons -> Bootstrap Font Icons
+  $form['content_tab']['icon_tab']['bootstrap_icons'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('Bootstrap Font Icons'),
+  ];
+  $form['content_tab']['icon_tab']['bootstrap_icons']['bootstrapicons'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable Bootstrap Icons'),
+    '#default_value' => theme_get_setting('bootstrapicons'),
+    '#description'   => t('Check this option to enable Bootstrap Font Icons. Read more about <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a>'),
+  ];
+  // content -> Font icons -> Google material font icons
+  $form['content_tab']['icon_tab']['material'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Google Material Font Icons'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
-  // Settings under content tab -> iconmonstr
-  $form['content']['fonticons']['iconmonstr'] = [
+  // content -> Font icons -> iconmonstr
+  $form['content_tab']['icon_tab']['iconmonstr'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Iconmonstr Font Icons'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
-  // Settings under content tab -> Shortcodes
-  $form['content']['shortcodes'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Shortcodes'),
-    '#description'   => t('Tara theme has some custom shortcodes. You can create some styling content using these shortcodes.<br />Please visit this tutorial page for details. <a href="https://www.drupar.com/tara-theme-documentation/tara-shortcodes" target="_blank">Shortcodes in Tara theme</a>.'),
-  ];
-  // Show user picture in comment.
-  $form['content']['comment'] = [
+  // content -> comment -> user picture in comment
+  $form['content_tab']['comment']['comment_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Comment'),
   ];
-
-  $form['content']['comment']['comment_user_pic'] = [
+  $form['content_tab']['comment']['comment_section']['comment_user_pic'] = [
     '#type'          => 'checkbox',
     '#title'         => t('User Picture in comments'),
     '#default_value' => theme_get_setting('comment_user_pic', 'tara'),
     '#description'   => t("Check this option to show user picture in comment. Uncheck to hide."),
   ];
-
-  // Node author picture.
-  $form['content']['node'] = [
+  // content -> node -> Node author picture
+  $form['content_tab']['node']['node_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Node'),
   ];
-
-  $form['content']['node']['node_author_pic'] = [
+  $form['content_tab']['node']['node_section']['node_author_pic'] = [
     '#type'          => 'checkbox',
     '#title'         => t('Node Author Picture'),
     '#default_value' => theme_get_setting('node_author_pic', 'tara'),
     '#description'   => t("Check this option to show node author picture in submitted details. Uncheck to hide."),
   ];
-
   // Show tags in node submitted.
-  $form['content']['node']['node_tags'] = [
+  $form['content_tab']['node']['node_section']['node_tags'] = [
     '#type'          => 'checkbox',
     '#title'         => t('Node Tags'),
     '#default_value' => theme_get_setting('node_tags', 'tara'),
     '#description'   => t("Check this option to show node tags (if any) in submitted details. Uncheck to hide."),
-  ];
-
-  $form['content']['node_share'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Share Page On Social Media'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   // Settings under footer tab.
@@ -498,14 +539,14 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
   $form['footer']['copyright']['copyright_text_custom'] = [
     '#type'          => 'fieldset',
     '#title'         => t('Custom copyright text'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   // Footer -> Cookie message.
   $form['footer']['cookie'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Cookie Consent message'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
 
   $form['footer']['cookie']['cookie_message'] = [
@@ -541,19 +582,19 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
   // Insert Codes -> Head -> Head codes
   $form['insert_codes']['head']['insert_head'] = [
     '#type'          => 'fieldset',
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
   // Insert Codes -> Body -> Body start codes
   $form['insert_codes']['body']['insert_body_start_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Insert code after &lt;BODY&gt; tag'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
   // Insert Codes -> Body -> Body ENd codes
   $form['insert_codes']['body']['insert_body_end_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Insert code before &lt;/BODY&gt; tag'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/tarapro" target="_blank">Buy TaraPro for $19 only.</a>'),
   ];
   // Insert Codes -> css
   $form['insert_codes']['css']['css_custom'] = [
@@ -570,7 +611,7 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
     '#type'          => 'textarea',
     '#title'         => t('Addtional CSS Codes'),
     '#default_value' => theme_get_setting('css_code', 'tara'),
-    '#description'   => t('Add your own CSS codes here to customize the appearance of your site.<br />Please refer to this tutorial for detail: <a href="https://www.drupar.com/tara-theme-documentation/custom-css" target="_blank">Custom CSS</a>'),
+    '#description'   => t('Add your own CSS codes here to customize the appearance of your site.<br />Please refer to this tutorial for detail: <a href="https://drupar.com/tara-theme-documentation/custom-css" target="_blank">Custom CSS</a>'),
   ];
 
   // Settings under support tab.
@@ -578,20 +619,20 @@ function tara_form_system_theme_settings_alter(&$form, FormStateInterface &$form
     '#type'        => 'fieldset',
     '#title'         => t('Theme Support'),
     '#description' => t('<h4>Documentation</h4>
-    <p>We have a detailed documentation about how to use theme. Please read the <a href="https://www.drupar.com/tara-theme-documentation" target="_blank">Tara Theme Documentation</a>.</p>
+    <p>We have a detailed documentation about how to use theme. Please read the <a href="https://drupar.com/tara-theme-documentation" target="_blank">Tara Theme Documentation</a>.</p>
     <hr />
     <h4>Open An Issue</h4>
     <p>If you need support that is beyond our theme documentation, please <a href="https://www.drupal.org/project/issues/tara?categories=All" target="_blank">open an issue</a> at project page.</p>
     <hr />
     <h4>Contact Us</h4>
-    <p>If you need some specific customization in theme, please contact us<br><a href="https://www.drupar.com/contact" target="_blank">drupar.com/contact</a></p>'),
+    <p>If you need some specific customization in theme, please contact us<br><a href="https://drupar.com/contact" target="_blank">drupar.com/contact</a></p>'),
   ];
 
   // Settings under upgrade tab.
   $form['upgrade']['info'] = [
     '#type'        => 'fieldset',
-    '#title'       => t('<a href="https://demo2.drupar.com/tarapro/" target="_blank">TaraPro Demo</a> | <a href="https://www.drupar.com/theme/tarapro" target="_blank">Purchase TaraPro for $19 only</a>'),
-    '#description' => t("$img<br /><a href='https://demo2.drupar.com/tarapro/' target='_blank'>TaraPro Demo</a> | <a href='https://www.drupar.com/theme/tarapro' target='_blank'>Purchase TaraPro for $19 only</a>"),
+    '#title'       => t('<a href="https://demo2.drupar.com/tarapro/" target="_blank">TaraPro Demo</a> | <a href="https://drupar.com/theme/tarapro" target="_blank">Purchase TaraPro for $19 only</a>'),
+    '#description' => t("$img<br /><a href='https://demo2.drupar.com/tarapro/' target='_blank'>TaraPro Demo</a> | <a href='https://drupar.com/theme/tarapro' target='_blank'>Purchase TaraPro for $19 only</a>"),
   ];
 // End form.
 }

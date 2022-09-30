@@ -5,6 +5,7 @@ dependencies:
   config:
     - review.review_type.company_review_type
   module:
+    - node
     - review
 id: reviews
 label: Reviews
@@ -203,7 +204,12 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_company_review_node:
+          id: field_company_review_node
+          table: review__field_company_review_node
+          field: field_company_review_node
+          plugin_id: standard
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -269,8 +275,10 @@ display:
         groups:
           1: AND
       defaults:
+        relationships: false
         filters: false
         filter_groups: false
+      relationships: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1

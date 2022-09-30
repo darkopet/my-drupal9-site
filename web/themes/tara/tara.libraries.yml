@@ -39,3 +39,10 @@ book:
   css:
     component:
       css/book.css: {}
+
+# Bootstrap Icons v1.9.1
+bootstrap-icons:
+  version: 1.9.1
+  css:
+    component:
+      css/bootstrap-icons.css: {}

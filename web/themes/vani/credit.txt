@@ -1,15 +1,15 @@
 Google material font icons
----------------------------
++------------------------------+
 https://material.io/tools/icons
 
 
-FontAwesome version 4.7
--------------------
-https://fontawesome.com/v4.7.0/
+FontAwesome
++------------------------------+
+https://fontawesome.com/
 
 
 Google web font
----------------------------
++------------------------------+
 https://fonts.google.com/
 
 
@@ -22,6 +22,16 @@ Roboto Font by: Christian Robertson
 https://fonts.google.com/specimen/Roboto
 
 
+Demo images:
++------------------------------+
+https://undraw.co/illustrations
+
+
+Icons made using Figma
++------------------------------+
+https://www.figma.com/
+
+
 Morphist Slider
----------------------------
++------------------------------+
 https://morphist.fyianlai.com/

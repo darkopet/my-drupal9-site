@@ -1,7 +1,13 @@
 #footer-top {
   background: var(--content-bg);
   margin: 0;
-  padding: 2em 0;
+  padding: 2rem 0;
+}
+.region-footer-top,
+.region-footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .footer {
   position: relative;
@@ -18,7 +24,8 @@
 .footer a:hover {
   color: #ffffff;
 }
-.footer ul {
+.footer ul,
+.footer ol {
   margin: 0;
   padding: 0;
 }
@@ -35,53 +42,55 @@
 }
 #footer-blocks {
   margin: 0;
-  padding: 3em 0;
+  padding: 3rem 0;
 }
 .footer-container {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 .footer-block {
-  flex: 1;
-  padding: 0;
-}
-.last-footer-block {
-  padding-right: 0;
+  flex: 1 0 250px;
 }
 #footer-bottom {
   position: relative;
   margin: 0;
-  padding: 1em 0;
+  padding: 0 0 1rem 0;
 }
 #footer-bottom-last {
   position: relative;
   margin: 0;
-  padding: 1em 0;
+  padding: 1rem 0;
   border-top: 1px solid var(--footer-border-color);
 }
 .footer-bottom-last {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-.copyright {
-  margin-bottom: 10px;
+.copyright,
+.footer-social-icons {
+  flex: 1 0 300px;
 }
-ul.social-icons {
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .social-icons li {
-  display: inline-block;
-  margin: 0 0 6px 6px;
-  padding: 0;
   border: 0;
 }
 .social-icons li a {
+  display: grid;
+  place-content: center;
   width: 44px;
   height: 44px;
-  line-height: 42px;
-  text-align: center;
   padding: 0;
   border: 1px solid var(--theme-color);
   transition: all 0.3s ease-in-out;

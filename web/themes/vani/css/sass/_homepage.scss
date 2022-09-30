@@ -60,13 +60,14 @@
 .morphist {
   text-align: center;
 }
+/* Homepage -> Main */
 .home-block-cicle1 {
   position: absolute;
   left: 5%;
   top: 10%;
   background: #f3e7f0;
-  width: 3em;
-  height: 3em;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   -webkit-animation: circle-size 4s linear infinite alternate;
   animation: circle-size 4s linear infinite alternate;
@@ -76,8 +77,8 @@
   right: 5%;
   bottom: 20%;
   background: #f3e7f0;
-  width: 3em;
-  height: 3em;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   -webkit-animation: circle-size 7s linear infinite alternate;
   animation: circle-size 7s linear infinite alternate;
@@ -87,8 +88,8 @@
   left: 3%;
   bottom: 5%;
   background: #f9b6b4;
-  width: 2em;
-  height: 2em;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   -webkit-animation: circle-move 5s linear infinite alternate;
   animation: circle-move 5s linear infinite alternate;
@@ -109,29 +110,26 @@
   background: var(--content-bg);
 }
 .region-content-home .block {
-  padding: 4em 0;
+  padding: 4rem 0;
 }
 
 /* Block title */
 .homepage-content .block-title {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
-.homepage-content .block-title::before {
-  position: absolute;
-  content: '';
-  width: 40px;
-  height: 2px;
-  background: var(--theme-color);
-  top: 50%;
-  transform: translateX(-50px);
-}
+.homepage-content .block-title::before,
 .homepage-content .block-title::after {
   position: absolute;
   content: '';
+  top: 50%;
+  background: var(--theme-color);
   width: 40px;
   height: 2px;
-  background: var(--theme-color);
-  top: 50%;
+}
+.homepage-content .block-title::before {
+  transform: translateX(-50px);
+}
+.homepage-content .block-title::after {
   transform: translateX(10px);
 }

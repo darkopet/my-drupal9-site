@@ -23,7 +23,7 @@
   box-shadow: var(--shadow);
 }
 .sidebar .block-title {
-  color: #222;
+  color: var(--bold-color);
 }
 .sidebar h3.block-title {
   margin: 0.1em 0 0.2em 0;
@@ -31,7 +31,7 @@
   font-size: 1.3em;
   font-weight: 400;
   border-bottom: 1px solid #ffff;
-  border-left: 2px solid #e3831c;
+  border-left: 2px solid var(--primary);
 }
 .sidebar ul {
   margin: 0;

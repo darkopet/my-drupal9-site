@@ -1,34 +1,34 @@
 <!-- Start: Footer -->
 {% if page.footer_top %}
-  <section id="footer-top" class="clear">
-    <div class="footer-top container clear">
+  <section id="footer-top">
+    <div class="footer-top footer-block-region container">
       {{ page.footer_top }}
     </div>
   </section>
 {% endif %}<!-- /footer-top -->
-<footer class="footer clear">
+<footer class="footer">
   {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-    <section id="footer-blocks" class="clear">
-      <div class="container footer-container clear">
-        <div class="footer-block block-section">
+    <section id="footer-blocks">
+      <div class="container footer-container">
+        <div class="footer-block footer-block-region block-section">
           {% if page.footer_first %}
             {{ page.footer_first }}
           {% endif %}
         </div> <!--/footer-first -->
 
-        <div class="footer-block block-section">
+        <div class="footer-block footer-block-region block-section">
           {% if page.footer_second %}
             {{ page.footer_second }}
           {% endif %}
         </div> <!--/footer-second -->
 
-        <div class="footer-block block-section">
+        <div class="footer-block footer-block-region block-section">
           {% if page.footer_third %}
             {{ page.footer_third }}
           {% endif %}
         </div> <!--/footer-three -->
 
-        <div class="footer-block block-section last-footer-block">
+        <div class="footer-block footer-block-region block-section">
           {% if page.footer_fourth %}
             {{ page.footer_fourth }}
           {% endif %}
@@ -39,15 +39,15 @@
 
   {% if page.footer_bottom %}
     <section id="footer-bottom">
-      <div class="footer-bottom container block-section clear">
+      <div class="footer-bottom container block-section">
         {{ page.footer_bottom }}
       </div> <!-- /.container -->
     </section>
   {% endif %}<!-- /footer-bottom -->
 
  {% if copyright_text or all_icons_show %}
-  <section id="footer-bottom-last" class="clear">
-    <div class="container clear">
+  <section id="footer-bottom-last">
+    <div class="container">
     <div class="footer-bottom-last">
       {% if copyright_text %}
           <div class="copyright">
@@ -74,4 +74,7 @@
 {% endif %}
 {% if font_icon_material %}
 {{ attach_library('vani/material') }}
+{% endif %}
+{% if bootstrapicons %}
+  {{ attach_library('vani/bootstrap-icons') }}
 {% endif %}

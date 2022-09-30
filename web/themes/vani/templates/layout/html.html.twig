@@ -40,9 +40,15 @@
   <head>
     <head-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
+    {% if google_font == 'local' %}
     <link rel="preload" as="font" href="{{ base_path ~ directory }}/fonts/open-sans.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="{{ base_path ~ directory }}/fonts/roboto.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="{{ base_path ~ directory }}/fonts/roboto-bold.woff2" type="font/woff2" crossorigin>
+    {% elseif google_font == 'googlecdn' %}
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    {% endif %}
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
 {% if styling %}
@@ -62,6 +68,9 @@
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
+    {% if google_font == 'local' %}
+      {{ attach_library('vani/googlefontslocal') }}
+    {% endif %}
     <js-bottom-placeholder token="{{ placeholder_token }}">
   </body>
 </html>

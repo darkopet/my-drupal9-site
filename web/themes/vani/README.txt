@@ -19,22 +19,23 @@ INTRODUCTION
 
 THEME FEATURES
 --------------
-Drupal 8.x compatible
-Fully responsive
-Clean & modern design
-HTML5 & CSS3
-Google Font
-Multi-level drop down main menu
-Google Material Font Icons
-FontAwesome Font Icons
-Inbuilt slider for homepage.
-One column, two column, three column page layout.
-Intelligent dynamic columns
-Customizable theme setting
-and more..
+- Drupal 8.x, 9.x compatible
+- Fully responsive
+- Clean & modern design
+- HTML5 & CSS3
+- Google Font
+- Multi-level drop down main menu
+- Google Material Font Icons
+- FontAwesome Font Icons
+- Inbuilt slider for homepage.
+- One column, two column, three column page layout.
+- Intelligent dynamic columns
+- Customizable theme setting
+- and more..
+
 
 Please visit theme page for all features.
-https://www.drupar.com/theme/vani
+https://drupar.com/theme/vani
 
 
 THEME REGIONS
@@ -59,7 +60,7 @@ Footer Bottom
 Hidden Blocks
 
 Please visit below url for more details about block regions.
-https://www.drupar.com/vani-documentation/block-regions-available-theme
+https://drupar.com/vani-documentation/block-regions-available-theme
 
 
 REQUIREMENTS
@@ -74,8 +75,9 @@ INSTALLATION
 3. Click on "Install and set as default" next to vani theme.
 
 Please visit below page for detailed step by step instruction.
-https://www.drupar.com/vani-documentation/how-install-vani-theme
-https://www.drupal.org/docs/8/extending-drupal-8/installing-themes
+- https://drupar.com/vani-documentation/how-install-vani-theme
+
+- https://www.drupal.org/docs/extending-drupal/installing-themes
 
 
 CONFIGURATION
@@ -86,15 +88,15 @@ Navigate to: Administration >> Appearance >> Settings >> vani
 FAQ
 ---
 Please visit below page for frequently asked questions and its answer.
-https://www.drupar.com/vani-documentation
+https://drupar.com/vani-documentation
 
 
 MAINTAINERS
 -----------
 Current maintainer:
- * Ravi Shekhar - https://www.drupal.org/u/ravi_9793
+ * Ravi Shekhar - https://www.drupal.org/u/ravis
 
 
 DEMO
 ----
-http://demo2.drupar.com/vani/
+https://demo2.drupar.com/vani/

@@ -2,10 +2,8 @@
 global-styling:
   version: 1.0
   css:
-    base:
+    theme:
       css/style.css: {}
-    layout:
-      css/responsive.css: {}
 
 # Global Javascripts. These will be loaded on every pages.
 global-scripts:
@@ -24,7 +22,13 @@ slider:
   dependencies:
     - core/jquery
 
-# FontAwesome
+# Google Fonts from local
+googlefontslocal:
+  css:
+    theme:
+      css/font.css: {}
+
+# FontAwesome 4
 fontawesome:
   version: 4.7.0
   css:
@@ -37,6 +41,13 @@ material:
   css:
     component:
       css/material.css: {}
+
+# Bootstrap Icons v1.9.1
+bootstrap-icons:
+  version: 1.9.1
+  css:
+    component:
+      css/bootstrap-icons.css: {}
 
 # Book
 book:

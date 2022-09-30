@@ -4,14 +4,13 @@
   width: 80%;
 }
 ol.search-results {
-  margin: 1em 0;
-  padding: 0;
   list-style: none;
-  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
 }
-ol.search-results li {
-  margin: 0 0 1em 0;
-  padding: 1em;
+.search-results li {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
   background: var(--content-bg);
 }
 .search-advanced summary {
@@ -19,10 +18,10 @@ ol.search-results li {
   cursor: pointer;
 }
 .search-advanced .form-details-wrapper {
-  padding: 0.5em 1.4em;
+  padding: 0.5rem 1.4rem;
   border: 1px solid var(--border-color);
 }
 .search-advanced .form-wrapper {
-  padding: 0.5em 1.4em;
+  padding: 0.5rem 1.4rem;
   border: 1px solid var(--border-color);
 }

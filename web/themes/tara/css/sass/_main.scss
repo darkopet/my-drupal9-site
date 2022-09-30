@@ -9,7 +9,7 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 2em;
-  color: #111;
+  color: var(--bold-color);
 }
 
 /* Admin Tabs */
@@ -17,7 +17,7 @@ ul.page-tabs {
   display: flex;
   margin: 0 0 10px 0;
   padding: 0;
-  border-bottom: 1px solid #d1cdc3;
+  border-bottom: 1px solid var(--border);
   list-style: none;
 }
 .page-tabs li {
@@ -27,45 +27,31 @@ ul.page-tabs {
   border-right: 2px solid #ffffff;
   padding: 4px 10px;
   background: #e2dfd8;
-  color: #111;
+  color: var(--bold-color);
   transition: all 0.3s ease;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px #ffffff;
 }
 ul.page-tabs li.active-page-tab a,
 ul.page-tabs li a:hover {
-  background: #e3831c;
-  color: #fff;
+  background: var(--primary);
+  color: #ffffff;
   text-shadow: none;
 }
 
 /* common for all nodes */
-.node {
-  position: relative;
-}
-.node-content .field--name-body {
-  text-shadow: 1px 1px #fff;
-}
-
-/* promoted node */
-.node-promoted {
-  position: relative;
-}
-
-/* sticky node */
-.node-sticky {
+.node,
+.node-promoted,
+.node-sticky,
+.node-unpublished,
+.node-view-mode-full {
   position: relative;
 }
 .node-view-mode-teaser.node-sticky {
   position: relative;
-  padding: 0 1em 1em 1em;
-  background: #fff;
-  border: 1px solid #c4c4c4;
+  padding: 0 1rem 1rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
   border-radius: 6px;
-}
-
-/* unpublished node */
-.node-unpublished {
-  position: relative;
 }
 
 /* node in teaser view */
@@ -73,17 +59,11 @@ ul.page-tabs li a:hover {
   position: relative;
   margin-bottom: 60px;
   padding-bottom: 60px;
-  border-bottom: 3px double #bbb;
-}
-
-/* full view node */
-.node-view-mode-full {
-  position: relative;
+  border-bottom: 4px double var(--border);
 }
 .node-view-mode-full .node-taxonomy-container {
   margin-bottom: 14px;
 }
-
 /* node author and submitted details */
 .node-header {
   position: relative;
@@ -100,10 +80,10 @@ ul.page-tabs li a:hover {
   margin: 0 0 8px 0;
   padding: 4px 0;
   color: #96918b;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid var(--border);
 }
 .node-submitted-details i {
-  color: #e3831c;
+  color: var(--primary);
 }
 .node-submitted-details a {
   color: #96918b;
@@ -119,24 +99,24 @@ ul.page-tabs li a:hover {
   position: relative;
   display: block;
   width: 100%;
-  margin: 16px 0 0 0;
-  padding: 16px 0 16px 0;
-  border-top: 1px solid #bbb;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
 }
 .node-links-container {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid var(--border);
 }
 h3.term-title {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   line-height: 1;
 }
 .term-title i {
-  font-size: 1.1em;
-  color: #e3831c;
+  font-size: 1.1rem;
+  color: var(--primary);
 }
 ul.taxonomy-terms {
-  margin: 1em 0 0.2em 0;
+  margin: 1rem 0 0.2rem 0;
   padding: 0;
   list-style: none;
   list-style-type: none;
@@ -146,12 +126,12 @@ li.taxonomy-term {
 }
 li.taxonomy-term a {
   padding: 4px 12px;
-  border: 3px solid #fff;
+  border: 3px solid #ffffff;
   border-radius: 2px;
   transition: all 0.4s ease;
 }
 li.taxonomy-term a:hover {
-  background: #fff;
+  background: #ffffff;
 }
 .node-links-container ul.links {
   position: relative;
@@ -194,15 +174,15 @@ ul.inline li {
 }
 li.node-readmore a {
   padding: 6px 12px;
-  background: #e3831c;
-  color: #fff;
+  background: var(--primary);
+  color: #ffffff;
   -webkit-transition: background 0.4s ease;
   -moz-transition: background 0.4s ease;
   transition: background 0.4s ease;
 }
 li.node-readmore a:hover {
-  background: #222;
-  color: #fff;
+  background: var(--bold-color);
+  color: #ffffff;
 }
 li.node-readmore a::after {
   content: "\f178";
@@ -221,7 +201,7 @@ nav.pager {
 .pager ul.pager__items {
   position: relative;
   margin: 0;
-  padding: 1em 0;
+  padding: 1rem 0;
   list-style: none;
   list-style-type: none;
 }
@@ -234,11 +214,11 @@ nav.pager {
 }
 .pager__item a {
   padding: 8px 14px;
-  border: 3px solid #fff;
+  border: 3px solid #ffffff;
   border-radius: 3px;
 }
 .pager__item a:hover,
 .pager__item.is-active a {
-  background: #e3831c;
-  color: #fff;
+  background-color: var(--primary);
+  color: #ffffff;
 }

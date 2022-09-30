@@ -1,7 +1,7 @@
 <section id="last-section" class="section"></section>
 <!-- Start: Footer -->
-<footer id="footer" class="clear">
-  <div class="footer clear">
+<footer id="footer">
+  <div class="footer">
     <div class="container">
       {% if page.footer_top %}
         <section class="footer-top">
@@ -58,3 +58,6 @@
 <div class="scrolltop"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 {% endif %}
 <!-- End: Footer -->
+{% if bootstrapicons %}
+  {{ attach_library('tara/bootstrap-icons') }}
+{% endif %}

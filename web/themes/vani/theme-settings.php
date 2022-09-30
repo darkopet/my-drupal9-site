@@ -21,7 +21,7 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['general'] = [
     '#type'  => 'details',
     '#title' => t('General'),
-    '#description' => t('<h3>Thanks for using Vani Theme</h3>Vani is a free Drupal 8 & 9 theme designed and developed by <a href="https://drupar.com" target="_blank">Drupar.com</a>'),
+    '#description' => t('<h3>Thank you for using Vani theme</h3>Vani is a free Drupal 8 & 9 theme designed and developed by <a href="https://drupar.com" target="_blank">Drupar.com</a>'),
     '#group' => 'vani',
   ];
 
@@ -36,7 +36,7 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['social'] = [
     '#type'  => 'details',
     '#title' => t('Social'),
-    '#description' => t('Social icons settings. These icons appear in footer region.'),
+    '#description' => t('Social icons settings. These icons appear in the footer.'),
     '#group' => 'vani',
   ];
 
@@ -85,7 +85,6 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['support'] = [
     '#type'  => 'details',
     '#title' => t('Support'),
-    '#description' => t('For any support related to Vani theme, please post on our <a href="https://www.drupar.com/forum" target="_blank">support forum</a>.'),
     '#group' => 'vani',
   ];
 
@@ -101,20 +100,20 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['general']['general_info'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Theme Info'),
-    '#description' => t('<a href="https://www.drupar.com/theme/vani" target="_blank">Theme Homepage</a> || <a href="//demo2.drupar.com/vani/" target="_blank">Theme Demo</a> || <a href="https://www.drupar.com/vani-documentation" target="_blank">Theme Documentation</a> || <a href="https://www.drupar.com/support" target="_blank">Theme Support</a>'),
+    '#description' => t('<a href="https://drupar.com/theme/vani" target="_blank">Theme Homepage</a> || <a href="https://demo2.drupar.com/vani/" target="_blank">Theme Demo</a> || <a href="https://drupar.com/vani-documentation" target="_blank">Theme Documentation</a> || <a href="https://drupar.com/support" target="_blank">Theme Support</a>'),
   ];
 
   $form['general']['general_info_upgrade'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Upgrade To VaniPro for $19 only'),
-    '#description' => t('<a href="https://www.drupar.com/theme/vanipro" target="_blank">Purchase VaniPro</a> || <a href="//demo2.drupar.com/vanipro/" target="_blank">VaniPro Demo</a>'),
+    '#description' => t('<a href="https://drupar.com/theme/vanipro" target="_blank">Purchase VaniPro</a> || <a href="https://demo2.drupar.com/vanipro/" target="_blank">VaniPro Demo</a>'),
   ];
 
   // Color -> Settings.
   $form['color']['theme_color'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Theme Color'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
 
   // Settings under social tab.
@@ -296,20 +295,20 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type'          => 'textarea',
     '#title'         => t('Slider Code'),
     '#default_value' => theme_get_setting('slider_code', 'vani'),
-    '#description'   => t('Please refer to this <a href="https://www.drupar.com/vani-documentation/homepage-slider" target="_blank">documentation page</a> for slider code tutorial.'),
+    '#description'   => t('Please refer to this <a href="https://drupar.com/node/912/" target="_blank">documentation page</a> for slider code tutorial.'),
   ];
 
   // Settings under header tab.
   $form['header']['sticky_header'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Sticky Header'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
 
   $form['header']['circle'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Disable Animated Circles in Header'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
 
   // Settings under sidebar.
@@ -326,97 +325,182 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['sidebar']['animated_sidebar'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Animated Sidebar'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
-
-  // Settings under content tab.
-  // Settings under content tab -> Page loader.
-  $form['content']['preloader'] = [
-    '#type'        => 'fieldset',
+  /**
+   * Content
+   */
+  $form['content']['content_tab'] = [
+    '#type'  => 'vertical_tabs',
+  ];
+  // content -> Homepage  content
+  $form['content_tab']['home_content'] = [
+    '#type'        => 'details',
+    '#title'       => t('Homepage content'),
+    '#description' => t('Please follow this tutorial to add content on homepage. <a href="https://drupar.com/node/922" target="_blank">How to add content on homepage</a>'),
+    '#group' => 'content_tab',
+  ];
+  // content -> Page loader
+  $form['content_tab']['preloader'] = [
+    '#type'        => 'details',
     '#title'       => t('Pre Page Loader'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description' => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#group' => 'content_tab',
   ];
-
-  $form['content']['cursor'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Fancy Cursor'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+  // content -> Animated Content
+  $form['content_tab']['animated_content'] = [
+    '#type'        => 'details',
+    '#title'       => t('Animated Content'),
+    '#description' => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#group' => 'content_tab',
   ];
-  // Settings under content tab -> Animated Content.
-  $form['content']['animated_content'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Animated Page Content'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+  // content -> Google fonts
+  $form['content_tab']['font_tab'] = [
+    '#type'        => 'details',
+    '#title'       => t('Google Fonts'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
   ];
-
-  // Settings under content tab -> Font Icons.
-  $form['content']['font_icons'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Font Icons'),
-    '#description'   => t(''),
+  // content -> Font icons
+  $form['content_tab']['icon_tab'] = [
+    '#type'        => 'details',
+    '#title'       => t('Font Icon'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
   ];
-
-  // Settings under content tab -> Font Icons -> FontAwesome
-  $form['content']['font_icons']['font_icon_fontawesome'] = [
-    '#type'          => 'checkbox',
-    '#title'         => t('Font Awesome 4'),
-    '#default_value' => theme_get_setting('font_icon_fontawesome', 'vani'),
-    '#description'   => t('Check this option to enable FontAwesome 4 font icons. Uncheck to disable.<br /><br />vani theme has included FontAwesome v4.7.0 font icons. You can use any FontAwesome font icon with vani theme.<br />Please visit this tutorial page for details. <a href="https://www.drupar.com/custom-shortcodes-set-two/fontawesome-font-icons" target="_blank">How To Use FontAwesome Font Icons</a>.<br /><br /><hr /><br />'),
+  // content -> shortcodes
+  $form['content_tab']['shortcode'] = [
+    '#type'        => 'details',
+    '#title'       => t('Shortcodes'),
+    '#description' => t('Vani theme has some custom shortcodes. You can create some styling content using these shortcodes.<br />Please visit this tutorial page for details. <a href="https://drupar.com/node/913" target="_blank">Shortcodes in Vani theme</a>.'),
+    '#group' => 'content_tab',
   ];
-  $form['content']['font_icons']['font_icon_fontawesome5'] = [
-    '#type'          => 'checkbox',
-    '#disabled'   => TRUE,
-    '#title'         => t('Font Awesome 5'),
-    '#default_value' => theme_get_setting('font_icon_fontawesome5', 'vani'),
-    '#description'   => t('<p>This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a></p><br /><br /><hr /><br />'),
+  // content -> comment
+  $form['content_tab']['comment'] = [
+    '#type'        => 'details',
+    '#title'       => t('Comment'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
   ];
-  // Settings under content tab -> Font Icons -> Google Material Icons
-  $form['content']['font_icons']['font_icon_material'] = [
-    '#type'          => 'checkbox',
-    '#title'         => t('Google Material Font Icons'),
-    '#default_value' => theme_get_setting('font_icon_material', 'vani'),
-    '#description'   => t('Check this option to enable Google Material font icons. Uncheck to disable.<br /><br /><br />Vani theme has included Google material font icons. You can use any Google material icon with Vani theme.<br />Please visit this tutorial page for details. <a href="https://www.drupar.com/vani-documentation/how-use-google-material-font-icons" target="_blank">How To Use Google Material Font Icons</a>.'),
+  // content -> node
+  $form['content_tab']['node'] = [
+    '#type'        => 'details',
+    '#title'       => t('Node'),
+    '#description' => t(''),
+    '#group' => 'content_tab',
   ];
-
-
-  // Show user picture in comment.
-  $form['content']['comment'] = [
+  // content -> share page
+  $form['content_tab']['node_share'] = [
+    '#type'        => 'details',
+    '#title'       => t('Share Page'),
+    '#description' => t('<h3>Share Page On Social Media</h3><p>This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a></p>'),
+    '#group' => 'content_tab',
+  ];
+  // content -> comment -> user picture in comment
+  $form['content_tab']['comment']['comment_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Comment'),
   ];
-
-  $form['content']['comment']['comment_user_pic'] = [
+  $form['content_tab']['comment']['comment_section']['comment_user_pic'] = [
     '#type'          => 'checkbox',
     '#title'         => t('User Picture in comments'),
     '#default_value' => theme_get_setting('comment_user_pic', 'vani'),
     '#description'   => t("Check this option to show user picture in comment. Uncheck to hide."),
   ];
-
-  // Node author picture.
-  $form['content']['node'] = [
+  // content -> node -> Node author picture
+  $form['content_tab']['node']['node_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Node'),
   ];
 
-  $form['content']['node']['node_author_pic'] = [
+  $form['content_tab']['node']['node_section']['node_author_pic'] = [
     '#type'          => 'checkbox',
     '#title'         => t('Node Author Picture'),
     '#default_value' => theme_get_setting('node_author_pic', 'vani'),
     '#description'   => t("Check this option to show node author picture in submitted details. Uncheck to hide."),
   ];
-
-  $form['social']['node_share'] = [
-    '#type'        => 'fieldset',
-    '#title'       => t('Share Page On Social networking websites'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
-  ];
-
-  // Show tags in node submitted.
-  $form['content']['node']['node_tags'] = [
+  $form['content_tab']['node']['node_section']['node_tags'] = [
     '#type'          => 'checkbox',
     '#title'         => t('Node Tags'),
     '#default_value' => theme_get_setting('node_tags', 'vani'),
     '#description'   => t("Check this option to show node tags (if any) in submitted details. Uncheck to hide."),
+  ];
+  // content -> Google fonts -> Google fonts options
+  $form['content_tab']['font_tab']['font_section'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('Google Fonts'),
+  ];
+  $form['content_tab']['font_tab']['font_section']['google_font'] = [
+    '#type'          => 'select',
+    '#title'         => t('Select Google Fonts Location'),
+    '#options' => array(
+    	'local' => t('Local Self Hosted'),
+      'googlecdn' => t('Google CDN Server')
+    ),
+    '#default_value' => theme_get_setting('google_font', 'vani'),
+    '#description'   => t('Vani theme uses following Google fonts: Open Sans and Roboto. You can serve these fonts locally or from Google server.'),
+  ];
+  // content -> Font icons -> FontAwesome 4
+  $form['content_tab']['icon_tab']['fontawesome4'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('FontAwesome 4'),
+  ];
+  $form['content_tab']['icon_tab']['fontawesome4']['font_icon_fontawesome'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Font Awesome 4'),
+    '#default_value' => theme_get_setting('font_icon_fontawesome', 'vani'),
+    '#description'   => t('Check this option to enable FontAwesome 4 font icons. Uncheck to disable.<br /><br />vani theme has included FontAwesome v4.7.0 font icons. You can use any FontAwesome font icon with vani theme.<br />Please visit this tutorial page for details. <a href="https://drupar.com/custom-shortcodes-set-two/fontawesome-font-icons" target="_blank">How To Use FontAwesome Font Icons</a>'),
+  ];
+  // content -> Font icons -> FontAwesome 5
+  $form['content_tab']['icon_tab']['fontawesome5'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('FontAwesome 5'),
+  ];
+  $form['content_tab']['icon_tab']['fontawesome5']['font_icon_fontawesome5'] = [
+    '#type'          => 'checkbox',
+    '#disabled'   => TRUE,
+    '#title'         => t('Font Awesome 5'),
+    '#default_value' => theme_get_setting('font_icon_fontawesome5', 'vani'),
+    '#description'   => t('<p>This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a></p>'),
+  ];
+  // content -> Font icons -> FontAwesome 6
+  $form['content_tab']['icon_tab']['fontawesome6'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('FontAwesome 6'),
+  ];
+  $form['content_tab']['icon_tab']['fontawesome6']['font_icon_fontawesome6'] = [
+    '#type'          => 'checkbox',
+    '#disabled'   => TRUE,
+    '#title'         => t('Font Awesome 6'),
+    '#default_value' => theme_get_setting('font_icon_fontawesome6', 'vani'),
+    '#description'   => t('<p>This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a></p>'),
+  ];
+  // content -> Font icons -> Bootstrap Font Icons
+  $form['content_tab']['icon_tab']['bootstrap_icons'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('Bootstrap Font Icons'),
+  ];
+  $form['content_tab']['icon_tab']['bootstrap_icons']['bootstrapicons'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Enable Bootstrap Icons'),
+    '#default_value' => theme_get_setting('bootstrapicons'),
+    '#description'   => t('Check this option to enable Bootstrap Font Icons. Read more about <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a>'),
+  ];
+  // Settings under content tab -> Font Icons -> Google Material Icons
+  $form['content_tab']['icon_tab']['material_icons'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('Google Material Font Icons'),
+  ];
+  $form['content_tab']['icon_tab']['material_icons']['font_icon_material'] = [
+    '#type'          => 'checkbox',
+    '#title'         => t('Google Material Font Icons'),
+    '#default_value' => theme_get_setting('font_icon_material', 'vani'),
+    '#description'   => t('Check this option to enable Google Material font icons. Uncheck to disable.<br /><br /><br />Vani theme has included Google material font icons. You can use any Google material icon with Vani theme.<br />Please visit this tutorial page for details. <a href="https://drupar.com/node/934" target="_blank">How To Use Google Material Font Icons</a>.'),
+  ];
+  $form['social']['node_share'] = [
+    '#type'        => 'fieldset',
+    '#title'       => t('Share Page On Social networking websites'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
 
   // Settings under footer tab.
@@ -450,14 +534,14 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['footer']['copyright']['copyright_text_custom'] = [
     '#type'          => 'fieldset',
     '#title'         => t('Custom copyright text'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
 
   // Footer -> Cookie message.
   $form['footer']['cookie'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Cookie Consent message'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
 
   $form['footer']['cookie']['cookie_message'] = [
@@ -494,19 +578,19 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
   // Insert Codes -> Head -> Head codes
   $form['insert_codes']['head']['insert_head'] = [
     '#type'          => 'fieldset',
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
   // Insert Codes -> Body -> Body start codes
   $form['insert_codes']['body']['insert_body_start_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Insert code after &lt;BODY&gt; tag'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
   // Insert Codes -> Body -> Body ENd codes
   $form['insert_codes']['body']['insert_body_end_section'] = [
     '#type'        => 'fieldset',
     '#title'       => t('Insert code before &lt;/BODY&gt; tag'),
-    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://www.drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
+    '#description'   => t('This feature is available in the premium version of this theme. <a href="https://drupar.com/theme/vanipro" target="_blank">Buy VaniPro for $19 only.</a>'),
   ];
   $form['insert_codes']['css']['custom'] = [
     '#type'        => 'fieldset',
@@ -517,34 +601,34 @@ function vani_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type'          => 'checkbox',
     '#title'         => t('Enable custom css'),
     '#default_value' => theme_get_setting('styling', 'vani'),
-    '#description'   => t("Check this option to enable custom styling. Uncheck to disable this fearure.<br />Please refer to this tutorial page. <a href='https://www.drupar.com/vani-documentation/custom-css' target='_blank'>How To Use Custom Styling</a>"),
+    '#description'   => t("Check this option to enable custom styling. Uncheck to disable this fearure.<br />Please refer to this tutorial page. <a href='https://drupar.com/vani-documentation/custom-css' target='_blank'>How To Use Custom Styling</a>"),
   ];
 
   $form['insert_codes']['css']['custom']['styling_code'] = [
     '#type'          => 'textarea',
     '#title'         => t('Custom CSS Codes'),
     '#default_value' => theme_get_setting('styling_code', 'vani'),
-    '#description'   => t('Please enter your custom css codes in this text box. You can use it to customize the appearance of your site.<br />Please refer to this tutorial for detail: <a href="https://www.drupar.com/vani-documentation/custom-css" target="_blank">Custom CSS</a>'),
+    '#description'   => t('Please enter your custom css codes in this text box. You can use it to customize the appearance of your site.<br />Please refer to this tutorial for detail: <a href="https://drupar.com/vani-documentation/custom-css" target="_blank">Custom CSS</a>'),
   ];
 
   // Settings under support tab.
   $form['support']['info'] = [
     '#type'        => 'fieldset',
     '#description' => t('<h4>Documentation</h4>
-    <p>We have a detailed documentation about how to use theme. Please read the <a href="https://www.drupar.com/vani-documentation" target="_blank">Vani Theme Documentation</a>.</p>
+    <p>We have a detailed documentation about how to use theme. Please read the <a href="https://drupar.com/vani-documentation" target="_blank">Vani Theme Documentation</a>.</p>
     <hr />
-    <h4>Ask in our forum</h4>
-    <p>If you need support that is beyond our theme documentation, please ask in our support forum.<br /><a href="https://www.drupar.com/forum" target="_blank">drupar.com/forum</a></p>
+    <h4>Open An Issue</h4>
+    <p>If you need support that is beyond our theme documentation, please <a href="https://www.drupal.org/project/issues/vani?categories=All" target="_blank">open an issue</a> at project page.</p>
     <hr />
     <h4>Contact Us</h4>
-    <p>If you need some specific customization in theme, please contact us<br><a href="https://www.drupar.com/contact" target="_blank">drupar.com/contact</a></p>'),
+    <p>If you need some specific customization in theme, please contact us<br><a href="https://drupar.com/contact" target="_blank">drupar.com/contact</a></p>'),
   ];
 
   // Settings under upgrade tab.
   $form['upgrade']['info'] = [
     '#type'        => 'fieldset',
-    '#title'       => t('<a href="https://demo2.drupar.com/vanipro/" target="_blank">VaniPro Demo</a> | <a href="https://www.drupar.com/theme/vanipro" target="_blank">Purchase VaniPro for $19 only</a>'),
-    '#description' => $vanipro,
+    '#title'       => t('<a href="https://demo2.drupar.com/vanipro/" target="_blank">VaniPro Demo</a> | <a href="https://drupar.com/theme/vanipro" target="_blank">Purchase VaniPro for $19 only</a>'),
+    '#description' => t("$vanipro<br /><p><a href='https://demo2.drupar.com/vanipro/' target='_blank'>VaniPro Demo</a> | <a href='https://drupar.com/theme/vanipro' target='_blank'>Purchase VaniPro for $19 only</a></p>"),
   ];
 // End form.
 }

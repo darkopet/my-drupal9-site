@@ -17,12 +17,10 @@
   -moz-box-shadow: 0 1px 1px #b9ad8c;
   box-shadow: 0 1px 1px #b9ad8c;
 }
-ol.breadcrumb-items {
+.breadcrumb-items {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.breadcrumb-items {
   display: flex;
   align-items: center;
 }

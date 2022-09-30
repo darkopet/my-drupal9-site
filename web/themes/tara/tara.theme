@@ -48,6 +48,7 @@ function tara_preprocess_page(array &$variables) {
 	$variables['scrolltotop_on'] = theme_get_setting('scrolltotop_on', 'tara');
 	$variables['copyright_text'] = theme_get_setting('copyright_text', 'tara');
   $variables['front_sidebar'] = theme_get_setting('front_sidebar', 'tara');
+	$variables['bootstrapicons'] = theme_get_setting('bootstrapicons');
 }
 
 /* *
