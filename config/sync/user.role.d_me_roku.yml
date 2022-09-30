@@ -1,0 +1,9 @@
+uuid: 2fa6abf8-e38e-4b62-a490-0a824d770522
+langcode: en
+status: true
+dependencies: {  }
+id: d_me_roku
+label: 'D.Me Roku'
+weight: 4
+is_admin: null
+permissions: {  }

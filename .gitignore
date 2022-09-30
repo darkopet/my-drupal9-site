@@ -12,7 +12,7 @@
 # core
 
 # Ignore public/private keys SSH certificates
-/keys/
+/keys/*
 
 # Ignore dependencies that are managed with Composer.
 # Generally you should only ignore the root vendor directory. It's important

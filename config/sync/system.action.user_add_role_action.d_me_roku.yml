@@ -1,0 +1,14 @@
+uuid: d5d05191-dcf5-4a88-ac49-e6a6b6596304
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.d_me_roku
+  module:
+    - user
+id: user_add_role_action.d_me_roku
+label: 'Add the D.Me Roku role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: d_me_roku

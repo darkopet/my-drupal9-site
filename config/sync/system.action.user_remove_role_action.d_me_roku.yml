@@ -1,0 +1,14 @@
+uuid: 612c10ac-f584-46a8-a2fa-fd550d36e00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.d_me_roku
+  module:
+    - user
+id: user_remove_role_action.d_me_roku
+label: 'Remove the D.Me Roku role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: d_me_roku
