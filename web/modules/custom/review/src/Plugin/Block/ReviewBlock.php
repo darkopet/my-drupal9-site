@@ -55,6 +55,6 @@ class ReviewBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    return  $this->formBuilder->getForm('Drupal\review\Form\CompanyReviewForm');
+    return $this->formBuilder->getForm('Drupal\review\Form\CompanyReviewForm');
   }
 }

@@ -46,6 +46,7 @@ module:
   entity_usage: 0
   event_form: 0
   event_timer: 0
+  event_title: 0
   examples: 0
   facets: 0
   faq: 0

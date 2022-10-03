@@ -1,8 +1,10 @@
 <?php
+
 /**
  * @file
  * Contains \Drupal\review\Form\CompanyReviewForm
  */
+
 namespace Drupal\review\Form;
 
 use Drupal\Core\Form\FormBase;
@@ -59,7 +61,7 @@ class CompanyReviewForm extends FormBase
 
     $form['open_modal'] = [
       '#type' => 'link',
-      '#title' => $this->t('Add Review'),
+      '#title' => $this->t('Add Company Review'),
       '#url' => Url::fromRoute('add_review.company_review_form'),
       '#attributes' => [
         'class' => [

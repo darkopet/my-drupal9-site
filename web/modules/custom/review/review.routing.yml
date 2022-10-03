@@ -10,3 +10,16 @@ add_review.company_review_form:
     parameters:
       id:
         type: entity:node
+
+add_review.location_review_form:
+  path: '/review/add/location_review_type'
+  defaults:
+    _title: 'Company Review Form'
+    _controller: '\Drupal\review\Controller\ReviewController::openModalForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+    parameters:
+      id:
+        type: entity:node

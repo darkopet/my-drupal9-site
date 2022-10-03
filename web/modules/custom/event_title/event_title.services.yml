@@ -1,0 +1,4 @@
+services:
+  event_title.custom_services:
+    class: Drupal\event_title\CustomService
+    arguments: ['@current_user']

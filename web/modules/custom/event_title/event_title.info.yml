@@ -1,0 +1,6 @@
+name: 'Event Title'
+description: 'Events titles in title case.'
+package: Custom
+type: module
+core: 8.x
+core_version_requirement:  ^8 || ^9
