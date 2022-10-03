@@ -3,9 +3,14 @@
 /**
  * Implements hook_entity_presave().
  */
-function event_title_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
-  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($entity);
-  $entity->setTitle($entity->$casedTitle);
+function event_title_entity_presave(&$entity) {
+  switch ($entity->bundle()) {
+    // Here you modify only your day content type
+    case 'event':
+      $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($entity);
+      $entity->setTitle($casedTitle);
+      break;
+  }
 }
 
 function event_title_preprocess_node(&$variables){

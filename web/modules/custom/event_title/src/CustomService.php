@@ -22,15 +22,15 @@ class CustomService {
     $this->getTitle = $getTitle;
   }
 
-  public function titleCase(&$variables):string {
-    $node = $variables['node'];
+  public function titleCase($entity):string {
+//  $node = $variables['node'];
 //  dd($node);
-    $title = $node->get('title')->getValue()[0]['value'];
+    $title = $entity['node']->get('title')->getValue()[0]['value'];
 //  dd($title);
-    if ($node->get('type')->getValue()[0]['target_id'] === 'event') {
+    if ($entity['node']->get('type')->getValue()[0]['target_id'] === 'event') {
       $smallwordsarray = ['of','a','the','and','an','or','nor','but','is','if','then','else','when',
         'at','from','by','on','off','for','in','out','over','to','into','with','so',
-        'yet','both', 'much','though', 'why', 'what', 'until', 'while', 'even', 'as'
+        'yet','both', 'much','though', 'why', 'what', 'until', 'while', 'even'
       ];
       $words = explode(' ', $title);
       foreach ($words as $key => $word) {
