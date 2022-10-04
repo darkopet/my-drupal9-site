@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      fields:
+        value:
+          label: Vrednost
+  admin_page:
+    display_options:
+      fields:
+        value:
+          label: Vrednost
+      menu:
+        title: '1 glas'
+  node_page:
+    display_options:
+      menu:
+        title: '1 glas'
+      arguments:
+        entity_id:
+          exception:
+            title: Vsi

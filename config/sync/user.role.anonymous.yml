@@ -11,6 +11,8 @@ dependencies:
     - media
     - review
     - system
+    - votingapi
+    - votingapi_widgets
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
@@ -22,9 +24,16 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'administer review types'
+  - 'administer vote types'
+  - 'administer voting api'
+  - 'clear own vote on node:event:field_rate_passed_event'
   - 'create review'
   - 'delete review'
+  - 'delete votes'
+  - 'edit own vote on node:event:field_rate_passed_event'
   - 'edit review'
+  - 'edit voting status on node:event:field_rate_passed_event'
   - 'use text format restricted_html'
   - 'view media'
   - 'view review'
+  - 'vote on node:event:field_rate_passed_event'

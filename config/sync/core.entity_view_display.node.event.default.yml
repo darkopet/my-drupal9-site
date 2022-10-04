@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_organizer
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_rate_passed_event
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
     - field.field.node.event.field_youtube_video
@@ -26,6 +27,7 @@ dependencies:
     - link
     - text
     - user
+    - votingapi_widgets
 third_party_settings:
   field_group:
     group_events_tabs:
@@ -46,6 +48,7 @@ third_party_settings:
         width_breakpoint: 640
     group_events_tab1:
       children:
+        - field_rate_passed_event
         - field_event_description
       label: 'Events Tab 1'
       parent_name: group_events_tabs
@@ -120,7 +123,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 17
     region: content
   field_event_image:
     type: blazy
@@ -188,6 +191,18 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_rate_passed_event:
+    type: voting_api_formatter
+    label: above
+    settings:
+      readonly: false
+      style: default
+      show_results: false
+      values: {  }
+      show_own_vote: false
+    third_party_settings: {  }
+    weight: 16
     region: content
   field_start_end_date:
     type: daterange_default

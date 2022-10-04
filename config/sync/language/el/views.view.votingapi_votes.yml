@@ -1,0 +1,65 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Εφαρμογή
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        type:
+          separator: ', '
+        value:
+          label: Αξία
+          separator: ', '
+        vote_source:
+          separator: ', '
+        user_id:
+          separator: ', '
+        timestamp:
+          separator: ', '
+  admin_page:
+    display_options:
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        type:
+          separator: ', '
+        entity_id:
+          separator: ', '
+        entity_type:
+          separator: ', '
+        value:
+          label: Αξία
+          separator: ', '
+        vote_source:
+          separator: ', '
+        user_id:
+          separator: ', '
+        timestamp:
+          separator: ', '
+      menu:
+        title: Ψήφοι
+  node_page:
+    display_options:
+      menu:
+        title: Ψήφοι
+      arguments:
+        entity_id:
+          exception:
+            title: Όλες

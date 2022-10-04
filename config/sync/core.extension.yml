@@ -163,6 +163,8 @@ module:
   video_embed_media: 0
   views_infinite_scroll: 0
   views_ui: 0
+  votingapi: 0
+  votingapi_widgets: 0
   webform: 0
   webform_example_element: 0
   webform_shortcuts: 0

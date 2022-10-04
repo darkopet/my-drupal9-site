@@ -1,0 +1,28 @@
+uuid: 56bb3c87-5bf7-4eda-9142-919492c8097c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rate_passed_event
+    - node.type.event
+  module:
+    - votingapi_widgets
+id: node.event.field_rate_passed_event
+field_name: field_rate_passed_event
+entity_type: node
+bundle: event
+label: 'Rate passed Event'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+    value: 0
+default_value_callback: ''
+settings:
+  anonymous_window: '300'
+  result_function: vote_average
+  user_window: '300'
+  widget_format: fivestar
+field_type: voting_api_field

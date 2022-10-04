@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.event.field_event_organizer
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_rate_passed_event
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
     - field.field.node.event.field_youtube_video
@@ -23,6 +24,7 @@ dependencies:
     - link
     - path
     - text
+    - votingapi_widgets
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -95,6 +97,13 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_rate_passed_event:
+    type: voting_api_widget
+    weight: 134
+    region: content
+    settings:
+      show_initial_vote: 0
     third_party_settings: {  }
   field_start_end_date:
     type: daterange_default

@@ -1,0 +1,68 @@
+display:
+  default:
+    display_title: 'Ana (master)'
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Uygula
+          reset_button_label: Sıfırla
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« İlk'
+            last: 'Son »'
+          expose:
+            items_per_page_label: 'Sayfa başına öğe sayısı'
+            items_per_page_options_all_label: '- Tümü -'
+            offset_label: 'Başlangıç değeri'
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        type:
+          separator: ', '
+        value:
+          label: Değer
+          separator: ', '
+        vote_source:
+          separator: ', '
+        user_id:
+          separator: ', '
+        timestamp:
+          separator: ', '
+  admin_page:
+    display_options:
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        type:
+          separator: ', '
+        entity_id:
+          separator: ', '
+        entity_type:
+          separator: ', '
+        value:
+          label: Değer
+          separator: ', '
+        vote_source:
+          separator: ', '
+        user_id:
+          separator: ', '
+        timestamp:
+          separator: ', '
+      menu:
+        title: Oylar
+  node_page:
+    display_options:
+      menu:
+        title: Oylar
+      arguments:
+        entity_id:
+          exception:
+            title: Tümü

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.event.field_event_organizer
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_rate_passed_event
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
     - field.field.node.event.field_youtube_video
@@ -236,6 +237,7 @@ content:
     weight: 10
     region: content
 hidden:
+  field_rate_passed_event: true
   langcode: true
   links: true
   search_api_excerpt: true

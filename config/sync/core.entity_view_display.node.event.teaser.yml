@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_organizer
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_website
+    - field.field.node.event.field_rate_passed_event
     - field.field.node.event.field_start_end_date
     - field.field.node.event.field_twitter_text
     - field.field.node.event.field_youtube_video
@@ -24,6 +25,11 @@ bundle: event
 mode: teaser
 content:
   flag_bookmark:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  flag_subscribe_node:
     settings: {  }
     third_party_settings: {  }
     weight: 10
@@ -42,7 +48,9 @@ hidden:
   field_event_organizer: true
   field_event_type: true
   field_event_website: true
+  field_rate_passed_event: true
   field_start_end_date: true
   field_twitter_text: true
   field_youtube_video: true
   langcode: true
+  search_api_excerpt: true

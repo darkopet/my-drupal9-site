@@ -1,0 +1,22 @@
+uuid: 24275c7e-12f0-46ce-a8af-f4ff087039c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - votingapi_widgets
+id: node.field_rate_passed_event
+field_name: field_rate_passed_event
+entity_type: node
+type: voting_api_field
+settings:
+  vote_plugin: fivestar
+  vote_type: event_vote
+  status: ''
+module: votingapi_widgets
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 05eacfc7-f804-4ec8-be32-02e571dd841a
+langcode: en
+status: true
+dependencies: {  }
+id: event_vote
+label: 'Event vote'
+value_type: percentage
+description: 'Users voting on the passed events.'
