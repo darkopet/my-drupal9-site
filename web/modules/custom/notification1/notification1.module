@@ -15,15 +15,17 @@ function notification1_node_insert(Node $node) {
   if ($node->getType() === 'event') {
     $message = Message::create(['template' => 'event_created', 'uid' => $node->get('uid')]);
     $message->set('field_node_reference', $node);
-    $eventType = $node->get('field_event_type')->getValue()[0]['target_id'];
-    $message->set('field_event_type_message', $eventType);
-    $text = $message->getText()[0];
-    $html = \Drupal::token()->replace($text, [
-      'node' => $node,
-    ], []);
-    $html = strip_tags(html_entity_decode($html));
-    $message->set('field_message_show', str_replace('&nbsp;', ' ', $html));
-    $message->save();
+    if($node->get('field_event_type')->getValue() != []) {
+      $eventType = $node->get('field_event_type')->getValue()[0]['target_id'];
+      $message->set('field_event_type_message', $eventType);
+      $text = $message->getText()[0];
+      $html = \Drupal::token()->replace($text, [
+        'node' => $node,
+      ], []);
+      $html = strip_tags(html_entity_decode($html));
+      $message->set('field_message_show', str_replace('&nbsp;', ' ', $html));
+      $message->save();
+    }
   }
 }
 

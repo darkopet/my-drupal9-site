@@ -18,16 +18,16 @@ class CustomService {
    * @param TitleResolver $getTitle
    */
   public function __construct(TitleResolver $getTitle) {
-//    dd($getTitle);
     $this->getTitle = $getTitle;
   }
 
-  public function titleCase($entity):string {
-//  $node = $variables['node'];
-//  dd($node);
-    $title = $entity['node']->get('title')->getValue()[0]['value'];
-//  dd($title);
-    if ($entity['node']->get('type')->getValue()[0]['target_id'] === 'event') {
+  public function titleCase(\Drupal\node\Entity\Node $entity) {
+//  $node = $entity['node'];
+//  dd($entity);
+  $title = $entity->get('title')->getValue()[0]['value'];
+//  dd($entity['node']);
+    $newtitle = '';
+    if ($entity->get('type')->getValue()[0]['target_id'] === 'event') {
       $smallwordsarray = ['of','a','the','and','an','or','nor','but','is','if','then','else','when',
         'at','from','by','on','off','for','in','out','over','to','into','with','so',
         'yet','both', 'much','though', 'why', 'what', 'until', 'while', 'even'
@@ -40,7 +40,8 @@ class CustomService {
       $newtitle = implode(' ', $words);
     }
 //  dd($newtitle);
-    return $newtitle;
+    if ($newtitle) {
+      return $newtitle;
+    }
   }
-
 }

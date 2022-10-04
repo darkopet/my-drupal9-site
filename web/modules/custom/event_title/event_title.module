@@ -3,7 +3,7 @@
 /**
  * Implements hook_entity_presave().
  */
-function event_title_entity_presave(&$entity) {
+function event_title_entity_presave($entity) {
   switch ($entity->bundle()) {
     // Here you modify only your day content type
     case 'event':
@@ -13,35 +13,35 @@ function event_title_entity_presave(&$entity) {
   }
 }
 
-function event_title_preprocess_node(&$variables){
-  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($variables);
-//  dd($casedTitle);
-  $variables['node']->get('title')->getValue()[0]['value'] = $casedTitle;
-  $variables['node']->title = $casedTitle;
-//  dd($variables);
-//  dd($variables['node']->title);
-}
+//function event_title_preprocess_node(\Drupal\node\Entity\Node $variables){
+//  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($variables);
+////  dd($casedTitle);
+//  $variables['node']->get('title')->getValue()[0]['value'] = $casedTitle;
+//  $variables['node']->title = $casedTitle;
+////  dd($variables);
+////  dd($variables['node']->title);
+//}
 
-function event_title_post_update_NAME(&$variables) {
-  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($variables);
-  // Example of updating some content.
-  $node = \Drupal\node\Entity\Node::load('id');
-  $node
-    ->setTitle($casedTitle);
-  $node
-    ->save();
-  $result = t('Node %nid saved', [
-    '%nid' => $node
-      ->id(),
-  ]);
-
-  // Example of updating some config.
-  if (\Drupal::moduleHandler()
-    ->moduleExists('taxonomy')) {
-
-    // Update the dependencies of all Vocabulary configuration entities.
-    \Drupal::classResolver(\Drupal\Core\Config\Entity\ConfigEntityUpdater::class)
-      ->update($variables, 'taxonomy_vocabulary');
-  }
-  return $result;
-}
+//function event_title_post_update_NAME(&$variables) {
+//  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($variables);
+//  // Example of updating some content.
+//  $node = \Drupal\node\Entity\Node::load('id');
+//  $node
+//    ->setTitle($casedTitle);
+//  $node
+//    ->save();
+//  $result = t('Node %nid saved', [
+//    '%nid' => $node
+//      ->id(),
+//  ]);
+//
+//  // Example of updating some config.
+//  if (\Drupal::moduleHandler()
+//    ->moduleExists('taxonomy')) {
+//
+//    // Update the dependencies of all Vocabulary configuration entities.
+//    \Drupal::classResolver(\Drupal\Core\Config\Entity\ConfigEntityUpdater::class)
+//      ->update($variables, 'taxonomy_vocabulary');
+//  }
+//  return $result;
+//}
