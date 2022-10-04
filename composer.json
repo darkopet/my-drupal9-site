@@ -25,6 +25,18 @@
                 "reference": "2.7.2"
               }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "antennaio/jquery-bar-rating",
+                "version": "1.2.2",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
+                }
+            }
         }
     ],
     "drupal-scaffold": {
@@ -37,6 +49,7 @@
     },
     "require": {
         "alchemy/zippy": "^1.0",
+        "antennaio/jquery-bar-rating": "^1.2",
         "composer/installers": "^1.9",
         "drupal/address": "^1.10",
         "drupal/avatar_field_formatter": "^2.0",
@@ -105,6 +118,8 @@
         "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_infinite_scroll": "^2.0",
+        "drupal/votingapi": "^3.0@beta",
+        "drupal/votingapi_widgets": "^1.0@alpha",
         "drupal/webform": "^6.1",
         "drupal/webform_submissions_delete": "^1.0",
         "drupal/xmlsitemap": "^1.2",
