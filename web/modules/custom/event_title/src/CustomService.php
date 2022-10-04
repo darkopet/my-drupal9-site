@@ -22,11 +22,8 @@ class CustomService {
   }
 
   public function titleCase(\Drupal\node\Entity\Node $entity) {
-//  $node = $entity['node'];
-//  dd($entity);
   $title = $entity->get('title')->getValue()[0]['value'];
-//  dd($entity['node']);
-    $newtitle = '';
+  $newtitle = '';
     if ($entity->get('type')->getValue()[0]['target_id'] === 'event') {
       $smallwordsarray = ['of','a','the','and','an','or','nor','but','is','if','then','else','when',
         'at','from','by','on','off','for','in','out','over','to','into','with','so',
@@ -39,7 +36,6 @@ class CustomService {
       }
       $newtitle = implode(' ', $words);
     }
-//  dd($newtitle);
     if ($newtitle) {
       return $newtitle;
     }
