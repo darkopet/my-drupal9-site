@@ -12,26 +12,24 @@ function event_title_entity_presave($entity) {
   }
 }
 
-//function event_title_post_update_NAME(&$variables) {
-//  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($variables);
-//  // Example of updating some content.
-//  $node = \Drupal\node\Entity\Node::load('id');
-//  $node
-//    ->setTitle($casedTitle);
-//  $node
-//    ->save();
-//  $result = t('Node %nid saved', [
-//    '%nid' => $node
-//      ->id(),
-//  ]);
-//
-//  // Example of updating some config.
-//  if (\Drupal::moduleHandler()
-//    ->moduleExists('taxonomy')) {
-//
-//    // Update the dependencies of all Vocabulary configuration entities.
-//    \Drupal::classResolver(\Drupal\Core\Config\Entity\ConfigEntityUpdater::class)
-//      ->update($variables, 'taxonomy_vocabulary');
-//  }
-//  return $result;
-//}
+/**
+ * Implements hook_post_update_NAME().
+ *
+ * @param $sandbox
+ * @return \Drupal\Core\StringTranslation\TranslatableMarkup
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function event_title_post_update_name(&$sandbox) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $nid = $node->id();
+  }
+  $node = \Drupal\node\Entity\Node::load($nid);
+  $casedTitle = \Drupal::service('event_title.custom_services')->titleCase($node);
+  $node->setTitle($casedTitle);
+  $node->save();
+  $result = t('Node %nid saved', [
+    '%nid' => $node->id(),
+  ]);
+  return $result;
+}
