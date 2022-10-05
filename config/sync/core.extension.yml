@@ -69,6 +69,7 @@ module:
   flexslider_example: 0
   flexslider_fields: 0
   flexslider_views: 0
+  gnode: 0
   group: 0
   hal: 0
   help: 0

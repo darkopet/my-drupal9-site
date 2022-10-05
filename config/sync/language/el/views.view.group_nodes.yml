@@ -1,0 +1,64 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Εφαρμογή
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+      fields:
+        title:
+          label: Τίτλος
+          separator: ', '
+        type:
+          label: 'Τύπος περιεχομένου'
+          separator: ', '
+        status:
+          label: Κατάσταση
+          settings:
+            format_custom_true: Δημοσιευμένο
+            format_custom_false: 'Μη δημοσιευμένο'
+          separator: ', '
+        changed:
+          label: Ενημερώθηκε
+          separator: ', '
+        dropbutton:
+          label: Λειτουργίες
+      filters:
+        status:
+          expose:
+            label: 'Κατάσταση δημοσίευσης'
+          group_info:
+            label: 'Κατάσταση δημοσίευσης'
+            group_items:
+              1:
+                title: Δημοσιευμένο
+              2:
+                title: 'Μη δημοσιευμένο'
+        type:
+          expose:
+            label: Τύπος
+      empty:
+        area_text_custom:
+          content: 'Δεν υπάρχει διαθέσιμη ύλη.'
+      arguments:
+        gid:
+          exception:
+            title: Όλες
+      title: Κόμβοι
+  page_1:
+    display_title: Σελίδα
+    display_options:
+      menu:
+        title: Κόμβοι
