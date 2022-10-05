@@ -1,0 +1,14 @@
+uuid: abb2d0ca-8199-4a58-977d-f36ea24fe0f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+id: users_joined_events-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: users_joined_events
+permissions_ui: true
+permissions: {  }

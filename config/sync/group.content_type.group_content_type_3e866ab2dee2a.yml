@@ -1,0 +1,17 @@
+uuid: cf5b6f82-c350-4da5-a3f0-060c0cc4d7ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+  module:
+    - user
+id: group_content_type_3e866ab2dee2a
+label: 'Users joined events: Group membership'
+description: 'Adds users to groups as members.'
+group_type: users_joined_events
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

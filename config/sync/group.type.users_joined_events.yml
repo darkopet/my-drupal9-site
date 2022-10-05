@@ -1,0 +1,11 @@
+uuid: ba563694-e947-441c-818d-56ea367d20d5
+langcode: en
+status: true
+dependencies: {  }
+id: users_joined_events
+label: 'Users joined events'
+description: ''
+new_revision: true
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

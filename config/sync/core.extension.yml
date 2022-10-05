@@ -38,6 +38,7 @@ module:
   drupal_slider: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   entity_browser: 0
   entity_browser_example: 0
   entity_reference: 0
@@ -68,6 +69,7 @@ module:
   flexslider_example: 0
   flexslider_fields: 0
   flexslider_views: 0
+  group: 0
   hal: 0
   help: 0
   history: 0
@@ -159,6 +161,7 @@ module:
   ultimate_cron: 0
   update: 0
   user: 0
+  variationcache: 0
   video_embed_field: 0
   video_embed_media: 0
   views_infinite_scroll: 0

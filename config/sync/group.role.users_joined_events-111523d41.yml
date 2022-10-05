@@ -1,0 +1,17 @@
+uuid: a354dd4a-3f1f-415c-9df7-68c64525db48
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+  enforced:
+    config:
+      - user.role.content_editor
+id: users_joined_events-111523d41
+label: 'Content editor'
+weight: 2
+internal: true
+audience: outsider
+group_type: users_joined_events
+permissions_ui: false
+permissions: {  }

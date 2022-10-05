@@ -1,0 +1,14 @@
+uuid: 5a27b428-47b2-4ca7-ab9d-94d138570cd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+id: users_joined_events-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: users_joined_events
+permissions_ui: true
+permissions: {  }

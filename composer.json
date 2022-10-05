@@ -74,6 +74,7 @@
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
+        "drupal/group": "^1.5",
         "drupal/intense": "^2.3",
         "drupal/jquery_ui_accordion": "^1.1",
         "drupal/jsonapi_extras": "^3.21",

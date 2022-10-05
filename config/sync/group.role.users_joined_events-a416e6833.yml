@@ -1,0 +1,17 @@
+uuid: 9f90aa4e-8508-4910-96b8-7153ec31e06e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+  enforced:
+    config:
+      - user.role.administrator
+id: users_joined_events-a416e6833
+label: Administrator
+weight: 3
+internal: true
+audience: outsider
+group_type: users_joined_events
+permissions_ui: false
+permissions: {  }

@@ -1,0 +1,14 @@
+uuid: cbe3f037-1700-4b16-b3b7-a639a086defc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+id: users_joined_events-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: users_joined_events
+permissions_ui: true
+permissions: {  }

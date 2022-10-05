@@ -1,0 +1,17 @@
+uuid: 0de47ca3-167a-4420-9b34-89f381b5f07c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.users_joined_events
+  enforced:
+    config:
+      - user.role.d_me_roku
+id: users_joined_events-9537bfe32
+label: 'D.Me Roku'
+weight: 4
+internal: true
+audience: outsider
+group_type: users_joined_events
+permissions_ui: false
+permissions: {  }

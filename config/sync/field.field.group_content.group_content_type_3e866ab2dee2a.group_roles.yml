@@ -1,0 +1,22 @@
+uuid: 1832756b-6646-45b1-9764-8c54668920ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group_content.group_roles
+    - group.content_type.group_content_type_3e866ab2dee2a
+id: group_content.group_content_type_3e866ab2dee2a.group_roles
+field_name: group_roles
+entity_type: group_content
+bundle: group_content_type_3e866ab2dee2a
+label: Roles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'group_type:group_role'
+  handler_settings:
+    group_type_id: users_joined_events
+field_type: entity_reference
