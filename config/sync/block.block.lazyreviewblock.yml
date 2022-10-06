@@ -1,0 +1,20 @@
+uuid: 7e1b46c5-5dbd-4c6e-9cb5-9b3c702953c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - lazy_block
+  theme:
+    - bartik
+id: lazyreviewblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: lazy_block
+settings:
+  id: lazy_block
+  label: 'My Reviews (lazy loading)'
+  label_display: visible
+  provider: lazy_block
+visibility: {  }

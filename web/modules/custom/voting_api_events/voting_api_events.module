@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Implementation of hook_entity_view_alter();
+ */
+
+function voting_api_events_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  if ($build['#view_mode'] == 'full' && isset($build['field_rate_passed_event'])) {
+    if($entity->get('type')->getValue()[0]['target_id'] == 'event') {
+      $field_value = $entity->get('field_start_end_date')->getValue();
+      if(!empty($field_value)){
+        $field_end_date = $field_value[0]['end_value'];
+        $current_time = time();
+        if (strtotime($field_end_date) < strtotime($current_time)) {
+          $build['field_rate_passed_event']['#access'] = FALSE;
+        }
+      }
+    }
+  }
+}

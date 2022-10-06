@@ -5,12 +5,21 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
+    - block_content
     - comment
     - contact
+    - field_ui
     - filter
+    - flag
+    - group
     - media
+    - message
+    - node
+    - paragraphs
+    - paragraphs_library
     - review
     - system
+    - taxonomy
     - votingapi
     - votingapi_widgets
 _core:
@@ -23,7 +32,22 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'administer block_content form display'
+  - 'administer comment form display'
+  - 'administer contact_message form display'
+  - 'administer display modes'
+  - 'administer flagging form display'
+  - 'administer group form display'
+  - 'administer group_content form display'
+  - 'administer media form display'
+  - 'administer message form display'
+  - 'administer node form display'
+  - 'administer paragraph form display'
+  - 'administer paragraphs_library_item form display'
+  - 'administer review form display'
   - 'administer review types'
+  - 'administer taxonomy_term form display'
+  - 'administer user form display'
   - 'administer vote types'
   - 'administer voting api'
   - 'clear own vote on node:event:field_rate_passed_event'

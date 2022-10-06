@@ -49,7 +49,7 @@ class ReviewController extends ControllerBase {
     $response = new AjaxResponse();
 
     // Get the modal form using the form builder.
-    $company_review_form = $this->formBuilder->getForm('Drupal\review\Form\CompanyReviewForm');
+    $company_review_form = $this->formBuilder->getForm('Drupal\review\Form\ReviewTypeForm');
 
     // Add an AJAX command to open a modal dialog with the form as the content.
     $response->addCommand(new OpenModalDialogCommand ('Add Reviews', $company_review_form, ['width' => '1200', 'height' => '800']));

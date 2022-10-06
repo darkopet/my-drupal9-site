@@ -1,6 +1,6 @@
 uuid: 25c57e1b-2d56-41ae-adc0-e508a9951c41
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.has_upcoming_events

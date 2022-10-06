@@ -196,11 +196,11 @@ content:
     type: voting_api_formatter
     label: above
     settings:
-      readonly: false
       style: default
-      show_results: false
+      show_results: '1'
+      readonly: 0
+      show_own_vote: 0
       values: {  }
-      show_own_vote: false
     third_party_settings: {  }
     weight: 16
     region: content

@@ -19,6 +19,7 @@ dependencies:
     - node.type.event
   module:
     - comment
+    - custom_field_type
     - datetime_range
     - image
     - link
@@ -69,16 +70,24 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_event_location:
-    type: options_buttons
+    type: entity_reference_autocomplete
     weight: 126
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_event_organizer:
-    type: options_buttons
+    type: entity_reference_autocomplete
     weight: 125
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_event_type:
     type: entity_reference_autocomplete
@@ -120,7 +129,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_youtube_video:
-    type: null
+    type: custom_field_type
     weight: 133
     region: content
     settings: {  }
