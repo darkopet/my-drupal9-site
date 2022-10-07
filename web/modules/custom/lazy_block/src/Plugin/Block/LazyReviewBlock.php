@@ -74,16 +74,21 @@ class LazyReviewBlock extends BlockBase implements ContainerFactoryPluginInterfa
         $reviewAddedByUser = ($item->getOwner()->get('name')->getValue()[0]['value']);
         if(($item->get('bundle')->getValue()[0]['target_id']) == 'company_review_type'){
           $rating = $item->get('field_company_review_rating')->getValue()[0]['value'];
-        } else {
+        } elseif (($item->get('bundle')->getValue()[0]['target_id']) == 'location_review_type') {
           $rating = $item->get('field_location_review_rating')->getValue()[0]['value'];
         }
         if ($reviewAddedByUser == $signedInUser) {
-          $reviewsAddedByCurrentUser[] = ['title' =>$item->label(), 'rating' => $rating[0]['value']];
+          $reviewsAddedByCurrentUser[] = ['title' =>$item->label(), 'rating' => $rating];
         }
       }
       sleep(5);
       return [
         '#theme' => 'lazy_block',
+        '#attached' => [
+          'library' => [
+            'star_rating/star',
+          ],
+        ],
         '#data' => $reviewsAddedByCurrentUser,
       ];
 

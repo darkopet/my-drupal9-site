@@ -1,4 +1,26 @@
-{% for item in data %}
-  <strong>Title: {{ item.title }}</strong> <br>
-  <strong>Rating: {{ item.rating }}</strong>  <br><br>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .checked {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    {% for item in data %}
+      <strong> Title: {{ item.title }} </strong> <br>
+      <strong> Rating: </strong>
+      {% for i in 1..item.rating %}
+        <span class="fa fa-star checked"> {{ "" }} </span>
+      {% endfor %}
+      <br><br>
+    {% endfor %}
+  </body>
+</html>
+
+
+
+
