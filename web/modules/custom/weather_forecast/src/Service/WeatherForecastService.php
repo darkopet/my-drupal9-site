@@ -1,8 +1,7 @@
 <?php
 
-namespace Drupal\weather_forecast;
+namespace Drupal\weather_forecast\Service;
 
-use Drupal\node\Entity\Node;
 use GuzzleHttp\ClientInterface;
 use Psr\Container\ContainerInterface;
 
@@ -38,23 +37,10 @@ class WeatherForecastService
       $container->get('http_client')
     );
   }
-
-  public function data()
-  {
-    $request = $this->httpClient->request('GET', 'api.openweathermap.org/data/2.5/forecast/daily?q=Beijing&units=metric&cnt=6&appid=542ffd081e67f4512b705f89d2a611b2', []);
-    $data = $request->getBody()->getContents();
-    $build = [
-      '#theme' => 'weather_forecast',
-      '#data' => $data,
-    ];
-    if ($request->getStatusCode() != 200) {
-      return $build;
-    }
-  }
-
-  public function timeCheck(Node $node) {
-    if ($node->getType() === 'event') {
-      dd($node);
-    }
+  public function data(string $city): array{
+    $request = $this->httpClient->request('GET', 'api.openweathermap.org/data/2.5/forecast/daily?q=' . $city . '&units=metric&cnt=5&appid=542ffd081e67f4512b705f89d2a611b2', []);
+    $data = json_decode($request->getBody()->getContents());
+    $weather = $data->list;
+    return $weather;
   }
 }

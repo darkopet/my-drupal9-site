@@ -150,6 +150,10 @@ module:
   simpletest: 0
   site_status_message: 0
   smart_date: 0
+  social_api: 0
+  social_auth: 0
+  social_auth_github: 0
+  social_auth_google: 0
   star_rating: 0
   starrating: 0
   system: 0

@@ -132,6 +132,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-server" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/steverhoades/oauth2-openid-connect-server" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cweagans/composer-patches" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-github" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-google" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

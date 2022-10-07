@@ -7,7 +7,8 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Security\TrustedCallbackInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormBuilder;
-use Drupal\weather_forecast\WeatherForecastService;
+use Drupal\weather_forecast\Service\WeatherForecastService;
+use Drupal\weather_forecast\Service\TimeCheckService;
 
 /**
  *
@@ -26,6 +27,10 @@ class WeatherForecastBlock extends BlockBase implements ContainerFactoryPluginIn
    * @var $weatherForecastService WeatherForecastService
    */
   protected $weatherForecastService;
+  /**
+   * @var $timeCheckService TimeCheckService
+   */
+  protected $timeCheckService;
 
   /**
    * @param ContainerInterface $container
@@ -42,6 +47,7 @@ class WeatherForecastBlock extends BlockBase implements ContainerFactoryPluginIn
       $plugin_definition,
       $container->get('form_builder'),
       $container->get('weather_forecast_service'),
+      $container->get('time_check_service'),
     );
   }
 
@@ -52,19 +58,18 @@ class WeatherForecastBlock extends BlockBase implements ContainerFactoryPluginIn
    * @param FormBuilder $formBuilder
    * @param WeatherForecastService $weatherForecastService
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, FormBuilder $formBuilder, WeatherForecastService $weatherForecastService) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition,
+                              FormBuilder $formBuilder, WeatherForecastService $weatherForecastService, TimeCheckService $timeCheckService) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->formBuilder = $formBuilder;
     $this->weatherForecastService = $weatherForecastService;
+    $this->timeCheckService = $timeCheckService;
   }
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-//    $data = $this->weatherForecastService->data();
-//    dd($data);
-    $build = [];
       $build['lazy_builder'] = [
         '#lazy_builder' => [
           WeatherForecastBlock::class . '::lazyBuilder',
@@ -72,16 +77,28 @@ class WeatherForecastBlock extends BlockBase implements ContainerFactoryPluginIn
         ],
         '#create_placeholder' => TRUE,
       ];
+
     return $build;
   }
 
   public static function lazyBuilder() {
-//    $data = $this->weatherForecastService->data();
-//    $data = \Drupal\weather_forecast\WeatherForecastService::data();
+    $city = 'Skopje';
+    $currentDay = date('Y-m-d');
+    $data = \Drupal::service('weather_forecast_service')->data($city);
+    $checkStartData = \Drupal::service('time_check_service')->eventStart();
+    $checkEndData = \Drupal::service('time_check_service')->eventEnd();
+    foreach ($data as $item) {
+      if(date("Y-m-d", $item->dt) > $checkStartData) {
+        if(date("Y-m-d", $item->dt) === $currentDay) {
+          $weather[] = ['city' => $city, 'temp' => $item->temp->day, 'weather' => $item->weather[0]->main];
+        }
+      } else
+        $weather[] = ['Not started.'];
+    }
     sleep(5);
     return [
       '#theme' => 'weather_forecast',
-      '#data' => 'sdasdasdva',
+      '#data' => $weather,
     ];
   }
   public static function trustedCallbacks() {

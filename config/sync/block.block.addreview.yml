@@ -10,7 +10,7 @@ dependencies:
 id: addreview
 theme: bartik
 region: sidebar_first
-weight: 0
+weight: -11
 provider: null
 plugin: add_review
 settings:

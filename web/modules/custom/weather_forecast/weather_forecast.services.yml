@@ -1,4 +1,6 @@
 services:
   weather_forecast_service:
-    class: Drupal\weather_forecast\WeatherForecastService
+    class: Drupal\weather_forecast\Service\WeatherForecastService
     arguments: ['@http_client']
+  time_check_service:
+    class: Drupal\weather_forecast\Service\TimeCheckService
