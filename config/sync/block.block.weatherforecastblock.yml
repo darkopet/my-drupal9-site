@@ -1,0 +1,28 @@
+uuid: c9321935-b7d1-4613-90c1-27387035b5b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - weather_forecast
+  theme:
+    - bartik
+id: weatherforecastblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: weather_forecast
+settings:
+  id: weather_forecast
+  label: 'Weather Forecast Block'
+  label_display: visible
+  provider: weather_forecast
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

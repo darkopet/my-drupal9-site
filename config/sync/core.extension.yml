@@ -171,6 +171,7 @@ module:
   voting_api_events: 0
   votingapi: 0
   votingapi_widgets: 0
+  weather_forecast: 0
   webform: 0
   webform_example_element: 0
   webform_shortcuts: 0

@@ -1,0 +1,6 @@
+name: 'Weather Forecast'
+description: 'Weather forecast for the location set on the event.'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: custom
