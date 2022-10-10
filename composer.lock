@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab65e4c779a087e0811c560da7716e2a",
+    "content-hash": "69e593589a19903815387a95b7ef5fc3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5660,6 +5660,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/phone_international",
                 "issues": "https://www.drupal.org/project/issues/phone_international"
+            }
+        },
+        {
+            "name": "drupal/queue_throttle",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/queue_throttle.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/queue_throttle-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "71e370a7463c87b8dd70a7f17a7fa401bc46ae29"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1606658682",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "baikho",
+                    "homepage": "https://www.drupal.org/user/2727459"
+                }
+            ],
+            "description": "Provides throttled queue processing consumption.",
+            "homepage": "https://www.drupal.org/project/queue_throttle",
+            "support": {
+                "source": "https://git.drupalcode.org/project/queue_throttle"
             }
         },
         {

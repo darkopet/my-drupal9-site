@@ -1,0 +1,18 @@
+uuid: 383754a2-6e6b-448d-b584-6b055860209c
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.join
+id: group.join.label
+field_name: label
+entity_type: group
+bundle: join
+label: Join
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

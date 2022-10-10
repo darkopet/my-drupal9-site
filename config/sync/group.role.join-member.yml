@@ -1,0 +1,14 @@
+uuid: f1394f47-1265-442b-8fc1-a4770d2e96bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.join
+id: join-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: join
+permissions_ui: true
+permissions: {  }

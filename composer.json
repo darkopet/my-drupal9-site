@@ -99,6 +99,7 @@
         "drupal/paragraphs_sets": "^2.8",
         "drupal/pathauto": "^1.10",
         "drupal/phone_international": "^3.2",
+        "drupal/queue_throttle": "^1.2",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/reroute_email": "^2.1",
         "drupal/restui": "^1.21",

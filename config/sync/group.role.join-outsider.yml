@@ -1,0 +1,14 @@
+uuid: 287321ac-2445-4666-b9f9-ff926ef267f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.join
+id: join-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: join
+permissions_ui: true
+permissions: {  }

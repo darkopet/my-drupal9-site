@@ -1,0 +1,17 @@
+uuid: 3068c28c-d59c-45aa-bc91-1b5c1b40de62
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.join
+  enforced:
+    config:
+      - user.role.d_me_roku
+id: join-9537bfe32
+label: 'D.Me Roku'
+weight: 4
+internal: true
+audience: outsider
+group_type: join
+permissions_ui: false
+permissions: {  }

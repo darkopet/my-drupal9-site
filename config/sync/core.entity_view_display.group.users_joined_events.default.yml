@@ -1,0 +1,34 @@
+uuid: 4ab28473-4781-4c93-87de-a3a983176f9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.users_joined_events.field_joined_event
+    - group.type.users_joined_events
+id: group.users_joined_events.default
+targetEntityType: group
+bundle: users_joined_events
+mode: default
+content:
+  field_joined_event:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -4
+    region: content
+  label:
+    type: string
+    label: above
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  changed: true
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

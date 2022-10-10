@@ -1,0 +1,17 @@
+uuid: 06ac0eb6-6edb-4f11-bc34-8f642ced275b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.join
+  enforced:
+    config:
+      - user.role.administrator
+id: join-a416e6833
+label: Administrator
+weight: 3
+internal: true
+audience: outsider
+group_type: join
+permissions_ui: false
+permissions: {  }

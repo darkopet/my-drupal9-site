@@ -1,17 +1,18 @@
-uuid: abb2d0ca-8199-4a58-977d-f36ea24fe0f1
+uuid: b178fa9e-b1ad-4f1a-96da-ddf234c9ce32
 langcode: en
 status: true
 dependencies:
   config:
     - group.type.users_joined_events
-id: users_joined_events-member
-label: Member
-weight: -100
-internal: true
+id: users_joined_events-joined_users
+label: 'Joined Users'
+weight: 5
+internal: false
 audience: member
 group_type: users_joined_events
 permissions_ui: true
 permissions:
   - 'access group_node overview'
-  - 'leave group'
   - 'update own group_membership content'
+  - 'view group_node:event content'
+  - 'view group_node:event entity'

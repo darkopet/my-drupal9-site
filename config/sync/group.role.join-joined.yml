@@ -1,0 +1,18 @@
+uuid: 8a2c47cb-3f48-4c49-b45a-b656ff5ac6a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.join
+id: join-joined
+label: Joined
+weight: 6
+internal: false
+audience: member
+group_type: join
+permissions_ui: true
+permissions:
+  - 'access group_node overview'
+  - 'view group_node:event content'
+  - 'view group_node:event entity'
+  - 'view unpublished group_node:event entity'

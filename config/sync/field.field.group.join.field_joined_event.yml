@@ -1,0 +1,29 @@
+uuid: 9657d010-21ce-457d-bbe5-2550e353c49d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_joined_event
+    - group.type.join
+    - node.type.event
+id: group.join.field_joined_event
+field_name: field_joined_event
+entity_type: group
+bundle: join
+label: 'Joined Event'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

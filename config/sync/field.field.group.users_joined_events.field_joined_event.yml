@@ -1,0 +1,29 @@
+uuid: 1d03db10-e059-4264-95ce-b16fe75de764
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_joined_event
+    - group.type.users_joined_events
+    - node.type.event
+id: group.users_joined_events.field_joined_event
+field_name: field_joined_event
+entity_type: group
+bundle: users_joined_events
+label: 'Joined Event'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
