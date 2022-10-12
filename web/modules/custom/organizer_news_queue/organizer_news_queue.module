@@ -1,0 +1,14 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Queue\QueueFactory;
+use Drupal\Core\Queue\QueueInterface;
+
+/**
+ * Implements hook_entity_insert()
+ */
+function organizer_news_queue_entity_insert(EntityInterface $entity) {
+  if($entity->getEntityTypeId() !== 'node') {
+    return $entity;
+  }
+}
