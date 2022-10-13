@@ -1,8 +1,6 @@
 <?php
 
-namespace Drupal\organizer_news_queue\Plugin\QueueWorker;
-
-use Drupal\organizer_news_queue\Plugin\QueueWorker\NodePublishBase;
+namespace Drupal\npq\Plugin\QueueWorker;
 
 /**
  * A Node Publisher that publishes nodes on CRON run.
@@ -14,6 +12,5 @@ use Drupal\organizer_news_queue\Plugin\QueueWorker\NodePublishBase;
  * )
  */
 class CronNodePublisher extends NodePublishBase {
-
 
 }

@@ -3,7 +3,6 @@
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Queue\QueueFactory;
 use Drupal\Core\Queue\QueueInterface;
-use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 ///**
 // * Implements hook_entity_view_alter().
@@ -17,13 +16,13 @@ use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 /**
  * Implements hook_entity_insert().
  */
-function organizer_news_queue_entity_insert(EntityInterface $entity) {
+function npq_entity_insert(EntityInterface $entity) {
   if($entity->getEntityType() !== 'node') {
-
+    return $entity;
   }
 
   if($entity->isPublished()){
-
+    return $entity;
   }
 
   /**   @var QueueFactory $queue_factory   */

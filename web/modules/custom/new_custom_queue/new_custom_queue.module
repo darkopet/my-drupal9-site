@@ -1,0 +1,16 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Queue\QueueFactory;
+use Drupal\Core\Queue\QueueInterface;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function new_custom_queue_entity_insert(EntityInterface $entity) {
+  /** @var QueueInterface $queue */
+  $queue = \Drupal::service('queue')->get('custom_queue');
+  $item = new \stdClass();
+  $item->nid = $entity->id();
+  $queue->createItem($item);
+}
