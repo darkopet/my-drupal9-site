@@ -1,0 +1,19 @@
+uuid: e529a561-d697-451e-8f04-feab9768b0aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - sample_rest_resource
+    - serialization
+    - user
+id: custom_get_rest_resource
+plugin_id: custom_get_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+    - xml
+  authentication:
+    - cookie

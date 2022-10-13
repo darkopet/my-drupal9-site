@@ -135,6 +135,7 @@ module:
   rh_node: 0
   rh_taxonomy: 0
   rh_user: 0
+  sample_rest_resource: 0
   schemata: 0
   search_api: 0
   search_api_autocomplete: 0
