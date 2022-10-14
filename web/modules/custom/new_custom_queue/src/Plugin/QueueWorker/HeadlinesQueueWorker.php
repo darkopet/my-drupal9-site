@@ -1,24 +1,25 @@
 <?php
 
-namespace Drupal\custom_queue\Plugin\QueueWorker;
+namespace Drupal\new_custom_queue\Plugin\QueueWorker;
 
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
+use Drupal\new_custom_queue\Service\HeadlinesQueueService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Custom Queue Worker.
  *
  * @QueueWorker(
- *   id = "custom_queue",
- *   title = @Translation("Custom Queue"),
+ *   id = "headlines_queue",
+ *   title = @Translation("HeadlinesQueueWorker"),
  *   cron = {"time" = 60}
  * )
  */
-final class CustomQueue extends QueueWorkerBase implements ContainerFactoryPluginInterface {
+final class HeadlinesQueueWorker extends QueueWorkerBase implements ContainerFactoryPluginInterface {
 
   /**
    * The entity type manager.
@@ -26,7 +27,6 @@ final class CustomQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    * @var EntityTypeManagerInterface
    */
   protected EntityTypeManagerInterface $entityTypeManager;
-
   /**
    * The database connection.
    *
@@ -39,6 +39,10 @@ final class CustomQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    * @var EntityStorageInterface
    */
   protected EntityStorageInterface $nodeStorage;
+  /**
+   * @var HeadlinesQueueService
+   */
+  protected HeadlinesQueueService $service;
 
   /**
    * Main constructor.
@@ -55,22 +59,25 @@ final class CustomQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    *   The connection to the database.
    * @param EntityStorageInterface $node_storage
    *   The node storage.
+   * @param HeadlinesQueueService $service
+   *   Custom Headline News Service.
    */
   public function __construct(array                      $configuration, $plugin_id, $plugin_definition,
                               EntityTypeManagerInterface $entity_type_manager,
                               Connection                 $database,
-                              EntityStorageInterface     $node_storage)
+                              HeadlinesQueueService      $service)
   {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->entityTypeManager = $entity_type_manager;
     $this->database = $database;
-    $this->nodeStorage = $node_storage;
+    $this->nodeStorage = $this->entityTypeManager->getStorage('node');
+    $this->service = $service;
   }
 
   /**
    * Used to grab functionality from the container.
    *
-   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   * @param ContainerInterface $container
    *   The container.
    * @param array $configuration
    *   Configuration array.
@@ -88,7 +95,7 @@ final class CustomQueue extends QueueWorkerBase implements ContainerFactoryPlugi
       $plugin_definition,
       $container->get('entity_type.manager'),
       $container->get('database'),
-      $container->get('node_storage')
+      $container->get('headlines.news')
     );
   }
 
@@ -104,9 +111,7 @@ final class CustomQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    * @throws \Exception
    */
   public function processItem($data) {
-    $nid = $data->nid;
-    $update = $data->update;
-    // Processing of queue items logic goes here.
+    $nids = $this->service->getNid();
+    return $nids;
   }
-
 }

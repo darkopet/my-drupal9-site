@@ -1,16 +1,68 @@
 <?php
 
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Queue\QueueFactory;
 use Drupal\Core\Queue\QueueInterface;
 
 /**
  * Implements hook_entity_insert().
  */
 function new_custom_queue_entity_insert(EntityInterface $entity) {
-  /** @var QueueInterface $queue */
-  $queue = \Drupal::service('queue')->get('custom_queue');
-  $item = new \stdClass();
-  $item->nid = $entity->id();
-  $queue->createItem($item);
+  if ($entity->bundle() === 'event') {
+    /** @var QueueInterface $queue */
+    $queue = \Drupal::service('queue')->get('headlines_queue');
+    $queue->createItem($entity);
+  }
+}
+
+/**
+ * Implements hook_schema().
+ */
+function new_custom_module_schema() {
+  $spec = [
+    'description' => 'Scanning Actions Raw Data',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => '0',
+        'unsigned' => TRUE,
+      ],
+      'mac_address' => [
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 20,
+        'default' => '',
+      ],
+      'rssi' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'scanner_id' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'start_date' => [
+        'type' => 'varchar',
+        'mysql_type' => 'datetime',
+        'not null' => TRUE,
+      ],
+      'current_date' => [
+        'type' => 'varchar',
+        'mysql_type' => 'datetime',
+        'not null' => TRUE,
+      ],
+      'created_date' => [
+        'type' => 'varchar',
+        'mysql_type' => 'datetime',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  $schema = \Drupal\Core\Database\Database::getConnection()->schema();
+  $schema->createTable('scanning_raw_data', $spec);
 }

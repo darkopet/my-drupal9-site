@@ -109,7 +109,6 @@ module:
   new_custom_queue: 0
   node: 0
   notification1: 0
-  npq: 0
   openapi: 0
   options: 0
   organizer_news_queue: 0

@@ -1,5 +1,0 @@
-name: 'Node Publish Queue'
-type: module
-description: 'Most recent news headlines about the company organizing the event.'
-core: 8.x
-core_version_requirement: ^8 || ^9
