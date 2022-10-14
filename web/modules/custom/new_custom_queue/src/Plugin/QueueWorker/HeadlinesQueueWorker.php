@@ -8,6 +8,7 @@ use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\new_custom_queue\Service\HeadlinesQueueService;
+use Drupal\new_custom_queue\Service\NewsRetrieveService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -42,7 +43,11 @@ final class HeadlinesQueueWorker extends QueueWorkerBase implements ContainerFac
   /**
    * @var HeadlinesQueueService
    */
-  protected HeadlinesQueueService $service;
+  protected HeadlinesQueueService $queueService;
+  /**
+   * @var NewsRetrieveService
+   */
+  protected NewsRetrieveService $retrieveService;
 
   /**
    * Main constructor.
@@ -59,19 +64,23 @@ final class HeadlinesQueueWorker extends QueueWorkerBase implements ContainerFac
    *   The connection to the database.
    * @param EntityStorageInterface $node_storage
    *   The node storage.
-   * @param HeadlinesQueueService $service
+   * @param HeadlinesQueueService $queueService
    *   Custom Headline News Service.
+   * @param NewsRetrieveService $retrieveService
+   *   NewsAPI retrieve Service.
    */
   public function __construct(array                      $configuration, $plugin_id, $plugin_definition,
                               EntityTypeManagerInterface $entity_type_manager,
                               Connection                 $database,
-                              HeadlinesQueueService      $service)
+                              HeadlinesQueueService      $queueService,
+                              NewsRetrieveService        $retrieveService)
   {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->entityTypeManager = $entity_type_manager;
     $this->database = $database;
     $this->nodeStorage = $this->entityTypeManager->getStorage('node');
-    $this->service = $service;
+    $this->queueService = $queueService;
+    $this->retrieveService = $retrieveService;
   }
 
   /**
@@ -95,7 +104,8 @@ final class HeadlinesQueueWorker extends QueueWorkerBase implements ContainerFac
       $plugin_definition,
       $container->get('entity_type.manager'),
       $container->get('database'),
-      $container->get('headlines.news')
+      $container->get('headlines.news'),
+      $container->get('news.retrieve')
     );
   }
 
@@ -110,8 +120,9 @@ final class HeadlinesQueueWorker extends QueueWorkerBase implements ContainerFac
    * @throws \Drupal\Core\Entity\EntityStorageException
    * @throws \Exception
    */
-  public function processItem($data) {
-    $nids = $this->service->getNid();
-    return $nids;
+  public function processItem($organizer) {
+    $news = $this->retrieveService->data($organizer);
+    dd($news);
+    return $news;
   }
 }
