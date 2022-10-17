@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function new_custom_queue_install() {
+  $schema['organizer_headlines'] = [
+    'description' => 'Organizer Headline',
+    'fields' => [
+      'id' => [
+        'type' => 'int',
+        'unsigned' =>TRUE,
+        'not null' => TRUE,
+      ],
+      'headline' => [
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 255,
+        'default' => '',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+//  $schema = \Drupal\Core\Database\Database::getConnection()->schema();
+//  $schema->createTable('organizer_headlines', $spec);
+  return $schema;
+}
