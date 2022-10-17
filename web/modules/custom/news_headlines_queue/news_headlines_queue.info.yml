@@ -1,0 +1,7 @@
+name: 'News Headlines Queue'
+type: module
+description: 'Retrieve latest news headlines about organizers of events.'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+

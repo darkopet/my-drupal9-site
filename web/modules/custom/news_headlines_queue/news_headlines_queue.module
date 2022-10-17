@@ -1,0 +1,15 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Queue\QueueInterface;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function news_headline_queue_entity_insert(EntityInterface $entity) {
+  if ($entity->bundle() === 'event') {
+    /** @var QueueInterface $queue */
+    $queue = \Drupal::service('queue')->get('news_headlines_queue');
+    $queue->createItem($entity);
+  }
+}
