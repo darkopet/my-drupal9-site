@@ -18,51 +18,23 @@ function new_custom_queue_entity_insert(EntityInterface $entity) {
  * Implements hook_schema().
  */
 function new_custom_module_schema() {
-  $spec = [
-    'description' => 'Scanning Actions Raw Data',
+  $schema['organizer_headlines'] = [
+    'description' => 'Organizer Headline',
     'fields' => [
       'id' => [
         'type' => 'serial',
         'not null' => TRUE,
       ],
-      'nid' => [
-        'type' => 'int',
-        'not null' => TRUE,
-        'default' => '0',
-        'unsigned' => TRUE,
-      ],
-      'mac_address' => [
+      'headline' => [
         'type' => 'varchar',
         'not null' => TRUE,
-        'length' => 20,
+        'length' => 255,
         'default' => '',
-      ],
-      'rssi' => [
-        'type' => 'int',
-        'not null' => TRUE,
-      ],
-      'scanner_id' => [
-        'type' => 'int',
-        'not null' => TRUE,
-      ],
-      'start_date' => [
-        'type' => 'varchar',
-        'mysql_type' => 'datetime',
-        'not null' => TRUE,
-      ],
-      'current_date' => [
-        'type' => 'varchar',
-        'mysql_type' => 'datetime',
-        'not null' => TRUE,
-      ],
-      'created_date' => [
-        'type' => 'varchar',
-        'mysql_type' => 'datetime',
-        'not null' => TRUE,
       ],
     ],
     'primary key' => ['id'],
   ];
-  $schema = \Drupal\Core\Database\Database::getConnection()->schema();
-  $schema->createTable('scanning_raw_data', $spec);
+//  $schema = \Drupal\Core\Database\Database::getConnection()->schema();
+//  $schema->createTable('organizer_headlines', $spec);
+  return $schema;
 }

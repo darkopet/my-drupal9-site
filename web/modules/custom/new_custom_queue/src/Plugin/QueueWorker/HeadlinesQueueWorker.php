@@ -120,8 +120,8 @@ final class HeadlinesQueueWorker extends QueueWorkerBase implements ContainerFac
    * @throws \Drupal\Core\Entity\EntityStorageException
    * @throws \Exception
    */
-  public function processItem($organizer) {
-    $news = $this->retrieveService->data($organizer);
+  public function processItem() {
+    $news = \Drupal::service('news.retrieve')->data('tesla');
     dd($news);
     return $news;
   }

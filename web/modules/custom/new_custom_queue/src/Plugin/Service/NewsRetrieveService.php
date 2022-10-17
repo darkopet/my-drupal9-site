@@ -36,7 +36,7 @@ class NewsRetrieveService {
     );
   }
   public function data(string $organizer): array{
-    $request = $this->httpClient->request('GET', 'https://newsapi.org/v2/everything?q=' . $organizer . 'from=2022-09-14&sortBy=publishedAt&apiKey=de33e4a7b4f94ff694b58b8efa876baf', []);
+    $request = $this->httpClient->request('GET', 'https://newsapi.org/v2/everything?q=' . $organizer . 'from=2022-09-17&sortBy=publishedAt&apiKey=de33e4a7b4f94ff694b58b8efa876baf', []);
     $data = json_decode($request->getBody()->getContents());
     $news = $data->list;
     return $news;
