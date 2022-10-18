@@ -37,7 +37,6 @@ class HeadlineNewsService {
   public function getHeadlines(string $organizer) {
     $request = $this->httpClient->request('GET', 'https://newsapi.org/v2/everything?q=' . $organizer . '&from=' . date('Y-m-d') . '&sortBy=publishedAt&apiKey=de33e4a7b4f94ff694b58b8efa876baf', []);
     $data = json_decode($request->getBody()->getContents());
-//  dd($data);
     return $data;
   }
 }

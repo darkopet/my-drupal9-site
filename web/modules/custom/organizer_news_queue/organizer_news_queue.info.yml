@@ -1,6 +1,0 @@
-name: 'Organizer News Queue'
-type: module
-description: 'Retrieve headline news for the organizer of an event.'
-package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9

@@ -1,2 +1,5 @@
-<strong> Organizer: {{ data[0]['company'] }} </strong> <br>
-<strong> Headline: {{ data[0]['headline'] }} </strong> <br>
+{% for i in 0..2 %}
+  <strong> Organizer: {{ data[i]['company'] }} </strong> <br><br>
+  <strong> {{ data[i]['headline'] }} </strong> <br><br>
+  <strong> <a href="{{ data[i]['link'] }}">{{ 'Link to the news'|t }}</a> </strong> <br><br><br>
+{% endfor %}

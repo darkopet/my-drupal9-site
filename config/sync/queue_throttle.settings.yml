@@ -1,0 +1,35 @@
+entity_reference_revisions_orphan_purger:
+  enabled: false
+  time: 60
+  items: 0
+  unit: ''
+entity_usage_regenerate_queue:
+  enabled: false
+  time: 60
+  items: 0
+  unit: ''
+headline_news_queue:
+  enabled: true
+  time: 60
+  items: 50
+  unit: hour
+locale_translation:
+  enabled: false
+  time: 60
+  items: 0
+  unit: ''
+media_entity_thumbnail:
+  enabled: false
+  time: 60
+  items: 0
+  unit: ''
+message_delete:
+  enabled: false
+  time: 60
+  items: 0
+  unit: ''
+message_check_delete:
+  enabled: false
+  time: 60
+  items: 0
+  unit: ''
