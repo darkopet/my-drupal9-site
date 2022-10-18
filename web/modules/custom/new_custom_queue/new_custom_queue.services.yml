@@ -1,7 +1,0 @@
-services:
-  headlines.news:
-    class: \Drupal\new_custom_queue\Service\HeadlinesQueueService
-    arguments: ['@entity_type.manager']
-  news.retrieve:
-    class: \Drupal\new_custom_queue\Service\NewsRetrieveService
-    arguments: [ '@http_client' ]
