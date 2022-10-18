@@ -3,6 +3,21 @@
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Queue\QueueInterface;
 
+
+/**
+ * Implements hook_theme().
+ */
+function headline_news_theme($existing, $type, $theme, $path): array
+{
+  return [
+    'headline_news' => [
+      'variables' => [
+        'data' => [],
+      ],
+    ],
+  ];
+}
+
 /**
  * Implements hook_entity_insert().
  */
@@ -14,30 +29,31 @@ function headline_news_entity_insert(EntityInterface $entity) {
   }
 }
 
-/**
- * Implements hook_update_N().
- */
-function module_name_update_9401() {
-  $database = \Drupal::database();
-  $schema = $database->schema();
-
-  $table_name = 'headlines';
-  $table_schema = [
-    'fields' => [
-      'id' => [
-        'type' => 'serial',
-        'size' => 'big',
-        'not null' => TRUE,
-      ],
-      'title' => [
-        'type' => 'text',
-        'size' => 'medium',
-        'not null' => FALSE,
-      ],
-    ],
-    'primary key' => ['id'],
-  ];
-
-  $schema->createTable($table_name, $table_schema);
-
-}
+//
+///**
+// * Implements hook_update_N().
+// */
+//function headline_news_update_9402() {
+//  $database = \Drupal::database();
+//  $schema = $database->schema();
+//
+//  $table_name = 'headlines';
+//  $table_schema = [
+//    'fields' => [
+//      'id' => [
+//        'type' => 'serial',
+//        'size' => 'big',
+//        'not null' => TRUE,
+//      ],
+//      'title' => [
+//        'type' => 'text',
+//        'size' => 'medium',
+//        'not null' => FALSE,
+//      ],
+//    ],
+//    'primary key' => ['id'],
+//  ];
+//
+//  $schema->createTable($table_name, $table_schema);
+//
+//}

@@ -2,12 +2,12 @@
 
 namespace Drupal\headline_news\Plugin\QueueWorker;
 
-use Drupal\Core\Annotation\QueueWorker;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use GuzzleHttp\ClientInterface;
 
 /**
   * @QueueWorker(
@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   *   title = @Translation("Headline News Queue"),
   *   cron = {"time" = 60}
   * )
-*/
+  */
 
 final class HeadlineNewsQueue extends QueueWorkerBase implements ContainerFactoryPluginInterface {
   /**
@@ -30,6 +30,12 @@ final class HeadlineNewsQueue extends QueueWorkerBase implements ContainerFactor
    * @var Connection
    */
   protected Connection $database;
+  /**
+   * The HTTP client to fetch the feed data with.
+   *
+   * @var ClientInterface
+   */
+  protected ClientInterface $httpClient;
 
   /**
    * Main constructor.
@@ -44,12 +50,17 @@ final class HeadlineNewsQueue extends QueueWorkerBase implements ContainerFactor
    *   The entity type manager.
    * @param Connection $database
    *   The connection to the database.
+   * @param ClientInterface $http_client
+   *   A Guzzle client object.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition,
-                              EntityTypeManagerInterface $entity_type_manager, Connection $database) {
+                              EntityTypeManagerInterface $entity_type_manager,
+                              Connection $database,
+                              ClientInterface $http_client) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->entityTypeManager = $entity_type_manager;
     $this->database = $database;
+    $this->httpClient = $http_client;
   }
 
   /**
@@ -73,6 +84,7 @@ final class HeadlineNewsQueue extends QueueWorkerBase implements ContainerFactor
       $plugin_definition,
       $container->get('entity_type.manager'),
       $container->get('database'),
+      $container->get('http_client'),
     );
   }
 
@@ -90,7 +102,6 @@ final class HeadlineNewsQueue extends QueueWorkerBase implements ContainerFactor
   public function processItem($data) {
     $nid = $data->nid;
     $update = $data->update;
-
 // Processing of queue items logic goes here.
   }
 }

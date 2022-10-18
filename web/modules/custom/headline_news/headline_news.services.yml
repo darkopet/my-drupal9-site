@@ -1,0 +1,4 @@
+services:
+  headline.news:
+    class: Drupal\headline_news\Service\HeadlineNewsService
+    arguments: ['@http_client']

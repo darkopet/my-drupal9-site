@@ -10,7 +10,7 @@ dependencies:
 id: notificationblock_2
 theme: bartik
 region: content
-weight: -13
+weight: -17
 provider: null
 plugin: notification_block
 settings:

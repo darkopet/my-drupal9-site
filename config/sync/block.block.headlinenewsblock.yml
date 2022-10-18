@@ -1,0 +1,20 @@
+uuid: 288f07e4-738c-42c1-a9c5-63c684624627
+langcode: en
+status: true
+dependencies:
+  module:
+    - headline_news
+  theme:
+    - bartik
+id: headlinenewsblock
+theme: bartik
+region: sidebar_first
+weight: -20
+provider: null
+plugin: headline_news
+settings:
+  id: headline_news
+  label: 'Headline News Block'
+  label_display: visible
+  provider: headline_news
+visibility: {  }

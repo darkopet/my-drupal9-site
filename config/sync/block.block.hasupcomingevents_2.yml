@@ -12,7 +12,7 @@ dependencies:
 id: hasupcomingevents_2
 theme: bartik
 region: sidebar_first
-weight: -13
+weight: -12
 provider: null
 plugin: 'facet_block:has_upcoming_events'
 settings:
