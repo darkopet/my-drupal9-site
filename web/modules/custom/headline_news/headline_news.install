@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function headline_news_schema():array {
+  $schema['organizer_headlines'] = [
+    'description' => 'Organizer Headline',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'headline' => [
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => FALSE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+//  $schema = \Drupal\Core\Database\Database::getConnection()->schema();
+//  $schema->createTable('organizer_headlines', $spec);
+  return $schema;
+}

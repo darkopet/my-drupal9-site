@@ -72,6 +72,7 @@ module:
   gnode: 0
   group: 0
   hal: 0
+  headline_news: 0
   help: 0
   history: 0
   hooks_example: 0
@@ -110,7 +111,6 @@ module:
   notification1: 0
   openapi: 0
   options: 0
-  organizer_news_queue: 0
   page_cache: 0
   page_example: 0
   pager_example: 0

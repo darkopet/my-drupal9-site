@@ -1,0 +1,43 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Queue\QueueInterface;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function headline_news_entity_insert(EntityInterface $entity) {
+  if ($entity->bundle() === 'event') {
+    /** @var QueueInterface $queue */
+    $queue = \Drupal::service('queue')->get('headline_news_queue');
+    $queue->createItem($entity);
+  }
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function module_name_update_9401() {
+  $database = \Drupal::database();
+  $schema = $database->schema();
+
+  $table_name = 'headlines';
+  $table_schema = [
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'title' => [
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  $schema->createTable($table_name, $table_schema);
+
+}
