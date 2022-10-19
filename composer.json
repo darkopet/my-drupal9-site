@@ -134,6 +134,7 @@
         "drush/drush": "*",
         "league/oauth2-google": "^3.0",
         "platformsh/config-reader": "^2.4",
+        "symfony/phpunit-bridge": "^6.1",
         "twig/twig": "2.15.3",
         "woocommerce/flexslider": "~2.0"
     },

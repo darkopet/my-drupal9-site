@@ -5,6 +5,7 @@ namespace Drupal\Tests\phpunit_example\Unit;
 use Drupal\Tests\UnitTestCase;
 use Drupal\phpunit_example\Unit;
 
+
 /**
  * Simple test to ensure that asserts pass.
  *
@@ -23,7 +24,7 @@ class UnitTest extends UnitTestCase {
   }
 
   /**
-   * @covers Unit::setLength
+   * @covers Drupal\phpunit_example\Unit::setLength
    */
   public function testSetLength() {
 
@@ -33,7 +34,7 @@ class UnitTest extends UnitTestCase {
   }
 
   /**
-   * @covers Unit::getLength
+   * @covers Drupal\phpunit_example\Unit::getLength
    */
   public function testGetLength() {
 
