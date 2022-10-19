@@ -1,0 +1,24 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+  gherkin:
+    cache: ~
+  extensions:
+    DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
+    Behat\MinkExtension:
+      goutte: ~
+      base_url: http://ddev
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: drupal
+      drupal:
+        drupal_root: web/
+      region_map:
+        header: "#header"
+        sidebar: "#sidebar-first"
+        content: "#content"
+        footer: ".site-footer"

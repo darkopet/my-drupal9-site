@@ -165,6 +165,31 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/complexity" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/behat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/transliterator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/textalk/websocket" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/drupal-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/drupal-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-selenium2-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-goutte-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/mink-browserkit-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/instaclick/php-webdriver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fabpot/goutte" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dmore/behat-chrome-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dmore/chrome-mink-driver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/friends-of-behat/mink-extension" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy-phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

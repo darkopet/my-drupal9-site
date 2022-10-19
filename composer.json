@@ -213,6 +213,10 @@
         }
     },
     "require-dev": {
+        "behat/behat": "^3.11",
+        "dmore/behat-chrome-extension": "^1.4",
+        "drupal/drupal-extension": "^4.2",
+        "phpspec/prophecy-phpunit": "^2.0",
         "phpunit/phpunit": "^9.5"
     }
 }
