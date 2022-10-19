@@ -67,8 +67,9 @@ class HeadlineNewsBlock extends BlockBase implements ContainerFactoryPluginInter
     if($this->currentRouteService->getCurrentRouteMatch()->getParameter('node') === null){
       $organizer = 'tesla';
     } elseif ($this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('type')->getValue()[0]['target_id'] === 'event') {
-      if ($this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('field_event_organizer')->getValue()[0]['target_id']){
-          $organizer = 'apple';
+      if ($this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('field_event_organizer')->getValue()){
+        $nid = $this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('field_event_organizer')->getValue()[0]['target_id'];
+        $organizer = \Drupal\node\Entity\Node::load($nid)->get('title')->getValue()[0]['value'];
       } else {
         $organizer = 'microsoft';
       }
