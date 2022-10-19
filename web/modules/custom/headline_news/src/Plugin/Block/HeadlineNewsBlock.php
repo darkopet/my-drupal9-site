@@ -65,22 +65,27 @@ class HeadlineNewsBlock extends BlockBase implements ContainerFactoryPluginInter
    */
   public function build() {
     if($this->currentRouteService->getCurrentRouteMatch()->getParameter('node') === null){
-      $organizer = 'tesla';
+      $organizer = null;
     } elseif ($this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('type')->getValue()[0]['target_id'] === 'event') {
       if ($this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('field_event_organizer')->getValue()){
         $nid = $this->currentRouteService->getCurrentRouteMatch()->getParameter('node')->get('field_event_organizer')->getValue()[0]['target_id'];
         $organizer = \Drupal\node\Entity\Node::load($nid)->get('title')->getValue()[0]['value'];
       } else {
-        $organizer = 'microsoft';
+        $organizer = null;
       }
     } else {
-      $organizer = 'foxconn';
+      $organizer = null;
     }
 
-    $results = \Drupal::service('headline.news')->getHeadlines($organizer);
-    foreach ($results->articles as $result) {
-      $headlineNews[] = ['company' => $organizer, 'headline' => $result->title, 'link' => $result->url];
+    if($organizer) {
+      $results = \Drupal::service('headline.news')->getHeadlines($organizer);
+      foreach ($results->articles as $result) {
+        $headlineNews[] = ['company' => $organizer, 'headline' => $result->title, 'link' => $result->url];
+      }
+    } else {
+      $headlineNews[] = ['company' => 'No such company', 'headline' => 'No headline', 'link' => ''];
     }
+
     return [
       '#theme' => 'headline_news',
       '#data' => $headlineNews,
