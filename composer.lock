@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8eeef1f7b05def13425fdc87410877c1",
+    "content-hash": "7a9a69ddfc5ba654a4e0328b99c2ad04",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -16208,6 +16208,116 @@
                 }
             ],
             "time": "2022-04-26T19:55:44+00:00"
+        },
+        {
+            "name": "drush-ops/behat-drush-endpoint",
+            "version": "9.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drush-ops/behat-drush-endpoint.git",
+                "reference": "319ad4034174f93d82373a2c83b02faa20d85226"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drush-ops/behat-drush-endpoint/zipball/319ad4034174f93d82373a2c83b02faa20d85226",
+                "reference": "319ad4034174f93d82373a2c83b02faa20d85226",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/drupal-driver": "*",
+                "php": ">=5.3.0"
+            },
+            "conflict": {
+                "drush/drush": "<8.2 || >=9.0 <9.6.0"
+            },
+            "require-dev": {
+                "composer/installers": "^1.2",
+                "drupal/core": "^8.8",
+                "drupal/core-composer-scaffold": "^8.8.1",
+                "drush/drush": "^8.3.3 || ^10.2.2",
+                "g1a/composer-test-scenarios": "^3.0.2",
+                "pantheon-systems/drupal-integrations": "^8",
+                "phpunit/phpunit": "^6.5",
+                "symfony/filesystem": "^3.4.28",
+                "webflo/drupal-finder": "^1.1.0",
+                "webmozart/path-util": "^2.3",
+                "zaporylie/composer-drupal-optimizations": "^1.0.2"
+            },
+            "type": "drupal-drush",
+            "extra": {
+                "installer-paths": {
+                    "sut/web/core": [
+                        "type:drupal-core"
+                    ],
+                    "sut/web/libraries/{$name}": [
+                        "type:drupal-library"
+                    ],
+                    "sut/web/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "sut/web/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "sut/web/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/Commands/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "drupal-scaffold": {
+                    "allowed-packages": [
+                        "pantheon-systems/drupal-integrations"
+                    ],
+                    "locations": {
+                        "web-root": "./sut/web"
+                    },
+                    "file-mapping": {
+                        "[project-root]/.editorconfig": false
+                    }
+                },
+                "scenarios": {
+                    "drush8": {
+                        "require-dev": {
+                            "drush/drush": "^8.3.3"
+                        },
+                        "config": {
+                            "platform": {
+                                "php": "7.0.8"
+                            }
+                        }
+                    },
+                    "drupal9": {
+                        "require-dev": {
+                            "drupal/core-recommended": "^9@rc",
+                            "drupal/core": "^9@rc",
+                            "drupal/core-composer-scaffold": "^9@rc",
+                            "pantheon-systems/drupal-integrations": "^9"
+                        },
+                        "config": {
+                            "platform": {
+                                "php": "7.3"
+                            }
+                        }
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Drush commandfile for use with drupal/drupal-driver.",
+            "homepage": "https://github.com/drush-ops/behat-drush-endpoint",
+            "keywords": [
+                "Behat",
+                "Drush",
+                "testing"
+            ],
+            "support": {
+                "issues": "https://github.com/drush-ops/behat-drush-endpoint/issues",
+                "source": "https://github.com/drush-ops/behat-drush-endpoint/tree/9.4.1"
+            },
+            "time": "2022-02-05T15:16:40+00:00"
         },
         {
             "name": "fabpot/goutte",
