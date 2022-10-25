@@ -4,8 +4,8 @@ cleanup_policy: 'no cleanup'
 horizon_refresh: P1D
 entity_ownership: by_email
 default_event_owner: 1
-cron_disabled: 0
 cron_frequency: 600
 client_secret_type: static_file
 client_secret_config:
-  secret_file_name: ''
+  secret_file_name: /home/workstation/Downloads/client_secret_741831487713-fi7km762kvukscflfgc1hn9e51g43i6g.apps.googleusercontent.com.json
+cron_disabled: 0
