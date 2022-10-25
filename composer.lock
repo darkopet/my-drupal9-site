@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fe3bdf8a3ecd0b3854e1480713382b7",
+    "content-hash": "a151fdede1cc6f6e92125b33203dd920",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4114,6 +4114,84 @@
             }
         },
         {
+            "name": "drupal/google_calendar",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_calendar.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_calendar-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "f538e7e4df9ac0905f940ba2c176588534622cba"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/google_secrets": "^1.0",
+                "ext-json": "*",
+                "google/apiclient": "^2.0@dev",
+                "php": "> 7.1"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1659304793",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev",
+                    "dev-8.x-2.x": "2.x-dev"
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ruth Ivimey-Cook",
+                    "homepage": "https://www.drupal.org/u/rivimey",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Drew Trafton",
+                    "homepage": "https://www.drupal.org/u/dtraft",
+                    "role": "Creator"
+                },
+                {
+                    "name": "rivimey",
+                    "homepage": "https://www.drupal.org/user/393446"
+                }
+            ],
+            "description": "Provides an extensible integration with Google Calendar",
+            "homepage": "https://www.drupal.org/project/google_calendar",
+            "keywords": [
+                "API",
+                "Calendar",
+                "Drupal",
+                "Entity",
+                "Google"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_calendar",
+                "issues": "https://www.drupal.org/project/issues/google_calendar"
+            }
+        },
+        {
             "name": "drupal/google_calendar_service",
             "version": "2.0.0-alpha1",
             "source": {
@@ -4180,6 +4258,63 @@
             "support": {
                 "source": "https://git.drupal.org/project/google_calendar_service.git",
                 "issues": "https://www.drupal.org/project/issues/google_calendar_service"
+            }
+        },
+        {
+            "name": "drupal/google_secrets",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_secrets.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_secrets-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "4d86efcee6fbdc31bf7bcb5c36a15248d54f5018"
+            },
+            "require": {
+                "drupal/core": "^8.8|^9.0",
+                "google/apiclient": "^2.0",
+                "php": "> 7.2"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1592433728",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ruth Ivimey-Cook",
+                    "homepage": "https://www.drupal.org/u/rivimey",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "API module defining storage for Google_Client API secrets files.",
+            "homepage": "https://www.drupal.org/project/google_secrets",
+            "keywords": [
+                "API",
+                "Drupal",
+                "Google",
+                "Google_Client"
+            ],
+            "support": {
+                "source": "http://git.drupalcode.org/project/google_secrets",
+                "issues": "https://www.drupal.org/project/issues/google_secrets"
             }
         },
         {

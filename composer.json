@@ -75,6 +75,7 @@
         "drupal/field_slideshow": "^3.0@beta",
         "drupal/flag": "^4.0@beta",
         "drupal/flexslider": "^2.0",
+        "drupal/google_calendar": "^2.4",
         "drupal/google_calendar_service": "^2.0@alpha",
         "drupal/group": "^1.5",
         "drupal/intense": "^2.3",

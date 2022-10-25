@@ -1,0 +1,17 @@
+uuid: 4c369539-e59b-4af8-b71f-4abb9d2755b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_calendar_service
+title: 'Default cron handler'
+id: google_calendar_service_cron
+weight: 0
+module: google_calendar_service
+callback: google_calendar_service_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

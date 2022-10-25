@@ -1,0 +1,54 @@
+display:
+  default:
+    display_title: 主
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 过滤
+          reset_button_label: 重置
+          exposed_sorts_label: 排序依据
+          sort_asc_label: 升序
+          sort_desc_label: 降序
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« 首页'
+            last: '末页 »'
+          expose:
+            items_per_page_label: 每页条目数
+            items_per_page_options_all_label: '- 全部 -'
+            offset_label: 偏移量
+      fields:
+        name:
+          label: 事件名称
+          separator: ', '
+        calendar:
+          separator: ', '
+        start_date:
+          label: 开始日期
+          separator: ', '
+        end_date:
+          label: 结束日期
+          separator: ', '
+        description__value:
+          label: 描述
+          separator: ', '
+        updated:
+          label: 已更新
+          separator: ', '
+        state:
+          label: 状态
+          separator: ', '
+        location:
+          label: 位置
+          separator: ', '
+        operations:
+          label: 动作
+      filters:
+        combine:
+          expose:
+            label: 搜索
+  events:
+    display_title: 页面

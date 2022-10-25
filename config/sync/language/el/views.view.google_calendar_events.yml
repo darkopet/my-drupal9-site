@@ -1,0 +1,50 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Φίλτρο
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+      fields:
+        name:
+          separator: ', '
+        calendar:
+          separator: ', '
+        start_date:
+          label: 'Ημερομηνία έναρξης'
+          separator: ', '
+        end_date:
+          label: 'Ημερομηνία Λήξης'
+          separator: ', '
+        description__value:
+          label: Περιγραφή
+          separator: ', '
+        updated:
+          label: Ενημερώθηκε
+          separator: ', '
+        state:
+          label: Κατάσταση
+          separator: ', '
+        location:
+          label: Τοποθεσία
+          separator: ', '
+        operations:
+          label: Ενέργειες
+      filters:
+        combine:
+          expose:
+            label: Αναζήτηση
+  events:
+    display_title: Σελίδα

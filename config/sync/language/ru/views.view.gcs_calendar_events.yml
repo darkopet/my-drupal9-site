@@ -1,0 +1,52 @@
+display:
+  default:
+    display_title: Основной
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Элементов на страницу'
+            items_per_page_options_all_label: '- Все -'
+            offset_label: Пропустить
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        name:
+          separator: ', '
+        start_date:
+          label: 'Дата начала'
+          separator: ', '
+        end_date:
+          label: 'Дата окончания'
+          separator: ', '
+        changed:
+          label: Обновлено
+          separator: ', '
+        operations:
+          label: Действия
+        description__value:
+          label: Описание
+          separator: ', '
+        location:
+          label: Место
+          separator: ', '
+        calendar:
+          separator: ', '
+      filters:
+        combine:
+          expose:
+            label: Поиск
+      arguments:
+        calendar:
+          exception:
+            title: Все
+  calendar_list:
+    display_title: Страница

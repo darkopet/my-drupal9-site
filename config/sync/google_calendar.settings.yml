@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: 4HDHwzWi69IJfMUolvztr-X4GOdZaIDf4rC7X_jKIHE
+cleanup_policy: 'no cleanup'
+horizon_refresh: P1D
+entity_ownership: by_email
+default_event_owner: 1
+cron_disabled: 0
+cron_frequency: 600
+client_secret_type: static_file
+client_secret_config:
+  secret_file_name: ''

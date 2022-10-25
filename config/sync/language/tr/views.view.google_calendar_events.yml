@@ -1,0 +1,53 @@
+display:
+  default:
+    display_title: 'Ana (master)'
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Süzgeç
+          reset_button_label: Sıfırla
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« İlk'
+            last: 'Son »'
+          expose:
+            items_per_page_label: 'Sayfa başına öğe sayısı'
+            items_per_page_options_all_label: '- Tümü -'
+            offset_label: 'Başlangıç değeri'
+      fields:
+        name:
+          separator: ', '
+        calendar:
+          separator: ', '
+        start_date:
+          label: 'Başlangıç Tarihi'
+          separator: ', '
+        end_date:
+          label: 'Bitiş Tarihi'
+          separator: ', '
+        description__value:
+          label: Açıklama
+          separator: ', '
+        updated:
+          label: Güncellendi
+          separator: ', '
+        state:
+          label: Eyalet
+          separator: ', '
+        location:
+          label: Konum
+          separator: ', '
+        operations:
+          label: Eylemler
+      filters:
+        combine:
+          expose:
+            label: Ara
+  events:
+    display_title: Sayfa

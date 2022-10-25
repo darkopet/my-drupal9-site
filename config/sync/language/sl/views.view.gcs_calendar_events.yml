@@ -1,0 +1,25 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      fields:
+        changed:
+          label: Posodobljeno
+        operations:
+          label: Akcije
+        description__value:
+          label: Opis
+        location:
+          label: Mesto
+      filters:
+        combine:
+          expose:
+            label: Išči
+      arguments:
+        calendar:
+          exception:
+            title: Vsi
+  calendar_list:
+    display_title: Stran

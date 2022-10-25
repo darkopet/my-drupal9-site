@@ -70,7 +70,9 @@ module:
   flexslider_fields: 0
   flexslider_views: 0
   gnode: 0
+  google_calendar: 0
   google_calendar_service: 0
+  google_secrets: 0
   group: 0
   hal: 0
   headline_news: 0
