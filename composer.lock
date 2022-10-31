@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a151fdede1cc6f6e92125b33203dd920",
+    "content-hash": "d0675d66ad98bf6b93197ba242f7a513",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4111,6 +4111,57 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flexslider",
                 "issues": "https://drupal.org/project/issues/flexslider"
+            }
+        },
+        {
+            "name": "drupal/google_api_client",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_api_client.git",
+                "reference": "8.x-4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_api_client-8.x-4.3.zip",
+                "reference": "8.x-4.3",
+                "shasum": "d8dbb56b5136f32b59593b2e2085e6b1d1259139"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10",
+                "google/apiclient": "~2",
+                "google/apiclient-services": "~0.200",
+                "php": ">=5.4.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.3",
+                    "datestamp": "1663728883",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "dakku",
+                    "homepage": "https://www.drupal.org/user/97634"
+                },
+                {
+                    "name": "sadashiv",
+                    "homepage": "https://www.drupal.org/user/1773304"
+                }
+            ],
+            "description": "Google API PHP Client",
+            "homepage": "https://www.drupal.org/project/google_api_client",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_api_client"
             }
         },
         {
