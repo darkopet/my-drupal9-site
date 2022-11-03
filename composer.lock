@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a57c1981cdd5cfa87baed9b0a65a4857",
+    "content-hash": "c05fc0b8999d4dc8cc6a7f5111085764",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4111,6 +4111,73 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flexslider",
                 "issues": "https://drupal.org/project/issues/flexslider"
+            }
+        },
+        {
+            "name": "drupal/fullcalendar",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/fullcalendar.git",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/fullcalendar-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "fd399948e748e4fe0cdb37e3a3be0bba82405ec5"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/colors": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1587382056",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "aspilicious",
+                    "homepage": "https://www.drupal.org/user/172527"
+                },
+                {
+                    "name": "dakala",
+                    "homepage": "https://www.drupal.org/user/53175"
+                },
+                {
+                    "name": "hefox",
+                    "homepage": "https://www.drupal.org/user/426416"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                },
+                {
+                    "name": "tstoeckler",
+                    "homepage": "https://www.drupal.org/user/107158"
+                }
+            ],
+            "description": "Integrates the Fullcalender Library from https://fullcalendar.io",
+            "homepage": "https://www.drupal.org/project/fullcalendar",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/fullcalendar",
+                "issues": "http://drupal.org/project/issues/fullcalendar"
             }
         },
         {
@@ -19640,6 +19707,7 @@
         "drupal/entity_usage": 10,
         "drupal/field_slideshow": 10,
         "drupal/flag": 10,
+        "drupal/fullcalendar": 15,
         "drupal/google_calendar_service": 15,
         "drupal/libraries": 10,
         "drupal/maillog": 10,
