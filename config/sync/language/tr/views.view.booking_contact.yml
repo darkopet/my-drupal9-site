@@ -1,0 +1,105 @@
+display:
+  default:
+    display_title: 'Ana (master)'
+    display_options:
+      fields:
+        view_booking_contact:
+          text: görüntüle
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: E-posta
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        operations:
+          label: İşlemler
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« İlk'
+            last: 'Son »'
+          expose:
+            items_per_page_label: 'Sayfa başına öğe sayısı'
+            items_per_page_options_all_label: '- Tümü -'
+            offset_label: 'Başlangıç değeri'
+      exposed_form:
+        options:
+          submit_button: Uygula
+          reset_button_label: Sıfırla
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+      filters:
+        email:
+          expose:
+            label: E-posta
+  attachment_1:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: görüntüle
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: görüntüle
+        date:
+          label: Tarih
+          separator: ', '
+        operations:
+          label: İşlemler
+      arguments:
+        uid:
+          exception:
+            title: Tümü
+  page_1:
+    display_title: Sayfa
+    display_options:
+      fields:
+        view_booking_contact:
+          text: görüntüle
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: E-posta
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: görüntüle
+        date:
+          separator: ', '
+        operations:
+          label: İşlemler
+  user_bookings:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: görüntüle
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: görüntüle
+        date:
+          label: Tarih
+          separator: ', '
+        operations:
+          label: İşlemler
+      arguments:
+        uid:
+          exception:
+            title: Tümü

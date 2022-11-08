@@ -12,6 +12,7 @@ module:
   blazy_ui: 0
   block: 0
   block_content: 0
+  bookable_calendar: 0
   breakpoint: 0
   cache_example: 0
   checklistapi: 0
@@ -160,6 +161,7 @@ module:
   simpletest: 0
   site_status_message: 0
   smart_date: 0
+  smart_date_recur: 0
   social_api: 0
   social_auth: 0
   social_auth_github: 0

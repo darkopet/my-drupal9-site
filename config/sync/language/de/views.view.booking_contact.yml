@@ -1,0 +1,105 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        view_booking_contact:
+          text: Ansicht
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: E-Mail
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        operations:
+          label: Aktionen
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      filters:
+        email:
+          expose:
+            label: E-Mail
+  attachment_1:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: Ansicht
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: Ansicht
+        date:
+          label: Datum
+          separator: ', '
+        operations:
+          label: Aktionen
+      arguments:
+        uid:
+          exception:
+            title: Alle
+  page_1:
+    display_title: Seite
+    display_options:
+      fields:
+        view_booking_contact:
+          text: Ansicht
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: E-Mail
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: Ansicht
+        date:
+          separator: ', '
+        operations:
+          label: Aktionen
+  user_bookings:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: Ansicht
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: Ansicht
+        date:
+          label: Datum
+          separator: ', '
+        operations:
+          label: Aktionen
+      arguments:
+        uid:
+          exception:
+            title: Alle

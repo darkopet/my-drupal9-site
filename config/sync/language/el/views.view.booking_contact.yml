@@ -1,0 +1,102 @@
+display:
+  default:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: προβολή
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        operations:
+          label: Λειτουργίες
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Είδη ανά σελίδα'
+            items_per_page_options_all_label: '- Όλα -'
+            offset_label: Αντιστάθμιση
+      exposed_form:
+        options:
+          submit_button: Εφαρμογή
+          reset_button_label: Επαναφορά
+          exposed_sorts_label: 'Ταξινόμηση κατά'
+          sort_asc_label: Αύξ
+          sort_desc_label: Φθί
+      filters:
+        email:
+          expose:
+            label: Email
+  attachment_1:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: προβολή
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: προβολή
+        date:
+          label: Ημερομηνία
+          separator: ', '
+        operations:
+          label: Λειτουργίες
+      arguments:
+        uid:
+          exception:
+            title: Όλες
+  page_1:
+    display_title: Σελίδα
+    display_options:
+      fields:
+        view_booking_contact:
+          text: προβολή
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: προβολή
+        date:
+          separator: ', '
+        operations:
+          label: Λειτουργίες
+  user_bookings:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: προβολή
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: προβολή
+        date:
+          label: Ημερομηνία
+          separator: ', '
+        operations:
+          label: Λειτουργίες
+      arguments:
+        uid:
+          exception:
+            title: Όλες

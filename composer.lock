@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6331f75650136694bbca5162afbedf11",
+    "content-hash": "df7306c7b071f1fc0099bb2ed632de18",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2381,6 +2381,54 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/blazy",
                 "issues": "https://drupal.org/project/issues/blazy"
+            }
+        },
+        {
+            "name": "drupal/bookable_calendar",
+            "version": "2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bookable_calendar.git",
+                "reference": "2.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bookable_calendar-2.1.5.zip",
+                "reference": "2.1.5",
+                "shasum": "7b0e4e86fa0c1fc75547e1a600db561039ab3976"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/smart_date": "^3.0",
+                "drupal/smart_date_recur": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.5",
+                    "datestamp": "1666749163",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Fabean",
+                    "homepage": "https://www.drupal.org/u/josh.fabean",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Create an easy to use bookable calendar for people to book time.",
+            "homepage": "https://www.drupal.org/project/bookable_calendar",
+            "support": {
+                "source": "http://cgit.drupalcode.org/bookable_calendar",
+                "issues": "https://www.drupal.org/project/issues/bookable_calendar"
             }
         },
         {
@@ -7170,6 +7218,44 @@
                 "source": "https://git.drupalcode.org/project/smart_date",
                 "issues": "https://www.drupal.org/project/issues/smart_date",
                 "documentation": "https://www.drupal.org/docs/contributed-modules/smart-date"
+            }
+        },
+        {
+            "name": "drupal/smart_date_recur",
+            "version": "3.6.1",
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "drupal/smart_date": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "3.6.1",
+                    "datestamp": "1661631736",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "stefan.korn",
+                    "homepage": "https://www.drupal.org/user/1942204"
+                }
+            ],
+            "description": "Extends Smart Date to allow events to be recurring.",
+            "homepage": "https://www.drupal.org/project/smart_date",
+            "support": {
+                "source": "https://git.drupalcode.org/project/smart_date"
             }
         },
         {

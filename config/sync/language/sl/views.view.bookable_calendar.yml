@@ -1,0 +1,27 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      fields:
+        title:
+          label: Naslov
+        active:
+          label: Aktiven
+        status:
+          label: Stanje
+        operations:
+          label: Operacije
+      filters:
+        title:
+          expose:
+            label: Naslov
+        active:
+          expose:
+            label: Aktiven
+        status:
+          expose:
+            label: Stanje
+  page_1:
+    display_title: Stran

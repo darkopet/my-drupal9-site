@@ -1,0 +1,28 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      fields:
+        view_booking:
+          text: pogled
+        created:
+          label: Ustvarjeno
+        operations:
+          label: Operacije
+  admin_route:
+    display_options:
+      arguments:
+        booking_calendar:
+          exception:
+            title: Vsi
+      fields:
+        view_booking:
+          text: pogled
+        created:
+          label: Ustvarjeno
+        operations:
+          label: Operacije
+  page_1:
+    display_title: Stran

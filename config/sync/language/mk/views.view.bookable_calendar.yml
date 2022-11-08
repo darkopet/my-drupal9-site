@@ -1,0 +1,19 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- Сите -'
+      fields:
+        title:
+          label: Наслов
+        active:
+          label: Активно
+      filters:
+        title:
+          expose:
+            label: Наслов
+        active:
+          expose:
+            label: Активно

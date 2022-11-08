@@ -1,0 +1,105 @@
+display:
+  default:
+    display_title: 主
+    display_options:
+      fields:
+        view_booking_contact:
+          text: 查看
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: 电子邮件
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        operations:
+          label: 操作
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« 首页'
+            last: '末页 »'
+          expose:
+            items_per_page_label: 每页条目数
+            items_per_page_options_all_label: '- 全部 -'
+            offset_label: 偏移量
+      exposed_form:
+        options:
+          submit_button: 应用
+          reset_button_label: 重置
+          exposed_sorts_label: 排序依据
+          sort_asc_label: 升序
+          sort_desc_label: 降序
+      filters:
+        email:
+          expose:
+            label: 电子邮件
+  attachment_1:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: 查看
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: 查看
+        date:
+          label: 日期
+          separator: ', '
+        operations:
+          label: 操作
+      arguments:
+        uid:
+          exception:
+            title: 全部
+  page_1:
+    display_title: 页面
+    display_options:
+      fields:
+        view_booking_contact:
+          text: 查看
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: 电子邮件
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: 查看
+        date:
+          separator: ', '
+        operations:
+          label: 操作
+  user_bookings:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: 查看
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: 查看
+        date:
+          label: 日期
+          separator: ', '
+        operations:
+          label: 操作
+      arguments:
+        uid:
+          exception:
+            title: 全部

@@ -1,0 +1,106 @@
+display:
+  default:
+    display_title: Основной
+    display_options:
+      fields:
+        view_booking_contact:
+          text: представление
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        operations:
+          label: Операции
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« Первая'
+            last: 'Последняя »'
+          expose:
+            items_per_page_label: 'Элементов на страницу'
+            items_per_page_options_all_label: '- Все -'
+            offset_label: Пропустить
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Сбросить
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: 'По возрастанию'
+          sort_desc_label: 'По убыванию'
+      filters:
+        email:
+          expose:
+            label: Email
+  attachment_1:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: представление
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: представление
+        date:
+          label: Дата
+          separator: ', '
+        operations:
+          label: Операции
+      arguments:
+        uid:
+          exception:
+            title: Все
+  page_1:
+    display_title: Страница
+    display_options:
+      fields:
+        view_booking_contact:
+          text: представление
+        id:
+          label: ID
+          separator: ', '
+        email:
+          label: Email
+          separator: ', '
+        party_size:
+          separator: ', '
+        booking_instance:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: представление
+        date:
+          label: 'Дата бронирования'
+          separator: ', '
+        operations:
+          label: Операции
+  user_bookings:
+    display_options:
+      fields:
+        view_booking_contact:
+          text: представление
+        id:
+          label: ID
+          separator: ', '
+        party_size:
+          separator: ', '
+        view_bookable_calendar_opening_inst:
+          text: представление
+        date:
+          label: Дата
+          separator: ', '
+        operations:
+          label: Операции
+      arguments:
+        uid:
+          exception:
+            title: Все

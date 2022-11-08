@@ -1,0 +1,37 @@
+display:
+  default:
+    display_title: 'Ana (master)'
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Uygula
+          reset_button_label: Sıfırla
+          exposed_sorts_label: 'Sıralama anahtarı'
+          sort_asc_label: Artan
+          sort_desc_label: Azalan
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« İlk'
+            last: 'Son »'
+          expose:
+            items_per_page_label: 'Sayfa başına öğe sayısı'
+            items_per_page_options_all_label: '- Tümü -'
+            offset_label: 'Başlangıç değeri'
+      fields:
+        view_bookable_calendar_opening_inst:
+          text: görüntüle
+        id:
+          label: ID
+          separator: ', '
+        booking_opening:
+          separator: ', '
+        date__value:
+          label: Tarih
+          separator: ', '
+        operations:
+          label: İşlemler
+  page_1:
+    display_title: Sayfa
