@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df7306c7b071f1fc0099bb2ed632de18",
+    "content-hash": "c191100ce5c3b68912e6fb8e3a277256",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7159,17 +7159,17 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.6.1",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.6.1"
+                "reference": "3.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.6.1.zip",
-                "reference": "3.6.1",
-                "shasum": "a2ce55f5e38d046143881839f5ba0e6dcb49e823"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-3.6.0.zip",
+                "reference": "3.6.0",
+                "shasum": "91b4aeb9556f73b236b33a451437091f06567f91"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -7182,8 +7182,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.6.1",
-                    "datestamp": "1661631736",
+                    "version": "3.6.0",
+                    "datestamp": "1661167871",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
