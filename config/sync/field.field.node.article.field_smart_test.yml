@@ -1,0 +1,31 @@
+uuid: 7b440f71-7403-48ef-8140-c12b2404042a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smart_test
+    - node.type.article
+  module:
+    - smart_date
+    - smart_date_recur
+third_party_settings:
+  smart_date_recur:
+    allow_recurring: true
+    month_limit: 12
+id: node.article.field_smart_test
+field_name: field_smart_test
+entity_type: node
+bundle: article
+label: 'smart test'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_date_type: now
+    default_date: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

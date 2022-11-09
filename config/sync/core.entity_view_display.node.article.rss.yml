@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_image
     - field.field.node.article.field_media
     - field.field.node.article.field_paragraphs
+    - field.field.node.article.field_smart_test
     - field.field.node.article.field_tags
     - node.type.article
   module:
@@ -20,6 +21,11 @@ targetEntityType: node
 bundle: article
 mode: rss
 content:
+  flag_subscribe_node:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   links:
     weight: 100
     region: content
@@ -29,5 +35,7 @@ hidden:
   field_image: true
   field_media: true
   field_paragraphs: true
+  field_smart_test: true
   field_tags: true
   langcode: true
+  search_api_excerpt: true

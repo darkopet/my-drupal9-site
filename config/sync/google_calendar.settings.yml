@@ -5,7 +5,7 @@ horizon_refresh: P1D
 entity_ownership: by_email
 default_event_owner: 1
 cron_frequency: 600
-client_secret_type: static_file
+client_secret_type: managed_file
 client_secret_config:
-  secret_file_name: ../keys/client_secret_741831487713-l7qmtc16a9q87ila6243qmir1tfm52r7.apps.googleusercontent.com.json
+  secret_file_id: null
 cron_disabled: 0
