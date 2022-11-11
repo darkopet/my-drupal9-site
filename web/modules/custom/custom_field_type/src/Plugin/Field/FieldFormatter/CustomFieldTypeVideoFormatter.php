@@ -1,6 +1,5 @@
 <?php
 
-// Standard namespaces, uses and annotations.
 namespace Drupal\custom_field_type\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FormatterBase;
