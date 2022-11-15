@@ -1,0 +1,12 @@
+event_email.modal_form:
+  path: '/admin/config/modal_form/{node}'
+  defaults:
+    _title: 'Modal Form'
+    _controller: '\Drupal\event_email\Controller\ModalFormController::openModalForm'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+    parameters:
+      node:
+        type: entity:node
