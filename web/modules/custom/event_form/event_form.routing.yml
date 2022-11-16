@@ -1,5 +1,5 @@
 event_form.modal_form:
-  path: '/admin/config/modal_form'
+  path: '/admin/config/modal_form/{node}'
   defaults:
     _title: 'Modal Form'
     _controller: '\Drupal\event_form\Controller\EmailController::openModalForm'
@@ -8,5 +8,5 @@ event_form.modal_form:
   options:
     _admin_route: TRUE
     parameters:
-      id:
+      node:
         type: entity:node

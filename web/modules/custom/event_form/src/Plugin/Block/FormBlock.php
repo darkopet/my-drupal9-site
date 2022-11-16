@@ -18,7 +18,7 @@ use Drupal\Core\Form\FormBuilder;
 class FormBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
-  * @var $formBuilder FormBuilder
+   * @var $formBuilder FormBuilder
    */
   protected $formBuilder;
 
@@ -58,3 +58,6 @@ class FormBlock extends BlockBase implements ContainerFactoryPluginInterface {
     return  $this->formBuilder->getForm('Drupal\event_form\Form\EmailForm');
   }
 }
+
+
+
